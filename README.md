@@ -52,9 +52,9 @@ Every theme has up to 3 files, and some override files which only change the pic
 * mip_Crystal-Config.css:
     * This is used in *userContent.css* and adds icons to the old about:config, which you can still get to as of now.
 * mip_Crystal-Library.css:
-    * This is also used in *userContent.css* and adds icons to the Library when you opening it inside a TAB.
+    * This is also used in *userContent.css* and adds icons to the Library when you are opening it inside a TAB.
 * mip_Crystal-Menus.css:
-    * This is used in *userChrome.css* and adds icons to the Firefox menus and to the Library when opened as a window.
+    * This is used in *userChrome.css* and adds icons to the Firefox menus and to the Library window.
 * mip_override_CutCopyPaste-Crystal.css:
     * This gives whatever theme is used before it the Cut/Copy/Paste icons from Crystal.
 
