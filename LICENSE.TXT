@@ -1,6 +1,6 @@
-Menu Icon Plus CSS v1.0 (MIP/CSS)
+Menu Icon Plus CSS (MIP/CSS)
 Add Icons To Firefox Menus/Context-Menus
-(c) by Sylvain "B00ze64" B.
+(c) Sylvain "B00ze64" B.
 
 Creative Commons Attribution 4.0 International Public License
 https://creativecommons.org/licenses/by/4.0/
