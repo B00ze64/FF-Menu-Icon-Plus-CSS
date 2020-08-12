@@ -7,7 +7,7 @@ The project is a *remake* of the classic [Menu Icon Plus XUL extension](http://w
 
 AFAIK, I've styled every XUL menu/menuitem in Firefox; I've styled stuff I cannot even see, but if you find something I've forgotten, open an issue. The method used to add the icons was suggested by Aris-t2 (thanks!), and it inserts a CSS element before the menuitems. Because of this, it is not possible to globally make every disabled menuitem greyed-out in a single CSS statement. I think I have covered all the meuitems that *can* be disabled, but you may find some I've forgotten (open an issue to let me know).
 
-You might not agree with some icons choices, or choice of selectors, feel free to open an issue. Note that some menuitems can only be selected by their labels, and labels change with the language used in Firefox, so some things, very few, will not style correctly if your Firefox is not in English; feel free to open an issue and we can add your own language's labels to the CSS files.
+You might not agree with some icons choices, or choice of selectors, feel free to open an issue. Note that some menuitems can only be selected by their labels, and labels change with the language used in Firefox, so some things, very few, will not style correctly if your Firefox is not in English; feel free to open an issue and we can add your own language's labels to the CSS files, or suggest a different selector.
 
 This project is (c) Sylvain "B00ze64" B. and released under the Creative Commons License v4.0.
 
@@ -49,14 +49,14 @@ All the Themes in Alphabetical order:
 
 Every theme has up to 3 files, and some override files which only change the picture used but do not themselves insert the icon element (you use them AFTER a complete theme file). Let's take the Crystal theme for example, you will find:
 
-1. mip_Crystal-Config.css:
-This is used in *userContent.css* and adds icons to the old about:config, which you can still get to as of now.
-2. mip_Crystal-Library.css:
-This is also used in *userContent.css* and adds icons to the Library when you opening it inside a TAB.
-3. mip_Crystal-Menus.css:
-This is used in *userChrome.css* and adds icons to the Firefox menus and to the Library when opened as a window.
-4. mip_override_CutCopyPaste-Crystal.css:
-This gives whatever theme is used before it the Cut/Copy/Paste icons from Crystal.
+* mip_Crystal-Config.css:
+    * This is used in *userContent.css* and adds icons to the old about:config, which you can still get to as of now.
+* mip_Crystal-Library.css:
+    * This is also used in *userContent.css* and adds icons to the Library when you opening it inside a TAB.
+* mip_Crystal-Menus.css:
+    * This is used in *userChrome.css* and adds icons to the Firefox menus and to the Library when opened as a window.
+* mip_override_CutCopyPaste-Crystal.css:
+    * This gives whatever theme is used before it the Cut/Copy/Paste icons from Crystal.
 
 # Installation
 
