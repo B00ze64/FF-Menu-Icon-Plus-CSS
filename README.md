@@ -62,6 +62,10 @@ Every theme has up to 3 files, and some override files which only change the pic
 
 Just extract the project into your *Profile/chrome* folder, so that you have *MipCss* and *MipImages* folders **inside** the *chrome* folder. Use the included *userChrome.css* and *userContent.css* as templates to modify your own. You are EXPECTED to edit the userChrome and userContent files to select WHICH theme you want to use. And as mentionned earlier, you are **strongly encouraged** to install the *bookmark_icons_colorized.css* file from Aris-t2's [CustomCSSforFx](https://github.com/Aris-t2/CustomCSSforFx).
 
+# Public Domain Images
+
+There are a FEW images in the PublicDomain folder that I downloaded off from generic icon sites which have no attribution. If you recognize your work, please open an issue so that proper credits can be given.
+
 # Themes Previews
 
 ### The Crystal Project
