@@ -33,6 +33,7 @@
  * + Contributors ->
  *
  *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
+ *	Acid-Crash Discovered bug with the Responsive Design icon and suggested the fix for it.
  *
  * + NOTES:
  * - TabSize=8
@@ -164,7 +165,8 @@
 
 #menu_browserConsole::Before {
 
-    	content: url("chrome://browser/skin/chevron.svg");
+    	content: url("chrome://devtools/skin/images/tool-webconsole.svg"); 
+/*    	content: url("chrome://browser/skin/chevron.svg"); */
 	}
 
 /* Responsive Design ************************************************************/
@@ -172,6 +174,8 @@
 #menu_responsiveUI::Before {
 
 	content: url("chrome://devtools/skin/images/command-responsivemode.svg");
+	-moz-context-properties: fill, fill-opacity;
+	 fill-opacity: 0;
 	}
 
 /* Eyedropper *******************************************************************/

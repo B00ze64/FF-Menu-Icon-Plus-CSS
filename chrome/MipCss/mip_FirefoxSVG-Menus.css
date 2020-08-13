@@ -33,6 +33,7 @@
  * + Contributors ->
  *
  *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
+ *	Acid-Crash Discovered bug with the Responsive Design icon and suggested the fix for it.
  *
  * + NOTES:
  * - TabSize=8
@@ -1726,12 +1727,54 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	vertical-align: middle;
 	}
 
+/* Remote Debugging *************************************************************/
+
+#menu_devtools_remotedebugging::Before {
+
+	content: url("../MipImages/FF/remote.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+
+	filter: grayscale(100%) brightness(70%);
+	}
+
+/* Toolbox'es *******************************************************************/
+
+#menu_browserToolbox::Before {
+
+	content: url("../MipImages/FF/tilt-black.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_browserContentToolbox::Before {
+
+	content: url("../MipImages/FF/tilt-black.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
 /* Error Console ****************************************************************/
 
 #menu_browserConsole::Before {
 
-/*    	content: url("chrome://devtools/skin/images/tool-webconsole.svg"); */
-    	content: url("chrome://browser/skin/chevron.svg");
+    	content: url("chrome://devtools/skin/images/tool-webconsole.svg"); 
+/*    	content: url("chrome://browser/skin/chevron.svg"); */
 
 	display: block;
 	width: 16px;
@@ -1753,6 +1796,8 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	margin-inline-start: 6px;
 	margin-top: 2px;
 	vertical-align: middle;
+	-moz-context-properties: fill, fill-opacity;
+	 fill-opacity: 0;
 	}
 
 /* Eyedropper *******************************************************************/
@@ -1782,6 +1827,9 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 #menuitem_accessibility > label,
 #menuitem_application > label,
 #menuitem_dom > label,
+#menu_devtools_remotedebugging > label,
+#menu_browserToolbox > label,
+#menu_browserContentToolbox > label,
 #menu_responsiveUI:not([checked=true]) > label,
 #menu_eyedropper > label {
 
