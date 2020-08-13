@@ -1,0 +1,616 @@
+/********************************************************************************
+ * Menu Icon Plus CSS v1.0 (MIP/CSS)
+ * Add Icons To Firefox Menus/Context-Menus
+ *
+ * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
+ *   Project Homepage https://github.com/B00ze64/FF-Menu-Icon-Plus-CSS
+ *   Released under Creative Commons Attribution 4.0 License.
+ *   https://creativecommons.org/licenses/by/4.0/
+ *
+ * - The Original MIP Firefox Extension (c) Justin Rodes http://www.codedawn.com/menu-icons-plus.php
+ *
+ * + The icons come from ->
+ *
+ * - Crystal Project	http://www.everaldo.com/
+ *			https://commons.wikimedia.org/wiki/Category:Crystal_Project
+ *			LGPL
+ *
+ * - Fugue Icons	http://p.yusukekamiyamane.com/
+ *			by Yusuke Kamiyamane,
+ *			Creative Commons Attribution 3.0 License.
+ *
+ * - Oxygen Icons	http://www.oxygen-icons.org/ [use Wayback Machine]
+ *			https://github.com/pasnox/oxygen-icons-png
+ *			https://techbase.kde.org/Projects/Oxygen/Licensing
+ *
+ * - Silk Icons		http://www.famfamfam.com/
+ *			Mark James, Birmingham (UK),
+ *			Creative Commons Attribution 2.5 License.
+ *
+ * - Tango Icons	http://tango-project.org/
+ *			Public Domain
+ *
+ * + Contributors ->
+ *
+ *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
+ *
+ * + NOTES:
+ * - TabSize=8
+ *
+ */
+
+/********************************************************************************
+ * LIBRARY IN A TAB: FIREFOX SVG
+ ********************************************************************************
+ *
+ * This is the Library-In-A-Tab skinning file for use with userContent.css.
+ * This one uses only built-in Firefox SVG icons. You can use it alone, or you
+ * can load it AFTER one of the other skins to override them and use SVG icons
+ * whenever possible. Alternative icons are commented-out.
+ *
+ */
+
+@-moz-document url("chrome://browser/content/places/places.xhtml") {
+
+/********************************************************************************
+ *
+ * CONTEXT MENUS
+ *
+ ********************************************************************************/
+
+/* New Window (Open In) *********************************************************/
+
+#placesContext_open\:newwindow::Before  {
+
+	content: url("chrome://browser/skin/new-window.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#placesContext_open\:newwindow > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Private Browsing *************************************************************/
+
+#placesContext_open\:newprivatewindow::before {
+
+/*	content: url("chrome://browser/skin/privatebrowsing/favicon.svg"); /* purple */
+	content: url("chrome://browser/skin/privateBrowsing.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#placesContext_open\:newprivatewindow > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Close Window *****************************************************************/
+
+#orgClose::Before {
+
+	content: url("chrome://global/skin/reader/close-16.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#orgClose > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Cut **************************************************************************/
+
+#orgCut::Before,
+#placesContext_cut::before {
+
+	content: url("chrome://browser/skin/edit-cut.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#orgCut[disabled=true]::before,
+#placesContext_cut[disabled=true]::before {
+
+	opacity: .4;
+	}
+
+#orgCut > label,
+#placesContext_cut > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Copy *************************************************************************/
+
+#orgCopy::Before,
+#placesContext_copy::before {
+
+	content: url("chrome://browser/skin/edit-copy.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Copy Link ********************************************************************/
+
+#downloadsContextMenu menuitem[command="cmd_copy"]::Before,
+menuitem[command="downloadsCmd_copyLocation"]::Before {
+
+	content: url("chrome://browser/skin/link.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#orgCopy[disabled=true]::Before,
+#placesContext_copy[disabled=true]::before {
+
+	opacity: .4;
+	}
+
+#orgCopy > label,
+#placesContext_copy > label,
+#downloadsContextMenu menuitem[command="cmd_copy"] > label,
+menuitem[command="downloadsCmd_copyLocation"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Paste ************************************************************************/
+
+#orgPaste::Before,
+#placesContext_paste::before {
+
+	content: url("chrome://browser/skin/edit-paste.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#orgPaste[disabled=true]::Before,
+#placesContext_paste[disabled=true]::before {
+
+	opacity: .4;
+	}
+
+#orgPaste > label,
+#placesContext_paste > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Delete ***********************************************************************/
+
+#orgDelete::Before,
+#placesContext_delete::before,
+#placesContext_delete_history::before {
+
+	content: url("chrome://devtools/skin/images/clear.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#orgDelete[disabled=true]::Before,
+#placesContext_delete[disabled=true]::before,
+#placesContext_delete_history[disabled=true]::before {
+
+	opacity: .4;
+	}
+
+#orgDelete > label,
+#placesContext_delete > label,
+#placesContext_delete_history > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* History Clear Recent / Forget Site *******************************************/
+
+#placesContext_deleteHost::Before,
+menuitem.downloadRemoveFromHistoryMenuItem::Before { /* menuitem[command="cmd_delete"] */
+
+	content: url("chrome://browser/skin/forget.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#placesContext_deleteHost > label,
+menuitem.downloadRemoveFromHistoryMenuItem > label { /* menuitem[command="cmd_delete"] */
+
+	margin-inline-start: -20px !important;
+	}
+
+/* History Clear All (Downloads/Search) *****************************************/
+
+menuitem[command="downloadsCmd_clearDownloads"]::Before {
+
+	content: url("chrome://devtools/skin/images/clear.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem[command="downloadsCmd_clearDownloads"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Bookmark This Page Link Tab or Frame + Bookmark-New **************************/
+
+#placesContext_new\:bookmark::Before,
+#placesContext_createBookmark::before, /* In the history context menu */
+#newbookmark::Before {
+
+	content: url("chrome://browser/skin/bookmark-hollow.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#placesContext_new\:bookmark[disabled=true]::Before,
+#newbookmark[disabled=true]::Before {
+
+	opacity: .4;
+	}
+
+#placesContext_new\:bookmark > label,
+#placesContext_createBookmark > label,
+#newbookmark > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Bookmark Folder-New **********************************************************/
+
+#placesContext_new\:folder::Before,
+#newfolder::Before {
+
+	content: url("chrome://browser/skin/folder.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#placesContext_new\:folder[disabled=true]::Before,
+#newfolder[disabled=true]::Before {
+
+	opacity: .4;
+	}
+
+
+#placesContext_new\:folder > label,
+#newfolder > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * LIBRARY (Toolbar)
+ *
+ ********************************************************************************/
+
+/* Undo *************************************************************************/
+
+#orgUndo::Before {
+
+	content: url("chrome://browser/skin/undo.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#orgUndo[disabled=true]::Before {
+
+	opacity: .4;
+	}
+
+#orgUndo > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Columns Chooser based on Fugue Table *****************************************/
+
+#viewColumns::Before {
+
+	content: url("chrome://global/skin/icons/columnpicker.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#viewColumns > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Sort Ascending/Descending ****************************************************/
+
+#viewSortAscending:not([checked=true])::Before,
+#placesContext_sortBy\:name::Before {
+
+	content: url("chrome://global/skin/icons/find-next-arrow.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#viewSortDescending:not([checked=true])::Before {
+
+	content: url("chrome://global/skin/icons/find-previous-arrow.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#viewSortAscending:not([checked=true]) > label,
+#viewSortDescending:not([checked=true]) > label,
+#placesContext_sortBy\:name > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Backup/Restore Bookmarks *****************************************************/
+
+#backupBookmarks::Before {
+
+	content: url("chrome://browser/skin/save.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#fileRestoreMenu::Before {
+
+	content: url("chrome://browser/skin/open.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#restoreFromFile::Before {
+
+	content: url("chrome://browser/skin/open.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#fileRestorePopup menuitem[oncommand="PlacesOrganizer.onRestoreMenuItemClick(this);"]::Before { /* The File Chooser Saved Backups */
+
+	content: url("chrome://browser/skin/bookmark.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#backupBookmarks > label,
+#fileRestoreMenu > label,
+#restoreFromFile > label,
+#fileRestorePopup menuitem > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Import from another browser **************************************************/
+
+#browserImport::Before {
+
+	content: url("chrome://devtools/skin/images/import.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#browserImport > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * DOWNLOADS
+ *
+ ********************************************************************************/
+
+/* Downloads Pause/Resume *******************************************************/
+
+menuitem[data-l10n-id="downloads-cmd-pause"]::Before {
+
+	content: url("chrome://global/skin/media/pauseButton.svg"); /* This is bigger than normal icons and needs a 1px top margin */
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 1px;
+	vertical-align: middle;
+	}
+
+menuitem[data-l10n-id="downloads-cmd-resume"]::Before {
+
+	content: url("chrome://global/skin/media/playButton.svg"); /* This is bigger than normal icons and needs a 1px top margin */
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 1px;
+	vertical-align: middle;
+	}
+
+menuitem[data-l10n-id="downloads-cmd-pause"] > label,
+menuitem[data-l10n-id="downloads-cmd-resume"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Downloads Open Containing Folder *********************************************/
+
+menuitem.downloadShowMenuItem::Before { /* [command="downloadsCmd_show"] */
+
+	content: url("chrome://browser/skin/folder.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem.downloadShowMenuItem > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Downloads Goto ***************************************************************/
+
+menuitem[command="downloadsCmd_openReferrer"]::Before {
+
+	content: url("chrome://browser/skin/forward.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem[command="downloadsCmd_openReferrer"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * TABS
+ *
+ ********************************************************************************/
+
+/* Tab-New **********************************************************************/
+
+#placesContext_open\:newtab::before,
+#placesContext_openLinks\:tabs::before,
+#placesContext_openContainer\:tabs::before {
+
+	content: url("chrome://browser/skin/new-tab.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#placesContext_open\:newtab[disabled=true]::Before,
+#placesContext_openLinks\:tabs[disabled=true]::Before,
+#placesContext_openContainer\:tabs[disabled=true]::Before {
+
+	opacity: .4;
+	}
+
+#placesContext_open\:newtab > label,
+#placesContext_openLinks\:tabs > label,
+#placesContext_openContainer\:tabs > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+}

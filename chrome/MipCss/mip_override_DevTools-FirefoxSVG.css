@@ -1,0 +1,197 @@
+/********************************************************************************
+ * Menu Icon Plus CSS v1.0 (MIP/CSS)
+ * Add Icons To Firefox Menus/Context-Menus
+ *
+ * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
+ *   Project Homepage https://github.com/B00ze64/FF-Menu-Icon-Plus-CSS
+ *   Released under Creative Commons Attribution 4.0 License.
+ *   https://creativecommons.org/licenses/by/4.0/
+ *
+ * - The Original MIP Firefox Extension (c) Justin Rodes http://www.codedawn.com/menu-icons-plus.php
+ *
+ * + The icons come from ->
+ *
+ * - Crystal Project	http://www.everaldo.com/
+ *			https://commons.wikimedia.org/wiki/Category:Crystal_Project
+ *			LGPL
+ *
+ * - Fugue Icons	http://p.yusukekamiyamane.com/
+ *			by Yusuke Kamiyamane,
+ *			Creative Commons Attribution 3.0 License.
+ *
+ * - Oxygen Icons	http://www.oxygen-icons.org/ [use Wayback Machine]
+ *			https://github.com/pasnox/oxygen-icons-png
+ *			https://techbase.kde.org/Projects/Oxygen/Licensing
+ *
+ * - Silk Icons		http://www.famfamfam.com/
+ *			Mark James, Birmingham (UK),
+ *			Creative Commons Attribution 2.5 License.
+ *
+ * - Tango Icons	http://tango-project.org/
+ *			Public Domain
+ *
+ * + Contributors ->
+ *
+ *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
+ *
+ * + NOTES:
+ * - TabSize=8
+ *
+ */
+
+/********************************************************************************
+ * OVERRIDE FILE: DEVTOOLS FIREFOX SVG
+ ********************************************************************************
+ *
+ * YOU MUST LOAD THIS AFTER LOADING ONE OF THE THEME FILES.
+ * This is the override file for the DevTools, using SVG icons.
+ *
+ */
+
+@-moz-document	url("chrome://browser/content/browser.xhtml") {
+
+/********************************************************************************
+ *
+ * DEV TOOLS / WEB DEVELOPER
+ *
+ ********************************************************************************/
+
+/* Get More Tools ***************************************************************/
+
+#getMoreDevtools::Before {
+
+	content: url("chrome://browser/skin/developer.svg");
+	}
+
+/* Toggle Tools *****************************************************************/
+
+#menu_devToolbox:not([checked=true])::Before {
+
+	content: url("chrome://browser/skin/toggle.svg");
+	}
+
+/* Dom Inspector ****************************************************************/
+
+#menuitem_inspector::Before {
+
+	content: url("chrome://devtools/skin/images/tool-inspector.svg");
+	}
+
+/* Web Console ******************************************************************/
+
+#menuitem_webconsole::Before {
+
+	content: url("chrome://devtools/skin/images/tool-webconsole.svg");
+	}
+
+/* Debug ************************************************************************/
+
+#menuitem_jsdebugger::Before {
+
+	content: url("chrome://devtools/skin/images/tool-debugger.svg");
+	}
+
+/* Network Monitor **************************************************************/
+
+#menuitem_netmonitor::Before {
+
+	content: url("chrome://devtools/skin/images/tool-network.svg");
+	}
+
+/* Style Editor *****************************************************************/
+
+#menuitem_styleeditor::Before {
+
+	content: url("chrome://devtools/skin/images/tool-styleeditor.svg");
+	}
+
+/* Performance Profiler *********************************************************/
+
+#menuitem_performance::Before {
+
+	content: url("chrome://devtools/skin/images/tool-profiler.svg");
+	}
+
+/* Storage (Explorer) ***********************************************************/
+
+#menuitem_storage::Before {
+
+	content: url("chrome://devtools/skin/images/tool-storage.svg");
+	}
+
+/* Accessibility ****************************************************************/
+
+#menuitem_accessibility::Before {
+
+	content: url("chrome://devtools/skin/images/tool-accessibility.svg");
+	}
+
+/* Application ******************************************************************/
+
+#menuitem_application::Before {
+
+	content: url("chrome://devtools/skin/images/tool-application.svg");
+	}
+
+/* DOM **************************************************************************/
+
+#menuitem_dom::Before {
+
+	content: url("chrome://devtools/skin/images/tool-dom.svg");
+	}
+
+/* Remote Debugging *************************************************************/
+
+#menu_devtools_remotedebugging::Before {
+
+	content: url("../MipImages/FF/remote.png");
+	filter: grayscale(100%) brightness(70%);
+	}
+
+/* Toolbox'es *******************************************************************/
+
+#menu_browserToolbox::Before {
+
+	content: url("../MipImages/FF/tilt-black.png");
+	}
+
+#menu_browserContentToolbox::Before {
+
+	content: url("../MipImages/FF/tilt-black.png");
+	}
+
+/* Error Console ****************************************************************/
+
+#menu_browserConsole::Before {
+
+    	content: url("chrome://browser/skin/chevron.svg");
+	}
+
+/* Responsive Design ************************************************************/
+
+#menu_responsiveUI::Before {
+
+	content: url("chrome://devtools/skin/images/command-responsivemode.svg");
+	}
+
+/* Eyedropper *******************************************************************/
+
+#menu_eyedropper::Before {
+
+	content: url("chrome://devtools/skin/images/command-eyedropper.svg");
+	}
+
+/********************************************************************************
+ *
+ * VIEW SOURCE
+ *
+ ********************************************************************************/
+
+/* View Source ******************************************************************/
+
+#menu_pageSource::Before {
+
+	content: url("chrome://devtools/skin/images/tool-dom.svg");
+	}
+
+}

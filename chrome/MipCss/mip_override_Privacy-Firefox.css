@@ -1,0 +1,71 @@
+/********************************************************************************
+ * Menu Icon Plus CSS v1.0 (MIP/CSS)
+ * Add Icons To Firefox Menus/Context-Menus
+ *
+ * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
+ *   Project Homepage https://github.com/B00ze64/FF-Menu-Icon-Plus-CSS
+ *   Released under Creative Commons Attribution 4.0 License.
+ *   https://creativecommons.org/licenses/by/4.0/
+ *
+ * - The Original MIP Firefox Extension (c) Justin Rodes http://www.codedawn.com/menu-icons-plus.php
+ *
+ * + The icons come from ->
+ *
+ * - Crystal Project	http://www.everaldo.com/
+ *			https://commons.wikimedia.org/wiki/Category:Crystal_Project
+ *			LGPL
+ *
+ * - Fugue Icons	http://p.yusukekamiyamane.com/
+ *			by Yusuke Kamiyamane,
+ *			Creative Commons Attribution 3.0 License.
+ *
+ * - Oxygen Icons	http://www.oxygen-icons.org/ [use Wayback Machine]
+ *			https://github.com/pasnox/oxygen-icons-png
+ *			https://techbase.kde.org/Projects/Oxygen/Licensing
+ *
+ * - Silk Icons		http://www.famfamfam.com/
+ *			Mark James, Birmingham (UK),
+ *			Creative Commons Attribution 2.5 License.
+ *
+ * - Tango Icons	http://tango-project.org/
+ *			Public Domain
+ *
+ * + Contributors ->
+ *
+ *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
+ *
+ * + NOTES:
+ * - TabSize=8
+ *
+ */
+
+/********************************************************************************
+ * OVERRIDE FILE: PRIVATE BROWSING FIREFOX PNG
+ ********************************************************************************
+ *
+ * YOU MUST LOAD THIS AFTER LOADING ONE OF THE THEME FILES.
+ * You can use this file in both userChrome and userContent.css.
+ * This is the override file for Private Browsing using the old Firefox PNG icon.
+ *
+ */
+
+@-moz-document	url("chrome://browser/content/browser.xhtml"),
+		url("chrome://browser/content/places/places.xhtml") {
+
+/********************************************************************************
+ *
+ * FILE MENU
+ *
+ ********************************************************************************/
+
+/* Private Browsing *************************************************************/
+
+#menu_newPrivateWindow::Before,
+#context-openlinkprivate::Before,
+#placesContext_open\:newprivatewindow::Before,
+#syncedTabsOpenSelectedInPrivateWindow::Before {
+
+	content: url("../MipImages/FF/privacy-16.png");
+	}
+
+}

@@ -1,0 +1,356 @@
+/********************************************************************************
+ * Menu Icon Plus CSS v1.0 (MIP/CSS)
+ * Add Icons To Firefox Menus/Context-Menus
+ *
+ * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
+ *   Project Homepage https://github.com/B00ze64/FF-Menu-Icon-Plus-CSS
+ *   Released under Creative Commons Attribution 4.0 License.
+ *   https://creativecommons.org/licenses/by/4.0/
+ *
+ * - The Original MIP Firefox Extension (c) Justin Rodes http://www.codedawn.com/menu-icons-plus.php
+ *
+ * + The icons come from ->
+ *
+ * - Crystal Project	http://www.everaldo.com/
+ *			https://commons.wikimedia.org/wiki/Category:Crystal_Project
+ *			LGPL
+ *
+ * - Fugue Icons	http://p.yusukekamiyamane.com/
+ *			by Yusuke Kamiyamane,
+ *			Creative Commons Attribution 3.0 License.
+ *
+ * - Oxygen Icons	http://www.oxygen-icons.org/ [use Wayback Machine]
+ *			https://github.com/pasnox/oxygen-icons-png
+ *			https://techbase.kde.org/Projects/Oxygen/Licensing
+ *
+ * - Silk Icons		http://www.famfamfam.com/
+ *			Mark James, Birmingham (UK),
+ *			Creative Commons Attribution 2.5 License.
+ *
+ * - Tango Icons	http://tango-project.org/
+ *			Public Domain
+ *
+ * + Contributors ->
+ *
+ *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
+ *
+ * + NOTES:
+ * - TabSize=8
+ *
+ */
+
+/********************************************************************************
+ * LIBRARY IN A TAB: FIREFOX PNG
+ ********************************************************************************
+ *
+ * This is the Library-In-A-Tab skinning file for use with userContent.css.
+ * This one uses only icons from the old Firefox releases. You can use it alone, 
+ * or you can load it AFTER one of the other skins to override them. I have not 
+ * spent a lot of time on this, I'm sure there are plenty of other Old-Firefox 
+ * icons we can use; pull requests welcomed. For now it is just incomplete work 
+ * and the interesting bits have all been extracted into OVERRIDE files (e.g. 
+ * mip_override_CutCopyPaste-Firefox). Alternative icons are commented-out (mostly 
+ * Windows-XP theme).
+ *
+ */
+
+@-moz-document url("chrome://browser/content/places/places.xhtml") {
+
+/********************************************************************************
+ *
+ * CONTEXT MENUS
+ *
+ ********************************************************************************/
+
+/* New Window (Open In) *********************************************************/
+
+#placesContext_open\:newwindow::Before  {
+
+	content: url("../MipImages/FF/aboutSessionRestore-window-icon.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#placesContext_open\:newwindow > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Private Browsing *************************************************************/
+
+#placesContext_open\:newprivatewindow::before {
+
+	content: url("../MipImages/FF/privacy-16.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#placesContext_open\:newprivatewindow > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Cut **************************************************************************/
+
+#orgCut::Before,
+#placesContext_cut::before {
+
+	content: url("../MipImages/FF/cut.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#orgCut[disabled=true]::before,
+#placesContext_cut[disabled=true]::before {
+
+	opacity: .4;
+	}
+
+#orgCut > label,
+#placesContext_cut > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Copy *************************************************************************/
+
+#orgCopy::Before,
+#placesContext_copy::before {
+
+	content: url("../MipImages/FF/copy.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Copy Link ********************************************************************/
+
+#downloadsContextMenu menuitem[command="cmd_copy"]::Before,
+menuitem[command="downloadsCmd_copyLocation"]::Before {
+
+	content: url("../MipImages/FF/copy.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#orgCopy[disabled=true]::Before,
+#placesContext_copy[disabled=true]::before {
+
+	opacity: .4;
+	}
+
+#orgCopy > label,
+#placesContext_copy > label,
+#downloadsContextMenu menuitem[command="cmd_copy"] > label,
+menuitem[command="downloadsCmd_copyLocation"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Paste ************************************************************************/
+
+#orgPaste::Before,
+#placesContext_paste::before {
+
+	content: url("../MipImages/FF/paste.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#orgPaste[disabled=true]::Before,
+#placesContext_paste[disabled=true]::before {
+
+	opacity: .4;
+	}
+
+#orgPaste > label,
+#placesContext_paste > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* History Clear Recent / Forget Site *******************************************/
+
+#placesContext_deleteHost::Before,
+menuitem.downloadRemoveFromHistoryMenuItem::Before { /* menuitem[command="cmd_delete"] */
+
+	content: url("../MipImages/FF/broom.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#placesContext_deleteHost > label,
+menuitem.downloadRemoveFromHistoryMenuItem > label { /* menuitem[command="cmd_delete"] */
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Bookmark This Page Link Tab or Frame + Bookmark-New **************************/
+
+#placesContext_new\:bookmark::Before,
+#placesContext_createBookmark::before, /* In the history context menu */
+#newbookmark::Before {
+
+/*	content: url("../MipImages/FF/bookmark-3.png"); */
+	content: url("../MipImages/FF/bookmark-2.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#placesContext_new\:bookmark[disabled=true]::Before,
+#newbookmark[disabled=true]::Before {
+
+	opacity: .4;
+	}
+
+#placesContext_new\:bookmark > label,
+#placesContext_createBookmark > label,
+#newbookmark > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Bookmark Folder-New **********************************************************/
+
+#placesContext_new\:folder::Before,
+#newfolder::Before {
+
+	content: url("../MipImages/FF/folder.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#placesContext_new\:folder[disabled=true]::Before,
+#newfolder[disabled=true]::Before {
+
+	opacity: .4;
+	}
+
+
+#placesContext_new\:folder > label,
+#newfolder > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * LIBRARY (Toolbar)
+ *
+ ********************************************************************************/
+
+/* Backup/Restore Bookmarks *****************************************************/
+
+#fileRestoreMenu::Before {
+
+	content: url("../MipImages/FF/folder.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#restoreFromFile::Before {
+
+	content: url("../MipImages/FF/folder.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#fileRestorePopup menuitem[oncommand="PlacesOrganizer.onRestoreMenuItemClick(this);"]::Before { /* The File Chooser Saved Backups */
+
+	content: url("../MipImages/FF/bookmark-3.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#fileRestoreMenu > label,
+#restoreFromFile > label,
+#fileRestorePopup menuitem > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * DOWNLOADS
+ *
+ ********************************************************************************/
+
+/* Downloads Open Containing Folder *********************************************/
+
+menuitem.downloadShowMenuItem::Before { /* [command="downloadsCmd_show"] */
+
+	content: url("../MipImages/FF/folder.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem.downloadShowMenuItem > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+}

@@ -1,0 +1,55 @@
+/********************************************************************************
+ * Menu Icon Plus CSS v1.0 (MIP/CSS)
+ * Add Icons To Firefox Menus/Context-Menus
+ *
+ * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
+ *   Project Homepage https://github.com/B00ze64/FF-Menu-Icon-Plus-CSS
+ *   Released under Creative Commons Attribution 4.0 License.
+ *   https://creativecommons.org/licenses/by/4.0/
+ *
+ */
+
+/********************************************************************************
+ * userContent.css
+ ********************************************************************************
+ *
+ * UN-Comment your favorite theme or add the corresponding @import lines to your
+ * own userContent. NOTE that @import only works so long as no inline CSS is yet
+ * encountered inside the userContent file.
+ *
+ */
+
+@import "./css/generalui/bookmark_icons_colorized.css"; /* Aris-t2 bookmarks folders [This must appear BEFORE Menu Icon Plus] */
+
+/* @import "./MipCss/mip_Crystal-Config.css";		/* About:Config Crystal Theme */
+/* @import "./MipCss/mip_Crystal-Library.css";		/* Library-In-A-Tab Crystal Theme */
+/* @import "./MipCss/mip_Fugue-Config.css";		/* About:Config Fugue Theme */
+/* @import "./MipCss/mip_Fugue-Library.css";		/* Library-In-A-Tab Fugue Theme */
+   @import "./MipCss/mip_FuguePlus-Config.css";		/* About:Config Fugue+ Theme */
+   @import "./MipCss/mip_FuguePlus-Library.css";	/* Library-In-A-Tab Fugue+ Theme */
+/* @import "./MipCss/mip_Oxygen-Config.css";		/* About:Config Crystal Theme */
+/* @import "./MipCss/mip_Oxygen-Library.css";		/* Library-In-A-Tab Crystal Theme */
+/* @import "./MipCss/mip_Silk-Config.css";		/* About:Config Silk Theme */
+/* @import "./MipCss/mip_Silk-Library.css";		/* Library-In-A-Tab Silk Theme */
+/* @import "./MipCss/mip_Tango-Config.css";		/* About:Config Tango Theme */
+/* @import "./MipCss/mip_Tango-Library.css";		/* Library-In-A-Tab Tango Theme */
+
+/* @import "./MipCss/mip_Firefox-Library.css";		/* Use this alone or after one of the other themes to use some of the old Firefox icons */
+/* @import "./MipCss/mip_FirefoxSVG-Config.css";	/* Use this alone or after one of the other themes to use mostly built-in SVG icons */
+/* @import "./MipCss/mip_FirefoxSVG-Library.css";	/* Use this alone or after one of the other themes to use mostly built-in SVG icons */
+
+/* OVERRIDES MUST BE USED AFTER A COMPLETE THEME */
+/* Overrides should be used in both userChrome/userContent if using Library-In-A-Tab */
+
+/* @import "./MipCss/mip_override_Bookmark-Firefox.css";	/* The bookmark STAR using old Firefox PNG icons */
+/* @import "./MipCss/mip_override_CutCopyPaste-Firefox.css";	/* Cut/Copy/Paste using old Firefox PNG icons */
+/* @import "./MipCss/mip_override_CutCopyPaste-Crystal.css";	/* Cut/Copy/Paste using Crystal Project icons */
+/* @import "./MipCss/mip_override_CutCopyPaste-Fugue.css";	/* Cut/Copy/Paste using Fugue icons */
+/* @import "./MipCss/mip_override_CutCopyPaste-Oxygen.css";	/* Cut/Copy/Paste using Oxygen icons */
+/* @import "./MipCss/mip_override_CutCopyPaste-Silk.css";	/* Cut/Copy/Paste using Silk icons */
+/* @import "./MipCss/mip_override_CutCopyPaste-Tango.css";	/* Cut/Copy/Paste using Tango icons */
+/* @import "./MipCss/mip_override_Privacy-Firefox.css";		/* Private Browsing using the old Firefox PNG icon */
+
+/* @import "./MipCss/mip_worksheet-AddIconsToLibraryInTab.css";	/* This is my worksheet, it runs Fugue Plus */
+/* @import "./MipCss/mip_worksheet-AddIconsToAboutConfig.css";	/* This is my worksheet, it runs Fugue Plus */
+

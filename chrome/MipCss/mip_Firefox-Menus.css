@@ -1,0 +1,1441 @@
+/********************************************************************************
+ * Menu Icon Plus CSS v1.0 (MIP/CSS)
+ * Add Icons To Firefox Menus/Context-Menus
+ *
+ * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
+ *   Project Homepage https://github.com/B00ze64/FF-Menu-Icon-Plus-CSS
+ *   Released under Creative Commons Attribution 4.0 License.
+ *   https://creativecommons.org/licenses/by/4.0/
+ *
+ * - The Original MIP Firefox Extension (c) Justin Rodes http://www.codedawn.com/menu-icons-plus.php
+ *
+ * + The icons come from ->
+ *
+ * - Crystal Project	http://www.everaldo.com/
+ *			https://commons.wikimedia.org/wiki/Category:Crystal_Project
+ *			LGPL
+ *
+ * - Fugue Icons	http://p.yusukekamiyamane.com/
+ *			by Yusuke Kamiyamane,
+ *			Creative Commons Attribution 3.0 License.
+ *
+ * - Oxygen Icons	http://www.oxygen-icons.org/ [use Wayback Machine]
+ *			https://github.com/pasnox/oxygen-icons-png
+ *			https://techbase.kde.org/Projects/Oxygen/Licensing
+ *
+ * - Silk Icons		http://www.famfamfam.com/
+ *			Mark James, Birmingham (UK),
+ *			Creative Commons Attribution 2.5 License.
+ *
+ * - Tango Icons	http://tango-project.org/
+ *			Public Domain
+ *
+ * + Contributors ->
+ *
+ *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
+ *
+ * + NOTES:
+ * - TabSize=8
+ *
+ */
+
+/********************************************************************************
+ * STANDARD MENUS: FIREFOX PNG
+ ********************************************************************************
+ *
+ * This is the main skinning file for the Firefox menus. This one uses only icons 
+ * from the old Firefox releases. You can use it alone, or you can load it AFTER 
+ * one of the other skins to override them. I have not spent a lot of time on 
+ * this, I'm sure there are plenty of other Old-Firefox icons we can use; pull
+ * requests welcomed. For now it is just incomplete work and the interesting 
+ * bits have all been extracted into OVERRIDE files (e.g. mip_override_CutCopyPaste-
+ * Firefox). Alternative icons are commented-out (mostly Windows-XP theme).
+ *
+ */
+
+@-moz-document	url("chrome://browser/content/browser.xhtml"),
+		url("chrome://browser/content/places/places.xhtml"),
+		url("chrome://browser/content/places/historySidebar.xhtml"),
+		url("chrome://browser/content/places/bookmarksSidebar.xhtml"),
+		url("chrome://browser/content/syncedtabs/sidebar.xhtml") {
+
+/********************************************************************************
+ *
+ * FILE MENU
+ *
+ ********************************************************************************/
+
+/* New Window (Open In) *********************************************************/
+
+#menu_newNavigator::Before,
+#context-openlink::Before,
+#context-openframe::Before,
+#context_openTabInWindow::Before,
+#placesContext_open\:newwindow::Before,
+#historyUndoWindowPopup menuitem.restoreallitem::Before,
+#syncedTabsOpenSelectedInWindow::Before,
+#_testpilot-containers-menuitem-_move-to-new-window-container::Before {
+
+	content: url("../MipImages/FF/aboutSessionRestore-window-icon.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_newNavigator > label,
+#context-openlink > label,
+#context-openframe > label,
+#context_openTabInWindow > label,
+#placesContext_open\:newwindow > label,
+#historyUndoWindowPopup menuitem.restoreallitem > label,
+#syncedTabsOpenSelectedInWindow > label,
+#_testpilot-containers-menuitem-_move-to-new-window-container > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Private Browsing *************************************************************/
+
+#menu_newPrivateWindow::Before,
+#context-openlinkprivate::Before,
+#placesContext_open\:newprivatewindow::Before,
+#syncedTabsOpenSelectedInPrivateWindow::Before {
+
+	content: url("../MipImages/FF/privacy-16.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_newPrivateWindow > label,
+#context-openlinkprivate > label,
+#placesContext_open\:newprivatewindow > label,
+#syncedTabsOpenSelectedInPrivateWindow > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* File-Open ********************************************************************/
+
+#menu_openFile::Before {
+
+	content: url("../MipImages/FF/folder.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_openFile > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Email ************************************************************************/
+
+#menu_sendLink::Before,
+#context-sendimage::Before,
+#context-sendvideo::Before,
+#context-sendaudio::Before {
+
+/*	content: url("../MipImages/FF/mail-2.png"); */
+	content: url("../MipImages/FF/mail-1.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_sendLink > label,
+#context-sendimage > label,
+#context-sendvideo > label,
+#context-sendaudio > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Print ************************************************************************/
+
+#menu_print::Before,
+#context-printframe::Before {
+
+	content: url("../MipImages/FF/print.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_print > label,
+#context-printframe > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Exit/Quit/Shutdown ***********************************************************/
+
+#menu_FileQuitItem::Before {
+
+	content: url("../MipImages/FF/quit.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_FileQuitItem > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * EDIT MENU (and Everywhere)
+ *
+ ********************************************************************************/
+
+/* Cut **************************************************************************/
+
+#menu_cut::Before,
+#context-cut::Before,
+#orgCut::Before,
+#placesContext_cut::Before,
+menuitem[cmd="cmd_cut"]::Before,
+#textbox-contextmenu menuitem[command="cmd_cut"]::Before {
+
+	content: url("../MipImages/FF/cut.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_cut[disabled=true]::Before,
+#context-cut[disabled=true]::Before,
+#orgCut[disabled=true]::Before,
+#placesContext_cut[disabled=true]::Before,
+menuitem[cmd="cmd_cut"][disabled=true]::Before,
+#textbox-contextmenu menuitem[command="cmd_cut"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_cut > label,
+#context-cut > label,
+#orgCut > label,
+#placesContext_cut > label,
+menuitem[cmd="cmd_cut"] > label,
+#textbox-contextmenu menuitem[command="cmd_cut"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Copy *************************************************************************/
+
+#menu_copy::Before,
+#context-copy::Before,
+#context-copyimage-contents::Before,
+#orgCopy::Before,
+#placesContext_copy::Before,
+menuitem[cmd="cmd_copy"]::Before,
+#textbox-contextmenu menuitem[command="cmd_copy"]::Before {
+
+	content: url("../MipImages/FF/copy.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Copy Link ********************************************************************/
+
+#context-copyaudiourl::Before,
+#context-copyemail::Before,
+#context-copyimage::Before,
+#context-copylink::Before,
+#context-copyvideourl::Before,
+#downloadsContextMenu menuitem[command="cmd_copy"]::Before,
+menuitem[command="downloadsCmd_copyLocation"]::Before,
+#syncedTabsCopySelected::Before {
+
+	content: url("../MipImages/FF/copy.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_copy[disabled=true]::Before,
+#orgCopy[disabled=true]::Before,
+#placesContext_copy[disabled=true]::Before,
+menuitem[cmd="cmd_copy"][disabled=true]::Before,
+#textbox-contextmenu menuitem[command="cmd_copy"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_copy > label,
+#context-copy > label,
+#context-copyaudiourl > label,
+#context-copyemail > label,
+#context-copyimage > label,
+#context-copyimage-contents > label,
+#context-copylink > label,
+#context-copyvideourl > label,
+#orgCopy > label,
+#placesContext_copy > label,
+menuitem[cmd="cmd_copy"] > label,
+#textbox-contextmenu menuitem[command="cmd_copy"] > label,
+#downloadsContextMenu menuitem[command="cmd_copy"] > label,
+menuitem[command="downloadsCmd_copyLocation"] > label,
+#syncedTabsCopySelected > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Paste ************************************************************************/
+
+#menu_paste::Before,
+#context-paste::Before,
+#orgPaste::Before,
+#placesContext_paste::Before,
+menuitem[cmd="cmd_paste"]::Before,
+#textbox-contextmenu menuitem[command="cmd_paste"]::Before {
+
+	content: url("../MipImages/FF/paste.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_paste[disabled=true]::Before,
+#context-paste[disabled=true]::Before,
+#orgPaste[disabled=true]::Before,
+#placesContext_paste[disabled=true]::Before,
+menuitem[cmd="cmd_paste"][disabled=true]::Before,
+#textbox-contextmenu menuitem[command="cmd_paste"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_paste > label,
+#context-paste > label,
+#orgPaste > label,
+#placesContext_paste > label,
+menuitem[cmd="cmd_paste"] > label,
+#textbox-contextmenu menuitem[command="cmd_paste"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Paste and Go *****************************************************************/
+
+#paste-and-go::Before,
+menuitem.searchbar-paste-and-search::Before {
+
+	content: url("../MipImages/FF/paste.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#paste-and-go[disabled=true]::Before,
+menuitem.searchbar-paste-and-search[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#paste-and-go > label,
+menuitem.searchbar-paste-and-search > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Find (In this page...) *******************************************************/
+
+#menu_find::Before,
+#context-searchselect::Before,
+#context-searchselect-private::Before {
+
+	content: url("../MipImages/FF/Search-glass-2.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_findAgain::Before {
+
+	content: url("../MipImages/FF/Search-glass-2.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_find[disabled=true]::Before,
+#menu_findAgain[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_find > label,
+#menu_findAgain > label,
+#context-searchselect > label,
+#context-searchselect-private > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * VIEW MENU
+ *
+ ********************************************************************************/
+
+/* Toolbars *********************************************************************/
+
+menu#viewToolbarsMenu::Before {
+
+	content: url("../MipImages/FF/application-XP-light.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#toggle_toolbar-menubar:not([checked=true])::Before {
+
+	content: url("../MipImages/FF/bookmarksMenu.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#toggle_PersonalToolbar:not([checked=true])::Before {
+
+	content: url("../MipImages/FF/bookmarksToolbar.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_viewPopup menu#viewToolbarsMenu > label,
+#toggle_toolbar-menubar:not([checked=true]) > label,
+#toggle_PersonalToolbar:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Sidebars *********************************************************************/
+
+#viewSidebarMenuMenu::Before { /* Note that individual Sidebars are in their respective sections (e.g. History) */
+
+	content: url("../MipImages/FF/application.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#viewSidebarMenuMenu > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Bidi Switch Text Direction ***************************************************/
+
+#documentDirection-swap::Before,
+#textfieldDirection-swap::Before,
+#context-bidi-text-direction-toggle::Before,
+#context-bidi-page-direction-toggle::Before {
+
+	content: url("../MipImages/FF/sync-16.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#documentDirection-swap > label,
+#textfieldDirection-swap > label,
+#context-bidi-text-direction-toggle > label,
+#context-bidi-page-direction-toggle > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * HISTORY MENU (And Context)
+ *
+ ********************************************************************************/
+
+/* History (Show All) ***********************************************************/
+
+#menu_showAllHistory::Before,
+#menu_historySidebar:not([checked=true])::Before {
+
+/*	content: url("../MipImages/FF/history-XP.png"); */
+	content: url("../MipImages/FF/history.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_showAllHistory > label,
+#menu_historySidebar:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* History Clear Recent / Forget Site *******************************************/
+
+#sanitizeItem::Before {
+
+	content: url("../MipImages/FF/broom.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#placesContext_deleteHost::Before,
+menuitem.downloadRemoveFromHistoryMenuItem::Before {
+
+	content: url("../MipImages/FF/broom.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#sanitizeItem > label,
+#placesContext_deleteHost > label,
+menuitem.downloadRemoveFromHistoryMenuItem > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* History Recently Closed Windows **********************************************/
+
+#historyUndoWindowMenu::Before {
+
+	content: url("../MipImages/FF/aboutSessionRestore-window-icon.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#historyUndoWindowMenu[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#historyUndoWindowMenu > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * BOOKMARKS
+ *
+ ********************************************************************************/
+
+/* Bookmarks Show All/Sidebar ***************************************************/
+
+#bookmarksShowAll::Before {
+
+	content: url("../MipImages/FF/allBookmarks.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_bookmarksSidebar:not([checked=true])::Before {
+
+	content: url("../MipImages/FF/application.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#bookmarksShowAll > label,
+#menu_bookmarksSidebar:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Bookmarks toolbar Button PANEL
+ * NOTE that this (and containers in +) are the only panels included so far in MIP/CSS */
+
+#BMB_viewBookmarksSidebar .menu-iconic-icon {
+
+	 list-style-image: url("../MipImages/FF/application.png");
+	-moz-image-region: auto;
+	 }
+
+#BMB_bookmarksShowAllTop .menu-iconic-icon {
+
+	 list-style-image: url("../MipImages/FF/allBookmarks.png");
+	-moz-image-region: auto;
+	 }
+
+/* Bookmark This Page Link Tab or Frame + Bookmark-New **************************/
+
+#menu_bookmarkThisPage::Before,
+#context-bookmarkframe::Before,
+#context-bookmarklink::Before,
+#context_bookmarkTab::Before,
+#context_bookmarkSelectedTabs::Before,
+#toolbar-context-bookmarkSelectedTab::Before,
+#toolbar-context-bookmarkSelectedTabs::Before,
+#placesContext_new\:bookmark::Before,
+#placesContext_createBookmark::Before, /* In the history context menu */
+#syncedTabsBookmarkSelected::Before,
+#newbookmark::Before {
+
+/*	content: url("../MipImages/FF/bookmark-3.png"); */
+	content: url("../MipImages/FF/bookmark-2.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_bookmarkThisPage[data-l10n-id="menu-bookmark-edit"]::Before { /* Edit This Bookmark */
+
+	content: url("../MipImages/FF/bookmark-3.png");
+	}
+
+#placesContext_new\:bookmark[disabled=true]::Before,
+#newbookmark[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_bookmarkThisPage > label,
+#context-bookmarkframe > label,
+#context-bookmarklink > label,
+#context_bookmarkTab > label,
+#context_bookmarkSelectedTabs > label,
+#toolbar-context-bookmarkSelectedTab > label,
+#toolbar-context-bookmarkSelectedTabs > label,
+#placesContext_new\:bookmark > label,
+#placesContext_createBookmark > label,
+#syncedTabsBookmarkSelected > label,
+#newbookmark > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Bookmark Folder-New **********************************************************/
+
+#placesContext_new\:folder::Before,
+#newfolder::Before {
+
+	content: url("../MipImages/FF/folder.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#placesContext_new\:folder[disabled=true]::Before,
+#newfolder[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#placesContext_new\:folder > label,
+#newfolder > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * LIBRARY (Toolbar)
+ *
+ ********************************************************************************/
+
+/* Backup/Restore Bookmarks *****************************************************/
+
+#fileRestoreMenu::Before {
+
+	content: url("../MipImages/FF/folder.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#restoreFromFile::Before {
+
+	content: url("../MipImages/FF/folder.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#fileRestorePopup menuitem[oncommand="PlacesOrganizer.onRestoreMenuItemClick(this);"]::Before { /* The File Chooser Saved Backups */
+
+	content: url("../MipImages/FF/bookmark-3.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#fileRestoreMenu > label,
+#restoreFromFile > label,
+#fileRestorePopup menuitem > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * DOWNLOADS (TOOLS MENU AND LIBRARY)
+ *
+ ********************************************************************************/
+
+/* Downloads in Tools Menu ******************************************************/
+
+#menu_openDownloads::Before {
+
+/*	content: url("../MipImages/FF/saveFile-XP.png"); */
+	content: url("../MipImages/FF/saveFile.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_openDownloads > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Downloads Open Containing Folder *********************************************/
+
+menuitem.downloadShowMenuItem::Before { /* [command="downloadsCmd_show"] */
+
+	content: url("../MipImages/FF/folder.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem.downloadShowMenuItem > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * TOOLS MENU
+ *
+ ********************************************************************************/
+
+/* AddOns ***********************************************************************/
+
+#menu_openAddons::Before,
+menuitem[data-l10n-id="page-action-manage-extension"]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-manage-extension"]::Before {
+
+/*	content: url("../MipImages/FF/extensionGeneric-16-XP.png"); */
+	content: url("../MipImages/FF/extensionGeneric-16.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_openAddons > label,
+menuitem[data-l10n-id="page-action-manage-extension"] > label,
+menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Page Information (frame/image/page) ******************************************/
+
+#menu_pageInfo::Before,
+#context-viewinfo::Before,
+#context-viewframeinfo::Before,
+#context-viewimageinfo::Before,
+#context-viewimagedesc::Before {
+
+	content: url("../MipImages/FF/information-16.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_pageInfo > label,
+#context-viewinfo > label,
+#context-viewframeinfo > label,
+#context-viewimageinfo > label,
+#context-viewimagedesc > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Options **********************************************************************/
+
+#menu_preferences::Before,
+#blockedPopupOptions menuitem[oncommand="gPopupBlockerObserver.editPopupSettings();"]::Before {
+
+/*	content: url("../MipImages/FF/settings.png"); */
+	content: url("../MipImages/FF/options.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_preferences > label,
+#blockedPopupOptions menuitem[oncommand="gPopupBlockerObserver.editPopupSettings();"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * SYNC / DEVICES
+ *
+ ********************************************************************************/
+
+/* Sync Setup *******************************************************************/
+
+#sync-setup::Before,
+#sync-unverifieditem::Before,
+#sync-reauthitem::Before {
+
+/*	content: url("../MipImages/FF/profileicon-XP.png"); */
+	content: url("../MipImages/FF/profileicon.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#sync-setup > label,
+#sync-unverifieditem > label,
+#sync-reauthitem > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Sync Now *********************************************************************/
+
+#sync-enable::Before,
+#sync-syncnowitem::Before,
+#syncedTabsRefresh::Before,
+#syncedTabsRefreshFilter::Before,
+#sync-tabs-menuitem::Before,
+#menu_tabsSidebar:not([checked=true])::Before {
+
+	content: url("../MipImages/FF/sync-16.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#sync-enable::Before {
+
+	filter: grayscale(100%);
+	}
+
+#sync-enable > label,
+#sync-syncnowitem > label,
+#syncedTabsRefresh > label,
+#syncedTabsRefreshFilter > label,
+#sync-tabs-menuitem > label,
+#menu_tabsSidebar:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ * % TEMPORARY FIX FOR MISSING LABEL FOR THIS SYNC-TAB-SIDEBAR-TEXTBOX CONTEXT MENU ITEM %
+ * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+#syncedTabsRefreshFilter > label { display: none !important; }
+
+#syncedTabsRefreshFilter::After {
+
+	content: "Sync Now";
+	margin-inline-start: -16px;
+	padding-inline-end: 2px;
+	}
+
+/********************************************************************************
+ *
+ * DEV TOOLS / WEB DEVELOPER
+ *
+ ********************************************************************************/
+
+/* Web Developer Tools Menu *****************************************************/
+
+#webDeveloperMenu::Before {
+
+	content: url("../MipImages/FF/tools-grey.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Get More Tools ***************************************************************/
+
+#getMoreDevtools::Before {
+
+	content: url("../MipImages/FF/tools-grey.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Toggle Tools *****************************************************************/
+
+#menu_devToolbox:not([checked=true])::Before {
+
+	content: url("../MipImages/FF/switch.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#webDeveloperMenu > label,
+#getMoreDevtools > label,
+#menu_devToolbox:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Dom Inspector ****************************************************************/
+
+#menuitem_inspector::Before {
+
+	content: url("../MipImages/FF/tool-inspector.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Web Console ******************************************************************/
+
+#menuitem_webconsole::Before {
+
+	content: url("../MipImages/FF/tool-webconsole.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Debug ************************************************************************/
+
+#menuitem_jsdebugger::Before {
+
+	content: url("../MipImages/FF/tool-debugger.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Network Monitor **************************************************************/
+
+#menuitem_netmonitor::Before {
+
+	content: url("../MipImages/FF/tool-network.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Style Editor *****************************************************************/
+
+#menuitem_styleeditor::Before {
+
+	content: url("../MipImages/FF/tool-styleeditor.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Performance Profiler *********************************************************/
+
+#menuitem_performance::Before {
+
+	content: url("../MipImages/FF/tool-profiler.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Remote Debugging *************************************************************/
+
+#menu_devtools_remotedebugging::Before {
+
+/*	content: url("../MipImages/FF/remote-XP.png"); */
+	content: url("../MipImages/FF/remote.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	filter: grayscale(100%);
+	}
+
+/* Toolbox'es *******************************************************************/
+
+#menu_browserToolbox::Before {
+
+	content: url("../MipImages/FF/tilt-grey.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_browserContentToolbox::Before {
+
+	content: url("../MipImages/FF/tilt-grey.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Error Console ****************************************************************/
+
+#menu_browserConsole::Before {
+
+	content: url("../MipImages/FF/commandline.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Responsive Design ************************************************************/
+
+#menu_responsiveUI:not([checked=true])::Before {
+
+	content: url("../MipImages/FF/tool-responsivemode.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Labels ***********************************************************************/
+
+#menuitem_inspector > label,
+#menuitem_webconsole > label,
+#menu_browserConsole > label,
+#menuitem_jsdebugger > label,
+#menuitem_netmonitor > label,
+#menuitem_styleeditor > label,
+#menuitem_performance > label,
+#menu_devtools_remotedebugging > label,
+#menu_browserToolbox > label,
+#menu_browserContentToolbox > label,
+#menu_responsiveUI:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * HELP MENU
+ *
+ ********************************************************************************/
+
+/* Firefox Help *****************************************************************/
+
+#menu_openHelp::Before,
+#helpPolicySupport::Before {
+
+	content: url("../MipImages/FF/question-16.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_openHelp > label,
+#helpPolicySupport > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Troubleshooting Information **************************************************/
+
+#troubleShooting::Before {
+
+	content: url("../MipImages/FF/information-16.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#troubleShooting > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Submit Feedback **************************************************************/
+
+#feedbackPage::Before {
+
+	content: url("../MipImages/FF/alwaysAsk-XP-lower.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#feedbackPage > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Report Phishing Website/Addon ************************************************/
+
+#menu_HelpPopup_reportPhishingtoolmenu::Before,
+menuitem[data-l10n-id="toolbar-context-menu-report-extension"]::Before {
+
+/*	content: url("../MipImages/FF/warning-16-XP.png"); */
+	content: url("../MipImages/FF/warning-16.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_HelpPopup_reportPhishingtoolmenu[disabled=true]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-report-extension"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_HelpPopup_reportPhishingtoolmenu > label,
+menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* About Firefox ****************************************************************/
+
+#aboutName::Before {
+
+	content: url("../MipImages/FF/FIREFOX-icon16.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#aboutName > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * PAGE CONTEXT MENU
+ *
+ ********************************************************************************/
+
+/* Check Spelling Select Language ***********************************************/
+
+#spell-dictionaries::Before,
+#spell-add-dictionaries-main::Before {
+
+	content: url("../MipImages/FF/dictionaryGeneric-16.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#spell-add-dictionaries::Before {
+
+	content: url("../MipImages/FF/dictionaryGeneric-16.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#spell-dictionaries > label,
+#spell-add-dictionaries-main > label,
+#spell-add-dictionaries > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Inspect Element **************************************************************/
+
+#context-inspect::Before {
+
+/*	content: url("../MipImages/FF/inspect-blue.png"); */
+	content: url("../MipImages/FF/inspect-contrast.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-inspect > label {
+
+	margin-inline-start: -20px !important;
+	}
+	
+/********************************************************************************
+ *
+ * LOGINS/PASSWORDS (Field Context Menu)
+ * These are unfortunately Language-Dependent
+ *
+ ********************************************************************************/
+
+#fill-login::Before,
+#fill-login > #fill-login-popup > menuitem.context-login-item::Before {
+
+/*	content: url("../MipImages/FF/profileicon-XP.png"); */
+	content: url("../MipImages/FF/profileicon.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#fill-login[label="Fill Password"]::Before,
+#fill-login[label="Fill Password"] > #fill-login-popup > menuitem.context-login-item::Before {
+
+	content: url("../MipImages/FF/key.png");
+	}
+
+#fill-login-generated-password::Before { /* Use Generated Password */
+
+	content: url("../MipImages/FF/key-16.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#fill-login > label,
+#fill-login-generated-password > label,
+#fill-login > #fill-login-popup > menuitem.context-login-item > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+}

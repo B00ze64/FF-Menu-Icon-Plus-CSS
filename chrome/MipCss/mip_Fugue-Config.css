@@ -1,0 +1,225 @@
+/********************************************************************************
+ * Menu Icon Plus CSS v1.0 (MIP/CSS)
+ * Add Icons To Firefox Menus/Context-Menus
+ *
+ * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
+ *   Project Homepage https://github.com/B00ze64/FF-Menu-Icon-Plus-CSS
+ *   Released under Creative Commons Attribution 4.0 License.
+ *   https://creativecommons.org/licenses/by/4.0/
+ *
+ * - The Original MIP Firefox Extension (c) Justin Rodes http://www.codedawn.com/menu-icons-plus.php
+ *
+ * + The icons come from ->
+ *
+ * - Crystal Project	http://www.everaldo.com/
+ *			https://commons.wikimedia.org/wiki/Category:Crystal_Project
+ *			LGPL
+ *
+ * - Fugue Icons	http://p.yusukekamiyamane.com/
+ *			by Yusuke Kamiyamane,
+ *			Creative Commons Attribution 3.0 License.
+ *
+ * - Oxygen Icons	http://www.oxygen-icons.org/ [use Wayback Machine]
+ *			https://github.com/pasnox/oxygen-icons-png
+ *			https://techbase.kde.org/Projects/Oxygen/Licensing
+ *
+ * - Silk Icons		http://www.famfamfam.com/
+ *			Mark James, Birmingham (UK),
+ *			Creative Commons Attribution 2.5 License.
+ *
+ * - Tango Icons	http://tango-project.org/
+ *			Public Domain
+ *
+ * + Contributors ->
+ *
+ *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
+ *
+ * + NOTES:
+ * - TabSize=8
+ *
+ */
+
+/********************************************************************************
+ * THE OLD ABOUT-CONFIG: FUGUE
+ ********************************************************************************
+ *
+ * This is the old About:Config skinning file for use with userContent.css.
+ * This one uses Fugue icons when they are available - missing icons are taken 
+ * from the other themes.
+ *
+ * This being one of the main themes I have commented-out the icons from other
+ * themes but I've left them here, so you can tweak the css easily to your needs.
+ * Obvious alternate icons are not commented out, so if you use a syntax-
+ * highlighting editor you can quickly spot where some alternatives exist.
+ * But really every commented image is a valid alternative.
+ *
+ */
+
+@-moz-document url("chrome://global/content/config.xhtml") {
+
+#toggleSelected::Before {
+
+/*	content: url("chrome://browser/skin/toggle.svg");
+	content: url("../MipImages/Silk/silk_Bidi.png");
+	content: url("../MipImages/Tango/tango_Sync-bright.png");
+	content: url("../MipImages/Tango/tango_Sync.png");
+	*/
+	content: url("../MipImages/Fugue/fugue_Bidi.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#toggleSelected > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+#copyPref::Before,
+#copyName::Before,
+#copyValue::Before {
+
+/*	content: url("chrome://browser/skin/edit-copy.svg");
+	content: url("../MipImages/FF/copy.png");
+	content: url("../MipImages/Crystal/crystal_Copy.png");
+	content: url("../MipImages/Oxygen/oxygen_Copy.png");
+	content: url("../MipImages/Silk/silk_Copy.png");
+	content: url("../MipImages/Tango/tango_Copy.png");
+	*/
+	content: url("../MipImages/Fugue/fugue_Copy.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#copyPref > label,
+#copyName > label,
+#copyValue > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+#modifySelected::Before {
+
+/*	content: url("../MipImages/Crystal/crystal_TextField.png");
+	content: url("../MipImages/Oxygen/oxygen_TextField.png");
+	content: url("../MipImages/Silk/silk_TextField.png");
+	content: url("../MipImages/Tango/tango_TextField.png");
+	*/
+	content: url("../MipImages/Fugue/fugue_TextField.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#modifySelected > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+#configContext > menu[label="New"]::Before {
+
+/*	content: url("chrome://browser/skin/add.svg");
+	content: url("../MipImages/Crystal/crystal_Plus.png");
+	content: url("../MipImages/Oxygen/oxygen_Plus.png");
+	content: url("../MipImages/Silk/silk_Plus.png");
+	content: url("../MipImages/Tango/tango_Plus.png");
+	*/
+	content: url("../MipImages/Fugue/fugue_Plus.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#configContext > menu[label="New"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+#configString::Before {
+
+	content: url("../MipImages/Fugue/fugue_FileText.png");
+
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	display: block;
+	vertical-align: middle;
+	}
+
+#configInt::Before {
+
+	content: url("../MipImages/Fugue/fugue_FileInteger.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#configBool::Before {
+
+	content: url("../MipImages/Fugue/fugue_FileCode.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#configString > label,
+#configInt > label,
+#configBool > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+#resetSelected::Before {
+
+/*	content: url("../MipImages/Crystal/crystal_Restart.png");
+	content: url("../MipImages/Oxygen/oxygen_Restart.png");
+	content: url("../MipImages/Silk/silk_Restart.png");
+	content: url("../MipImages/Tango/tango_Restart.png");
+	*/
+	content: url("../MipImages/Fugue/fugue_Restart.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#resetSelected[disabled=true]::Before {
+
+	opacity: .4;
+	}
+
+#resetSelected > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+}

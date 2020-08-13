@@ -1,0 +1,158 @@
+/********************************************************************************
+ * Menu Icon Plus CSS v1.0 (MIP/CSS)
+ * Add Icons To Firefox Menus/Context-Menus
+ *
+ * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
+ *   Project Homepage https://github.com/B00ze64/FF-Menu-Icon-Plus-CSS
+ *   Released under Creative Commons Attribution 4.0 License.
+ *   https://creativecommons.org/licenses/by/4.0/
+ *
+ * - The Original MIP Firefox Extension (c) Justin Rodes http://www.codedawn.com/menu-icons-plus.php
+ *
+ * + The icons come from ->
+ *
+ * - Crystal Project	http://www.everaldo.com/
+ *			https://commons.wikimedia.org/wiki/Category:Crystal_Project
+ *			LGPL
+ *
+ * - Fugue Icons	http://p.yusukekamiyamane.com/
+ *			by Yusuke Kamiyamane,
+ *			Creative Commons Attribution 3.0 License.
+ *
+ * - Oxygen Icons	http://www.oxygen-icons.org/ [use Wayback Machine]
+ *			https://github.com/pasnox/oxygen-icons-png
+ *			https://techbase.kde.org/Projects/Oxygen/Licensing
+ *
+ * - Silk Icons		http://www.famfamfam.com/
+ *			Mark James, Birmingham (UK),
+ *			Creative Commons Attribution 2.5 License.
+ *
+ * - Tango Icons	http://tango-project.org/
+ *			Public Domain
+ *
+ * + Contributors ->
+ *
+ *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
+ *
+ * + NOTES:
+ * - TabSize=8
+ *
+ */
+
+/********************************************************************************
+ * OVERRIDE FILE: CUT/COPY/PASTE FUGUE
+ ********************************************************************************
+ *
+ * YOU MUST LOAD THIS AFTER LOADING ONE OF THE THEME FILES.
+ * You can use this file in both userChrome and userContent.css.
+ * This is the override file for Cut/Copy/Paste/Delete, using Fugue icons.
+ *
+ */
+
+@-moz-document	url("chrome://browser/content/browser.xhtml"),
+		url("chrome://browser/content/places/places.xhtml"),
+		url("chrome://browser/content/places/historySidebar.xhtml"),
+		url("chrome://browser/content/places/bookmarksSidebar.xhtml"),
+		url("chrome://browser/content/syncedtabs/sidebar.xhtml"),
+		url("chrome://global/content/config.xhtml") {
+
+/********************************************************************************
+ *
+ * EDIT MENU (and Everywhere)
+ *
+ ********************************************************************************/
+
+/* Cut **************************************************************************/
+
+#menu_cut::Before,
+#context-cut::Before,
+#orgCut::Before,
+#placesContext_cut::Before,
+menuitem[cmd="cmd_cut"]::Before,
+#textbox-contextmenu menuitem[command="cmd_cut"]::Before {
+
+	content: url("../MipImages/Fugue/fugue_Cut.png");
+	}
+
+/* Copy *************************************************************************/
+
+#menu_copy::Before,
+#context-copy::Before,
+#context-copyimage-contents::Before,
+#orgCopy::Before,
+#placesContext_copy::Before,
+menuitem[cmd="cmd_copy"]::Before,
+#textbox-contextmenu menuitem[command="cmd_copy"]::Before {
+
+	content: url("../MipImages/Fugue/fugue_Copy.png");
+	}
+
+/* Copy Link ********************************************************************/
+
+#context-copyaudiourl::Before,
+#context-copyemail::Before,
+#context-copyimage::Before,
+#context-copylink::Before,
+#context-copyvideourl::Before,
+#downloadsContextMenu menuitem[command="cmd_copy"]::Before,
+menuitem[command="downloadsCmd_copyLocation"]::Before,
+#syncedTabsCopySelected::Before {
+
+	content: url("../MipImages/Fugue/fugue_CopyLink.png");
+	}
+
+/* Paste ************************************************************************/
+
+#menu_paste::Before,
+#context-paste::Before,
+#orgPaste::Before,
+#placesContext_paste::Before,
+menuitem[cmd="cmd_paste"]::Before,
+#textbox-contextmenu menuitem[command="cmd_paste"]::Before {
+
+	content: url("../MipImages/Fugue/fugue_Paste.png");
+	}
+
+/* Paste and Go *****************************************************************/
+
+#paste-and-go::Before,
+menuitem.searchbar-paste-and-search::Before {
+
+	content: url("../MipImages/Fugue/fugue_PasteAndGo.png");
+	}
+
+/* Delete ***********************************************************************/
+
+#menu_delete::Before,
+#context-delete::Before,
+#orgDelete::Before,
+#placesContext_delete::Before,
+#placesContext_delete_history::Before,
+menuitem[cmd="cmd_delete"]::Before,
+#textbox-contextmenu menuitem[command="cmd_delete"]::Before {
+
+	content: url("../MipImages/Fugue/fugue_Recycle.png"); /* Alternate */
+	content: url("../MipImages/Fugue/fugue_Delete.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/********************************************************************************
+ *
+ * THE OLD ABOUT CONFIG
+ *
+ ********************************************************************************/
+
+#copyPref::Before,
+#copyName::Before,
+#copyValue::Before {
+
+	content: url("../MipImages/Fugue/fugue_Copy.png");
+	}
+
+}

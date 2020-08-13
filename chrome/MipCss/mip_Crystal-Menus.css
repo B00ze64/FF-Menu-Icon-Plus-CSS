@@ -1,0 +1,4988 @@
+/********************************************************************************
+ * Menu Icon Plus CSS v1.0 (MIP/CSS)
+ * Add Icons To Firefox Menus/Context-Menus
+ *
+ * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
+ *   Project Homepage https://github.com/B00ze64/FF-Menu-Icon-Plus-CSS
+ *   Released under Creative Commons Attribution 4.0 License.
+ *   https://creativecommons.org/licenses/by/4.0/
+ *
+ * - The Original MIP Firefox Extension (c) Justin Rodes http://www.codedawn.com/menu-icons-plus.php
+ *
+ * + The icons come from ->
+ *
+ * - Crystal Project	http://www.everaldo.com/
+ *			https://commons.wikimedia.org/wiki/Category:Crystal_Project
+ *			LGPL
+ *
+ * - Fugue Icons	http://p.yusukekamiyamane.com/
+ *			by Yusuke Kamiyamane,
+ *			Creative Commons Attribution 3.0 License.
+ *
+ * - Oxygen Icons	http://www.oxygen-icons.org/ [use Wayback Machine]
+ *			https://github.com/pasnox/oxygen-icons-png
+ *			https://techbase.kde.org/Projects/Oxygen/Licensing
+ *
+ * - Silk Icons		http://www.famfamfam.com/
+ *			Mark James, Birmingham (UK),
+ *			Creative Commons Attribution 2.5 License.
+ *
+ * - Tango Icons	http://tango-project.org/
+ *			Public Domain
+ *
+ * + Contributors ->
+ *
+ *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
+ *
+ * + NOTES:
+ * - TabSize=8
+ *
+ */
+
+/********************************************************************************
+ * STANDARD MENUS: CRYSTAL PROJECT
+ ********************************************************************************
+ *
+ * This is the main skinning file for the Firefox menus. This one uses icons
+ * from the Crystal Project when they are available - missing icons are taken
+ * from the other themes.
+ *
+ * This being one of the main themes I have commented-out the icons from other
+ * themes but I've left them here, so you can tweak the css easily to your needs.
+ * Obvious alternate icons are not commented out, so if you use a syntax-
+ * highlighting editor you can quickly spot where some alternatives exist.
+ * But really every commented image is a valid alternative.
+ *
+ */
+
+@-moz-document	url("chrome://browser/content/browser.xhtml"),
+		url("chrome://browser/content/places/places.xhtml"),
+		url("chrome://browser/content/places/historySidebar.xhtml"),
+		url("chrome://browser/content/places/bookmarksSidebar.xhtml"),
+		url("chrome://browser/content/syncedtabs/sidebar.xhtml") {
+
+/********************************************************************************
+ *
+ * FILE MENU
+ *
+ ********************************************************************************/
+
+/* New Window (Open In) *********************************************************/
+
+#menu_newNavigator::Before,
+#context-openlink::Before,
+#context-openframe::Before,
+#context_openTabInWindow::Before,
+#placesContext_open\:newwindow::Before,
+#historyUndoWindowPopup menuitem.restoreallitem::Before,
+#syncedTabsOpenSelectedInWindow::Before,
+#_testpilot-containers-menuitem-_move-to-new-window-container::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_WindowNew.png");
+	content: url("../MipImages/Oxygen/oxygen_WindowNew.png");
+	content: url("../MipImages/Silk/silk_WindowNew.png");
+	content: url("../MipImages/Tango/tango_WindowNew.png");
+	content: url("../MipImages/Fugue/fugue_WindowNew(crystal).png");
+	*/
+	content: url("../MipImages/Crystal/crystal_WindowNew.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_newNavigator > label,
+#context-openlink > label,
+#context-openframe > label,
+#context_openTabInWindow > label,
+#placesContext_open\:newwindow > label,
+#historyUndoWindowPopup menuitem.restoreallitem > label,
+#syncedTabsOpenSelectedInWindow > label,
+#_testpilot-containers-menuitem-_move-to-new-window-container > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Private Browsing *************************************************************/
+
+#menu_newPrivateWindow::Before,
+#context-openlinkprivate::Before,
+#placesContext_open\:newprivatewindow::Before,
+#syncedTabsOpenSelectedInPrivateWindow::Before {
+
+/*	content: url("chrome://browser/skin/privateBrowsing.svg");
+	content: url("chrome://browser/skin/privatebrowsing/favicon.svg"); /* purple */
+/*	content: url("../MipImages/FF/privacy-16.png");
+	content: url("../MipImages/Crystal/crystal_PrivateBrowsing-darker.png");
+	content: url("../MipImages/Fugue/fugue_PrivateBrowsing.png");
+	content: url("../MipImages/Oxygen/oxygen_UserSingle.png");
+	content: url("../MipImages/Silk/silk_PrivateBrowsing.png");
+	content: url("../MipImages/Tango/tango_PrivateBrowsing.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_PrivateBrowsing.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_newPrivateWindow > label,
+#context-openlinkprivate > label,
+#placesContext_open\:newprivatewindow > label,
+#syncedTabsOpenSelectedInPrivateWindow > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Location-Open ****************************************************************/
+
+#menu_openLocation::Before,
+#placesContext_open::Before,
+#context-openlinkincurrent::Before,
+#syncedTabsOpenSelected::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_OpenLocation.png");
+	content: url("../MipImages/Oxygen/oxygen_OpenLocation.png");
+	content: url("../MipImages/Silk/silk_OpenLocation.png");
+	content: url("../MipImages/Tango/tango_OpenLocation.png");
+	content: url("../MipImages/Fugue/fugue_Globe.png");
+	content: url("../MipImages/Oxygen/oxygen_Globe.png");
+	content: url("../MipImages/Silk/silk_Globe.png");
+	content: url("../MipImages/Tango/tango_Globe.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_OpenLocation.png");
+	content: url("../MipImages/Crystal/crystal_Globe.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_openLocation > label,
+#placesContext_open > label,
+#context-openlinkincurrent > label,
+#syncedTabsOpenSelected > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* File-Open ********************************************************************/
+
+#menu_openFile::Before {
+
+/*	content: url("chrome://browser/skin/open.svg");
+	content: url("../MipImages/FF/folder.png");
+	content: url("../MipImages/Fugue/fugue_FileOpen.png");
+	content: url("../MipImages/Oxygen/oxygen_FileOpen.png");
+	content: url("../MipImages/Silk/silk_FileOpen.png");
+	content: url("../MipImages/Tango/tango_FileOpen.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_FileOpen.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_openFile > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Close Window *****************************************************************/
+
+#menu_closeWindow::Before,
+#orgClose::Before {
+
+/*	content: url("../MipImages/Silk/silk_WindowClose.png");
+	content: url("../MipImages/Tango/tango_WindowClose.png");
+	content: url("../MipImages/Fugue/fugue_ClearAll.png");
+	content: url("../MipImages/Oxygen/oxygen_ClearAll.png");
+	content: url("../MipImages/Silk/silk_ClearAll.png");
+	content: url("../MipImages/Tango/tango_ClearAll.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_ClearAll.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_closeWindow > label,
+#orgClose > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Email ************************************************************************/
+
+#menu_sendLink::Before,
+#context-sendimage::Before,
+#context-sendvideo::Before,
+#context-sendaudio::Before {
+
+/*	content: url("chrome://browser/skin/mail.svg");
+	content: url("../MipImages/FF/mail-1.png");
+	content: url("../MipImages/FF/mail-2.png");
+	content: url("../MipImages/Oxygen/oxygen_Mail.png");
+	content: url("../MipImages/Silk/silk_Mail.png");
+	content: url("../MipImages/Tango/tango_Mail.png");
+	content: url("../MipImages/Fugue/fugue_Mail.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Mail.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_sendLink > label,
+#context-sendimage > label,
+#context-sendvideo > label,
+#context-sendaudio > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Print Page Setup *************************************************************/
+
+#menu_printSetup::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_PrintPageSetup.png");
+	content: url("../MipImages/Oxygen/oxygen_PrintPageSetup.png");
+	content: url("../MipImages/Silk/silk_PrintPageSetup.png");
+	content: url("../MipImages/Tango/tango_PrintPageSetup.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_PrintPageSetup.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Print Preview ****************************************************************/
+
+#menu_printPreview::Before {
+
+/*	content: url("chrome://devtools/skin/images/rules-view-print-simulation.svg");
+	content: url("../MipImages/Fugue/fugue_PrintPreview.png");
+	content: url("../MipImages/Oxygen/oxygen_PrintPreview.png");
+	content: url("../MipImages/Silk/silk_PrintPreview.png");
+	content: url("../MipImages/Tango/tango_PrintPreview.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_PrintPreview.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Print ************************************************************************/
+
+#menu_print::Before,
+#context-printframe::Before {
+
+/*	content: url("chrome://browser/skin/print.svg");
+	content: url("../MipImages/FF/print.png");
+	content: url("../MipImages/Fugue/fugue_Print.png");
+	content: url("../MipImages/Oxygen/oxygen_Print.png");
+	content: url("../MipImages/Silk/silk_Print.png");
+	content: url("../MipImages/Tango/tango_Print.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Print.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_printSetup > label,
+#menu_printPreview > label,
+#menu_print > label,
+#context-printframe > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Import from another browser **************************************************/
+
+#menu_importFromAnotherBrowser::Before,
+#help_importFromAnotherBrowser::Before,
+#browserImport::Before {
+
+/*	content: url("chrome://devtools/skin/images/import.svg");
+	content: url("../MipImages/Fugue/fugue_ImportWindow.png");
+	content: url("../MipImages/Fugue/fugue_ImportWindow-blue.png");
+	content: url("../MipImages/Oxygen/oxygen_ImportWindow.png");
+	content: url("../MipImages/Silk/silk_ImportWindow.png");
+	content: url("../MipImages/Tango/tango_ImportWindow.png");
+	content: url("../MipImages/Fugue/fugue_Step.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_ImportWindow.png");
+	content: url("../MipImages/Crystal/crystal_ImportWindow-green.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_importFromAnotherBrowser > label,
+#help_importFromAnotherBrowser > label,
+#browserImport > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Offline (Work Offline) *******************************************************/
+
+#goOfflineMenuitem:not([checked=true])::Before {
+
+/*	content: url("../MipImages/Crystal/crystal_Offline.png");
+	content: url("../MipImages/Fugue/fugue_Offline.png");
+	content: url("../MipImages/Fugue/fugue_Plug.png");
+	content: url("../MipImages/Oxygen/oxygen_Offline.png");
+	content: url("../MipImages/Oxygen/oxygen_Offline-darker.png");
+	content: url("../MipImages/Silk/silk_Offline.png");
+	content: url("../MipImages/Tango/tango_Offline.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Offline-darker.png"); /* Darker prongs */
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#goOfflineMenuitem:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Exit/Quit/Shutdown ***********************************************************/
+
+#menu_FileQuitItem::Before {
+
+/*	content: url("chrome://browser/skin/quit.svg");
+	content: url("../MipImages/FF/quit.png");
+	content: url("../MipImages/Fugue/fugue_Quit.png");
+	content: url("../MipImages/Oxygen/oxygen_Quit.png");
+	content: url("../MipImages/Silk/silk_Quit.png");
+	content: url("../MipImages/Tango/tango_Quit.png");
+	content: url("../MipImages/Fugue/fugue_PowerDown.png");
+	content: url("../MipImages/Oxygen/oxygen_PowerDown-1.png");
+	content: url("../MipImages/Oxygen/oxygen_PowerDown-2.png");
+	content: url("../MipImages/Tango/tango_PowerDown.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_PowerDown.png");
+	content: url("../MipImages/Crystal/crystal_Quit.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_FileQuitItem > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * EDIT MENU (and Everywhere)
+ *
+ ********************************************************************************/
+
+/* Undo *************************************************************************/
+
+#menu_undo::Before,
+#orgUndo::Before,
+#context-undo::Before,
+#context_undoCloseTab::Before,
+#toolbar-context-undoCloseTab::Before,
+#spell-undo-add-to-dictionary::Before,
+menuitem[cmd="cmd_undo"]::Before,
+#textbox-contextmenu menuitem[command="cmd_undo"]::Before {
+
+/*	content: url("chrome://browser/skin/undo.svg");
+	content: url("../MipImages/Fugue/fugue_Undo.png");
+	content: url("../MipImages/Oxygen/oxygen_Undo.png");
+	content: url("../MipImages/Silk/silk_Undo.png");
+	content: url("../MipImages/Tango/tango_Undo.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Undo.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_undo[disabled=true]::Before,
+#orgUndo[disabled=true]::Before,
+#context-undo[disabled=true]::Before,
+#context_undoCloseTab[disabled=true]::Before,
+#toolbar-context-undoCloseTab[disabled=true]::Before,
+#spell-undo-add-to-dictionary[disabled=true]::Before,
+menuitem[cmd="cmd_undo"][disabled=true]::Before,
+#textbox-contextmenu menuitem[command="cmd_undo"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_undo > label,
+#orgUndo > label,
+#context-undo > label,
+#context_undoCloseTab > label,
+#toolbar-context-undoCloseTab > label,
+#spell-undo-add-to-dictionary > label,
+menuitem[cmd="cmd_undo"] > label,
+#textbox-contextmenu menuitem[command="cmd_undo"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Redo *************************************************************************/
+
+#menu_redo::Before,
+#orgRedo::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_Redo.png");
+	content: url("../MipImages/Oxygen/oxygen_Redo.png");
+	content: url("../MipImages/Silk/silk_Redo.png");
+	content: url("../MipImages/Tango/tango_Redo.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Redo.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_redo[disabled=true]::Before,
+#orgRedo[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_redo > label,
+#orgRedo > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Cut **************************************************************************/
+
+#menu_cut::Before,
+#context-cut::Before,
+#orgCut::Before,
+#placesContext_cut::Before,
+menuitem[cmd="cmd_cut"]::Before,
+#textbox-contextmenu menuitem[command="cmd_cut"]::Before {
+
+/*	content: url("chrome://browser/skin/edit-cut.svg");
+	content: url("../MipImages/FF/cut.png");
+	content: url("../MipImages/Fugue/fugue_Cut.png");
+	content: url("../MipImages/Oxygen/oxygen_Cut.png");
+	content: url("../MipImages/Silk/silk_Cut.png");
+	content: url("../MipImages/Tango/tango_Cut.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Cut.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_cut[disabled=true]::Before,
+#context-cut[disabled=true]::Before,
+#orgCut[disabled=true]::Before,
+#placesContext_cut[disabled=true]::Before,
+menuitem[cmd="cmd_cut"][disabled=true]::Before,
+#textbox-contextmenu menuitem[command="cmd_cut"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_cut > label,
+#context-cut > label,
+#orgCut > label,
+#placesContext_cut > label,
+menuitem[cmd="cmd_cut"] > label,
+#textbox-contextmenu menuitem[command="cmd_cut"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Copy *************************************************************************/
+
+#menu_copy::Before,
+#context-copy::Before,
+#context-copyimage-contents::Before,
+#orgCopy::Before,
+#placesContext_copy::Before,
+menuitem[cmd="cmd_copy"]::Before,
+#textbox-contextmenu menuitem[command="cmd_copy"]::Before {
+
+/*	content: url("chrome://browser/skin/edit-copy.svg");
+	content: url("../MipImages/FF/copy.png");
+	content: url("../MipImages/Fugue/fugue_Copy.png");
+	content: url("../MipImages/Oxygen/oxygen_Copy.png");
+	content: url("../MipImages/Silk/silk_Copy.png");
+	content: url("../MipImages/Tango/tango_Copy.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Copy.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Copy Link ********************************************************************/
+
+#context-copyaudiourl::Before,
+#context-copyemail::Before,
+#context-copyimage::Before,
+#context-copylink::Before,
+#context-copyvideourl::Before,
+#downloadsContextMenu menuitem[command="cmd_copy"]::Before,
+menuitem[command="downloadsCmd_copyLocation"]::Before,
+#syncedTabsCopySelected::Before {
+
+/*	content: url("chrome://browser/skin/link.svg");
+	content: url("../MipImages/FF/copy.png");
+	content: url("../MipImages/Fugue/fugue_CopyLink.png");
+	content: url("../MipImages/Oxygen/oxygen_Copy.png");
+	content: url("../MipImages/Silk/silk_CopyLink.png");
+	content: url("../MipImages/Tango/tango_Copy.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_CopyLink.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_copy[disabled=true]::Before,
+#orgCopy[disabled=true]::Before,
+#placesContext_copy[disabled=true]::Before,
+menuitem[cmd="cmd_copy"][disabled=true]::Before,
+#textbox-contextmenu menuitem[command="cmd_copy"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_copy > label,
+#context-copy > label,
+#context-copyaudiourl > label,
+#context-copyemail > label,
+#context-copyimage > label,
+#context-copyimage-contents > label,
+#context-copylink > label,
+#context-copyvideourl > label,
+#orgCopy > label,
+#placesContext_copy > label,
+menuitem[cmd="cmd_copy"] > label,
+#textbox-contextmenu menuitem[command="cmd_copy"] > label,
+#downloadsContextMenu menuitem[command="cmd_copy"] > label,
+menuitem[command="downloadsCmd_copyLocation"] > label,
+#syncedTabsCopySelected > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Paste ************************************************************************/
+
+#menu_paste::Before,
+#context-paste::Before,
+#orgPaste::Before,
+#placesContext_paste::Before,
+menuitem[cmd="cmd_paste"]::Before,
+#textbox-contextmenu menuitem[command="cmd_paste"]::Before {
+
+/*	content: url("chrome://browser/skin/edit-paste.svg");
+	content: url("../MipImages/FF/paste.png");
+	content: url("../MipImages/Fugue/fugue_Paste.png");
+	content: url("../MipImages/Oxygen/oxygen_Paste.png");
+	content: url("../MipImages/Silk/silk_Paste.png");
+	content: url("../MipImages/Tango/tango_Paste.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Paste.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_paste[disabled=true]::Before,
+#context-paste[disabled=true]::Before,
+#orgPaste[disabled=true]::Before,
+#placesContext_paste[disabled=true]::Before,
+menuitem[cmd="cmd_paste"][disabled=true]::Before,
+#textbox-contextmenu menuitem[command="cmd_paste"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_paste > label,
+#context-paste > label,
+#orgPaste > label,
+#placesContext_paste > label,
+menuitem[cmd="cmd_paste"] > label,
+#textbox-contextmenu menuitem[command="cmd_paste"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Paste and Go *****************************************************************/
+
+#paste-and-go::Before,
+menuitem.searchbar-paste-and-search::Before {
+
+/*	content: url("chrome://browser/skin/forward.svg");
+	content: url("../MipImages/FF/paste.png");
+	content: url("../MipImages/Fugue/fugue_PasteAndGo.png");
+	content: url("../MipImages/Fugue/fugue_Go.png");
+	content: url("../MipImages/Oxygen/oxygen_Go.png");
+	content: url("../MipImages/Silk/silk_GoTo.png");
+	content: url("../MipImages/Tango/tango_Go.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Go.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#paste-and-go[disabled=true]::Before,
+menuitem.searchbar-paste-and-search[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#paste-and-go > label,
+menuitem.searchbar-paste-and-search > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Delete ***********************************************************************/
+
+#menu_delete::Before,
+#context-delete::Before,
+#orgDelete::Before,
+#placesContext_delete::Before,
+#placesContext_delete_history::Before,
+menuitem[cmd="cmd_delete"]::Before,
+#textbox-contextmenu menuitem[command="cmd_delete"]::Before {
+
+/*	content: url("chrome://devtools/skin/images/clear.svg");
+	content: url("../MipImages/Fugue/fugue_Delete.png");
+	content: url("../MipImages/Oxygen/oxygen_Delete.png");
+	content: url("../MipImages/Silk/silk_Delete.png");
+	content: url("../MipImages/Tango/tango_Delete.png");
+	content: url("../MipImages/Fugue/fugue_Recycle.png");
+	content: url("../MipImages/Oxygen/oxygen_Recycle.png");
+	content: url("../MipImages/Silk/silk_Recycle.png");
+	content: url("../MipImages/Tango/tango_Recycle.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Recycle.png");
+	content: url("../MipImages/Crystal/crystal_Delete.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_delete[disabled=true]::Before,
+#context-delete[disabled=true]::Before,
+#orgDelete[disabled=true]::Before,
+#placesContext_delete[disabled=true]::Before,
+#placesContext_delete_history[disabled=true]::Before,
+menuitem[cmd="cmd_delete"][disabled=true]::Before,
+#textbox-contextmenu menuitem[command="cmd_delete"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_delete > label,
+#context-delete > label,
+#orgDelete > label,
+#placesContext_delete > label,
+#placesContext_delete_history > label,
+menuitem[cmd="cmd_delete"] > label,
+#textbox-contextmenu menuitem[command="cmd_delete"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Select All - Must be BEFORE TABS *********************************************/
+
+#menu_selectAll::Before,
+#menu_showAllTabs::Before,
+#menu_bookmarkAllTabs::Before,
+#orgSelectAll::Before,
+#context-selectall::Before,
+#context_selectAllTabs::Before,
+#toolbar-context-selectAllTabs::Before,
+menuitem[cmd="cmd_selectAll"]::Before,
+#textbox-contextmenu menuitem[command="cmd_selectAll"]::Before {
+
+/*	content: url("../MipImages/Oxygen/oxygen_SelectAll.png");
+	content: url("../MipImages/Tango/tango_SelectAll.png");
+	content: url("../MipImages/Fugue/fugue_SelectAll.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_SelectAll.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_selectAll[disabled=true]::Before,
+#orgSelectAll[disabled=true]::Before,
+#context-selectall[disabled=true]::Before,
+#context_selectAllTabs[disabled=true]::Before,
+#toolbar-context-selectAllTabs[disabled=true]::Before,
+menuitem[cmd="cmd_selectAll"][disabled=true]::Before,
+#textbox-contextmenu menuitem[command="cmd_selectAll"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_selectAll > label,
+#menu_showAllTabs > label,
+#menu_bookmarkAllTabs > label,
+#orgSelectAll > label,
+#context-selectall > label,
+#context_selectAllTabs > label,
+#toolbar-context-selectAllTabs > label,
+menuitem[cmd="cmd_selectAll"] > label,
+#textbox-contextmenu menuitem[command="cmd_selectAll"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Find (In this page...) *******************************************************/
+
+#menu_find::Before,
+#context-searchselect::Before,
+#context-searchselect-private::Before {
+
+/*	content: url("chrome://browser/skin/search-glass.svg");
+	content: url("../MipImages/FF/Search-glass-2.png");
+	content: url("../MipImages/Fugue/fugue_Find.png");
+	content: url("../MipImages/Oxygen/oxygen_Find.png");
+	content: url("../MipImages/Silk/silk_Find.png");
+	content: url("../MipImages/Tango/tango_Find.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Find.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_findAgain::Before {
+
+/*	content: url("chrome://browser/skin/search-glass.svg");
+	content: url("../MipImages/FF/Search-glass-2.png");
+	content: url("../MipImages/Fugue/fugue_FindAgain.png");
+	content: url("../MipImages/Oxygen/oxygen_Find.png");
+	content: url("../MipImages/Silk/silk_FindAgain.png");
+	content: url("../MipImages/Silk/silk_FindAgain(fugue).png");
+	content: url("../MipImages/Tango/tango_Find.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Find.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_find[disabled=true]::Before,
+#menu_findAgain[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_find > label,
+#menu_findAgain > label,
+#context-searchselect > label,
+#context-searchselect-private > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * VIEW MENU
+ *
+ ********************************************************************************/
+
+/* Toolbars *********************************************************************/
+
+menu#viewToolbarsMenu::Before {
+
+	content: url("../MipImages/FF/application-XP-light.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#toggle_toolbar-menubar:not([checked=true])::Before {
+
+	content: url("../MipImages/FF/bookmarksMenu.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#toggle_PersonalToolbar:not([checked=true])::Before {
+
+	content: url("../MipImages/FF/bookmarksToolbar.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_viewPopup menu#viewToolbarsMenu > label,
+#toggle_toolbar-menubar:not([checked=true]) > label,
+#toggle_PersonalToolbar:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Sidebars *********************************************************************/
+
+#viewSidebarMenuMenu::Before { /* Note that individual Sidebars are in their respective sections (e.g. History) */
+
+/*	content: url("chrome://browser/skin/sidebars.svg");
+	content: url("../MipImages/FF/application.png");
+	content: url("../MipImages/FF/toolbarButton-sidebarToggle.png");
+	content: url("../MipImages/Fugue/fugue_Sidebar.png");
+	content: url("../MipImages/Oxygen/oxygen_Sidebar.png");
+	content: url("../MipImages/Silk/silk_Sidebar.png");
+	content: url("../MipImages/Tango/tango_Sidebar.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Sidebar.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#viewSidebarMenuMenu > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Zoom/Zoom-In/Zoom-Out/Zoom-Reset**********************************************/
+
+#viewFullZoomMenu::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_Zoom.png");
+	content: url("../MipImages/Oxygen/oxygen_Zoom.png");
+	content: url("../MipImages/Silk/silk_Zoom.png");
+	content: url("../MipImages/Tango/tango_Zoom.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Zoom.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_zoomEnlarge::Before {
+
+/*	content: url("chrome://browser/skin/zoom-in.svg");
+	content: url("../MipImages/Fugue/fugue_ZoomPlus.png");
+	content: url("../MipImages/Oxygen/oxygen_ZoomPlus.png");
+	content: url("../MipImages/Silk/silk_ZoomPlus.png");
+	content: url("../MipImages/Tango/tango_ZoomPlus.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_ZoomPlus.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_zoomReduce::Before {
+
+/*	content: url("chrome://browser/skin/zoom-out.svg");
+	content: url("../MipImages/Fugue/fugue_ZoomMinus.png");
+	content: url("../MipImages/Oxygen/oxygen_ZoomMinus.png");
+	content: url("../MipImages/Silk/silk_ZoomMinus.png");
+	content: url("../MipImages/Tango/tango_ZoomMinus.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_ZoomMinus.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_zoomReset::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_ZoomReset.png");
+	content: url("../MipImages/Oxygen/oxygen_ZoomReset.png");
+	content: url("../MipImages/Silk/silk_ZoomReset.png");
+	content: url("../MipImages/Tango/tango_ZoomReset.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_ZoomReset.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#toggle_zoom:not([checked=true])::Before {
+
+/*	content: url("chrome://devtools/skin/images/case-match.svg");
+	content: url("../MipImages/Fugue/fugue_TextSize.png");
+	content: url("../MipImages/Tango/tango_TextSize.png");
+	content: url("../MipImages/Fugue/fugue_Font.png");
+	content: url("../MipImages/Oxygen/oxygen_Font.png");
+	content: url("../MipImages/Silk/silk_Font.png");
+	content: url("../MipImages/Tango/tango_Font.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_TextSize.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#viewFullZoomMenu > label,
+#menu_zoomEnlarge > label,
+#menu_zoomReduce > label,
+#menu_zoomReset > label,
+#toggle_zoom:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Page Style *******************************************************************/
+
+#pageStyleMenu::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_PageStyle.png");
+	content: url("../MipImages/Oxygen/oxygen_PageStyle.png");
+	content: url("../MipImages/Silk/silk_PageStyle.png");
+	content: url("../MipImages/Tango/tango_PageStyle.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_PageStyle.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#pageStyleMenu > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Char Encoding ****************************************************************/
+
+#charsetMenu::Before {
+
+/*	content: url("chrome://browser/skin/characterEncoding.svg");
+	content: url("../MipImages/Oxygen/oxygen_Encoding.png");
+	content: url("../MipImages/Silk/silk_Encoding.png");
+	content: url("../MipImages/Tango/tango_Encoding.png");
+	*/
+	content: url("../MipImages/Fugue/fugue_Encoding.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#charsetMenu[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#charsetMenu > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* FullScreen *******************************************************************/
+
+#context-video-fullscreen::Before,
+#fullScreenItem:not([checked=true])::Before {
+
+/*	content: url("chrome://browser/skin/fullscreen.svg");
+	content: url("chrome://global/skin/media/fullscreenEnterButton.svg");
+	content: url("../MipImages/Fugue/fugue_FullScreen.png");
+	content: url("../MipImages/Oxygen/oxygen_FullScreen.png");
+	content: url("../MipImages/Silk/silk_FullScreen.png");
+	content: url("../MipImages/Tango/tango_FullScreen.png");
+	content: url("../MipImages/Tango/tango_FullScreen(fugue).png");
+	content: url("../MipImages/Tango/tango_FullScreen(oxygen).png");
+	*/
+	content: url("../MipImages/Tango/tango_FullScreen(crystal).png");
+	content: url("../MipImages/Crystal/crystal_FullScreen.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-leave-dom-fullscreen::Before,
+#autohide-context menuitem[data-l10n-id="full-screen-exit"]::Before {
+
+/*	content: url("chrome://browser/skin/fullscreen-exit.svg");
+	content: url("chrome://global/skin/media/fullscreenExitButton.svg");
+	content: url("../MipImages/Fugue/fugue_FullScreenExit.png");
+	content: url("../MipImages/Oxygen/oxygen_FullScreen.png");
+	content: url("../MipImages/Silk/silk_FullScreenExit.png");
+	content: url("../MipImages/Tango/tango_FullScreenExit.png");
+	content: url("../MipImages/Tango/tango_FullScreenExit(fugue).png");
+	content: url("../MipImages/Tango/tango_FullScreenExit(oxygen).png");
+	*/
+	content: url("../MipImages/Tango/tango_FullScreenExit(crystal).png");
+	content: url("../MipImages/Crystal/crystal_FullScreen.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-video-fullscreen > label,
+#context-leave-dom-fullscreen > label,
+#fullScreenItem:not([checked=true]) > label,
+#autohide-context menuitem[data-l10n-id="full-screen-exit"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Reader Mode ******************************************************************/
+
+#menu_readerModeItem::Before {
+
+/*	content: url("chrome://browser/skin/readerMode.svg");
+	content: url("../MipImages/Fugue/fugue_Script.png");
+	content: url("../MipImages/Oxygen/oxygen_Script.png");
+	content: url("../MipImages/Silk/silk_Script.png");
+	content: url("../MipImages/Tango/tango_Script.png");
+	content: url("../MipImages/Oxygen/oxygen_View.png")
+	content: url("../MipImages/Oxygen/oxygen_View-darker.png");
+	content: url("../MipImages/Tango/tango_PrivateBrowsing.png");
+	*/
+	content: url("../MipImages/Fugue/fugue_ReaderView.png");
+	content: url("../MipImages/Crystal/crystal_Script.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_readerModeItem > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Bidi Switch Text Direction ***************************************************/
+
+#documentDirection-swap::Before,
+#textfieldDirection-swap::Before,
+#context-bidi-text-direction-toggle::Before,
+#context-bidi-page-direction-toggle::Before {
+
+/*	content: url("chrome://browser/skin/sync.svg");
+	content: url("chrome://browser/skin/toggle.svg");
+	content: url("../MipImages/FF/sync-16.png");
+	content: url("../MipImages/Oxygen/oxygen_Sync.png");
+	content: url("../MipImages/Tango/tango_Sync-bright.png");
+	content: url("../MipImages/Tango/tango_Sync.png");
+	content: url("../MipImages/Fugue/fugue_Bidi.png");
+	content: url("../MipImages/Silk/silk_Bidi.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Sync.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#documentDirection-swap > label,
+#textfieldDirection-swap > label,
+#context-bidi-text-direction-toggle > label,
+#context-bidi-page-direction-toggle > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * HISTORY MENU (And Context)
+ *
+ ********************************************************************************/
+
+/* History (Show All) ***********************************************************/
+
+#menu_showAllHistory::Before,
+#menu_historySidebar:not([checked=true])::Before {
+
+/*	content: url("chrome://browser/skin/history.svg");
+	content: url("../MipImages/FF/history.png");
+	content: url("../MipImages/FF/history-XP.png");
+	content: url("../MipImages/Fugue/fugue_History.png");
+	content: url("../MipImages/Oxygen/oxygen_History.png");
+	content: url("../MipImages/Silk/silk_History.png");
+	content: url("../MipImages/Silk/silk_HistoryClock.png");
+	content: url("../MipImages/Tango/tango_History.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_History.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_showAllHistory > label,
+#menu_historySidebar:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* History Clear Recent / Forget Site *******************************************/
+
+#sanitizeItem::Before {
+
+/*	content: url("chrome://browser/skin/forget.svg");
+	content: url("../MipImages/Fugue/fugue_Eraser.png");
+	content: url("../MipImages/Fugue/fugue_HistoryDelete.png");
+	content: url("../MipImages/Oxygen/oxygen_HistoryDelete.png");
+	content: url("../MipImages/Silk/silk_HistoryDelete.png");
+	content: url("../MipImages/FF/broom.png");
+	content: url("../MipImages/Fugue/fugue_Sweep.png");
+	content: url("../MipImages/Tango/tango_Sweep.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_HistoryDelete.png");
+	content: url("../MipImages/Crystal/crystal_Eraser.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#placesContext_deleteHost::Before,
+menuitem.downloadRemoveFromHistoryMenuItem::Before {
+
+/*	content: url("chrome://browser/skin/forget.svg");
+	content: url("../MipImages/Fugue/fugue_Eraser.png");
+	content: url("../MipImages/Fugue/fugue_HistoryDelete.png");
+	content: url("../MipImages/Oxygen/oxygen_HistoryDelete.png");
+	content: url("../MipImages/Silk/silk_HistoryDelete.png");
+	content: url("../MipImages/FF/broom.png");
+	content: url("../MipImages/Fugue/fugue_Sweep.png");
+	content: url("../MipImages/Tango/tango_Sweep.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_HistoryDelete.png");
+	content: url("../MipImages/Crystal/crystal_Eraser.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#sanitizeItem > label,
+#placesContext_deleteHost > label,
+menuitem.downloadRemoveFromHistoryMenuItem > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* History Clear All (Downloads/Search) *****************************************/
+
+menuitem[command="downloadsCmd_clearList"]::Before,
+menuitem[command="downloadsCmd_clearDownloads"]::Before,
+menuitem.searchbar-clear-history::Before {
+
+/*	content: url("chrome://devtools/skin/images/clear.svg");
+	content: url("../MipImages/Fugue/fugue_Recycle.png");
+	content: url("../MipImages/Oxygen/oxygen_Recycle.png");
+	content: url("../MipImages/Silk/silk_Recycle.png");
+	content: url("../MipImages/Tango/tango_Recycle.png");
+	content: url("../MipImages/Fugue/fugue_ClearAll.png");
+	content: url("../MipImages/Oxygen/oxygen_ClearAll.png");
+	content: url("../MipImages/Silk/silk_ClearAll.png");
+	content: url("../MipImages/Tango/tango_ClearAll.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_ClearAll.png");
+	content: url("../MipImages/Crystal/crystal_Recycle.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem[command="downloadsCmd_clearList"][disabled=true]::Before,
+menuitem[command="downloadsCmd_clearDownloads"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+menuitem[command="downloadsCmd_clearList"] > label,
+menuitem[command="downloadsCmd_clearDownloads"] > label,
+menuitem.searchbar-clear-history > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* History Restore Previous Session *********************************************/
+
+#historyRestoreLastSession::Before {
+
+/*	content: url("chrome://browser/skin/restore-session.svg");
+	content: url("../MipImages/Oxygen/oxygen_Session.png");
+	content: url("../MipImages/Fugue/fugue_RestoreSession(silk).png");
+	content: url("../MipImages/Fugue/fugue_RestoreSession.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Session.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#historyRestoreLastSession[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#historyRestoreLastSession > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* History Recently Closed Windows **********************************************/
+
+#historyUndoWindowMenu::Before {
+
+/*	content: url("chrome://browser/skin/window.svg");
+	content: url("../MipImages/FF/aboutSessionRestore-window-icon.png");
+	content: url("../MipImages/Fugue/fugue_Window.png");
+	content: url("../MipImages/Oxygen/oxygen_Window.png");
+	content: url("../MipImages/Silk/silk_Window.png");
+	content: url("../MipImages/Tango/tango_Window.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Window.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#historyUndoWindowMenu[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#historyUndoWindowMenu > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * BOOKMARKS
+ *
+ ********************************************************************************/
+
+/* Bookmarks Show All/Sidebar ***************************************************/
+
+#bookmarksShowAll::Before {
+
+/*	content: url("chrome://browser/skin/library.svg");
+	content: url("../MipImages/FF/allBookmarks.png");
+	content: url("../MipImages/Fugue/fugue_Bookmarks-Opened.png");
+	content: url("../MipImages/Oxygen/oxygen_Bookmarks-Organize.png");
+	content: url("../MipImages/Silk/silk_Bookmarks-Opened.png");
+	content: url("../MipImages/Tango/tango_Bookmarks-Organize.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Bookmarks.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_bookmarksSidebar:not([checked=true])::Before {
+
+/*	content: url("chrome://browser/skin/sidebars.svg");
+	content: url("../MipImages/FF/application.png");
+	content: url("../MipImages/FF/toolbarButton-sidebarToggle.png");
+	content: url("../MipImages/Fugue/fugue_Bookmarks-Closed.png");
+	content: url("../MipImages/Oxygen/oxygen_Bookmarks.png");
+	content: url("../MipImages/Silk/silk_Bookmarks-Closed.png");
+	content: url("../MipImages/Tango/tango_Bookmarks.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Bookmarks.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#bookmarksShowAll > label,
+#menu_bookmarksSidebar:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Bookmarks toolbar Button PANEL
+ * NOTE that this (and containers in +) are the only panels included so far in MIP/CSS */
+
+#BMB_viewBookmarksSidebar .menu-iconic-icon {
+
+/*	list-style-image: url("../MipImages/FF/application.png");
+	list-style-image: url("../MipImages/FF/toolbarButton-sidebarToggle.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Bookmarks-Closed.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmarks.png");
+	list-style-image: url("../MipImages/Silk/silk_Bookmarks-Closed.png");
+	list-style-image: url("../MipImages/Tango/tango_Bookmarks.png");
+	 */
+	list-style-image: url("../MipImages/Crystal/crystal_Bookmarks.png");
+	-moz-image-region: auto;
+	 }
+
+#BMB_bookmarksShowAllTop .menu-iconic-icon {
+
+/*	list-style-image: url("../MipImages/FF/allBookmarks.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Bookmarks-Opened.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmarks-Organize.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmarks.png");
+	list-style-image: url("../MipImages/Silk/silk_Bookmarks-Opened.png");
+	list-style-image: url("../MipImages/Tango/tango_Bookmarks-Organize.png");
+	 */
+	list-style-image: url("../MipImages/Crystal/crystal_Bookmarks.png");
+	-moz-image-region: auto;
+	 }
+
+#BMB_viewBookmarksToolbar[label^="Hide"] image.menu-iconic-icon {
+
+/*	list-style-image: url("../MipImages/FF/container-hide-black.svg"); */
+	list-style-image: url("../MipImages/FF/container-hide.svg");
+	}
+
+#BMB_viewBookmarksToolbar[label^="View"] image.menu-iconic-icon {
+
+/*	list-style-image: url("../MipImages/FF/container-unhide-black.svg"); */
+	list-style-image: url("../MipImages/FF/container-unhide.svg");
+	}
+
+/* Mobile Bookmarks Menu/Menupopup is no longer used I think ********************/
+
+#menu_mobileBookmarks::Before {
+
+/*	content: url("chrome://devtools/skin/images/browsers/mobile.svg");
+	content: url("../MipImages/Fugue/fugue_MobilePhone.png");
+	*/
+	content: url("../MipImages/PublicDomain/Icon-Mobile-Phone.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_mobileBookmarks > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Bookmark This Page Link Tab or Frame + Bookmark-New **************************/
+
+#menu_bookmarkThisPage::Before,
+#context-bookmarkframe::Before,
+#context-bookmarklink::Before,
+#context_bookmarkTab::Before,
+#context_bookmarkSelectedTabs::Before,
+#toolbar-context-bookmarkSelectedTab::Before,
+#toolbar-context-bookmarkSelectedTabs::Before,
+#placesContext_new\:bookmark::Before,
+#placesContext_createBookmark::Before, /* In the history context menu */
+#syncedTabsBookmarkSelected::Before,
+#newbookmark::Before {
+
+/*	content: url("chrome://browser/skin/bookmark.svg");
+	content: url("chrome://browser/skin/bookmark-hollow.svg");
+	content: url("../MipImages/FF/bookmark-1.png");
+	content: url("../MipImages/FF/bookmark-2.png");
+	content: url("../MipImages/FF/bookmark-3.png");
+	content: url("../MipImages/Fugue/fugue_Bookmark-New.png");
+	content: url("../MipImages/Oxygen/oxygen_Bookmark-New.png");
+	content: url("../MipImages/Silk/silk_Bookmark-New.png");
+	content: url("../MipImages/Silk/silk_Bookmark-New(crystal).png");
+	content: url("../MipImages/Tango/tango_Bookmark-New.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Bookmark-New.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_bookmarkThisPage[data-l10n-id="menu-bookmark-edit"]::Before { /* Edit This Bookmark */
+
+/*	content: url("chrome://browser/skin/bookmark.svg");
+	content: url("../MipImages/FF/bookmark-2.png");
+	content: url("../MipImages/FF/bookmark-3.png");
+	content: url("../MipImages/Fugue/fugue_Bookmark.png");
+	content: url("../MipImages/Oxygen/oxygen_Bookmark.png");
+	content: url("../MipImages/Silk/silk_Bookmark.png");
+	content: url("../MipImages/Tango/tango_Bookmark.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Bookmark.png");
+	}
+
+#placesContext_new\:bookmark[disabled=true]::Before,
+#newbookmark[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_bookmarkThisPage > label,
+#context-bookmarkframe > label,
+#context-bookmarklink > label,
+#context_bookmarkTab > label,
+#context_bookmarkSelectedTabs > label,
+#toolbar-context-bookmarkSelectedTab > label,
+#toolbar-context-bookmarkSelectedTabs > label,
+#placesContext_new\:bookmark > label,
+#placesContext_createBookmark > label,
+#syncedTabsBookmarkSelected > label,
+#newbookmark > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Bookmark Folder-New **********************************************************/
+
+#placesContext_new\:folder::Before,
+#newfolder::Before {
+
+/*	content: url("chrome://browser/skin/folder.svg");
+	content: url("../MipImages/FF/folder.png");
+	content: url("../MipImages/Fugue/fugue_Bookmark-NewFolder.png");
+	content: url("../MipImages/Fugue/fugue_Bookmark-NewFolder(crystal).png");
+	content: url("../MipImages/Oxygen/oxygen_Bookmark-NewFolder.png");
+	content: url("../MipImages/Silk/silk_Bookmark-NewFolder.png");
+	content: url("../MipImages/Tango/tango_Bookmark-NewFolder.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Bookmark-NewFolder.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#placesContext_new\:folder[disabled=true]::Before,
+#newfolder[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#placesContext_new\:folder > label,
+#newfolder > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Bookmark Separator-New *******************************************************/
+
+#placesContext_new\:separator::Before,
+#newseparator::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_Bookmark-NewSeparator.png");
+	content: url("../MipImages/Silk/silk_Bookmark-NewSeparator.png");
+	content: url("../MipImages/Silk/silk_Bookmark-NewSeparator-2.png");
+	content: url("../MipImages/Tango/tango_Bookmark-NewSeparator.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Bookmark-NewSeparator.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#placesContext_new\:separator[disabled=true]::Before,
+#newseparator[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#placesContext_new\:separator > label,
+#newseparator > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Bookmark Properties **********************************************************/
+
+#placesContext_show\:info::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_FileIni.png");
+	content: url("../MipImages/Fugue/fugue_Properties.png");
+	content: url("../MipImages/Oxygen/oxygen_FileUnknown.png");
+	content: url("../MipImages/Silk/silk_FileSys.png");
+	content: url("../MipImages/Tango/tango_Properties.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_ViewSource.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#placesContext_show\:info[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#placesContext_show\:info > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * LIBRARY (Toolbar)
+ *
+ ********************************************************************************/
+
+/* Columns Chooser based on Fugue Table *****************************************/
+
+#viewColumns::Before {
+
+/*	content: url("chrome://global/skin/icons/columnpicker.svg");
+	content: url("../MipImages/Fugue/fugue_Columns-cyan.png");
+	*/
+	content: url("../MipImages/Fugue/fugue_Columns-blue.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#viewColumns > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Sort Ascending/Descending ****************************************************/
+
+#viewSort::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_Sort-Menu.png");
+	content: url("../MipImages/Fugue/fugue_Sort-Menu-Document.png");
+	content: url("../MipImages/Oxygen/oxygen_Sort-AZ.png");
+	content: url("../MipImages/Silk/silk_Sort-Menu.png");
+	content: url("../MipImages/Tango/tango_Sort-AZ.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Sort-AZ.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#viewSortAscending:not([checked=true])::Before,
+#placesContext_sortBy\:name::Before {
+
+/*	content: url("chrome://global/skin/icons/find-next-arrow.svg");
+	content: url("../MipImages/Fugue/fugue_Sort-AZ.png");
+	content: url("../MipImages/Fugue/fugue_Sort-AZ-Document.png");
+	content: url("../MipImages/Oxygen/oxygen_Sort-AZ.png");
+	content: url("../MipImages/Silk/silk_Sort-AZ.png");
+	content: url("../MipImages/Tango/tango_Sort-AZ.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Sort-AZ.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#viewSortDescending:not([checked=true])::Before {
+
+/*	content: url("chrome://global/skin/icons/find-previous-arrow.svg");
+	content: url("../MipImages/Fugue/fugue_Sort-ZA.png");
+	content: url("../MipImages/Fugue/fugue_Sort-ZA-Document.png");
+	content: url("../MipImages/Oxygen/oxygen_Sort-ZA.png");
+	content: url("../MipImages/Silk/silk_Sort-ZA.png");
+	content: url("../MipImages/Tango/tango_Sort-ZA.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Sort-ZA.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#viewSort > label,
+#viewSortAscending:not([checked=true]) > label,
+#viewSortDescending:not([checked=true]) > label,
+#placesContext_sortBy\:name > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Backup/Restore Bookmarks *****************************************************/
+
+#backupBookmarks::Before {
+
+/*	content: url("chrome://browser/skin/save.svg");
+	content: url("../MipImages/Fugue/fugue_Save.png");
+	content: url("../MipImages/Oxygen/oxygen_Save.png");
+	content: url("../MipImages/Silk/silk_Save.png");
+	content: url("../MipImages/Tango/tango_Save.png");
+	content: url("../MipImages/Silk/silk_Backup.png");
+	content: url("../MipImages/Tango/tango_Backup.png");
+	content: url("../MipImages/Fugue/fugue_Database-export.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Save.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#fileRestoreMenu::Before {
+
+/*	content: url("chrome://browser/skin/open.svg");
+	content: url("../MipImages/FF/folder.png");
+	content: url("../MipImages/Fugue/fugue_FileOpen.png");
+	content: url("../MipImages/Oxygen/oxygen_FileOpen.png");
+	content: url("../MipImages/Silk/silk_FileOpen.png");
+	content: url("../MipImages/Tango/tango_FileOpen.png");
+	content: url("../MipImages/Fugue/fugue_Database-import.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_FileOpen.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#restoreFromFile::Before {
+
+/*	content: url("chrome://browser/skin/open.svg");
+	content: url("../MipImages/FF/folder.png");
+	content: url("../MipImages/Fugue/fugue_FileOpen.png");
+	content: url("../MipImages/Oxygen/oxygen_FileOpen.png");
+	content: url("../MipImages/Silk/silk_FileOpen.png");
+	content: url("../MipImages/Tango/tango_FileOpen.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_FileOpen.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#fileRestorePopup menuitem[oncommand="PlacesOrganizer.onRestoreMenuItemClick(this);"]::Before { /* The File Chooser Saved Backups */
+
+/*	content: url("chrome://browser/skin/bookmark.svg");
+	content: url("../MipImages/FF/bookmark-3.png");
+	content: url("../MipImages/Fugue/fugue_Bookmark.png");
+	content: url("../MipImages/Oxygen/oxygen_Bookmark.png");
+	content: url("../MipImages/Silk/silk_Bookmark.png");
+	content: url("../MipImages/Tango/tango_Bookmark.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Bookmark.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#backupBookmarks > label,
+#fileRestoreMenu > label,
+#restoreFromFile > label,
+#fileRestorePopup menuitem > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Import/Export Bookmarks to HTML **********************************************/
+
+#fileImport::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_Import.png");
+	content: url("../MipImages/Oxygen/oxygen_Import.png");
+	content: url("../MipImages/Silk/silk_Import.png");
+	content: url("../MipImages/Tango/tango_Import.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Import.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#fileExport::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_Export.png");
+	content: url("../MipImages/Oxygen/oxygen_Export.png");
+	content: url("../MipImages/Silk/silk_Export.png");
+	content: url("../MipImages/Tango/tango_Export.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Export.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#fileImport > label,
+#fileExport > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * LIBRARY TREE
+ *
+ ********************************************************************************/
+
+/* Bookmarks Folders copied from Aris-t2 bookmark_icons_colorized, bugs are his ;-) */
+/* You must import bookmark_icons_colorized FIRST */
+
+#editBMPanel_chooseFolderMenuItem .menu-iconic-icon,
+treechildren::-moz-tree-image(title, container),
+treechildren::-moz-tree-image(title, query, hostContainer) {
+
+/*	list-style-image: url("../MipImages/Fugue/fugue_FolderClosed.png") !important;
+	list-style-image: url("../MipImages/Oxygen/oxygen_FolderClosed.png") !important;
+	list-style-image: url("../MipImages/Silk/silk_FolderClosed.png") !important;
+	list-style-image: url("../MipImages/Tango/tango_FolderClosed.png") !important;
+	*/
+	list-style-image: url("../MipImages/Crystal/crystal_FolderClosed.png") !important;
+	-moz-image-region: auto !important;
+	}
+
+treechildren::-moz-tree-image(title, open) {
+
+/*	list-style-image: url("../MipImages/Fugue/fugue_FolderOpened.png") !important;
+	list-style-image: url("../MipImages/Oxygen/oxygen_FolderOpened.png") !important;
+	list-style-image: url("../MipImages/Silk/silk_FolderOpened.png") !important;
+	list-style-image: url("../MipImages/Tango/tango_FolderOpened.png") !important;
+	*/
+	list-style-image: url("../MipImages/Crystal/crystal_FolderOpened.png") !important;
+	-moz-image-region: auto !important;
+	}
+
+.bookmark-item[container]:not([query]):not([livemark]) {
+
+/*	list-style-image: url("../MipImages/Fugue/fugue_FolderClosed.png") !important;
+	list-style-image: url("../MipImages/Oxygen/oxygen_FolderClosed.png") !important;
+	list-style-image: url("../MipImages/Silk/silk_FolderClosed.png") !important;
+	list-style-image: url("../MipImages/Tango/tango_FolderClosed.png") !important;
+	*/
+	list-style-image: url("../MipImages/Crystal/crystal_FolderClosed.png") !important;
+	-moz-image-region: auto !important;
+	}
+
+.bookmark-item[container]:not([query]):not([livemark])[open] {
+
+/*	list-style-image: url("../MipImages/Fugue/fugue_FolderOpened.png") !important;
+	list-style-image: url("../MipImages/Oxygen/oxygen_FolderOpened.png") !important;
+	list-style-image: url("../MipImages/Silk/silk_FolderOpened.png") !important;
+	list-style-image: url("../MipImages/Tango/tango_FolderOpened.png") !important;
+	*/
+	list-style-image: url("../MipImages/Crystal/crystal_FolderOpened.png") !important;
+	-moz-image-region: auto !important;
+	}
+
+.bookmark-item[query][hostContainer] {
+
+/*	list-style-image: url("../MipImages/Fugue/fugue_FolderClosed.png") !important;
+	list-style-image: url("../MipImages/Oxygen/oxygen_FolderClosed.png") !important;
+	list-style-image: url("../MipImages/Silk/silk_FolderClosed.png") !important;
+	list-style-image: url("../MipImages/Tango/tango_FolderClosed.png") !important;
+	*/
+	list-style-image: url("../MipImages/Crystal/crystal_FolderClosed.png") !important;
+	-moz-image-region: auto !important;
+	}
+
+.bookmark-item[query][hostContainer][open] {
+
+/*	list-style-image: url("../MipImages/Fugue/fugue_FolderOpened.png") !important;
+	list-style-image: url("../MipImages/Oxygen/oxygen_FolderOpened.png") !important;
+	list-style-image: url("../MipImages/Silk/silk_FolderOpened.png") !important;
+	list-style-image: url("../MipImages/Tango/tango_FolderOpened.png") !important;
+	*/
+	list-style-image: url("../MipImages/Crystal/crystal_FolderOpened.png") !important;
+	-moz-image-region: auto !important;
+	}
+
+/********************************************************************************
+ *
+ * DOWNLOADS (TOOLS MENU AND LIBRARY)
+ *
+ ********************************************************************************/
+
+/* Downloads in Tools Menu ******************************************************/
+
+#menu_openDownloads::Before {
+
+/*	content: url("chrome://browser/skin/downloads/download-icons.svg#arrow-with-bar");
+	content: url("../MipImages/FF/saveFile.png");
+	content: url("../MipImages/FF/saveFile-XP.png");
+	content: url("../MipImages/Fugue/fugue_Download.png");
+	content: url("../MipImages/Oxygen/oxygen_Download.png");
+	content: url("../MipImages/Silk/silk_Download.png");
+	content: url("../MipImages/Tango/tango_Download.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Download.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_openDownloads > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Downloads Pause/Resume *******************************************************/
+
+menuitem[data-l10n-id="downloads-cmd-pause"]::Before {
+
+/*	content: url("chrome://global/skin/media/pauseButton.svg");
+	content: url("../MipImages/Fugue/fugue_Player-Pause.png");
+	content: url("../MipImages/Oxygen/oxygen_Player-Pause.png");
+	content: url("../MipImages/Silk/silk_Player-Pause.png");
+	content: url("../MipImages/Tango/tango_Player-Pause.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Player-Pause.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem[data-l10n-id="downloads-cmd-resume"]::Before {
+
+/*	content: url("chrome://global/skin/media/playButton.svg");
+	content: url("../MipImages/Fugue/fugue_Player-Play.png");
+	content: url("../MipImages/Oxygen/oxygen_Player-Play.png");
+	content: url("../MipImages/Silk/silk_Player-Play.png");
+	content: url("../MipImages/Tango/tango_Player-Play.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Player-Play.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem[data-l10n-id="downloads-cmd-pause"] > label,
+menuitem[data-l10n-id="downloads-cmd-resume"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Downloads Open Containing Folder *********************************************/
+
+menuitem.downloadShowMenuItem::Before { /* [command="downloadsCmd_show"] */
+
+/*	content: url("chrome://browser/skin/folder.svg");
+	content: url("../MipImages/FF/folder.png");
+	content: url("../MipImages/Fugue/fugue_FolderGoTo.png");
+	content: url("../MipImages/Silk/silk_FolderGoTo.png");
+	content: url("../MipImages/Fugue/fugue_FolderOpened.png");
+	content: url("../MipImages/Oxygen/oxygen_FolderOpened.png");
+	content: url("../MipImages/Silk/silk_FolderOpened.png");
+	content: url("../MipImages/Tango/tango_FolderOpened.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_FolderOpened.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem.downloadShowMenuItem > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Downloads Goto ***************************************************************/
+
+menuitem[command="downloadsCmd_openReferrer"]::Before {
+
+/*	content: url("chrome://browser/skin/forward.svg");
+	content: url("../MipImages/Fugue/fugue_GoTo.png");
+	content: url("../MipImages/Oxygen/oxygen_GoTo.png");
+	content: url("../MipImages/Silk/silk_GoTo.png");
+	content: url("../MipImages/Tango/tango_GoTo.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_GoTo.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem[command="downloadsCmd_openReferrer"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * TOOLS MENU
+ *
+ ********************************************************************************/
+
+/* AddOns ***********************************************************************/
+
+#menu_openAddons::Before,
+menuitem[data-l10n-id="page-action-manage-extension"]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-manage-extension"]::Before {
+
+/*	content: url("chrome://mozapps/skin/extensions/extension.svg");
+	content: url("../MipImages/FF/extensionGeneric-16.png");
+	content: url("../MipImages/FF/extensionGeneric-16-XP.png");
+	content: url("../MipImages/Fugue/fugue_AddOn.png");
+	content: url("../MipImages/Oxygen/oxygen_AddOn.png");
+	content: url("../MipImages/Silk/silk_AddOn.png");
+	content: url("../MipImages/Tango/tango_AddOn.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_AddOn.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_openAddons > label,
+menuitem[data-l10n-id="page-action-manage-extension"] > label,
+menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* AddOns Remove ****************************************************************/
+
+menuitem[data-l10n-id="page-action-remove-extension"]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-remove-extension"]::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_Delete.png");
+	content: url("../MipImages/Oxygen/oxygen_Delete.png");
+	content: url("../MipImages/Silk/silk_Delete.png");
+	content: url("../MipImages/Tango/tango_Delete.png");
+	content: url("../MipImages/Fugue/fugue_AddOnRemove.png");
+	content: url("../MipImages/Silk/silk_AddOnRemove.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Delete.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem[data-l10n-id="page-action-remove-extension"][disabled=true]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-remove-extension"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+menuitem[data-l10n-id="page-action-remove-extension"] > label,
+menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Page Information (frame/image/page) ******************************************/
+
+#menu_pageInfo::Before,
+#context-viewinfo::Before,
+#context-viewframeinfo::Before,
+#context-viewimageinfo::Before,
+#context-viewimagedesc::Before {
+
+/*	content: url("chrome://browser/skin/info.svg"); /* blue */
+/*	content: url("chrome://mozapps/skin/profile/information.svg");
+	content: url("../MipImages/FF/information-16.png");
+	content: url("../MipImages/Fugue/fugue_PageInfo.png");
+	content: url("../MipImages/Fugue/fugue_PageInfo(oxygen).png");
+	content: url("../MipImages/Oxygen/oxygen_PageInfo.png");
+	content: url("../MipImages/Silk/silk_PageInfo.png");
+	content: url("../MipImages/Tango/tango_PageInfo.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_PageInfo.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_pageInfo > label,
+#context-viewinfo > label,
+#context-viewframeinfo > label,
+#context-viewimageinfo > label,
+#context-viewimagedesc > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Options **********************************************************************/
+
+#menu_preferences::Before,
+#blockedPopupOptions menuitem[oncommand="gPopupBlockerObserver.editPopupSettings();"]::Before {
+
+/*	content: url("chrome://global/skin/icons/settings.svg");
+	content: url("../MipImages/FF/gear_clicked.png");
+	content: url("../MipImages/FF/gear_default.png");
+	content: url("../MipImages/FF/option-icon-grey.png");
+	content: url("../MipImages/FF/option-icon-blue.png");
+	content: url("../MipImages/FF/options.png");
+	content: url("../MipImages/FF/settings.png");
+	content: url("../MipImages/Fugue/fugue_Gear.png");
+	content: url("../MipImages/Fugue/fugue_Options-darker.png");
+	content: url("../MipImages/Fugue/fugue_Options.png");
+	content: url("../MipImages/Oxygen/oxygen_Options.png");
+	content: url("../MipImages/Silk/silk_Options.png");
+	content: url("../MipImages/Tango/tango_Options.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Options.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_preferences > label,
+#blockedPopupOptions menuitem[oncommand="gPopupBlockerObserver.editPopupSettings();"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * SYNC / DEVICES
+ *
+ ********************************************************************************/
+
+/* Sync Setup *******************************************************************/
+
+#sync-setup::Before,
+#sync-unverifieditem::Before,
+#sync-reauthitem::Before {
+
+/*	content: url("chrome://browser/skin/fxa/avatar.svg");
+	content: url("../MipImages/FF/profileicon-XP.png");
+	content: url("../MipImages/FF/profileicon.png");
+	content: url("../MipImages/Fugue/fugue_UserSingle.png");
+	content: url("../MipImages/Oxygen/oxygen_UserSingle.png");
+	content: url("../MipImages/Silk/silk_UserSingle.png");
+	content: url("../MipImages/Tango/tango_UserSingle.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_UserSingle.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#sync-setup > label,
+#sync-unverifieditem > label,
+#sync-reauthitem > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Sync Now *********************************************************************/
+
+#sync-enable::Before,
+#sync-syncnowitem::Before,
+#syncedTabsRefresh::Before,
+#syncedTabsRefreshFilter::Before,
+#sync-tabs-menuitem::Before,
+#menu_tabsSidebar:not([checked=true])::Before {
+
+/*	content: url("chrome://browser/skin/sync.svg");
+	content: url("../MipImages/FF/sync-16.png");
+	content: url("../MipImages/Fugue/fugue_Sync.png");
+	content: url("../MipImages/Oxygen/oxygen_Sync.png");
+	content: url("../MipImages/Silk/silk_Reload.png");
+	content: url("../MipImages/Tango/tango_Sync-bright.png");
+	content: url("../MipImages/Tango/tango_Sync.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Sync.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#sync-enable::Before {
+
+	filter: grayscale(100%);
+	}
+
+#sync-enable > label,
+#sync-syncnowitem > label,
+#syncedTabsRefresh > label,
+#syncedTabsRefreshFilter > label,
+#sync-tabs-menuitem > label,
+#menu_tabsSidebar:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ * % TEMPORARY FIX FOR MISSING LABEL FOR THIS SYNC-TAB-SIDEBAR-TEXTBOX CONTEXT MENU ITEM %
+ * %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+#syncedTabsRefreshFilter > label { display: none !important; }
+
+#syncedTabsRefreshFilter::After {
+
+	content: "Sync Now";
+	margin-inline-start: -16px;
+	padding-inline-end: 2px;
+	}
+
+/* Manage Devices ***************************************************************/
+
+#syncedTabsManageDevices::Before {
+
+/*	content: url("chrome://browser/skin/fxa/add-device.svg");
+	content: url("../MipImages/Fugue/fugue_MobilePhone.png");
+	*/
+	content: url("../MipImages/PublicDomain/Icon-Mobile-Phone.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#syncedTabsManageDevices > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Send To Device ***************************************************************/
+
+#context_sendTabToDevice::Before,
+#context-sendpagetodevice::Before,
+#context-sendlinktodevice::Before {
+
+/*	content: url("chrome://browser/skin/send-to-device.svg");
+	content: url("../MipImages/Fugue/fugue_GoTo.png");
+	content: url("../MipImages/Fugue/fugue_MobilePhone.png");
+	content: url("../MipImages/Fugue/fugue_MobilePhone-SendTo.png");
+	content: url("../MipImages/PublicDomain/Icon-Mobile-Phone.png");
+	*/
+	content: url("../MipImages/PublicDomain/Icon-Mobile-Phone-SendTo(crystal).png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context_sendTabToDevice[disabled=true]::Before,
+#context-sendpagetodevice[disabled=true]::Before,
+#context-sendlinktodevice[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context_sendTabToDevice > label,
+#context-sendpagetodevice > label,
+#context-sendlinktodevice > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Send To Device: Device List **************************************************/
+
+#context_sendTabToDevicePopupMenu menuitem.sendtab-target::Before,
+#context-sendpagetodevice-popup menuitem.sendtab-target::Before,
+#context-sendlinktodevice-popup menuitem.sendtab-target::Before {
+
+/*	content: url("../MipImages/Oxygen/oxygen_ConnectedBrowser.png");
+	content: url("../MipImages/Silk/silk_ConnectedBrowser.png");
+	content: url("../MipImages/Tango/tango_ConnectedBrowser.png");
+	content: url("../MipImages/Fugue/fugue_ConnectedBrowser.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_ConnectedBrowser.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context_sendTabToDevicePopupMenu menuitem[label^="Connect Another Device"]::Before,
+#context-sendpagetodevice-popup menuitem[label^="Connect Another Device"]::Before,
+#context-sendlinktodevice-popup menuitem[label^="Connect Another Device"]::Before {
+
+/*	content: url("chrome://browser/skin/fxa/add-device.svg");
+	content: url("../MipImages/Fugue/fugue_Connect.png");
+	content: url("../MipImages/Oxygen/oxygen_Connect.png");
+	content: url("../MipImages/Silk/silk_Connect.png");
+	content: url("../MipImages/Tango/tango_Connect.png");
+	content: url("../MipImages/Oxygen/oxygen_ConnectedBrowser.png");
+	content: url("../MipImages/Silk/silk_ConnectedBrowser.png");
+	content: url("../MipImages/Tango/tango_ConnectedBrowser.png");
+	content: url("../MipImages/Fugue/fugue_ConnectedBrowser.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Connect.png");
+	content: url("../MipImages/Crystal/crystal_ConnectedBrowser.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context_sendTabToDevicePopupMenu menuitem.sendtab-target > label,
+#context-sendpagetodevice-popup menuitem.sendtab-target > label,
+#context-sendlinktodevice-popup menuitem.sendtab-target > label,
+#context_sendTabToDevicePopupMenu menuitem[label^="Connect Another Device"] > label,
+#context-sendpagetodevice-popup menuitem[label^="Connect Another Device"] > label,
+#context-sendlinktodevice-popup menuitem[label^="Connect Another Device"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * DEV TOOLS / WEB DEVELOPER
+ *
+ ********************************************************************************/
+
+/* Web Developer Tools Menu *****************************************************/
+
+#webDeveloperMenu::Before {
+
+/*	content: url("chrome://browser/skin/developer.svg");
+	content: url("../MipImages/FF/tools-grey.png");
+	content: url("../MipImages/Crystal/crystal_Tools.png");
+	content: url("../MipImages/Fugue/fugue_Tools.png");
+	content: url("../MipImages/Oxygen/oxygen_Tools.png");
+	content: url("../MipImages/Silk/silk_Tools.png");
+	content: url("../MipImages/Tango/tango_Tools.png");
+	content: url("../MipImages/Fugue/fugue_Wrench.png");
+	content: url("../MipImages/Misc/external_Wrench.png");
+	content: url("../MipImages/Oxygen/oxygen_Wrench-darker.png");
+	content: url("../MipImages/Oxygen/oxygen_Wrench.png");
+	content: url("../MipImages/Silk/silk_Wrench.png");
+	content: url("../MipImages/Tango/tango_Wrench.png");
+	content: url("../MipImages/Fugue/fugue_WebDeveloper.png");
+	content: url("../MipImages/Fugue/fugue_WebDeveloper-blocks.png");
+	content: url("../MipImages/Oxygen/oxygen_WebDeveloper.png");
+	content: url("../MipImages/Silk/silk_WebDeveloper.png");
+	content: url("../MipImages/Tango/tango_WebDeveloper.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_WebDeveloper.png");
+	content: url("../MipImages/Crystal/crystal_Wrench.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Get More Tools ***************************************************************/
+
+#getMoreDevtools::Before {
+
+/*	content: url("chrome://browser/skin/developer.svg");
+	content: url("../MipImages/FF/tools-grey.png");
+	content: url("../MipImages/Fugue/fugue_Tools.png");
+	content: url("../MipImages/Oxygen/oxygen_Tools.png");
+	content: url("../MipImages/Silk/silk_Tools.png");
+	content: url("../MipImages/Tango/tango_Tools.png");
+	content: url("../MipImages/Crystal/crystal_Wrench.png");
+	content: url("../MipImages/Fugue/fugue_Wrench.png");
+	content: url("../MipImages/Misc/external_Wrench.png");
+	content: url("../MipImages/Oxygen/oxygen_Wrench.png");
+	content: url("../MipImages/Oxygen/oxygen_Wrench-darker.png");
+	content: url("../MipImages/Silk/silk_Wrench.png");
+	content: url("../MipImages/Tango/tango_Wrench.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Tools.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Toggle Tools *****************************************************************/
+
+#menu_devToolbox:not([checked=true])::Before {
+
+/*	content: url("chrome://browser/skin/toggle.svg");
+	content: url("../MipImages/FF/switch.png");
+	content: url("../MipImages/Fugue/fugue_Switch.png");
+	*/
+	content: url("../MipImages/Tango/tango_PowerDown.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#webDeveloperMenu > label,
+#getMoreDevtools > label,
+#menu_devToolbox:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Dom Inspector ****************************************************************/
+
+#menuitem_inspector::Before {
+
+/*	content: url("chrome://devtools/skin/images/tool-inspector.svg");
+	content: url("../MipImages/FF/tool-inspector.png");
+	content: url("../MipImages/Fugue/fugue_Dev-Inspect.png");
+	content: url("../MipImages/Fugue/fugue_Dev-Inspect-darker.png");
+	content: url("../MipImages/Oxygen/oxygen_Dev-Inspect.png");
+	content: url("../MipImages/Silk/silk_Dev-Inspect.png");
+	content: url("../MipImages/Tango/tango_Dev-Inspect.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Dev-Inspect.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Web Console ******************************************************************/
+
+#menuitem_webconsole::Before {
+
+/*	content: url("chrome://devtools/skin/images/tool-webconsole.svg");
+	content: url("../MipImages/FF/tool-webconsole.png");
+	content: url("../MipImages/Fugue/fugue_Dev-WebConsole.png");
+	content: url("../MipImages/Oxygen/oxygen_Dev-WebConsole.png");
+	content: url("../MipImages/Silk/silk_Dev-WebConsole.png");
+	content: url("../MipImages/Tango/tango_Dev-WebConsole.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Dev-WebConsole.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Debug ************************************************************************/
+
+#menuitem_jsdebugger::Before {
+
+/*	content: url("chrome://devtools/skin/images/tool-debugger.svg");
+	content: url("../MipImages/FF/tool-debugger.png");
+	content: url("../MipImages/Fugue/fugue_Dev-Bug.png");
+	content: url("../MipImages/Fugue/fugue_Dev-Debugger.png");
+	content: url("../MipImages/Oxygen/oxygen_Dev-Debugger.png");
+	content: url("../MipImages/Silk/silk_Dev-Debugger.png");
+	content: url("../MipImages/Tango/tango_Dev-Debugger.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Dev-Debugger.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Network Monitor **************************************************************/
+
+#menuitem_netmonitor::Before {
+
+/*	content: url("chrome://devtools/skin/images/tool-network.svg");
+	content: url("../MipImages/FF/tool-network.png");
+	content: url("../MipImages/Fugue/fugue_Dev-NetMonitor.png");
+	content: url("../MipImages/Oxygen/oxygen_Dev-NetMonitor.png");
+	content: url("../MipImages/Silk/silk_Globe.png");
+	content: url("../MipImages/Tango/tango_Connect.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Dev-NetMonitor.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Style Editor *****************************************************************/
+
+#menuitem_styleeditor::Before {
+
+/*	content: url("chrome://devtools/skin/images/tool-styleeditor.svg");
+	content: url("../MipImages/FF/tool-styleeditor.png");
+	content: url("../MipImages/Fugue/fugue_Dev-CSS.png");
+	content: url("../MipImages/Oxygen/oxygen_Dev-CSS.png");
+	content: url("../MipImages/Silk/silk_Dev-CSS.png");
+	content: url("../MipImages/Tango/tango_Dev-CSS.png");
+	content: url("../MipImages/Tango/tango_Dev-Style.png");
+	content: url("../MipImages/Fugue/fugue_PageStyle.png");
+	content: url("../MipImages/Oxygen/oxygen_PageStyle.png");
+	content: url("../MipImages/Silk/silk_PageStyle.png");
+	content: url("../MipImages/Tango/tango_PageStyle.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Dev-CSS.png");
+	content: url("../MipImages/Crystal/crystal_PageStyle.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Performance Profiler *********************************************************/
+
+#menuitem_performance::Before {
+
+/*	content: url("chrome://devtools/skin/images/tool-profiler.svg");
+	content: url("../MipImages/FF/tool-profiler.png");
+	content: url("../MipImages/Fugue/fugue_Dev-Profiler.png");
+	content: url("../MipImages/Fugue/fugue_Dev-Profiler-light.png");
+	content: url("../MipImages/Oxygen/oxygen_Dev-Profiler.png");
+	content: url("../MipImages/Silk/silk_Dev-Profiler.png");
+	content: url("../MipImages/Tango/tango_Dev-Profiler.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Dev-Profiler.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Storage (Explorer) ***********************************************************/
+
+#menuitem_storage::Before {
+
+/*	content: url("chrome://devtools/skin/images/tool-storage.svg");
+	content: url("../MipImages/Fugue/fugue_Explore.png");
+	content: url("../MipImages/Fugue/fugue_ExploreFolders.png");
+	content: url("../MipImages/Tango/tango_Explore.png");
+	*/
+	content: url("../MipImages/Fugue/fugue_Database-inspect.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	/*
+	-moz-context-properties: fill;
+	 fill: DimGrey;
+	 */
+	}
+
+/* Accessibility ****************************************************************/
+
+#menuitem_accessibility::Before {
+
+	content: url("chrome://devtools/skin/images/tool-accessibility.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	-moz-context-properties: fill;
+	 fill: SlateGrey;
+	}
+
+/* Application ******************************************************************/
+
+#menuitem_application::Before {
+
+	content: url("chrome://devtools/skin/images/tool-application.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	-moz-context-properties: fill;
+	 fill: SlateGrey;
+	}
+
+/* DOM **************************************************************************/
+
+#menuitem_dom::Before {
+
+	content: url("chrome://devtools/skin/images/tool-dom.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	-moz-context-properties: fill;
+	 fill: SlateGrey;
+	}
+
+/* Remote Debugging *************************************************************/
+
+#menu_devtools_remotedebugging::Before {
+
+/*	content: url("../MipImages/FF/remote.png");
+	content: url("../MipImages/FF/remote-XP.png");
+	content: url("../MipImages/Fugue/fugue_Connect.png");
+	content: url("../MipImages/Oxygen/oxygen_Connect.png");
+	content: url("../MipImages/Silk/silk_Connect.png");
+	content: url("../MipImages/Tango/tango_Connect.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Connect.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Toolbox'es *******************************************************************/
+
+#menu_browserToolbox::Before {
+
+/*	content: url("../MipImages/FF/tilt.png");
+	content: url("../MipImages/FF/tilt-black.png");
+	content: url("../MipImages/FF/tilt-grey.png");
+	content: url("../MipImages/Fugue/fugue_WebDeveloper-blocks.png");
+	content: url("../MipImages/Silk/silk_WebDeveloper.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_WebDeveloper.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_browserContentToolbox::Before {
+
+/*	content: url("../MipImages/FF/tilt-black.png");
+	content: url("../MipImages/FF/tilt-grey.png");
+	content: url("../MipImages/Crystal/crystal_WebDeveloper.png");
+	content: url("../MipImages/Fugue/fugue_Toolbox.png");
+	content: url("../MipImages/Silk/silk_WebDeveloper.png");
+	*/
+	content: url("../MipImages/FF/tilt.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Error Console ****************************************************************/
+
+#menu_browserConsole::Before {
+
+/*    	content: url("chrome://browser/skin/chevron.svg");
+    	content: url("chrome://devtools/skin/images/tool-webconsole.svg");
+	content: url("../MipImages/FF/commandline.png");
+	content: url("../MipImages/Fugue/fugue_Dev-BrowserConsole.png");
+	content: url("../MipImages/Fugue/fugue_Dev-Console.png");
+	content: url("../MipImages/Oxygen/oxygen_Dev-Console.png");
+	content: url("../MipImages/Silk/silk_Dev-Console.png");
+	content: url("../MipImages/Tango/tango_Dev-Console.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Dev-Console.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Responsive Design ************************************************************/
+
+#menu_responsiveUI:not([checked=true])::Before {
+
+/*	content: url("chrome://devtools/skin/images/command-responsivemode.svg");
+	content: url("../MipImages/FF/tool-responsivemode.png");
+	content: url("../MipImages/FF/tool-responsivemode-black.png");
+	content: url("../MipImages/Fugue/fugue_Dev-Responsive.png");
+	content: url("../MipImages/Oxygen/oxygen_Dev-Responsive.png");
+	content: url("../MipImages/Silk/silk_Dev-Responsive.png");
+	content: url("../MipImages/Tango/tango_Dev-Responsive.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Dev-Responsive.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Eyedropper *******************************************************************/
+
+#menu_eyedropper::Before {
+
+/*	content: url("chrome://devtools/skin/images/command-eyedropper.svg");
+	content: url("../MipImages/Fugue/fugue_Eyedropper.png");
+	content: url("../MipImages/Oxygen/oxygen_Eyedropper.png");
+	content: url("../MipImages/Oxygen/oxygen_Eyedropper(silk).png");
+	content: url("../MipImages/Tango/tango_Eyedropper.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Eyedropper.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Labels ***********************************************************************/
+
+#menuitem_inspector > label,
+#menuitem_webconsole > label,
+#menu_browserConsole > label,
+#menuitem_jsdebugger > label,
+#menuitem_netmonitor > label,
+#menuitem_styleeditor > label,
+#menuitem_performance > label,
+#menuitem_storage > label,
+#menuitem_accessibility > label,
+#menuitem_application > label,
+#menuitem_dom > label,
+#menu_devtools_remotedebugging > label,
+#menu_browserToolbox > label,
+#menu_browserContentToolbox > label,
+#menu_responsiveUI:not([checked=true]) > label,
+#menu_eyedropper > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * HELP MENU
+ *
+ ********************************************************************************/
+
+/* Firefox Help *****************************************************************/
+
+#menu_openHelp::Before,
+#helpPolicySupport::Before {
+
+/*	content: url("chrome://global/skin/icons/help.svg");
+	content: url("../MipImages/FF/alwaysAsk-XP-lower.png");
+	content: url("../MipImages/FF/question-16.png");
+	content: url("../MipImages/Fugue/fugue_Help.png");
+	content: url("../MipImages/Oxygen/oxygen_Help.png");
+	content: url("../MipImages/Silk/silk_Help.png");
+	content: url("../MipImages/Tango/tango_Help.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Help.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_openHelp > label,
+#helpPolicySupport > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Firefox Tour/Tips ************************************************************/
+
+#menu_openTour::Before,
+#context-media-eme-learnmore::Before,
+#context_sendTabToDevicePopupMenu menuitem[label^="Learn About Sending Tabs"]::Before,
+#context-sendpagetodevice-popup menuitem[label^="Learn About Sending Tabs"]::Before,
+#context-sendlinktodevice-popup menuitem[label^="Learn About Sending Tabs"]::Before {
+
+/*	content: url("chrome://browser/skin/tip.svg");
+	content: url("../MipImages/Fugue/fugue_LightBulb-off.png");
+	content: url("../MipImages/Fugue/fugue_LightBulb.png");
+	*/
+	content: url("../MipImages/Tango/tango_Information.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_openTour > label,
+#context-media-eme-learnmore > label,
+#context_sendTabToDevicePopupMenu menuitem[label^="Learn About Sending Tabs"] > label,
+#context-sendpagetodevice-popup menuitem[label^="Learn About Sending Tabs"] > label,
+#context-sendlinktodevice-popup menuitem[label^="Learn About Sending Tabs"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Keyboard Shortcuts ***********************************************************/
+
+#menu_keyboardShortcuts::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_KeyboardShortcut.png");
+	content: url("../MipImages/Oxygen/oxygen_KeyboardShortcut.png");
+	content: url("../MipImages/Silk/silk_KeyboardShortcut.png");
+	content: url("../MipImages/Tango/tango_KeyboardShortcut.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_KeyboardShortcut.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_keyboardShortcuts > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Troubleshooting Information **************************************************/
+
+#troubleShooting::Before {
+
+/*	content: url("chrome://browser/skin/info.svg"); /* blue */
+/*	content: url("chrome://mozapps/skin/profile/information.svg");
+	content: url("../MipImages/FF/information-16.png");
+	content: url("../MipImages/Fugue/fugue_Information.png");
+	content: url("../MipImages/Oxygen/oxygen_Information.png");
+	content: url("../MipImages/Silk/silk_PageInfo.png");
+	content: url("../MipImages/Tango/tango_Information.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Information.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#troubleShooting > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Submit Feedback **************************************************************/
+
+#feedbackPage::Before {
+
+/*	content: url("../MipImages/FF/services-16.png");
+	content: url("../MipImages/FF/alwaysAsk-XP-lower.png");
+	content: url("../MipImages/Fugue/fugue_Alert.png");
+	content: url("../MipImages/Fugue/fugue_Balloon-left.png");
+	content: url("../MipImages/Fugue/fugue_Balloon-white-left.png");
+	content: url("../MipImages/Oxygen/oxygen_Alert.png");
+	content: url("../MipImages/Silk/silk_Alert-bigger.png");
+	content: url("../MipImages/Silk/silk_Alert.png");
+	content: url("../MipImages/Tango/tango_Alert.png");
+	content: url("../MipImages/Fugue/fugue_Smiley.png");
+	content: url("../MipImages/Oxygen/oxygen_Smiley.png");
+	content: url("../MipImages/Silk/silk_Smiley.png");
+	content: url("../MipImages/Tango/tango_Smiley.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Smiley.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#feedbackPage > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* RESTART (in Safe Mode) *******************************************************/
+
+#helpSafeMode::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_Restart.png");
+	content: url("../MipImages/Oxygen/oxygen_Restart.png");
+	content: url("../MipImages/Silk/silk_Restart.png");
+	content: url("../MipImages/Tango/tango_Restart.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Restart.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#helpSafeMode > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* RESTART (Aris Restart Script Menu Entry) *************************************/
+
+#fileMenu-restart-item .menu-iconic-icon {
+
+/*	list-style-image: url("../MipImages/Fugue/fugue_Restart-red.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Restart.png");
+	list-style-image: url("../MipImages/Silk/silk_Restart.png");
+	list-style-image: url("../MipImages/Tango/tango_Restart.png");
+	*/
+	list-style-image: url("../MipImages/Crystal/crystal_Restart.png");
+
+	-moz-image-region: auto;
+	transform: none !important;
+	fill: none !important;
+	margin-inline-start: 2px;
+	}
+
+/* Report Phishing Website/Addon ************************************************/
+
+#menu_HelpPopup_reportPhishingtoolmenu::Before,
+menuitem[data-l10n-id="toolbar-context-menu-report-extension"]::Before {
+
+/*	content: url("chrome://browser/skin/warning.svg"); /* yellow */
+/*	content: url("chrome://devtools/skin/images/alert.svg");
+	content: url("../MipImages/FF/warning-16.png");
+	content: url("../MipImages/FF/warning-16-XP.png");
+	content: url("../MipImages/Fugue/fugue_Warning-1.png");
+	content: url("../MipImages/Fugue/fugue_Warning-2.png");
+	content: url("../MipImages/Oxygen/oxygen_Warning.png");
+	content: url("../MipImages/Silk/silk_Warning.png");
+	content: url("../MipImages/Tango/tango_Warning.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Warning.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_HelpPopup_reportPhishingtoolmenu[disabled=true]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-report-extension"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_HelpPopup_reportPhishingtoolmenu > label,
+menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* About Firefox ****************************************************************/
+
+#aboutName::Before {
+
+/*	content: url("chrome://browser/skin/welcome-back.svg");
+	content: url("../MipImages/FF/FIREFOX-icon16.png");
+	*/
+	content: url("../MipImages/FF/FIREFOX-78-icon16.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#aboutName > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * TABS
+ *
+ ********************************************************************************/
+
+/* Tab-New **********************************************************************/
+
+#menu_newNavigatorTab::Before,
+#context-openlinkintab::Before,
+#context-openframeintab::Before,
+#placesContext_open\:newtab::Before,
+#placesContext_openLinks\:tabs::Before,
+#placesContext_openContainer\:tabs::Before,
+menuitem.openintabs-menuitem::Before,
+#historyUndoPopup menuitem.restoreallitem::Before,
+#syncedTabsOpenSelectedInTab::Before,
+#syncedTabsOpenAllInTabs::Before {
+
+/*	content: url("chrome://browser/skin/new-tab.svg");
+	content: url("../MipImages/Fugue/fugue_TabPlus.png");
+	content: url("../MipImages/Oxygen/oxygen_TabPlus.png");
+	content: url("../MipImages/Silk/silk_TabPlus.png");
+	content: url("../MipImages/Tango/tango_TabPlus.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_TabPlus.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_newNavigatorTab[disabled=true]::Before,
+#context-openlinkintab[disabled=true]::Before,
+#context-openframeintab[disabled=true]::Before,
+#placesContext_open\:newtab[disabled=true]::Before,
+#placesContext_openLinks\:tabs[disabled=true]::Before,
+#placesContext_openContainer\:tabs[disabled=true]::Before,
+.openintabs-menuitem[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_newNavigatorTab > label,
+#context-openlinkintab > label,
+#context-openframeintab > label,
+#placesContext_open\:newtab > label,
+#placesContext_openLinks\:tabs > label,
+#placesContext_openContainer\:tabs > label,
+menuitem.openintabs-menuitem > label,
+#historyUndoPopup menuitem.restoreallitem > label,
+#syncedTabsOpenSelectedInTab > label,
+#syncedTabsOpenAllInTabs > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Reload (Tab,Frame,Image) *****************************************************/
+
+#context_reloadTab::Before,
+#context_reloadSelectedTabs::Before,
+#toolbar-context-reloadSelectedTab::Before,
+#toolbar-context-reloadSelectedTabs::Before,
+#context-reloadframe::Before,
+#context-reloadimage::Before {
+
+/*	content: url("chrome://browser/skin/reload.svg");
+	content: url("../MipImages/Fugue/fugue_Reload.png");
+	content: url("../MipImages/Oxygen/oxygen_Reload.png");
+	content: url("../MipImages/Oxygen/oxygen_Repeat.png");
+	content: url("../MipImages/Silk/silk_Reload.png");
+	content: url("../MipImages/Tango/tango_Reload.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Reload.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context_reloadTab > label,
+#context_reloadSelectedTabs > label,
+#toolbar-context-reloadSelectedTab > label,
+#toolbar-context-reloadSelectedTabs > label,
+#context-reloadframe > label,
+#context-reloadimage > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Tab-Audio Muting *************************************************************/
+
+#context_toggleMuteTab::Before,
+#context_toggleMuteSelectedTabs::Before,
+#context-media-mute::Before {
+
+/*	content: url("chrome://browser/skin/tabbrowser/tab-audio-playing.svg");
+	content: url("../MipImages/Fugue/fugue_AudioPlaying.png");
+	content: url("../MipImages/Oxygen/oxygen_AudioPlaying.png");
+	content: url("../MipImages/Silk/silk_AudioPlaying.png");
+	content: url("../MipImages/Tango/tango_AudioPlaying.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_AudioPlaying.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-media-mute[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context_toggleMuteTab[muted=true]::Before,
+#context_toggleMuteSelectedTabs[muted=true]::Before,
+#context-media-unmute::Before {
+
+/*	content: url("chrome://browser/skin/tabbrowser/tab-audio-muted.svg");
+	content: url("../MipImages/Fugue/fugue_AudioMuted.png");
+	content: url("../MipImages/Oxygen/oxygen_AudioMuted.png");
+	content: url("../MipImages/Silk/silk_AudioMuted.png");
+	content: url("../MipImages/Tango/tango_AudioMuted.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_AudioMuted.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context_toggleMuteTab > label,
+#context_toggleMuteSelectedTabs > label,
+#context-media-mute > label,
+#context-media-unmute > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Tab-Pin (and other PIN items) ************************************************/
+
+#context_pinTab::Before,
+#context_pinSelectedTabs::Before,
+menuitem[data-l10n-id="toolbar-context-menu-pin-to-overflow-menu"]::Before,
+#customizationPanelItemContextMenuPin::Before,
+menuitem.customize-context-addToPanel::Before {
+
+/*	content: url("chrome://browser/skin/pin-tab.svg");
+	content: url("../MipImages/Fugue/fugue_Pin.png");
+	content: url("../MipImages/Fugue/fugue_Pin-Purple.png");
+	*/
+	content: url("../MipImages/Fugue/fugue_Pin-Blue.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context_unpinTab::Before,
+#context_unpinSelectedTabs::Before,
+#customizationPanelItemContextMenuUnpin::Before {
+
+/*	content: url("chrome://browser/skin/unpin-tab.svg");
+	content: url("../MipImages/Fugue/fugue_Pin.png");
+	content: url("../MipImages/Fugue/fugue_Pin-Purple.png");
+	*/
+	content: url("../MipImages/Fugue/fugue_Pin-Blue.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem[data-l10n-id="toolbar-context-menu-pin-to-overflow-menu"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context_pinTab > label,
+#context_unpinTab > label,
+#context_pinSelectedTabs > label,
+#context_unpinSelectedTabs > label,
+menuitem[data-l10n-id="toolbar-context-menu-pin-to-overflow-menu"] > label,
+#customizationPanelItemContextMenuPin > label,
+#customizationPanelItemContextMenuUnpin > label,
+menuitem.customize-context-addToPanel > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Tab-Duplicate ****************************************************************/
+
+#context_duplicateTab::Before,
+#context_duplicateTabs::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_TabDuplicate.png");
+	content: url("../MipImages/Oxygen/oxygen_TabDuplicate.png");
+	content: url("../MipImages/Silk/silk_TabDuplicate.png");
+	content: url("../MipImages/Tango/tango_TabDuplicate.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_TabDuplicate.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context_duplicateTab > label,
+#context_duplicateTabs > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Tabs-All [OVERRIDES SELECT ALL / FUGUE ONLY] *********************************/
+
+#menu_showAllTabs::Before,
+#menu_bookmarkAllTabs::Before,
+#context_selectAllTabs::Before,
+#toolbar-context-selectAllTabs::Before {
+
+	content: url("../MipImages/Fugue/fugue_TabsAll.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context_selectAllTabs[disabled=true]::Before,
+#toolbar-context-selectAllTabs[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_showAllTabs > label,
+#menu_bookmarkAllTabs > label,
+#context_selectAllTabs > label,
+#toolbar-context-selectAllTabs > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Tab-Move *********************************************************************/
+
+#context_moveTabOptions::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_TabMove.png");
+	content: url("../MipImages/Oxygen/oxygen_TabMove.png");
+	content: url("../MipImages/Silk/silk_TabMove.png");
+	content: url("../MipImages/Tango/tango_TabMove.png");
+	content: url("../MipImages/Crystal/crystal_TabMove-Blue.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_TabMove.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context_moveTabOptions[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context_moveTabOptions > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Tab-Move Start/End (and Close to the Right) **********************************/
+
+#context_moveToStart::Before {
+
+/*	content: url("chrome://browser/skin/back.svg");
+	content: url("../MipImages/Fugue/fugue_ToStart.png");
+	content: url("../MipImages/Oxygen/oxygen_ToStart.png");
+	content: url("../MipImages/Silk/silk_ToStart.png");
+	content: url("../MipImages/Tango/tango_ToStart.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_ToStart.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context_moveToEnd::Before,
+#context_closeTabsToTheEnd::Before {
+
+/*	content: url("chrome://browser/skin/forward.svg");
+	content: url("../MipImages/Fugue/fugue_ToEnd.png");
+	content: url("../MipImages/Oxygen/oxygen_ToEnd.png");
+	content: url("../MipImages/Silk/silk_ToEnd.png");
+	content: url("../MipImages/Tango/tango_ToEnd.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_ToEnd.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context_moveToStart[disabled=true]::Before,
+#context_moveToEnd[disabled=true]::Before,
+#context_closeTabsToTheEnd[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context_moveToStart > label,
+#context_moveToEnd > label,
+#context_closeTabsToTheEnd > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Tab-Close ********************************************************************/
+
+#context_closeTab::Before,
+#context_closeSelectedTabs::Before,
+#menu_close::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_TabMinus.png");
+	content: url("../MipImages/Fugue/fugue_TabX.png");
+	content: url("../MipImages/Oxygen/oxygen_TabX.png");
+	content: url("../MipImages/Silk/silk_TabMinus.png");
+	content: url("../MipImages/Tango/tango_TabX.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_TabMinus.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context_closeTab > label,
+#context_closeSelectedTabs > label,
+#menu_close > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Tab Close All / Do NOT Show PopUp Bar ****************************************/
+
+#context_closeTabOptions::Before,
+#blockedPopupDontShowMessage:not([checked=true])::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_ClearAll.png");
+	content: url("../MipImages/Oxygen/oxygen_ClearAll.png");
+	content: url("../MipImages/Silk/silk_ClearAll.png");
+	content: url("../MipImages/Tango/tango_ClearAll.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_ClearAll.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context_closeTabOptions[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context_closeTabOptions > label,
+#blockedPopupDontShowMessage:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Tab Close Other Tabs *********************************************************/
+
+#context_closeOtherTabs::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_TabsOthers.png");
+	content: url("../MipImages/Oxygen/oxygen_TabsOthers.png");
+	content: url("../MipImages/Silk/silk_TabsOther.png");
+	content: url("../MipImages/Tango/tango_TabsOthers.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_TabsOthers.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context_closeOtherTabs[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context_closeOtherTabs > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Tab-Hidden (History Menu) ****************************************************/
+
+#hiddenTabsMenu::Before {
+
+/*	content: url("chrome://browser/skin/tab.svg");
+	content: url("../MipImages/Fugue/fugue_TabHidden.png");
+	content: url("../MipImages/Oxygen/oxygen_TabHidden.png");
+	content: url("../MipImages/Silk/silk_TabHidden.png");
+	content: url("../MipImages/Tango/tango_TabHidden.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_TabHidden.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Tab-History (Recently Closed) ************************************************/
+
+#historyUndoMenu::Before {
+
+/*	content: url("chrome://browser/skin/tab.svg");
+	content: url("../MipImages/Fugue/fugue_Tab.png");
+	content: url("../MipImages/Oxygen/oxygen_Tab.png");
+	content: url("../MipImages/Silk/silk_Tab.png");
+	content: url("../MipImages/Tango/tango_Tab.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Tab.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#historyUndoMenu[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#hiddenTabsMenu > label,
+#historyUndoMenu > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Tab-Hidden (Tabs Dropdown Panel) *********************************************/
+
+#allTabsMenu-hiddenTabsButton > image {
+
+/*	list-style-image: url("../MipImages/Fugue/fugue_TabHidden.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_TabHidden.png");
+	list-style-image: url("../MipImages/Silk/silk_TabHidden.png");
+	list-style-image: url("../MipImages/Tango/tango_TabHidden.png");
+	*/
+	list-style-image: url("../MipImages/Crystal/crystal_TabHidden.png");
+	-moz-image-region: auto;
+	}
+
+#allTabsMenu-hiddenTabsButton > label { padding-inline-start: 8px !important; }
+
+/********************************************************************************
+ *
+ * CONTAINERS
+ *
+ ********************************************************************************/
+
+/* Manage Containers ************************************************************/
+
+menuitem[command="Browser:OpenAboutContainers"]::Before { /* #new-tab-button, #new-tab-button-popup, #menu_newUserContext */
+
+	content: url("../MipImages/FF/container-site.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#allTabsMenu-containerTabsView toolbarbutton[data-l10n-id="all-tabs-menu-manage-user-context"] > image { list-style-image: url("../MipImages/FF/container-site.svg"); }
+#allTabsMenu-containerTabsView toolbarbutton[data-l10n-id="all-tabs-menu-manage-user-context"] > label { padding-inline-start: 8px !important; }
+
+/* Single Same Container ********************************************************/
+
+#context-openlinkincontainertab::Before,
+#_testpilot-containers-menuitem-_open-in-this-container::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_Container.png"); */
+	content: url("../MipImages/Fugue/fugue_Container-grey.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Multiple Containers **********************************************************/
+
+#menu_newUserContext::Before,
+#context_reopenInContainer::Before,
+#context-openlinkinusercontext-menu::Before {
+
+	content: url("../MipImages/Fugue/fugue_Theme.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#allTabsMenu-containerTabsButton > image { list-style-image: url("../MipImages/Fugue/fugue_Theme.png"); -moz-image-region: auto; }
+#allTabsMenu-containerTabsButton > label { padding-inline-start: 8px !important; }
+
+/* Bookmarks Context Menu *******************************************************/
+
+#_testpilot-containers-menuitem-_open-bookmark-in-container-tab > .menu-iconic-left > image { display: none !important; }
+
+#_testpilot-containers-menuitem-_open-bookmark-in-container-tab::Before {
+
+	content: url("../MipImages/Fugue/fugue_Theme.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* No Containers ****************************************************************/
+
+menuitem[data-usercontextid="0"]::Before { /* #new-tab-button, #new-tab-button-popup, #context-openlinkinusercontext-menu */
+
+/*	content: url("chrome://global/skin/icons/error.svg");
+	content: url("../MipImages/Fugue/fugue_DisableBlockEmpty.png");
+	content: url("../MipImages/Oxygen/oxygen_DisableBlockEmpty.png");
+	content: url("../MipImages/Silk/silk_DisableBlockEmpty.png");
+	content: url("../MipImages/Tango/tango_DisableBlockEmpty.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_DisableBlockEmpty.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem[command="Browser:OpenAboutContainers"] > label,
+#context-openlinkincontainertab > label,
+#menu_newUserContext > label,
+#context_reopenInContainer > label,
+#context-openlinkinusercontext-menu > label,
+#_testpilot-containers-menuitem-_open-in-this-container > label,
+menuitem[data-usercontextid="0"] > label,
+#_testpilot-containers-menuitem-_open-bookmark-in-container-tab > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * PAGE CONTEXT MENU
+ *
+ ********************************************************************************/
+
+/* File-Save ********************************************************************/
+
+#menu_savePage::Before,
+#context-savelink::Before,
+#context-saveimage::Before,
+#context-savepage::Before,
+#context-saveframe::Before,
+#context-savevideo::Before,
+#context-video-saveimage::Before,
+#context-saveaudio::Before {
+
+/*	content: url("chrome://browser/skin/save.svg");
+	content: url("../MipImages/Fugue/fugue_SaveAs.png");
+	content: url("../MipImages/Oxygen/oxygen_SaveAs.png");
+	content: url("../MipImages/Silk/silk_SaveAs.png");
+	content: url("../MipImages/Tango/tango_SaveAs.png");
+	content: url("../MipImages/Oxygen/oxygen_Save.png");
+	content: url("../MipImages/Silk/silk_Save.png");
+	content: url("../MipImages/Tango/tango_Save.png");
+	content: url("../MipImages/Fugue/fugue_Save.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_SaveAs.png");
+	content: url("../MipImages/Crystal/crystal_Save.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-saveimage::Before,
+#context-video-saveimage::Before {
+/* File-Save-Image [Overrides Above] */
+
+/*	content: url("../MipImages/Fugue/fugue_SaveImage.png");
+	content: url("../MipImages/Oxygen/oxygen_SaveImage.png");
+	content: url("../MipImages/Silk/silk_SaveImage.png");
+	content: url("../MipImages/Tango/tango_SaveImage.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_SaveImage.png");
+	}
+
+#context-savevideo::Before {
+/* File-Save-Video [Overrides Above] */
+
+/*	content: url("../MipImages/Fugue/fugue_SaveVideo.png");
+	content: url("../MipImages/Oxygen/oxygen_SaveVideo.png");
+	content: url("../MipImages/Silk/silk_SaveVideo.png");
+	content: url("../MipImages/Tango/tango_SaveVideo.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_SaveVideo.png");
+	}
+
+#context-saveaudio::Before {
+/* File-Save-Audio [Overrides Above] */
+
+/*	content: url("../MipImages/Fugue/fugue_SaveAudio.png");
+	content: url("../MipImages/Oxygen/oxygen_SaveAudio.png");
+	content: url("../MipImages/Silk/silk_SaveAudio.png");
+	content: url("../MipImages/Tango/tango_SaveAudio.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_SaveAudio.png");
+	}
+
+#menu_savePage > label,
+#context-savelink > label,
+#context-saveimage > label,
+#context-savepage > label,
+#context-saveframe > label,
+#context-savevideo > label,
+#context-video-saveimage > label,
+#context-saveaudio > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Pocket ***********************************************************************/
+
+#context-pocket::Before,
+#context-savelinktopocket::Before {
+
+/*	content: url("chrome://browser/skin/pocket.svg");
+	content: url("chrome://browser/skin/pocket-outline.svg");
+	content: url("../MipImages/PublicDomain/pocket-alt-red-icon.png");
+	content: url("../MipImages/PublicDomain/pocket-icon-colorful.png");
+	content: url("../MipImages/PublicDomain/pocket-alt-demin-icon.png");
+	*/
+	content: url("../MipImages/PublicDomain/pocket-alt-demin-icon-light.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-pocket > label,
+#context-savelinktopocket > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* View Image *******************************************************************/
+
+#context-viewimage::Before,
+#context-viewbgimage::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_Image.png");
+	content: url("../MipImages/Oxygen/oxygen_Image.png");
+	content: url("../MipImages/Silk/silk_Image.png");
+	content: url("../MipImages/Tango/tango_Image.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Image.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-viewbgimage[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+/* Set Desktop Background *******************************************************/
+
+#context-setDesktopBackground::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_Image.png");
+	content: url("../MipImages/Oxygen/oxygen_Image.png");
+	content: url("../MipImages/Silk/silk_Image.png");
+	content: url("../MipImages/Tango/tango_Image.png");
+	*/
+	content: url("../MipImages/Fugue/fugue_Desktop.png"); /* This is only available for fugue but works for all */
+	content: url("../MipImages/Crystal/crystal_Image.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-viewimage > label,
+#context-viewbgimage > label,
+#context-setDesktopBackground > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* View Video *******************************************************************/
+
+#context-viewvideo::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_Video.png");
+	content: url("../MipImages/Oxygen/oxygen_Video.png");
+	content: url("../MipImages/Silk/silk_Video.png");
+	content: url("../MipImages/Tango/tango_Video.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Video.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-viewvideo > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* VIEW ALTERNATE ***************************************************************/
+
+#context-viewimage::Before,
+#context-viewbgimage::Before,
+#context-viewvideo::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_View.png");
+	content: url("../MipImages/Oxygen/oxygen_View-darker.png");
+	content: url("../MipImages/Oxygen/oxygen_View.png");
+	content: url("../MipImages/Silk/silk_View.png");
+	content: url("../MipImages/Tango/tango_View.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_View.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Search Web [OPTIONAL OVERRIDES FIND] *****************************************/
+
+#context-searchselect::Before,
+#context-searchselect-private::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_WebSearch.png");
+	content: url("../MipImages/Oxygen/oxygen_WebSearch.png");
+	content: url("../MipImages/Silk/silk_WebSearch.png");
+	content: url("../MipImages/Tango/tango_WebSearch.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Zoom.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-searchselect > label,
+#context-searchselect-private > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Search Add Keyword ***********************************************************/
+
+#context-keywordfield::Before {
+
+/*	content: url("chrome://devtools/skin/images/animation-fast-track.svg");
+	content: url("../MipImages/Fugue/fugue_Lightning.png");
+	content: url("../MipImages/Fugue/fugue_Lightning-saturated.png");
+	content: url("../MipImages/Oxygen/oxygen_Lightning.png");
+	content: url("../MipImages/Silk/silk_Lightning.png");
+	content: url("../MipImages/Tango/tango_Lightning.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Lightning.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-keywordfield > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Frame (This Frame/Show Only) *************************************************/
+
+#frame::Before,
+#context-showonlythisframe::Before {
+
+/*	content: url("chrome://devtools/skin/images/command-frames.svg");
+	content: url("../MipImages/Fugue/fugue_Frame.png");
+	content: url("../MipImages/Oxygen/oxygen_Frame.png");
+	content: url("../MipImages/Silk/silk_Frame.png");
+	content: url("../MipImages/Tango/tango_Frame.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Frame.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#frame > label,
+#context-showonlythisframe > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Check Spelling Toggle / Add To Dictionary ************************************/
+
+#spell-add-to-dictionary::Before,
+#spell-check-enabled:not([checked=true])::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_CheckSpelling.png");
+	content: url("../MipImages/Oxygen/oxygen_CheckSpelling.png");
+	content: url("../MipImages/Oxygen/oxygen_CheckSpelling-longer.png");
+	content: url("../MipImages/Silk/silk_CheckSpelling.png");
+	content: url("../MipImages/Tango/tango_CheckSpelling.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_CheckSpelling.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#spell-add-to-dictionary > label,
+#spell-check-enabled:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Check Spelling Select Language ***********************************************/
+
+#spell-dictionaries::Before,
+#spell-add-dictionaries-main::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_SetLanguage.png");	/* Officially it is these ones */
+/*	content: url("../MipImages/Tango/tango_SetLanguage.png");
+	content: url("../MipImages/FF/alwaysAsk-XP-lower.png");		/* Alternatives: Speech Bubbles */
+/*	content: url("../MipImages/FF/services-16.png");
+	content: url("../MipImages/Fugue/fugue_Balloon-left.png");
+	content: url("../MipImages/Fugue/fugue_Balloon-white-left.png");
+	content: url("../MipImages/Silk/silk_Alert-bigger.png");
+	content: url("../MipImages/Silk/silk_Alert.png");
+	content: url("../MipImages/Tango/tango_Alert.png");
+	content: url("../MipImages/FF/dictionaryGeneric-16.png");	/* Alternatives: Dictionaries */
+/*	content: url("../MipImages/Fugue/fugue_Research.png");
+	content: url("../MipImages/Oxygen/oxygen_Research.png");
+	content: url("../MipImages/Tango/tango_Research.png");
+	*/
+	content: url("../MipImages/Fugue/fugue_Encoding.png");
+	content: url("../MipImages/Oxygen/oxygen_Encoding.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#spell-add-dictionaries::Before {
+
+/*	content: url("../MipImages/FF/dictionaryGeneric-16.png");
+	content: url("../MipImages/Oxygen/oxygen_Research.png");
+	content: url("../MipImages/Tango/tango_Research.png");
+	*/
+	content: url("../MipImages/Fugue/fugue_Research.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#spell-dictionaries > label,
+#spell-add-dictionaries-main > label,
+#spell-add-dictionaries > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Inspect Element **************************************************************/
+
+#context-inspect::Before {
+
+/*	content: url("chrome://devtools/skin/images/command-pick.svg");
+	content: url("chrome://devtools/skin/images/tool-inspector.svg");
+	content: url("../MipImages/FF/inspect-blue.png");
+	content: url("../MipImages/FF/inspect-contrast.png");
+	content: url("../MipImages/FF/tool-inspector.png");
+	content: url("../MipImages/Fugue/fugue_Dev-Inspect.png");
+	content: url("../MipImages/Fugue/fugue_Dev-Inspect-darker.png");
+	content: url("../MipImages/Oxygen/oxygen_Dev-Inspect.png");
+	content: url("../MipImages/Silk/silk_Dev-Inspect.png");
+	content: url("../MipImages/Tango/tango_Dev-Inspect.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Dev-Inspect.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* Inspect Accessibility ********************************************************/
+
+#context-inspect-a11y::Before {
+
+/*	content: url("chrome://devtools/skin/images/tool-accessibility.svg"); */
+	content: url("chrome://devtools/skin/images/command-pick-accessibility.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	-moz-context-properties: fill;
+	 fill: SlateGrey;
+	}
+
+#context-inspect > label,
+#context-inspect-a11y > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * MEDIA PLAYER
+ *
+ ********************************************************************************/
+
+/* PIP (Very Basic) *************************************************************/
+
+#context-video-pictureinpicture:not([checked=true])::Before {
+
+/*	content: url("chrome://global/skin/media/pictureinpicture.svg");
+	content: url("../MipImages/Fugue/fugue_Pip.png");
+	content: url("../MipImages/Oxygen/oxygen_Pip.png");
+	content: url("../MipImages/Silk/silk_Pip.png");
+	content: url("../MipImages/Tango/tango_Pip.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Pip.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-video-pictureinpicture:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Play/Pause/Speed *************************************************************/
+
+#context-media-play::Before {
+
+/*	content: url("chrome://global/skin/media/playButton.svg");
+	content: url("../MipImages/Fugue/fugue_Player-Play.png");
+	content: url("../MipImages/Oxygen/oxygen_Player-Play.png");
+	content: url("../MipImages/Silk/silk_Player-Play.png");
+	content: url("../MipImages/Tango/tango_Player-Play.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Player-Play.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-media-pause::Before {
+
+/*	content: url("chrome://global/skin/media/pauseButton.svg");
+	content: url("../MipImages/Fugue/fugue_Player-Pause.png");
+	content: url("../MipImages/Oxygen/oxygen_Player-Pause.png");
+	content: url("../MipImages/Silk/silk_Player-Pause.png");
+	content: url("../MipImages/Tango/tango_Player-Pause.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Player-Pause.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-media-playbackrate::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_Player-Forward.png");
+	content: url("../MipImages/Oxygen/oxygen_Player-Forward.png");
+	content: url("../MipImages/Silk/silk_Player-Forward.png");
+	content: url("../MipImages/Tango/tango_Player-Forward.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Player-Forward.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-media-play[disabled=true]::Before,
+#context-media-playbackrate[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context-media-play > label,
+#context-media-pause > label,
+#context-media-playbackrate > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Loop/Repeat ******************************************************************/
+
+#context-media-loop:not([checked=true])::Before {
+
+/*	content: url("chrome://browser/skin/reload.svg");
+	content: url("../MipImages/Crystal/crystal_Reload.png");
+	content: url("../MipImages/Fugue/fugue_Reload.png");
+	content: url("../MipImages/Fugue/fugue_Repeat.png");
+	content: url("../MipImages/Oxygen/oxygen_Repeat.png");
+	content: url("../MipImages/Silk/silk_Reload.png");
+	content: url("../MipImages/Silk/silk_Repeat.png");
+	content: url("../MipImages/Tango/tango_Reload.png");
+	*/
+	content: url("../MipImages/Oxygen/oxygen_Reload.png"); /* Use this one preferably */
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-media-loop:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Show/Hide Controls ***********************************************************/
+
+#context-media-hidecontrols::Before {
+
+/*	content: url("../MipImages/FF/container-hide.svg"); */
+	content: url("../MipImages/FF/container-hide-black.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-media-showcontrols::Before {
+
+/*	content: url("../MipImages/FF/container-unhide.svg"); */
+	content: url("../MipImages/FF/container-unhide-black.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-media-hidecontrols[disabled=true]::Before,
+#context-media-showcontrols[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context-media-hidecontrols > label,
+#context-media-showcontrols > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Plugin ***********************************************************************/
+
+#context-ctp-play::Before { /* Activate This Plugin */
+
+/*	content: url("chrome://global/skin/plugins/plugin.svg");
+	content: url("../MipImages/Fugue/fugue_Allow.png");
+	content: url("../MipImages/Silk/silk_Allow.png");
+	*/
+	content: url("../MipImages/Silk/silk_Plugin.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-ctp-play > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * VIEW SOURCE
+ *
+ ********************************************************************************/
+
+/* View Source ******************************************************************/
+
+#context-viewframesource::Before,
+#context-viewpartialsource-selection::Before,
+#context-viewsource::Before,
+#menu_pageSource::Before {
+
+/*	content: url("chrome://devtools/skin/images/tool-dom.svg");
+	content: url("../MipImages/Fugue/fugue_ViewSource.png");
+	content: url("../MipImages/Fugue/fugue_ViewSource(silk).png");
+	content: url("../MipImages/Oxygen/oxygen_ViewSource.png");
+	content: url("../MipImages/Silk/silk_ViewSource.png");
+	content: url("../MipImages/Tango/tango_ViewSource-Brakets.png");
+	content: url("../MipImages/Tango/tango_ViewSource.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_ViewSource.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#context-viewframesource[disabled=true]::Before,
+#context-viewpartialsource-selection[disabled=true]::Before,
+#context-viewsource[disabled=true]::Before,
+#menu_pageSource[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context-viewframesource > label,
+#context-viewpartialsource-selection > label,
+#context-viewsource > label,
+#menu_pageSource > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* View Source GoTo Line ********************************************************/
+
+menuitem[label^="Go to Line"]:not([checked=true])::Before,
+menuitem[generateditemid="16"]:not([checked=true])::Before {
+
+/*	content: url("chrome://browser/skin/forward.svg");
+	content: url("../MipImages/Fugue/fugue_GoTo.png");
+	content: url("../MipImages/Oxygen/oxygen_GoTo.png");
+	content: url("../MipImages/Silk/silk_GoTo.png");
+	content: url("../MipImages/Tango/tango_GoTo.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_GoTo.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* View Source Wrap Lines *******************************************************/
+
+menuitem[label="Wrap Long Lines"]:not([checked=true])::Before,
+menuitem[generateditemid="17"]:not([checked=true])::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_Wrap.png");
+	content: url("../MipImages/Oxygen/oxygen_Wrap.png");
+	content: url("../MipImages/Silk/silk_Wrap.png");
+	content: url("../MipImages/Tango/tango_Wrap.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Wrap.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+/* View Source Syntax Highlight *************************************************/
+
+menuitem[label="Syntax Highlighting"]:not([checked=true])::Before,
+menuitem[generateditemid="18"]:not([checked=true])::Before {
+
+/*	content: url("../MipImages/Crystal/crystal_Highlight-green.png");
+	content: url("../MipImages/Fugue/fugue_Highlight.png");
+	content: url("../MipImages/Oxygen/oxygen_Highlight.png");
+	content: url("../MipImages/Silk/silk_Highlight.png");
+	content: url("../MipImages/Tango/tango_Highlight.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Highlight.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem[label^="Go to Line"]:not([checked=true]) > label,
+menuitem[generateditemid="16"]:not([checked=true]) > label,
+menuitem[label="Wrap Long Lines"]:not([checked=true]) > label,
+menuitem[generateditemid="17"]:not([checked=true]) > label,
+menuitem[label="Syntax Highlighting"]:not([checked=true]) > label,
+menuitem[generateditemid="18"]:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * Screenshot BuiltIn Extension
+ *
+ ********************************************************************************/
+
+#screenshots_mozilla_org-menuitem-_create-screenshot > hbox.menu-iconic-left { display: none !important; }
+
+#screenshots_mozilla_org-menuitem-_create-screenshot::Before {
+
+/*	content: url("../MipImages/Crystal/crystal_SaveImage.png");
+	content: url("../MipImages/Fugue/fugue_SaveImage.png");
+	content: url("../MipImages/Oxygen/oxygen_SaveImage.png");
+	content: url("../MipImages/Silk/silk_SaveImage.png");
+	content: url("../MipImages/Tango/tango_SaveImage.png");
+	content: url("../MipImages/Fugue/fugue_ScreenshotSaveImage.png");
+	content: url("../MipImages/Oxygen/oxygen_ScreenshotSaveImage.png");
+	content: url("../MipImages/Silk/silk_ScreenshotSaveImage.png");
+	content: url("../MipImages/Tango/tango_ScreenshotSaveImage.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_ScreenshotSaveImage.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#screenshots_mozilla_org-menuitem-_create-screenshot > label {
+
+	margin-inline-start: 10px !important;
+	}
+
+/********************************************************************************
+ *
+ * ALLOW / Pop-Up Blocker
+ *
+ ********************************************************************************/
+
+#blockedPopupAllowSite::Before,
+#menu_HelpPopup_reportPhishingErrortoolmenu::Before {
+
+/*	content: url("../MipImages/Silk/silk_Allow.png"); */
+	content: url("../MipImages/Fugue/fugue_Allow.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#blockedPopupAllowSite > label,
+#menu_HelpPopup_reportPhishingErrortoolmenu > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"]::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_View.png");
+	content: url("../MipImages/Oxygen/oxygen_View-darker.png");
+	content: url("../MipImages/Oxygen/oxygen_View.png");
+	content: url("../MipImages/Silk/silk_View.png");
+	content: url("../MipImages/Tango/tango_View.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_View.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * EMPTY/HIDE
+ *
+ ********************************************************************************/
+
+/* EMPTY LISTS - ALWAYS DISABLED MENU ENTRIES ***********************************/
+
+#spell-no-suggestions::Before,
+#fill-login-no-logins::Before,
+#context_sendTabToDevicePopupMenu menuitem[label="No Devices Connected"]::Before, /* unfortunately Language-Dependent */
+#context-sendpagetodevice-popup menuitem[label="No Devices Connected"]::Before,
+#context-sendlinktodevice-popup menuitem[label="No Devices Connected"]::Before {
+
+/*	content: url("chrome://global/skin/icons/error.svg");
+	content: url("../MipImages/Fugue/fugue_DisableBlockEmpty.png");
+	content: url("../MipImages/Oxygen/oxygen_DisableBlockEmpty.png");
+	content: url("../MipImages/Silk/silk_DisableBlockEmpty.png");
+	content: url("../MipImages/Tango/tango_DisableBlockEmpty.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_DisableBlockEmpty.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	opacity: 0.4;
+	}
+
+#spell-no-suggestions > label,
+#fill-login-no-logins > label,
+#context_sendTabToDevicePopupMenu menuitem[label="No Devices Connected"] > label,
+#context-sendpagetodevice-popup menuitem[label="No Devices Connected"] > label,
+#context-sendlinktodevice-popup menuitem[label="No Devices Connected"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* HIDE STUFF that has no Un-Hide / Downloads,FullScreenToolbar,PIP Auto-Hide ***/
+
+#toolbar-context-autohide-downloads-button:not([checked=true])::Before,
+#autohide-context menuitem[data-l10n-id="full-screen-autohide"]:not([checked=true])::Before,
+#pictureInPictureToggleContextMenu menuitem[oncommand="PictureInPicture.hideToggle();"]::Before,
+#_testpilot-containers-menuitem-_hide-container::Before,
+#context-ctp-hide::Before {
+
+/*	content: url("../MipImages/Crystal/crystal_PrivateBrowsing.png");
+	content: url("../MipImages/Crystal/crystal_PrivateBrowsing-darker.png");	/* Use this only when not using Crystal */
+/*	content: url("../MipImages/PublicDomain/fugue-ghost.png");
+	content: url("../MipImages/PublicDomain/public-ghost-16x16-bright.png");
+	content: url("../MipImages/PublicDomain/vector-ghost-icon-bold.png");		/* Suitable for use with built-in SVG */
+
+	content: url("../MipImages/FF/container-hide-black.svg");
+	content: url("../MipImages/FF/container-hide.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#toolbar-context-autohide-downloads-button:not([checked=true]) > label,
+#autohide-context menuitem[data-l10n-id="full-screen-autohide"]:not([checked=true]) > label,
+#pictureInPictureToggleContextMenu menuitem[oncommand="PictureInPicture.hideToggle();"] > label,
+#_testpilot-containers-menuitem-_hide-container > label,
+#context-ctp-hide > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * LOGINS/PASSWORDS (Field Context Menu)
+ * These are unfortunately Language-Dependent
+ *
+ ********************************************************************************/
+
+#fill-login::Before,
+#fill-login > #fill-login-popup > menuitem.context-login-item::Before {
+
+/*	content: url("chrome://browser/skin/fxa/avatar.svg");
+	content: url("../MipImages/FF/profileicon.png");
+	content: url("../MipImages/FF/profileicon-XP.png");
+	content: url("../MipImages/Fugue/fugue_UserSingle.png");
+	content: url("../MipImages/Oxygen/oxygen_UserSingle.png");
+	content: url("../MipImages/Silk/silk_UserSingle.png");
+	content: url("../MipImages/Tango/tango_UserSingle.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_UserSingle.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#fill-login[label="Fill Password"]::Before,
+#fill-login[label="Fill Password"] > #fill-login-popup > menuitem.context-login-item::Before {
+
+/*	content: url("chrome://browser/skin/login.svg");
+	content: url("../MipImages/FF/key-16.png");
+	content: url("../MipImages/FF/key.png");
+	content: url("../MipImages/Fugue/fugue_Fingerprint.png");
+	content: url("../MipImages/Fugue/fugue_Key-solid.png");
+	content: url("../MipImages/Silk/silk_Key.png");
+	*/
+	content: url("../MipImages/Fugue/fugue_Key.png");
+	}
+
+#fill-login-saved-passwords::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_UserGroup.png");
+	content: url("../MipImages/Oxygen/oxygen_UserGroup.png");
+	content: url("../MipImages/Silk/silk_UserGroup.png");
+	content: url("../MipImages/Tango/tango_UserGroup.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_UserGroup.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#fill-login-generated-password::Before { /* Use Generated Password */
+
+/*	content: url("chrome://browser/skin/login.svg");
+	content: url("../MipImages/FF/key-16.png");
+	content: url("../MipImages/FF/key.png");
+	content: url("../MipImages/Fugue/fugue_Fingerprint.png");
+	content: url("../MipImages/Fugue/fugue_Key.png");
+	content: url("../MipImages/Silk/silk_Key.png");
+	content: url("../MipImages/Tango/tango_Go.png"); /* Double Gears */
+
+	content: url("../MipImages/Fugue/fugue_Key-solid.png"); /* Different Key */
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#fill-login > label,
+#fill-login-saved-passwords > label,
+#fill-login-generated-password > label,
+#fill-login > #fill-login-popup > menuitem.context-login-item > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * Page Action Context Menu
+ *
+ ********************************************************************************/
+
+menuitem[data-l10n-id="page-action-add-to-urlbar"]::Before,
+menuitem.customize-context-addToToolbar::Before {
+
+/*	content: url("chrome://browser/skin/add.svg");
+	content: url("../MipImages/Fugue/fugue_Plus.png");
+	content: url("../MipImages/Oxygen/oxygen_Plus.png");
+	content: url("../MipImages/Silk/silk_Plus.png");
+	content: url("../MipImages/Tango/tango_Plus.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Plus.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem[data-l10n-id="page-action-remove-from-urlbar"]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-remove-from-toolbar"]::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_Minus.png");
+	content: url("../MipImages/Oxygen/oxygen_Minus.png");
+	content: url("../MipImages/Silk/silk_Delete.png");
+	content: url("../MipImages/Tango/tango_Minus.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Minus.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem[data-l10n-id="page-action-add-to-urlbar"][disabled=true]::Before,
+menuitem[data-l10n-id="page-action-remove-from-urlbar"][disabled=true]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-remove-from-toolbar"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+menuitem[data-l10n-id="page-action-add-to-urlbar"] > label,
+menuitem.customize-context-addToToolbar > label,
+menuitem[data-l10n-id="page-action-remove-from-urlbar"] > label,
+menuitem[data-l10n-id="toolbar-context-menu-remove-from-toolbar"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * Toolbar Context Menu
+ *
+ ********************************************************************************/
+
+/* Customize/Colors/Palette *****************************************************/
+
+#menu_customizeToolbars::Before,
+menuitem[command="cmd_CustomizeToolbars"]::Before, /* #customizationPanelContextMenu */
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"]::Before {
+
+/*	content: url("chrome://browser/skin/customize.svg");
+	content: url("../MipImages/Fugue/fugue_Palette.png");
+	content: url("../MipImages/Oxygen/oxygen_Palette.png");
+	content: url("../MipImages/Silk/silk_Palette.png");
+	content: url("../MipImages/Tango/tango_Palette.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Palette.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_customizeToolbars[disabled=true]::Before,
+menuitem[command="cmd_CustomizeToolbars"][disabled=true]::Before
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_customizeToolbars > label,
+menuitem[command="cmd_CustomizeToolbars"] > label,
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * Navigation Context Icons
+ *
+ ********************************************************************************/
+
+#context-back image {
+
+/*	list-style-image: url("../MipImages/Fugue/fugue_NavBack.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_NavBack.png");
+	list-style-image: url("../MipImages/Silk/silk_NavBack.png");
+	list-style-image: url("../MipImages/Tango/tango_NavBack.png");
+	*/
+	list-style-image: url("../MipImages/Crystal/crystal_NavBack.png");
+	-moz-context-properties: none;
+	-moz-image-region: auto;
+	}
+
+#context-forward image {
+
+/*	list-style-image: url("../MipImages/Fugue/fugue_NavForward.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_NavForward.png");
+	list-style-image: url("../MipImages/Silk/silk_NavForward.png");
+	list-style-image: url("../MipImages/Tango/tango_NavForward.png");
+	*/
+	list-style-image: url("../MipImages/Crystal/crystal_NavForward.png");
+	-moz-context-properties: none;
+	-moz-image-region: auto;
+	}
+
+#context-reload image {
+
+/*	list-style-image: url("../MipImages/Fugue/fugue_Reload.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Reload.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Repeat.png");
+	list-style-image: url("../MipImages/Silk/silk_Reload.png");
+	list-style-image: url("../MipImages/Tango/tango_Reload.png");
+	*/
+	list-style-image: url("../MipImages/Crystal/crystal_Reload.png");
+	-moz-context-properties: none;
+	-moz-image-region: auto;
+	}
+
+#context-stop image {
+
+/*	list-style-image: url("../MipImages/Fugue/fugue_NavStop.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_NavStop.png");
+	list-style-image: url("../MipImages/Silk/silk_NavStop.png");
+	list-style-image: url("../MipImages/Tango/tango_NavStop.png");
+	*/
+	list-style-image: url("../MipImages/Crystal/crystal_NavStop.png");
+	-moz-context-properties: none;
+	-moz-image-region: auto;
+	}
+
+#context-bookmarkpage:not([starred=true]) image {
+
+/*	list-style-image: url("../MipImages/FF/bookmark-1.png");
+	list-style-image: url("../MipImages/FF/bookmark-2.png");
+	list-style-image: url("../MipImages/FF/bookmark-3.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Bookmark-New.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmark-New.png");
+	list-style-image: url("../MipImages/Silk/silk_Bookmark-New.png");
+	list-style-image: url("../MipImages/Silk/silk_Bookmark-New(crystal).png");
+	list-style-image: url("../MipImages/Tango/tango_Bookmark-New.png");
+	*/
+	list-style-image: url("../MipImages/Crystal/crystal_Bookmark-New.png");
+	-moz-context-properties: none;
+	-moz-image-region: auto;
+	}
+
+#context-bookmarkpage[starred=true] image {
+
+/*	list-style-image: url("../MipImages/FF/bookmark-3.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Bookmark.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmark.png");
+	list-style-image: url("../MipImages/Silk/silk_Bookmark.png");
+	list-style-image: url("../MipImages/Tango/tango_Bookmark.png");
+	*/
+	list-style-image: url("../MipImages/Crystal/crystal_Bookmark.png");
+	-moz-context-properties: none;
+	-moz-image-region: auto;
+	}
+
+#context-back[disabled=true] image,
+#context-forward[disabled=true] image,
+#context-reload[disabled=true] image,
+#context-stop[disabled=true] image,
+#context-bookmarkpage[disabled=true] image {
+
+	opacity: 0.4;
+	}
+
+/********************************************************************************
+ *
+ * Checkmarks
+ *
+ ********************************************************************************/
+
+menuitem[checked=true]::Before {
+
+/*	content: url("../MipImages/Fugue/fugue_Checkmark.png");
+	content: url("../MipImages/Oxygen/oxygen_Checkmark.png");
+	content: url("../MipImages/Silk/silk_Checkmark.png");
+	content: url("../MipImages/Tango/tango_Checkmark.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Checkmark.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem[checked=true][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+menuitem[checked=true] > hbox.menu-iconic-left { display: none; !important }
+
+menuitem[checked=true] > label {
+
+	margin-inline-start: 10px !important;
+	}
+
+}
