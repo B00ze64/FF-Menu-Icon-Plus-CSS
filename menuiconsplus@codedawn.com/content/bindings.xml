@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<bindings xmlns="http://www.mozilla.org/xbl"
+          xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+          xmlns:xbl="http://www.mozilla.org/xbl">
+  <binding id="iconic-menu" extends="chrome://global/content/bindings/menu.xml#menu-iconic">
+    <implementation>
+      <constructor>
+        <![CDATA[
+          if (this.className.indexOf('menu-iconic') == -1)
+            this.className += (this.className == '') ? 'menu-iconic'
+                                                    : ' menu-iconic';
+        ]]>
+      </constructor>
+    </implementation>
+  </binding>
+  <binding id="iconic-menuitem" extends="chrome://global/content/bindings/menu.xml#menuitem-iconic">
+    <implementation>
+      <constructor>
+        <![CDATA[
+          if (this.className.indexOf('menuitem-iconic') == -1)
+            this.className += (this.className == '') ? 'menuitem-iconic'
+                                                    : ' menuitem-iconic';
+        ]]>
+      </constructor>
+    </implementation>
+  </binding>
+  <binding id="iconic-menuitem-tooltip" extends="chrome://browser/content/urlbarBindings.xml#menuitem-iconic-tooltip">
+    <implementation>
+      <constructor>
+        <![CDATA[
+          if (this.className.indexOf('menuitem-iconic') == -1)
+            this.className += (this.className == '') ? 'menuitem-iconic'
+                                                    : ' menuitem-iconic';
+          this.className = this.className.replace('menuitem-tooltip', 'menuitem-iconic-tooltip', 'i');
+        ]]>
+      </constructor>
+    </implementation>
+  </binding>
+  <binding id="iconic-splitmenu" extends="chrome://browser/content/urlbarBindings.xml#splitmenu">
+    <implementation>
+      <constructor>
+        <![CDATA[
+          this.setAttribute('iconic', 'true');
+        ]]>
+      </constructor>
+    </implementation>
+  </binding>
+</bindings>

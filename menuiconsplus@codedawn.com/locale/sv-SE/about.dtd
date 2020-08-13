@@ -1,0 +1,15 @@
+<!ENTITY about "Om Menu Icons Plus">
+<!ENTITY extensionName "Menu Icons Plus">
+<!ENTITY version "Version:">
+<!ENTITY createdBy "Skapat av:">
+<!ENTITY contributors "Medarbetare:">
+<!ENTITY contrib1 "Everaldo Coelho - Crystal Project-ikoner">
+<!ENTITY contrib2 "Mark James - Silk-ikoner">
+<!ENTITY contrib3 "Oxygen team - Oxygen-ikoner">
+<!ENTITY contrib4 "Gruppen bakom Tango Desktop Project - Tango-ikoner">
+<!ENTITY contrib5 "Yusuke Kamiyamane - Fugue-ikoner">
+<!ENTITY translators "Översättare:">
+<!ENTITY translator1 "BlackJack - fr-FR">
+<!ENTITY translator2 "Mikael Hiort af Ornäs - sv-SE">
+<!ENTITY homepage "Hemsida:">
+<!ENTITY donate.tooltip "PayPal-donationer: Stöd utvecklingen av det här tillägget">

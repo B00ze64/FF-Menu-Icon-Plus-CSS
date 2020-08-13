@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>menuiconsplus@codedawn.com</em:id>
+    <em:type>2</em:type>
+    <em:name>Menu Icons Plus</em:name>
+    <em:version>3.2.1-signed.1-signed</em:version>
+    <em:creator>Justin Rodes</em:creator>
+    <em:iconURL>chrome://menuiconsplus/skin/menuiconsplus.png</em:iconURL>
+    <em:optionsURL>chrome://menuiconsplus/content/options.xul</em:optionsURL>
+    <em:aboutURL>chrome://menuiconsplus/content/about.xul</em:aboutURL>
+    <em:homepageURL>http://www.codedawn.com/menu-icons-plus.php</em:homepageURL>
+
+    <em:localized>
+      <Description>
+        <em:locale>en-US</em:locale>
+        <em:name>Menu Icons Plus</em:name>
+        <em:contributor>Everaldo Coelho - Crystal Project icons (www.everaldo.com)</em:contributor>
+        <em:contributor>Mark James - Silk icons (www.famfamfam.com)</em:contributor>
+        <em:contributor>Oxygen team - Oxygen icons (www.oxygen-icons.org)</em:contributor>
+        <em:contributor>Tango Desktop Project team - Tango icons (tango.freedesktop.org)</em:contributor>
+        <em:contributor>Yusuke Kamiyamane - Fugue icons (p.yusukekamiyamane.com)</em:contributor>
+        <em:translator>BlackJack - fr-FR</em:translator>
+        <em:translator>Mikael Hiort af Ornäs - sv-SE</em:translator>
+        <em:description>Menu icon sets and tweaks.</em:description>
+      </Description>
+    </em:localized>
+
+    <em:localized>
+      <Description>
+        <em:locale>es-MX</em:locale>
+        <em:name>Menu Icons Plus</em:name>
+        <em:contributor>Everaldo Coelho - iconos Crystal Project (www.everaldo.com)</em:contributor>
+        <em:contributor>Mark James - iconos Silk (www.famfamfam.com)</em:contributor>
+        <em:contributor>Grupo Oxygen - iconos Oxygen (www.oxygen-icons.org)</em:contributor>
+        <em:contributor>Tango Desktop Project - iconos Tango (tango.freedesktop.org)</em:contributor>
+        <em:contributor>Yusuke Kamiyamane - iconos Fugue (p.yusukekamiyamane.com)</em:contributor>
+        <em:translator>BlackJack - fr-FR</em:translator>
+        <em:translator>Mikael Hiort af Ornäs - sv-SE</em:translator>
+        <em:description>Juegos de iconos y ajustes para los menús.</em:description>
+      </Description>
+    </em:localized>
+
+    <em:localized>
+      <Description>
+        <em:locale>sv-SE</em:locale>
+        <em:name>Menu Icons Plus</em:name>
+        <em:contributor>Everaldo Coelho - Crystal Project-ikoner (www.everaldo.com)</em:contributor>
+        <em:contributor>Mark James - Silk-ikoner (www.famfamfam.com)</em:contributor>
+        <em:contributor>Gruppen bakom Tango Desktop Project - Tango-ikoner (tango.freedesktop.org)</em:contributor>
+        <em:contributor>Gruppen bakom Oxygen - Oxygen-ikoner (www.oxygen-icons.org)</em:contributor>
+        <em:contributor>Yusuke Kamiyamane - Fugue-ikoner (p.yusukekamiyamane.com)</em:contributor>
+        <em:translator>BlackJack - fr-FR</em:translator>
+        <em:translator>Mikael Hiort af Ornäs - sv-SE</em:translator>
+        <em:description>Menyikonpaket och justeringar.</em:description>
+      </Description>
+    </em:localized>
+
+    <em:localized>
+      <Description>
+        <em:locale>fr-FR</em:locale>
+        <em:name>Menu Icons Plus</em:name>
+        <em:contributor>Everaldo Coelho - icônes Crystal Project (www.everaldo.com)</em:contributor>
+        <em:contributor>Mark James - icônes Silk (www.famfamfam.com)</em:contributor>
+        <em:contributor>Oxygen Project - icônes Oxygen (www.oxygen-icons.org)</em:contributor>
+        <em:contributor>Tango Desktop Project - icônes Tango (tango.freedesktop.org)</em:contributor>
+        <em:contributor>Yusuke Kamiyamane - icônes Fugue (p.yusukekamiyamane.com)</em:contributor>
+        <em:translator>BlackJack - fr-FR</em:translator>
+        <em:translator>Mikael Hiort af Ornäs - sv-SE</em:translator>
+        <em:description>Jeux d'icônes de menu et réglages.</em:description>
+      </Description>
+    </em:localized>
+
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- firefox -->
+        <em:minVersion>4.0</em:minVersion>
+        <em:maxVersion>33.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+  </Description>
+</RDF>

@@ -1,0 +1,39 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Allow icon set checkmarks/radio buttons */
+menuitem[type="checkbox"],
+menuitem[type="radio"],
+menuitem[checked="true"] {
+  -moz-appearance: menuitem !important;
+}
+
+menuitem[type="checkbox"] > .menu-iconic-left,
+menuitem[type="radio"] > .menu-iconic-left,
+menuitem[checked="true"] > .menu-iconic-left {
+  -moz-appearance: menuimage !important;
+}
+
+menuitem[type="checkbox"] > .menu-iconic-left > .menu-iconic-icon,
+menuitem[checked="true"] > .menu-iconic-left > .menu-iconic-icon,
+menuitem[type="radio"] > .menu-iconic-left > .menu-iconic-icon {
+  display: -moz-box !important;
+}
+
+/* Australis rules */
+.subviewbutton[type="checkbox"],
+.subviewbutton[type="radio"],
+.subviewbutton[checked="true"] {
+  background-image: none !important;
+}
+
+.subviewbutton[type="checkbox"],
+.subviewbutton[type="radio"],
+.subviewbutton[checked="true"] {
+  -moz-appearance: none !important;
+}
+
+.subviewbutton[type="checkbox"] > .menu-iconic-left,
+.subviewbutton[type="radio"] > .menu-iconic-left,
+.subviewbutton[checked="true"] > .menu-iconic-left {
+  -moz-appearance: none !important;
+}

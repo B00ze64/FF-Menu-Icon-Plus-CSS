@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ***** BEGIN LICENSE BLOCK *****
+  -   Version: MPL 1.1/GPL 2.0/LGPL 2.1
+  -
+  - The contents of this file are subject to the Mozilla Public License Version
+  - 1.1 (the "License"); you may not use this file except in compliance with
+  - the License. You may obtain a copy of the License at
+  - http://www.mozilla.org/MPL/
+  - 
+  - Software distributed under the License is distributed on an "AS IS" basis,
+  - WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+  - for the specific language governing rights and limitations under the
+  - License.
+  -
+  - The Original Code is Menu Icons Plus.
+  -
+  - The Initial Developer of the Original Code is
+  - Justin Rodes.
+  - Portions created by the Initial Developer are Copyright (C) 2008
+  - the Initial Developer. All Rights Reserved.
+  -
+  - Contributor(s):
+  -
+  - Alternatively, the contents of this file may be used under the terms of
+  - either the GNU General Public License Version 2 or later (the "GPL"), or
+  - the GNU Lesser General Public License Version 2.1 or later (the "LGPL"),
+  - in which case the provisions of the GPL or the LGPL are applicable instead
+  - of those above. If you wish to allow use of your version of this file only
+  - under the terms of either the GPL or the LGPL, and not to allow others to
+  - use your version of this file under the terms of the MPL, indicate your
+  - decision by deleting the provisions above and replace them with the notice
+  - and other provisions required by the GPL or the LGPL. If you do not delete
+  - the provisions above, a recipient may use your version of this file under
+  - the terms of any one of the MPL, the GPL or the LGPL.
+  - 
+  - ***** END LICENSE BLOCK ***** -->
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://menuiconsplus/skin/options.css" type="text/css"?>
+<!DOCTYPE prefwindow SYSTEM "chrome://menuiconsplus/locale/prefwindow.dtd">
+<prefwindow id="menuiconsplus-preferences" title="&prefwindow.title;" ondialogaccept="return menuIconOptions.accept();"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <prefpane id="menuiconsplus-prefpane1" label="&iconset.prefpane;">
+    <description value="&header1.description;" class="heading1"/>
+    <description value="&header2.description;" class="heading2"/>
+    <separator class="thin"/>
+    <groupbox flex="1">
+      <caption label="&iconset.caption;"/>
+      <hbox pack="center">
+        <image id="iconset-preview-image" src="chrome://menuiconsplus/skin/preview-frame.png" width="158" height="110"/>
+      </hbox>
+    </groupbox>
+    <groupbox>
+      <hbox id="iconset-box">
+        <label value="&iconset.menulist.label;" accesskey="&iconset.menulist.accesskey;" control="iconset-menu"/>
+        <menulist id="iconset-menu" flex="1"
+                  onselect="menuIconOptions.updatePreview(this.value);"/>
+        <button id="advanced-button" type="menu" label="&advanced.button.label;" accesskey="&advanced.button.accesskey;">
+          <menupopup>
+            <menuitem id="import-menuitem" label="&import.menuitem.label;" accesskey="&import.menuitem.accesskey;"
+                      oncommand="menuIconOptions.doImportWizard();"/>
+            <menuitem id="export-menuitem" label="&export.menuitem.label;" accesskey="&export.menuitem.accesskey;"
+                      oncommand="menuIconOptions.doExport(document.getElementById('iconset-menu').selectedItem.label);"/>
+            <menuitem id="delete-menuitem" label="&delete.menuitem.label;" accesskey="&delete.menuitem.accesskey;"
+                      oncommand="menuIconOptions.doDelete(document.getElementById('iconset-menu').selectedItem.label);"/>
+          </menupopup>
+        </button>
+      </hbox>
+    </groupbox>
+  </prefpane>
+
+  <prefpane id="menuiconsplus-prefpane2" label="&menu.prefpane;">
+    <preferences>
+      <preference id="checkmark-style-pref" name="extensions.menuiconsplus.checkmarkstyle" type="int"/>
+      <preference id="hide-disabled-pref" name="extensions.menuiconsplus.hidedisabledmenuicons" type="bool"/>
+      <preference id="theme-icons-pref" name="extensions.menuiconsplus.usethememenuicons" type="bool"/>
+    </preferences>
+    <description class="heading1">&header1.description;</description>
+    <description class="heading2">&header2.description;</description>
+    <separator class="thin"/>
+    <groupbox tooltiptext="&menu.checkmarks.tooltip;">
+      <caption label="&menu.checkmarks.caption;"/>
+      <radiogroup id="checkmark-style-radiogroup" preference="checkmark-style-pref">
+        <radio id="iconset-checkmarks-radio" label="&iconset.checkmarks.radio.label;" accesskey="&iconset.checkmarks.radio.accesskey;" value="2"/>
+        <radio id="alt-checkmarks-radio" label="&alt.checkmarks.radio.label;" accesskey="&alt.checkmarks.radio.accesskey;" value="1"/>
+        <radio id="default-checkmarks-radio" label="&default.checkmarks.radio.label;" accesskey="&default.checkmarks.radio.accesskey;" value="0"/>
+      </radiogroup>
+    </groupbox>
+    <separator class="thin"/>
+    <groupbox>
+      <checkbox id="hide-disabled-checkbox" label="&hide.disabled.checkbox.label;" accesskey="&hide.disabled.checkbox.accesskey;"
+                tooltiptext="&hide.disabled.checkbox.tooltip;" preference="hide-disabled-pref"/>
+      <checkbox id="theme-icons-checkbox" label="&theme.icons.checkbox.label;" accesskey="&theme.icons.checkbox.accesskey;"
+                tooltiptext="&theme.icons.checkbox.tooltip;" preference="theme-icons-pref" class="menuiconsplus-windows-only"/>
+    </groupbox>
+  </prefpane>
+
+  <stringbundleset>
+    <stringbundle id="menuiconsplus-strings" src="chrome://menuiconsplus/locale/menuiconsplus.properties"/>
+  </stringbundleset>
+  <script src="chrome://menuiconsplus/content/options.js" type="application/x-javascript"/>
+
+</prefwindow>

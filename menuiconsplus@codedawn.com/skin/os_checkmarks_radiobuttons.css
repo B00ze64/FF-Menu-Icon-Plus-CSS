@@ -1,0 +1,39 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Checkbox menuitems */
+menuitem[checked="true"],
+menuitem[type="checkbox"][checked="true"],
+menuitem[type="checkbox"]:not([checked="true"]) {
+  -moz-appearance: checkmenuitem !important;
+  list-style-image: none !important;
+}
+
+/* Radio (option) button menuitems */
+menuitem[type="radio"][checked="true"],
+menuitem[type="radio"]:not([flagitem="true"]):not([checked="true"]) {
+  -moz-appearance: radiomenuitem !important;
+  list-style-image: none !important;
+}
+
+/* Australis rules */
+.subviewbutton[type="checkbox"],
+.subviewbutton[type="radio"],
+.subviewbutton[checked="true"],
+.subviewbutton[type="checkbox"][checked="true"],
+.subviewbutton[type="checkbox"]:not([checked="true"]),
+.subviewbutton[type="radio"][checked="true"],
+.subviewbutton[type="radio"]:not([checked="true"]) {
+  -moz-appearance: none !important;
+  list-style-image: none !important;
+}
+
+.subviewbutton[type="checkbox"] > .menu-iconic-left,
+.subviewbutton[type="radio"] > .menu-iconic-left,
+.subviewbutton[checked="true"] > .menu-iconic-left {
+  -moz-appearance: none !important;
+}
+
+#PanelUI-characterEncodingView .subviewbutton,
+#PanelUI-characterEncodingView .subviewbutton[checked="true"] {
+  list-style-image: none !important;
+}

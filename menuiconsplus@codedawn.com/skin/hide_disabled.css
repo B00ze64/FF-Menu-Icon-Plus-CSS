@@ -1,0 +1,17 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Hide disabled menu icons */
+.menuitem-iconic[disabled="true"] > .menu-iconic-left,
+.menu-iconic[disabled="true"] image,
+menuitem[type="checkbox"][disabled="true"] image,
+menuitem[type="radio"][disabled="true"] image {
+  visibility: hidden !important;
+}
+
+/* Australis rules */
+.subviewbutton[disabled="true"] > .menu-iconic-left,
+.subviewbutton[disabled="true"] image,
+.subviewbutton[type="checkbox"][disabled="true"] image,
+.subviewbutton[type="radio"][disabled="true"] image {
+  visibility: hidden !important;
+}

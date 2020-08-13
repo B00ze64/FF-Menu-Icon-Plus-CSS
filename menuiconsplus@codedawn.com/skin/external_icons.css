@@ -1,0 +1,1058 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* make sure menu icons appear on linux */
+.menu-iconic-left
+{ visibility: visible !important; }
+
+/* australis app menu */
+.subviewbutton > .toolbarbutton-icon
+{ width: 16px !important; height: 16px !important; }
+.subviewbutton > .toolbarbutton-text
+{ -moz-padding-start: 0 !important; -moz-margin-start: 0 !important; }
+#appmenu-popup hbox > menu > .menu-iconic-left
+{ visibility: collapse !important; }
+
+/* no icon (blank) */
+#ja-JP-mitem,
+#ko-KR-mitem,
+#tr-TR-mitem,
+#zh-CN-mitem,
+#zh-TW-mitem
+{ -moz-image-region: rect(0, 16px, 16px, 0) !important; list-style-image: url("external.png") !important; }
+
+/* amazon sidebar discount search */
+menuitem[key="key_openAmznSBDiscSearch"]:not([checked="true"])
+{ -moz-image-region: rect(0, 80px, 16px, 64px) !important; list-style-image: url("external.png") !important; }
+
+/* look way up */
+menuitem[key="key_openLookWAYupSearch"]:not([checked="true"])
+{ -moz-image-region: rect(0, 96px, 16px, 80px) !important; list-style-image: url("external.png") !important; }
+
+/* aardvark */
+menuitem[oncommand="aardvark.start()"]
+{ -moz-image-region: rect(0, 112px, 16px, 96px) !important; list-style-image: url("external.png") !important; }
+
+/* accuweather */
+#ff-popup-site
+{ -moz-image-region: rect(0, 128px, 16px, 112px) !important; list-style-image: url("external.png") !important; }
+
+/* adblock plus */
+#abp-image-menuitem,
+#abp-link-menuitem,
+#abp-frame-menuitem,
+#abp-object-menuitem,
+#abp-menuitem,
+#abp-blockableitems:not([checked="true"]),
+.abp-contextmenuitem
+{ -moz-image-region: rect(0, 144px, 16px, 128px) !important; list-style-image: url("external.png") !important; }
+
+/* addons mirror */
+#en-US2-mitem
+{ -moz-image-region: rect(0, 160px, 16px, 144px) !important; list-style-image: url("external.png") !important; }
+
+/* better gmail 2 */
+#bettergmail2_options,
+#bettergmail_options
+{ -moz-image-region: rect(16px, 16px, 32px, 0) !important; list-style-image: url("external.png") !important; }
+
+/* bug me not */
+menuitem[oncommand="BugMeNot();"], #bugmenotcurrent,
+#bugmenotcurrent-popup
+{ -moz-image-region: rect(16px, 32px, 32px, 16px) !important; list-style-image: url("external.png") !important; }
+
+/* colorzilla */
+#colorzilla-pagecontextmenu-mainmenu
+{ -moz-image-region: rect(16px, 48px, 32px, 32px) !important; list-style-image: url("external.png") !important; }
+
+/* conquery */
+menuitem[oncommand="OpenCfgDialog();"],
+#cq-menu
+{ -moz-image-region: rect(16px, 64px, 32px, 48px) !important; list-style-image: url("external.png") !important; }
+
+/* febe */
+#febe_tools_menu_FEBE
+{ -moz-image-region: rect(16px, 80px, 32px, 64px) !important; list-style-image: url("external.png") !important; }
+
+/* esnips */
+#context-sniplink,
+#context-snipimage,
+#context-snippage,
+#context-snipselection,
+#MozillaSnipBar-MainMenu-Welcome,
+menuitem[oncommand="MozillaSnipBar_GotoHome();event.preventBubble();"]
+{ -moz-image-region: rect(16px, 96px, 32px, 80px) !important; list-style-image: url("external.png") !important; }
+
+/* extension developer */
+#menu_ToolsExtensionDevMenu
+{ -moz-image-region: rect(16px, 112px, 32px, 96px) !important; list-style-image: url("external.png") !important; }
+
+/* firefox
+{ -moz-image-region: rect(16px, 128px, 32px, 112px) !important; list-style-image: url("external.png") !important; } */
+
+/* flashblock */
+menuitem[oncommand="Flashblock.hideObject();"]
+{ -moz-image-region: rect(16px, 144px, 32px, 128px) !important; list-style-image: url("external.png") !important; }
+
+/* customize google */
+#customizegoogle-options
+{ -moz-image-region: rect(16px, 160px, 32px, 144px) !important; list-style-image: url("external.png") !important; }
+
+/* mozilla */
+#hu-HU-mitem,
+#ru-RU-mitem
+{ -moz-image-region: rect(32px, 16px, 48px, 0) !important; list-style-image: url("external.png") !important; }
+
+/* in form enter */
+#informenter-menu, #ife_context
+{ -moz-image-region: rect(32px, 32px, 48px, 16px) !important; list-style-image: url("external.png") !important; }
+
+/* internet explorer */
+menuitem[id^="ieview-do-"],
+menuitem[oncommand="openHelpLink('ieusers');"],
+menuitem[oncommand^="ieview.launch"],
+toolbar[iconsize="small"] #ieview-toolbar,
+toolbar[iconsize="small"] #ieview-button,
+toolbar[iconsize="small"] #ienetrender-button,
+#cont-ienetrenderer,
+#tools-ienetrenderer,
+#appmenu-ienetrenderer
+{ -moz-image-region: rect(32px, 48px, 48px, 32px) !important; list-style-image: url("external.png") !important; }
+
+/* java */
+menuitem[oncommand="webdeveloper_openJavaConsole()"] .menu-iconic-icon,
+menuitem[id^="javaconsole"],
+#java
+{ -moz-image-region: rect(32px, 64px, 48px, 48px) !important; list-style-image: url("external.png") !important; }
+
+/* lingvo online */
+#lingvoonline
+{ -moz-image-region: rect(32px, 80px, 48px, 64px) !important; list-style-image: url("external.png") !important; }
+
+/* location navigator */
+#urlnavMenu
+{ -moz-image-region: rect(32px, 96px, 48px, 80px) !important; list-style-image: url("external.png") !important; }
+
+/* czilla.cz */
+#cs-CZ-mitem
+{ -moz-image-region: rect(32px, 112px, 48px, 96px) !important; list-style-image: url("external.png") !important; }
+
+/* mozilla addons (AMO) */
+#en-US1-mitem,
+#da-DK-mitem,
+#nl-NL-mitem
+{ -moz-image-region: rect(32px, 128px, 48px, 112px) !important; list-style-image: url("external.png") !important; }
+
+/* opera */
+menuitem[oncommand="operaView()"],
+menuitem[oncommand="operaViewLink()"]
+{ -moz-image-region: rect(32px, 144px, 48px, 128px) !important; list-style-image: url("external.png") !important; }
+
+/* page update checker */
+menuitem[oncommand="pucDoOptions();"],
+menuitem[oncommand="puc_monitorCurrentPage();"]
+{ -moz-image-region: rect(32px, 160px, 48px, 144px) !important; list-style-image: url("external.png") !important; }
+
+/* pdf */
+menuitem[oncommand="showPDFDownloadSettings();"]
+{ -moz-image-region: rect(48px, 16px, 64px, 0) !important; list-style-image: url("external.png") !important; }
+
+/* remove it permanently (RIP) */
+#rip-menu-custom,
+#rip_menu_options
+{ -moz-image-region: rect(48px, 32px, 64px, 16px) !important; list-style-image: url("external.png") !important; }
+
+/* scribefire */
+#tools-menu-scribefire,
+#context-performancing,
+#tools-scribefire-next
+{ -moz-image-region: rect(48px, 48px, 64px, 32px) !important; list-style-image: url("external.png") !important; }
+
+/* ui tweaker */
+#uitweaker-options
+{ -moz-image-region: rect(48px, 64px, 64px, 48px) !important; list-style-image: url("external.png") !important; }
+
+/* user agent switcher */
+#useragentswitcher-menu
+{ -moz-image-region: rect(48px, 80px, 64px, 64px) !important; list-style-image: url("external.png") !important; }
+
+/* web developer extension */
+#web-developer-context,
+#web-developer-menu,
+#web-developer-app-menu
+{ -moz-image-region: rect(48px, 96px, 64px, 80px) !important; list-style-image: url("external.png") !important; }
+
+/* x-ray */
+#xray,
+menuitem[oncommand="xray();"],
+#xray-xray
+{ -moz-image-region: rect(48px, 112px, 64px, 96px) !important; list-style-image: url("external.png") !important; }
+
+/* erweiterungen.de */
+#de-DE-mitem
+{ -moz-image-region: rect(48px, 128px, 64px, 112px) !important; list-style-image: url("external.png") !important; }
+
+/* extensions.geckozone.org */
+#fr-FR-mitem
+{ -moz-image-region: rect(48px, 144px, 64px, 128px) !important; list-style-image: url("external.png") !important; }
+
+/* extenzilla.org */
+#it-IT-mitem
+{ -moz-image-region: rect(48px, 160px, 64px, 144px) !important; list-style-image: url("external.png") !important; }
+
+/* mozillapl.org */
+#pl-PL-mitem
+{ -moz-image-region: rect(64px, 16px, 80px, 0) !important; list-style-image: url("external.png") !important; }
+
+/* mozilla.sk */
+#sk-SK-mitem
+{ -moz-image-region: rect(64px, 32px, 80px, 16px) !important; list-style-image: url("external.png") !important; }
+
+/* wot */
+#wot-context-tools
+{ -moz-image-region: rect(64px, 48px, 80px, 32px) !important; list-style-image: url("external.png") !important; }
+
+/* billeo */
+#viewBilleoSidebarMenuItem:not([checked="true"])
+{ -moz-image-region: rect(64px, 64px, 80px, 48px) !important; list-style-image: url("external.png") !important; }
+
+/* view source chart */
+menuitem#vrs
+{ -moz-image-region: rect(64px, 80px, 80px, 64px) !important; list-style-image: url("external.png") !important; }
+
+/* tamper data */
+menuitem[oncommand="openTamper();"],
+#appmenu-webDeveloper-tdiconmenu,
+#menu_webDeveloper_tdiconmenu,
+menuitem[observes="viewTamperSidebar"]:not([checked="true"])
+{ -moz-image-region: rect(64px, 96px, 80px, 80px) !important; list-style-image: url("external.png") !important; }
+
+/* venkman (js debugger) */
+#tb-venkman-menu
+{ -moz-image-region: rect(64px, 112px, 80px, 96px) !important; list-style-image: url("external.png") !important; }
+
+/* -----------------------EXTENSION ICONS----------------------- */
+
+/* adblock plus */
+#abp-sidebar-close,
+#listEditorIcon,
+#find-closebutton
+{ -moz-image-region: rect(0, 16px, 16px, 0) !important; list-style-image: url("chrome://global/skin/icons/close.png") !important; }
+
+#abp-sidebar-close:hover,
+#listEditorIcon:hover,
+#find-closebutton:hover
+{ -moz-image-region: rect(0, 32px, 16px, 16px) !important; list-style-image: url("chrome://global/skin/icons/close.png") !important; }
+
+#abp-sidebar-close:hover:active,
+#listEditorIcon:hover:active,
+#find-closebutton:hover:active
+{ -moz-image-region: rect(0, 48px, 16px, 32px) !important; list-style-image: url("chrome://global/skin/icons/close.png") !important; }
+
+/* all-in-one sidebar */
+#commandBarBottom > button .button-icon
+{ -moz-margin-end: 4px !important; }
+#commandBarBottom > #aios-toolsButton .button-icon
+{ -moz-margin-end: 0px !important; }
+
+#openCloseFolder
+{ -moz-image-region: rect(0, 32px, 16px, 16px) !important; list-style-image: url("chrome://global/skin/icons/folder-item.png") !important; }
+#openCloseFolder:hover
+{ -moz-image-region: rect(16px, 32px, 32px, 16px) !important; list-style-image: url("chrome://global/skin/icons/folder-item.png") !important; }
+
+#clearSearch
+{ -moz-image-region: rect(0px 32px 16px 16px) !important; list-style-image: url("chrome://mozapps/skin/extensions/searchIcons.png") !important; }
+
+#sidebars-togglebutton > .toolbarbutton-icon,
+#sidebars-button > .toolbarbutton-icon,
+#paneltab-button > .toolbarbutton-icon,
+#toolbar-button > .toolbarbutton-icon,
+#autohide-button > .toolbarbutton-icon,
+#addons-button > .toolbarbutton-icon,
+#multipanel-button > .toolbarbutton-icon,
+#source-button > .toolbarbutton-icon,
+#pageinfo-button > .toolbarbutton-icon,
+#console-button > .toolbarbutton-icon,
+#dominspector-button > .toolbarbutton-icon {
+  opacity: 1 !important;
+}
+
+/* aol toolbar */
+menuitem[oncommand="aolOpenInbox();"],
+#inboxSidebar
+{ list-style-image: url("chrome://aoltoolbar/skin/inbox.png") !important; }
+
+menuitem[oncommand="aolOpenFavPlus();"],
+#favplusSidebar
+{ list-style-image: url("chrome://aoltoolbar/skin/fav_plus.png") !important; }
+
+#menuedit-menu_BookmarksPopup-Add_to_AOL_Favorites,
+#menuedit-menu_BookmarksPopup-Add_to_AOL_Favorites
+{ list-style-image: url("chrome://aoltoolbar/skin/add_favplus.png") !important; }
+
+/* auto pager */
+#autopager-menu,
+#autopager-context-menu,
+menuitem[oncommand^="toggleSidebar('viewautopagerSidebar');"]
+{ list-style-image: url("chrome://autopager/skin/autopager-small.on.gif") !important; }
+
+/* back to top */
+#backtotop-context
+{ list-style-image: url("chrome://backtotop/skin/defaultUpSmall.png") !important; }
+#gotobottom-context
+{ list-style-image: url("chrome://backtotop/skin/defaultDownSmall.png") !important; }
+
+/* better privacy */
+menuitem[oncommand="bprivacy.showBetterPrivacy();"]
+{ list-style-image: url("chrome://bprivacy/skin/btn_small.png") !important; }
+
+/* bloglines toolkit */
+#btoolkit-context-menu
+{ list-style-image: url("chrome://btoolkit/content/16x16.png") !important; }
+
+/* chatzilla */
+#tb-chatzilla-menu
+{ list-style-image: url("chrome://chatzilla/skin/images/chatzilla-16.gif") !important; }
+
+/* cleo */
+#cleo_tools_menu_CLEO,
+#CLEO
+{ list-style-image: url("chrome://cleo/skin/cleo16x16.png") !important; }
+
+/* colorzilla */
+#colorzilla-bottombar-close-button
+{ -moz-image-region: rect(0, 16px, 16px, 0) !important; list-style-image: url("chrome://global/skin/icons/close.png") !important; }
+#colorzilla-bottombar-close-button:hover
+{ -moz-image-region: rect(0, 32px, 16px, 16px) !important; list-style-image: url("chrome://global/skin/icons/close.png") !important; }
+#colorzilla-bottombar-close-button:hover:active
+{ -moz-image-region: rect(0, 48px, 16px, 32px) !important; list-style-image: url("chrome://global/skin/icons/close.png") !important; }
+
+/* converter */
+#context_converterselect
+{ list-style-image: url("chrome://converter/skin/cv_stat_on.png") !important; }
+
+/* del.icio.us bookmarks */
+menuitem[key="key_openYBookmarksSidebar"],
+#delicious-menu
+{ list-style-image: url("chrome://ybookmarks/skin/deliciousSingleButton.png") !important; }
+
+/* ebay sidebar (ff companion for ebay) */
+menuitem[key="keyOpenEBayCompSidebar"]
+{ -moz-image-region: rect(1px, 16px, 17px, 0) !important; list-style-image: url("chrome://ebaycompanion/skin/ebay_status_icon_connected.png") !important; }
+
+/* feed sidebar */
+toolbarbutton[oncommand="window.parent.FEEDBAR.openAll();"],
+toolbarbutton[oncommand="window.parent.FEEDBAR.markAllAsRead();"],
+toolbarbutton[oncommand="FEEDSIDEBAR.stopUpdate();"],
+toolbarbutton[oncommand="FEEDSIDEBAR.updateFeeds();"],
+#search-toggle
+{ margin-top: 0px !important; }
+
+toolbarbutton[oncommand="window.parent.FEEDBAR.markAllAsRead();"]
+{ -moz-image-region: rect(0, 16px, 16px, 0) !important; list-style-image: url("chrome://global/skin/icons/folder-item.png") !important; }
+
+/* firebug */
+#appmenu_firebug
+{ -moz-image-region: auto !important; }
+
+#menu_viewToggleFirebug:not([checked="true"]),
+menuitem[oncommand="czLaunchFirebug()"],
+#menu_detachFirebugContext,
+#menu_firebug_viewToggleFirebug:not([checked="true"])
+{ list-style-image: url("chrome://firebug/skin/firebug16.png") !important; }
+
+#fbRerunButton,
+#fbContinueButton,
+#fbStepOverButton,
+#fbStepIntoButton,
+#fbStepOutButton
+{ padding-left: 2px !important; padding-right: 2px !important; }
+
+#fbRerunButton[disabled="true"],
+#fbContinueButton[disabled="true"],
+#fbStepOverButton[disabled="true"],
+#fbStepIntoButton[disabled="true"],
+#fbStepOutButton[disabled="true"]
+{ opacity: 0.5 !important; }
+
+/* firefox search sidebar */
+menuitem[key="key_viewAdvancedSearchSidebar"]:not([checked="true"])
+{ list-style-image: url("chrome://searchsidebar/skin/ads-button-small.png") !important; }
+
+/* firefox sync */
+menuitem[oncommand="gSyncUI.openSetup()"],
+menuitem[oncommand="gSyncUI.doSync(event);"]
+{ list-style-image: url("chrome://browser/skin/sync-16.png") !important; -moz-image-region: auto !important; }
+
+/* fireftp */
+#fireftp-main-window toolbarbutton[disabled="true"]
+{ opacity: 0.4 !important; }
+
+#fireftp-main-window .upButton,
+#fireftp-main-window .refreshButton
+{ padding: 3px !important; }
+
+#searchClosebutton
+{ -moz-image-region: rect(0, 16px, 16px, 0) !important; list-style-image: url("chrome://global/skin/icons/close.png") !important; }
+#searchClosebutton:hover
+{ -moz-image-region: rect(0, 32px, 16px, 16px) !important; list-style-image: url("chrome://global/skin/icons/close.png") !important; }
+#searchClosebutton:hover:active
+{ -moz-image-region: rect(0, 48px, 16px, 32px) !important; list-style-image: url("chrome://global/skin/icons/close.png") !important; }
+
+#page-proxy-button
+{ -moz-image-region: rect(0, 16px, 16px, 0) !important; list-style-image: url("chrome://global/skin/icons/folder-item.png") !important; }
+#remotepath[disconnected="true"] #page-proxy-button
+{ opacity: 0.4 !important; }
+
+/* foxy spider */
+#context-foxyspider
+{ list-style-image: url("chrome://foxyspider/skin/foxyspider.png") !important; }
+
+/* foxytunes */
+#foxytunes-player-menu menu > .menu-iconic-left,
+#foxytunes-player-menu menuitem[checked="true"] > .menu-iconic-left,
+#foxytunes-player-menu menu menuitem > .menu-iconic-left
+{ -moz-image-region: inherit !important; }
+
+#foxytunes-player-menu menuitem[checked="true"] > .menu-iconic-icon,
+#foxytunes-player-menu menu menuitem > .menu-iconic-icon
+{ -moz-image-region: inherit !important; margin-right: 0 !important; }
+
+#foxytunes-minimode .foxytunes-statusbar-menubutton
+{ -moz-box-align: center; }
+
+/* getmail plus */
+#getmail-menu
+{ list-style-image: url("chrome://getmail/skin/Mail16.png") !important; }
+
+/* gmail manager */
+#gmanager-context-menu,
+#gmanager-tools-menu
+{ list-style-image: url("chrome://gmanager/skin/gmail/gmail-small.png") !important; -moz-image-region: rect(0 64px 16px 48px) !important; }
+
+/* google shortcuts (gbutts) */
+menuitem[key="key_openGSSidebar"]:not([checked="true"])
+{ list-style-image: url("chrome://googlebuttons/skin/googlebuttons16.gif") !important; }
+
+/* greasemonkey */
+#gm_general_menu
+{ list-style-image: url("chrome://greasemonkey/skin/icon16.png") !important; }
+
+/* gspace */
+menuitem[oncommand="opengSpace();"],
+#gspace
+{ list-style-image: url("chrome://gspace/skin/bicon_small_on.png") !important; }
+
+toolbarbutton[oncommand="gs_gLocalTreeView.GetPath();"] > .toolbarbutton-icon
+{ padding-right: 2px !important; }
+
+toolbarbutton[oncommand="gs_gSession.ManageAccounts();"]
+{ list-style-image: url("chrome://gspace/skin/accounts.png"); }
+toolbarbutton[oncommand="gs_gLocalTreeView.RefreshFolder()"],
+toolbarbutton[oncommand="gs_gRemoteTreeView.RefreshFolder();"]
+{ list-style-image: url("chrome://gspace/skin/reload.png"); }
+toolbarbutton[oncommand="gs_gLocalTreeView.GotoParentFolder();"],
+toolbarbutton[oncommand="gs_gRemoteTreeView.GotoParentFolder();"]
+{ list-style-image: url("chrome://gspace/skin/upbutton.png"); }
+toolbarbutton[oncommand="gs_gLocalTreeView.AddFolder();"],
+toolbarbutton[oncommand="gs_gRemoteTreeView.AddFolder();"]
+{ list-style-image: url("chrome://gspace/skin/folder_new.png"); }
+toolbarbutton[oncommand="gs_gLocalTreeView.DeleteSelected();"],
+toolbarbutton[oncommand="gs_gRemoteTreeView.DeleteSelected();"]
+{ list-style-image: url("chrome://gspace/skin/delete.png"); }
+toolbarbutton[oncommand="gs_gLocalTreeView.ToggleFilter();"]
+{ list-style-image: url("chrome://gspace/skin/filter.png"); }
+toolbarbutton[oncommand="gs_viewHandler.setGmailEnglishLocale();"]
+{ list-style-image: url("chrome://gspace/skin/en.png"); }
+toolbarbutton[oncommand="gs_gPlaylistTreeView.ClearItems();"]
+{ list-style-image: url("chrome://gspace/skin/clear.png"); }
+toolbarbutton[oncommand="gs_viewHandler.OpenNewWindow();"]
+{ list-style-image: url("chrome://gspace/skin/window_new.png"); }
+toolbarbutton[oncommand="gs_viewHandler.MagnifyImage(false);"]
+{ list-style-image: url("chrome://gspace/skin/imagezoom-in.png"); }
+toolbarbutton[oncommand="gs_viewHandler.MagnifyImage(false);"][zoomfit="true"]
+{ list-style-image: url("chrome://gspace/skin/imagezoom-fit.png"); }
+
+/* imacros */
+menuitem[key="key_openimacros"]
+{ list-style-image: url("chrome://imacros/skin/toolbarbutton_small.png") !important; -moz-image-region: rect(0, 16px, 16px, 0) !important; }
+
+/* launchy */
+#launchy-context
+{ list-style-image: url("chrome://launchy/skin/icon-small.png") !important; }
+
+/* link checker */
+menuitem[oncommand="linkcheckerutil.browserContextChcek(false);"],
+menuitem[oncommand="linkcheckerutil.browserContextChcek(true);"]
+{ list-style-image: url("chrome://linkchecker/skin/icons/check_16.png") !important; }
+
+/* linkification */
+#linkification-contextmenu
+{ list-style-image: url("chrome://linkification/skin/link-on.png") !important; }
+
+/* linky */
+#linky-info[disabled="true"] .menu-iconic-icon
+{ opacity: 1 !important; }
+
+/* live http headers */
+#livehttpheaders_title,
+menuitem[observes="viewLiveHTTPSidebar"]:not([checked="true"])
+{ list-style-image: url("chrome://livehttpheaders/skin/img/Logo_16.png") !important; }
+
+/* minimap sidebar */
+menuitem[observes="viewminimap"]
+{ -moz-image-region: rect(16px, 40px, 32px, 24px) !important; list-style-image: url("chrome://minimap/skin/toolbar.png") !important; }
+menuitem[oncommand^="minimapNS.openAddressService('google"]
+{ list-style-image: url("chrome://minimap/skin/google-icon.png") !important; }
+menuitem[oncommand^="minimapNS.openAddressService('yahoo"]
+{ list-style-image: url("chrome://minimap/skin/yahoo.png") !important; }
+menuitem[oncommand^="minimapNS.openAddressService('microsoft"]
+{ list-style-image: url("chrome://minimap/skin/microsoft.png") !important; }
+menu[label="Tagzania:"]
+{ list-style-image: url("chrome://minimap/skin/tagzania.png") !important; }
+menuitem[oncommand="minimapNS.googleEarthKml()"],
+menuitem[oncommand="minimapNS.openAddressService('google-earth');"]
+{ list-style-image: url("chrome://minimap/skin/google-earth.png") !important; }
+menuitem[oncommand="minimapNS.openAddressService('flickr');"]
+{ list-style-image: url("chrome://minimap/skin/flickrIcon.png") !important; }
+menuitem[oncommand="minimapNS.openAddressService('panoramio');"]
+{ list-style-image: url("chrome://minimap/skin/panoramio.png") !important; }
+menuitem[oncommand="minimapNS.openAddressService('geody');"]
+{ list-style-image: url("chrome://minimap/skin/geody.png") !important; }
+menuitem[oncommand="minimapNS.openAddressService('wikimapia');"]
+{ list-style-image: url("chrome://minimap/skin/wikimapia.png") !important; }
+menuitem[oncommand="minimapNS.openAddressService('osm');"]
+{ list-style-image: url("chrome://minimap/skin/osm.png") !important; }
+menuitem[oncommand="minimapNS.openAddressService('geonames');"]
+{ list-style-image: url("chrome://minimap/skin/map_but.png") !important; }
+#addAddressPanel.checked,
+#addAddressPanel.checked:hover
+{ list-style-image: url("chrome://minimap/skin/accept.png") !important; }
+#mappanel toolbarbutton:hover,
+#maps-deck toolbarbutton:hover,
+#minimap-deck toolbarbutton:hover
+{ outline: 1px dotted silver; }
+
+/* mouse gestures */
+menuitem[key="viewMozgestSidebarKB"]
+{ list-style-image: url("chrome://mozgest/skin/mgSidebarButton_small.png") !important; }
+
+/* mozimage */
+#launch-mozimageLink,
+#view-mozimage:not([checked="true"]),
+#launch-mozimage:not([checked="true"])
+{ list-style-image: url("chrome://mozimage/skin/mozimage-small.png") !important; }
+
+toolbarbutton#go-button
+{ list-style-image: url("chrome://mozimage/skin/go.png"); }
+#prior-button
+{ list-style-image: url("chrome://mozimage/skin/prior.png"); }
+#next-button
+{ list-style-image: url("chrome://mozimage/skin/next.png"); }
+#up-button
+{ list-style-image: url("chrome://mozimage/skin/up.png"); }
+#autosize-button
+{ list-style-image: url("chrome://mozimage/skin/autosize.png"); }
+#zoomin-button
+{ list-style-image: url("chrome://mozimage/skin/zoomin.png"); }
+#zoomout-button
+{ list-style-image: url("chrome://mozimage/skin/zoomout.png"); }
+#addbookmark-button
+{ list-style-image: url("chrome://mozimage/skin/bookmark_add.png"); }
+#deletebookmark-button
+{ list-style-image: url("chrome://mozimage/skin/bookmark_delete.png"); }
+#bookmarkup-button
+{ list-style-image: url("chrome://mozimage/skin/bookmark_up.png"); }
+#bookmarkdown-button
+{ list-style-image: url("chrome://mozimage/skin/bookmark_bottom.png"); }
+
+/* mystickies */
+#context-mystickies,
+#menu-mystickies
+{ list-style-image: url("http://www.mystickies.com/favicon.ico") !important; }
+menuitem[oncommand="addNote();"]
+{ list-style-image: url("chrome://mystickies/content/images/new_note.png") !important; }
+#context-mystickies-popup #context-mystickies
+{ -moz-image-region: rect(0, 16px, 16px, 0) !important; list-style-image: url("external.png") !important; }
+
+#toolbar-mystickies-addNote
+{ list-style-image: url("chrome://mystickies/content/images/new_note.png"); }
+#toolbar-mystickies-mystickies
+{ list-style-image: url("chrome://mystickies/content/images/accounts.png"); }
+#toolbar-mystickies-feedback
+{ list-style-image: url("chrome://mystickies/content/images/feedback.png"); }
+
+/* navibar */
+menuitem[key="key_viewNavibarSidebar"]:not([checked="true"]),
+#navibar-toolsMenu
+{ -moz-image-region: rect(0, 16px, 16px, 0) !important; list-style-image: url("chrome://navibar/skin/images/button_small.png") !important; }
+
+/* nightly tester tools */
+#nightly-menu
+{ list-style-image: url("chrome://nightly/skin/extensions/enable-messenger.png") !important; }
+
+#nightly-talkback-sidebar:not([checked="true"])
+{ -moz-image-region: rect(64px, 16px, 80px, 0) !important; list-style-image: url("chrome://nightly/skin/talkback/icons.png") !important; }
+
+/* personal menu */
+#CMCE-setting #up-button
+{ -moz-image-region: rect(0, 24px, 24px, 0) !important; list-style-image: url("chrome://compact-ce/skin/command.png") !important; }
+#CMCE-setting #up-button[disabled="true"]
+{ -moz-image-region: rect(24px, 24px, 48px, 0) !important; list-style-image: url("chrome://compact-ce/skin/command.png") !important; }
+
+/* plain text to link */
+#pttl_menu,
+menuitem[oncommand="showPttlOptionDialog();"]
+{ list-style-image: url("chrome://pttl/skin/pttls.png") !important; }
+
+/* platypus */
+#platypus,
+menuitem[oncommand="start_platypus_toolbar();"]
+{ list-style-image: url("chrome://platypus/skin/platypus_small_button.png") !important; }
+
+/* pong */
+menuitem[oncommand="PlayPONG();"]
+{ list-style-image: url("chrome://pong/skin/pong_toolbar_small_1.png") !important; }
+
+/* quick locale switcher */
+#mCavemanQLS
+{ list-style-image: url("chrome://qls/skin/qls_16x16.png") !important; }
+
+/* reminderfox */
+#mailAppButton.image-button > .toolbarbutton-icon
+{ min-height: 10px; }
+#getFileLocationButton.image-button > .toolbarbutton-icon
+{ min-height: 16px; }
+#rmFxView-Editor .infoButton
+{ opacity: 0.8 !important; }
+#rmFxView-Editor .infoButton:hover
+{ opacity: 1 !important; }
+
+/* resurrect page */
+#resurrect-link-context,
+#resurrect-page-context
+{ list-style-image: url("chrome://resurrect/skin/tb-icon-small.png") !important; }
+#resurrect-link-context .menu-iconic-icon,
+#resurrect-page-context .menu-iconic-icon
+{ width: 10px !important; margin-left: 3px; margin-right: 3px; }
+
+/* rikaichan */
+menuitem[command="rikaichan-toggle-cmd"]:not([checked="true"])
+{ list-style-image: url("chrome://rikaichan/skin/smile.png") !important; }
+menuitem[command="rikaichan-lbar-cmd"]
+{ list-style-image: url("chrome://rikaichan/skin/smile_lbar.png") !important; }
+
+/* roboform */
+menuitem[oncommand="RoboShowToolBar();"],
+menuitem[oncommand="RoboTaskBarIcon();"]
+{ list-style-image: url("chrome://roboform/content/logo.png") !important; }
+
+/* sage */
+menuitem[key="key_openSageSidebar"]
+{ list-style-image: url("chrome://sage/skin/sage_leaf_16.png") !important; }
+
+#rssMarkAsReadItem
+{ -moz-image-region: rect(0, 80px, 16px, 64px) !important; list-style-image: url("chrome://sage/skin/toolbar-small.png") !important; }
+#rssMarkAsUnreadItem
+{ -moz-image-region: rect(0, 96px, 16px, 80px) !important; list-style-image: url("chrome://sage/skin/toolbar-small.png") !important; }
+#rssMarkAllAsReadItem
+{ -moz-image-region: rect(0, 48px, 16px, 32px) !important; list-style-image: url("chrome://sage/skin/toolbar-small.png") !important; }
+#rssMarkAllAsUnreadItem
+{ -moz-image-region: rect(0, 64px, 16px, 48px) !important; list-style-image: url("chrome://sage/skin/toolbar-small.png") !important; }
+
+/* sage too */
+menuitem[label="Sage-Too"]
+{ list-style-image: url("chrome://sage/skin/sage-small.png") !important; }
+
+/* save image in folder */
+#saveimageinfolderMenu,
+#siif_menu
+{ list-style-image: url("chrome://saveimageinfolder/skin/saveimageinfolder16.png") !important; }
+
+/* save link in folder */
+#savelinkinfolderMenu,
+#slif_menu
+{ list-style-image: url("chrome://savelinkinfolder/skin/savelinkinfolder16.png") !important; }
+
+/* scrapbook */
+#ScrapBookToolsMenu,
+menuitem[key="key_openScrapBookSidebar"]:not([checked="true"]),
+#ScrapBookContextSubmenu,
+#menuedit-menu_ToolsPopup-ScrapBook,
+#ScrapBookMenu
+{ list-style-image: url("chrome://scrapbook/skin/main.png") !important; }
+
+#sbSearchImage
+{ list-style-image: url("chrome://scrapbook/skin/search_fulltext.png"); }
+#sbSearchImage[searchtype="title"]
+{ list-style-image: url("chrome://scrapbook/skin/search_title.png"); }
+#sbSearchImage[searchtype="comment"]
+{ list-style-image: url("chrome://scrapbook/skin/search_comment.png"); }
+#sbSearchImage[searchtype="source"]
+{ list-style-image: url("chrome://scrapbook/skin/search_source.png"); }
+#sbSearchImage[searchtype="id"]
+{ list-style-image: url("chrome://scrapbook/skin/search_id.png"); }
+#sbSearchImage[searchtype="all"]
+{ list-style-image: url("chrome://scrapbook/skin/search_all.png"); }
+
+#sbNoteImage
+{ display: none !important; }
+
+#sbList richlistitem
+{ border-bottom: none !important; }
+#sbList richlistitem[selected="true"]
+{ background-color: Highlight !important;	background-image: none !important; }
+
+#mbManagerDialog button .button-text,
+.sb-create .button-text,
+#sbFolderList .menulist-label
+{ -moz-margin-start: 3px !important; }
+
+/* scribefire */
+menuitem[command="cmd_bold"]
+{ list-style-image: url(chrome://performancing/skin/toolbar/toolbar-bold.png) !important; }
+menuitem[command="cmd_italic"]
+{ list-style-image: url(chrome://performancing/skin/toolbar/toolbar-italic.png) !important; }
+menuitem[command="cmd_underline"]
+{ list-style-image: url(chrome://performancing/skin/toolbar/toolbar-underline.png) !important; }
+menuitem[command="cmd_strikethrough"]
+{ list-style-image: url(chrome://performancing/skin/toolbar/toolbar-strikethrough.png) !important; }
+menuitem[command="cmd_strong"]
+{ list-style-image: url(chrome://performancing/skin/toolbar/toolbar-strong.png) !important; }
+menuitem[command="cmd_em"]
+{ list-style-image: url(chrome://performancing/skin/toolbar/toolbar-em.png) !important; }
+menuitem[command="cmd_blockquote"]
+{ list-style-image: url(chrome://performancing/skin/toolbar/toolbar-blockquote.png) !important; }
+menuitem[command="cmd_textincr"]
+{ list-style-image: url(chrome://performancing/skin/toolbar/text-increase.png) !important; }
+menuitem[command="cmd_textdecr"]
+{ list-style-image: url(chrome://performancing/skin/toolbar/text-decrease.png) !important; }
+menuitem[command="cmd_jleft"]
+{ list-style-image: url(chrome://performancing/skin/toolbar/toolbar-leftadj.png) !important; }
+menuitem[command="cmd_jcenter"]
+{ list-style-image: url(chrome://performancing/skin/toolbar/toolbar-centeradj.png) !important; }
+menuitem[command="cmd_jright"]
+{ list-style-image: url(chrome://performancing/skin/toolbar/toolbar-rightadj.png) !important; }
+menuitem[command="cmd_justify"]
+{ list-style-image: url(chrome://performancing/skin/toolbar/toolbar-justify.png) !important; }
+menuitem[command="cmd_aleft"]
+{ list-style-image: url(chrome://performancing/skin/toolbar/toolbar-alignleft.png) !important; }
+menuitem[command="cmd_aright"]
+{ list-style-image: url(chrome://performancing/skin/toolbar/toolbar-alignright.png) !important; }
+menuitem[command="cmd_anone"]
+{ list-style-image: url(chrome://performancing/skin/toolbar/toolbar-alignnone.png) !important; }
+
+image#performancing-close-toolbar
+{ background: url("chrome://global/skin/icons/close.png") no-repeat 0px 0px !important;
+  min-height: 16px; min-width: 16px; -moz-margin-end: 5px; }
+image#performancing-close-toolbar:hover
+{ background: url("chrome://global/skin/icons/close.png") no-repeat -16px 0px !important;
+  min-height: 16px; min-width: 16px; -moz-margin-end: 5px; }
+image#performancing-close-toolbar:hover:active
+{ background: url("chrome://global/skin/icons/close.png") no-repeat -32px 0px !important;
+  min-height: 16px; min-width: 16px; -moz-margin-end: 5px; }
+#scribefire-toolbar toolbarbutton[image="chrome://performancing/skin/closetab.png"] > .toolbarbutton-icon
+{ padding-top: 16px !important; background: url("chrome://global/skin/icons/close.png") no-repeat 0px 0px; height: 16px; width: 16px; }
+#scribefire-toolbar toolbarbutton[image="chrome://performancing/skin/closetab.png"]:hover > .toolbarbutton-icon
+{ background-position: -16px 0px; }
+#scribefire-toolbar toolbarbutton[image="chrome://performancing/skin/closetab.png"]:hover:active > .toolbarbutton-icon
+{ background-position: -32px 0px; }
+
+/* searchbastard */
+menuitem[oncommand="BASTARD.openSettings()"]
+{ list-style-image: url("chrome://searchbastard/skin/icon16x16.png") !important; }
+
+/* showcase */
+#showcaseThisWindowSidebarMenuItem:not([checked="true"]),
+#menu_showcase
+{ list-style-image: url("chrome://showcase/skin/icon16.png") !important; }
+
+.showcase-tab-close-button > .toolbarbutton-icon
+{ -moz-image-region: rect(0, 16px, 16px, 0) !important; list-style-image: url("chrome://global/skin/icons/close.png") !important; min-width: 16px !important; min-height: 16px !important; }
+.showcase-tab-close-button:hover > .toolbarbutton-icon
+{ -moz-image-region: rect(0, 32px, 16px, 16px) !important; list-style-image: url("chrome://global/skin/icons/close.png") !important; }
+.showcase-tab-close-button:hover:active > .toolbarbutton-icon
+{ -moz-image-region: rect(0, 48px, 16px, 32px) !important; list-style-image: url("chrome://global/skin/icons/close.png") !important; }
+
+#thumb-back .toolbarbutton-icon,
+#thumb-forward .toolbarbutton-icon,
+#thumb-stop .toolbarbutton-icon,
+#thumb-reload .toolbarbutton-icon
+{ opacity: 0.8 !important; }
+#thumb-back[disabled="true"] .toolbarbutton-icon,
+#thumb-forward[disabled="true"] .toolbarbutton-icon,
+#thumb-stop[disabled="true"] .toolbarbutton-icon,
+#thumb-reload[disabled="true"] .toolbarbutton-icon
+{ opacity: 0.3 !important; }
+#thumb-back:not([disabled="true"]):hover .toolbarbutton-icon,
+#thumb-forward:not([disabled="true"]):hover .toolbarbutton-icon,
+#thumb-stop:not([disabled="true"]):hover .toolbarbutton-icon,
+#thumb-reload:not([disabled="true"]):hover .toolbarbutton-icon,
+#thumb-back:not([disabled="true"]):hover:active .toolbarbutton-icon,
+#thumb-forward:not([disabled="true"]):hover:active .toolbarbutton-icon,
+#thumb-stop:not([disabled="true"]):hover:active .toolbarbutton-icon,
+#thumb-reload:not([disabled="true"]):hover:active .toolbarbutton-icon
+{ opacity: 1 !important; }
+
+/* similarweb */
+menuitem[key="key_openSimilarWebSidebar"]:not([checked="true"])
+{ list-style-image: url("chrome://similarweb/content/images/logo16.png") !important; }
+
+/* smiley xtra */
+menuitem[key="smxtra5-OpenSmxtra"]:not([checked="true"])
+{ list-style-image: url("chrome://smxtra5/skin/smxtra16.png"); }
+
+toolbarbutton[oncommand^="SmileyXtra5.insertSmiley"]
+{ list-style-image: url("chrome://smxtra5/skin/insert.png"); }
+#smxtra5-Preview
+{ list-style-image: url("chrome://smxtra5/skin/preview.png"); }
+#smxtra5-Favourites
+{ list-style-image: url("chrome://smxtra5/skin/fav.png"); }
+#smxtra5-SmileyMenu
+{ list-style-image: url("chrome://smxtra5/skin/menu.png"); }
+toolbarbutton[oncommand^="SmileyXtra5.insertSmiley"] .toolbarbutton-icon
+{ padding-top: 2px; padding-left: 2px; }
+
+/* speed dial */
+#speeddialContext,
+#speeddialBookmarksMenu
+{ list-style-image: url("chrome://speeddial/skin/icon16.png") !important; }
+
+.speeddial-close-button > .toolbarbutton-icon
+{ -moz-image-region: rect(0, 16px, 16px, 0) !important; list-style-image: url("chrome://global/skin/icons/close.png") !important; min-width: 16px !important; min-height: 16px !important; }
+.speeddial-close-button:hover > .toolbarbutton-icon
+{ -moz-image-region: rect(0, 32px, 16px, 16px) !important; list-style-image: url("chrome://global/skin/icons/close.png") !important; }
+.speeddial-close-button:hover:active > .toolbarbutton-icon
+{ -moz-image-region: rect(0, 48px, 16px, 32px) !important; list-style-image: url("chrome://global/skin/icons/close.png") !important; }
+
+.speeddial-open-button > .toolbarbutton-icon,
+.speeddial-newtab-button > .toolbarbutton-icon,
+.speeddial-backgroundtab-button > .toolbarbutton-icon,
+.speeddial-newwindow-button > .toolbarbutton-icon,
+.speeddial-reload-button > .toolbarbutton-icon,
+.speeddial-edit-button > .toolbarbutton-icon
+{ opacity: 0.8 !important; }
+.speeddial-open-button[disabled="true"] > .toolbarbutton-icon,
+.speeddial-newtab-button[disabled="true"] > .toolbarbutton-icon,
+.speeddial-backgroundtab-button[disabled="true"] > .toolbarbutton-icon,
+.speeddial-newwindow-button[disabled="true"] > .toolbarbutton-icon,
+.speeddial-reload-button[disabled="true"] > .toolbarbutton-icon,
+.speeddial-edit-button[disabled="true"] > .toolbarbutton-icon
+{ opacity: 0.3 !important; }
+.speeddial-open-button:not([disabled="true"]):hover > .toolbarbutton-icon,
+.speeddial-newtab-button:not([disabled="true"]):hover > .toolbarbutton-icon,
+.speeddial-backgroundtab-button:not([disabled="true"]):hover > .toolbarbutton-icon,
+.speeddial-newwindow-button:not([disabled="true"]):hover > .toolbarbutton-icon,
+.speeddial-reload-button:not([disabled="true"]):hover > .toolbarbutton-icon,
+.speeddial-edit-button:not([disabled="true"]):hover > .toolbarbutton-icon,
+.speeddial-open-button:not([disabled="true"]):hover:active > .toolbarbutton-icon,
+.speeddial-newtab-button:not([disabled="true"]):hover:active > .toolbarbutton-icon,
+.speeddial-backgroundtab-button:not([disabled="true"]):hover:active > .toolbarbutton-icon,
+.speeddial-newwindow-button:not([disabled="true"]):hover:active > .toolbarbutton-icon,
+.speeddial-reload-button:not([disabled="true"]):hover:active > .toolbarbutton-icon,
+.speeddial-edit-button:not([disabled="true"]):hover:active > .toolbarbutton-icon
+{ opacity: 1 !important; }
+
+/* sqlite manager */
+#menuitem-sqlitemanager-in-webdeveloper
+{ list-style-image: url("chrome://sqlitemanager/skin/images/default16.png") !important; }
+
+/* stylish */
+menuitem[oncommand="toggleSidebar('viewStylishSidebar');"]:not([checked="true"]),
+#stylish-turn-on
+{ list-style-image: url("chrome://stylish/skin/s3-16.png") !important; }
+#stylish-turn-off
+{ list-style-image: url("chrome://stylish/skin/s1-16.png") !important; }
+
+/* tab catalog */
+toolbarbutton[class="tabcatalog-thumbnail-header-closebox tabs-closebutton tab-close-button"]
+{ -moz-image-region: rect(0, 16px, 16px, 0) !important; list-style-image: url("chrome://global/skin/icons/close.png") !important; }
+toolbarbutton[class="tabcatalog-thumbnail-header-closebox tabs-closebutton tab-close-button"]:hover
+{ -moz-image-region: rect(0, 32px, 16px, 16px) !important; }
+toolbarbutton[class="tabcatalog-thumbnail-header-closebox tabs-closebutton tab-close-button"]:hover:active
+{ -moz-image-region: rect(0, 48px, 16px, 32px) !important; }
+
+toolbarbutton[class~="tabcatalog-thumbnail-toolbar-item"][disabled="true"]
+{ opacity: 0.3 !important; }
+
+/* tab mix plus */
+prefwindow#BrowserPreferences radio[pane=paneTabs]
+{ list-style-image: url("chrome://browser/skin/preferences/Options.png") !important; -moz-image-region: rect(0, 64px, 32px, 32px) !important; }
+
+prefwindow#BrowserPreferences radio[pane=paneTabs]:hover
+{ list-style-image: url("chrome://browser/skin/preferences/Options.png") !important; -moz-image-region: rect(0, 64px, 32px, 32px) !important; }
+
+toolbar[iconsize=small] #btn_sessionmanager[disabled=true] .toolbarbutton-icon,
+toolbar[iconsize=small] #btn_tabslist[disabled=true] .toolbarbutton-icon,
+toolbar[iconsize=small] #btn_closedwindows[disabled=true] .toolbarbutton-icon,
+toolbar[iconsize=small] #btn_undoclose[disabled=true] .toolbarbutton-icon
+{ opacity: 0.25 !important; }
+
+.tabs-newTab .tabs-newbutton[platform]
+{ padding: 3px !important; }
+
+/* tab scope */
+#tabscope-popup toolbarbutton
+{ opacity: 0.8 !important; }
+#tabscope-popup toolbarbutton[disabled="true"]
+{ opacity: 0.3 !important; }
+#tabscope-popup toolbarbutton:not([disabled="true"]):hover,
+#tabscope-popup toolbarbutton:not([disabled="true"]):hover:active
+{ opacity: 1 !important; }
+
+/* text to image */
+menuitem[oncommand="TxttoImage.OpenWindow(gContextMenu)"],
+menuitem[oncommand="TxttoImage.RemoveImage(gContextMenu)"],
+menuitem[oncommand="TxttoImage.Link2Img(gContextMenu.target)"],
+menuitem[oncommand="TxttoImage.Open()"]
+{ list-style-image: url("chrome://txttoimage/skin/txttoimage.png") !important; }
+
+menuitem[oncommand="TxttoImage.AddFilter(gContextMenu.target.src, 'filter')"],
+menuitem[oncommand="TxttoImage.AddFilter(gContextMenu.target.ownerDocument.location, 'siteFilter')"]
+{ list-style-image: url("chrome://txttoimage/skin/txttoimageDisabled.png") !important; }
+
+/* theme font & size changer */
+#themefontsizechanger-tools-menuitem
+{ list-style-image: url("chrome://themefontsizechanger/skin/statusbaricon.png") !important; }
+
+/* timestamp converter */
+#tsconverter_menu,
+#tsconverter_context_t2d,
+#tsconverter_context_d2t
+{ list-style-image: url("chrome://tsconverter/skin/icon_small.png") !important; }
+
+/* track me not */
+#trackmenot-tools-menu
+{ list-style-image: url("chrome://trackmenot/skin/tmn_icon.png") !important; }
+
+/* translator */
+menuitem[onclick="translator.interface.openDialog('options')"] image
+{ visibility: hidden !important; }
+
+/* tv manager */
+menuitem[oncommand^="toggleSidebar('viewTVManagerSidebar');"]
+{ list-style-image: url("chrome://tvmanager/skin/images/tvmanager_ico16.png") !important; }
+toolbarbutton[oncommand="displaySearch()"]
+{ list-style-image: url("chrome://tvmanager/skin/images/search.png"); }
+
+/* update scanner */
+menuitem[observes="viewUpdateScanSidebar"]:not([checked="true"])
+{ list-style-image: url("chrome://updatescan/skin/updatescan_sm.png") !important; }
+
+/* venkman (js debugger) */
+#findDialog #btnFind
+{ list-style-image: none !important; }
+
+/* view dependencies */
+#viewdep_toolMenu,
+#viewdep_contextMenu
+{ list-style-image: url("chrome://viewdep/skin/icon-small.png"); }
+
+/* view source with */
+#viewsourcewithSettingsDialog button .button-text
+{ -moz-margin-start: 4px !important; }
+
+/* view my currency */
+menu[label="ViewMyCurrency"]
+{ list-style-image: url("chrome://viewmycurrency/skin/enabled_icon16.png"); }
+
+/* web developer extension */
+#web-developer-toolbar toolbarbutton .toolbarbutton-icon
+{ -moz-margin-end: 4px !important; }
+#web-developer-toolbar #web-developer-javascript-statusbar .toolbarbutton-icon,
+#web-developer-toolbar #web-developer-render-mode-statusbar .toolbarbutton-icon,
+#web-developer-toolbar #web-developer-css-statusbar .toolbarbutton-icon
+{ -moz-margin-end: 0px !important; }
+
+.web-developer-close
+{ -moz-image-region: rect(0, 16px, 16px, 0) !important; list-style-image: url("chrome://global/skin/icons/close.png") !important; padding-left: 4px !important; border-style: none !important; -moz-appearance: none !important; }
+.web-developer-close:hover:not([disabled="true"])
+{ -moz-image-region: rect(0, 32px, 16px, 16px) !important; list-style-image: url("chrome://global/skin/icons/close.png") !important; padding-left: 4px !important; border-style: none !important; -moz-appearance: none !important; }
+.web-developer-close:hover:active:not([disabled="true"])
+{ -moz-image-region: rect(0, 48px, 16px, 32px) !important; list-style-image: url("chrome://global/skin/icons/close.png") !important; border-style: none !important; -moz-appearance: none !important; }
+
+#web-developer-dashboard-tabs
+{ display: -moz-box !important; }
+#web-developer-dashboard-spacer
+{ max-width: 5px; }
+#web-developer-dashboard-tabs .web-developer-close
+{ -moz-margin-end: 8px !important; }
+#web-developer-dashboard-tabs .tabs-right
+{ display: none; }
+
+/* webmail notifier */
+#wmn-context-menu menuitem[label$="Gmail"]
+{ list-style-image: url("https://mail.google.com/favicon.ico") !important; }
+#wmn-context-menu menuitem[label$="Daum"]
+{ list-style-image: url("http://www.daum.net/favicon.ico") !important; }
+#wmn-context-menu menuitem[label$="Naver"]
+{ list-style-image: url("http://mail.naver.com/favicon.ico") !important; }
+#wmn-context-menu menuitem[label$="Nate"]
+{ list-style-image: url("http://xo.nate.com/favicon.ico") !important; }
+#wmn-context-menu menuitem[label$="Yahoo"]
+{ list-style-image: url("http://m.www.yahoo.com/favicon.ico") !important; }
+#wmn-context-menu menuitem[label$="Hotmail"]
+{ list-style-image: url("http://mail.live.com/favicon.ico") !important; }
+
+/* yahoo toolbar */
+menuitem[ytrack*="yhoo_m28"][yurl*="answers.yahoo.com"],
+menuitem[ytrack*="srch_m_0"][yurl*="answers.yahoo.com"],
+#menu_yahoo-toolbar-kp
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/us/sch/gr/answers_favicon.ico") !important; }
+menuitem[ytrack*="yhoo_m29"][yurl*="flickr.com"]
+{ list-style-image: url("http://flickr.com/favicon.ico") !important; }
+menuitem[ytrack*="yhoo_m26"][yurl*="groups.yahoo.com"]
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/yg/img/logo/favicon.ico") !important; }
+menuitem[ytrack*="yhoo_m01"][yurl*="mail.yahoo.com"],
+#menu_yahoo-toolbar-yma_m
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/tb/iconsgif/mail_1.gif") !important; }
+menuitem[ytrack*="yhoo_m02"][yurl*="my.yahoo.com"],
+#menu_yahoo-toolbar-my
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/tb/iconsgif/my_03.gif") !important; }
+menuitem[ytrack*="yhoo_m21"][yurl*="games.yahoo.com"],
+#menu_yahoo-toolbar-gam
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/tb/iconsgif/gam_1.gif") !important; }
+menuitem[ytrack*="yhoo_m03"][yurl*="finance.yahoo.com"],
+menuitem[ytrack*="srch_m12"][yurl*="finance.yahoo.com"]
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/tb/iconsgif/fin_1.gif") !important; }
+menuitem[ytrack*="yhoo_m22"][yurl*="music.yahoo.com"],
+#menu_yahoo-toolbar-mus
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/tb/iconsgif/mus_1.gif") !important; }
+menuitem[ytrack*="yhoo_m05"][yurl*="sports.yahoo.com"],
+#menu_yahoo-toolbar-spo
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/tb/iconsgif/08c.gif") !important; }
+menuitem[ytrack*="srch_m07"][yurl*="video.search.yahoo.com"]
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/tb/iconsgif/st_vid2.gif") !important; }
+menuitem[ytrack*="srch_m03"][yurl*="yp.search.yahoo.com"]
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/tb/iconsgif/loc01.gif") !important; }
+menuitem[ytrack*="srch_m06"][yurl*="search.shopping.yahoo.com"]
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/tb/iconsgif/sh_1.gif") !important; }
+menuitem[ytrack*="srch_m30"][yurl*="hotjobs"]
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/tb/iconsgif/hj_1.gif") !important; }
+menuitem[ytrack*="srch_m02"][yurl*="news.search.yahoo.com"],
+#menu_yahoo-toolbar-new
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/tb/iconsgif/nws_1.gif") !important; }
+menuitem[ytrack*="srch_m11"][yurl*="education.yahoo.com/reference"]
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/tb/iconsgif/edu.gif") !important; }
+menuitem[ytrack*="srch_m13"][yurl*="movies.yahoo.com"]
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/tb/iconsgif/mov_1.gif") !important; }
+menuitem[ytrack*="srch_m14"][yurl*="address.yahoo.com"],
+menuitem[ytrack*="yma_m11"][yurl*="address.yahoo.com"]
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/tb/iconsgif/ab_1.gif") !important; }
+menuitem[ytrack*="yma_m12"][yurl*="calendar.yahoo.com"]
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/tb/iconsgif/cal_2.gif") !important; }
+menuitem[ytrack*="yma_m13"][yurl*="notepad.yahoo.com"]
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/tb/iconsgif/note_1.gif") !important; }
+#menu_yahoo-toolbar-yhoo_m
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/tb/iconsgif/tot.gif") !important; }
+#menu_yahoo-toolbar-cus_new_m
+{ list-style-image: url("chrome://ytoolbar/skin/option.gif") !important; }
+#menu_yahoo-toolbar-yas
+{ list-style-image: url("http://us.i1.yimg.com/us.yimg.com/i/tb/iconsgif/cayas.ico") !important; }
+
+/* yoono */
+menuitem[key="key_opensidebarTest"]
+{ list-style-image: url("chrome://yoono/skin/yoono16.png") !important; }
+
+/* zoomfox */
+#zoomFoxMenuItem
+{ list-style-image: url("chrome://zoomfox/content/icon_zoomfox_on.png") !important; }

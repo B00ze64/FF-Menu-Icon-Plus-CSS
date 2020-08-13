@@ -1,0 +1,12 @@
+<!ENTITY wizard.title "Importer un jeu d'icones">
+<!ENTITY page1.description "Pour importer un jeu d'icones, vous devez d'abord fournir un fichier PNG comprenant toutes les icones de 16x16 pixels de votre jeu, disposées selon un schéma de grille dans un ordre précis.  (Pour plus d'informations, cliquer sur le bouton Aide).  Le nom de votre fichier PNG sera le nom du nouveau jeu d'icones.">
+<!ENTITY import.image.textbox.label "Fichier image à importer :">
+<!ENTITY import.image.textbox.accesskey "m">
+<!ENTITY import.browse.button.label "Parcourir...">
+<!ENTITY import.browse.button.accesskey "P">
+<!ENTITY page2.description "En plus du fichier image du jeu d'icones, vous avez besoin de définir une feuille de style pour aller avec.  Si vous n'avez pas de feuille de style, mais avez correctement arrangé vos icones dans le fichier image, Menu Icons Plus peut générer une feuille de style basique pour vous.  Ou, vous pouvez définir votre propre feuille de style.">
+<!ENTITY generate.stylesheet.radio.label "Générer une feuille de style à ma place">
+<!ENTITY generate.stylesheet.radio.accesskey "G">
+<!ENTITY import.stylesheet.radio.label "Utiliser ma propre feuille de style :">
+<!ENTITY import.stylesheet.radio.accesskey "U">
+<!ENTITY page3.description "Les tâches suivantes seront effectuées :">

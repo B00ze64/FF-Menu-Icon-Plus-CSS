@@ -1,0 +1,6 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Hide options/preferences that don't apply to Linux */
+.menuiconsplus-windows-only {
+  display: none !important;
+}

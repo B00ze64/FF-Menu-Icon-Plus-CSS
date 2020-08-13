@@ -1,0 +1,117 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Browser theme icons from Classic Theme Restorer add-on */
+
+/* add-ons (extension) - WinXP platform */
+@media (-moz-windows-theme: luna-blue),
+       (-moz-windows-theme: luna-olive),
+       (-moz-windows-theme: luna-silver),
+       (-moz-windows-theme: royale),
+       (-moz-windows-theme: generic),
+       (-moz-windows-theme: zune) {
+  menuitem[command="Tools:Addons"],
+  menuitem[key="aiosKey_addons"],
+  #febe_tools_menu_restoreExtensions,
+  menuitem[oncommand="BrowserOpenAddonsMgr()"],
+  menuitem[observes="omnisidebar-viewAddonSidebar"]:not([checked="true"])
+  { list-style-image: url("chrome://classic_theme_restorer/content/images/appmenu_addons_xp.png") !important; -moz-image-region: auto !important; }
+}
+
+/* bookmark this page */
+menuitem[command="Browser:AddBookmarkAs"],
+#context_bookmarkTab,
+#context-bookmarklink,
+#context-bookmarkpage,
+#context-bookmarkframe,
+#addBookmarkContextItem,
+#placesContext_createBookmark,
+menuitem[oncommand="RemoteTabViewer.bookmarkSingleTab(event)"],
+#MultiLinks-Op5,
+#panelMenuBookmarkThisPage
+{ list-style-image: url("chrome://classic_theme_restorer/content/images/appmenu_bookmarks.png") !important; -moz-image-region: auto !important; }
+
+/* edit-cut */
+menuitem[command="cmd_cut"],
+menuitem[cmd="cmd_cut"],
+#mnEditCut,
+#context-cut,
+#cut,
+menuitem[key="key_cut"],
+menuitem[commandname="cmd-cut"],
+#platypus-smart_remove,
+#platypus-smart_remove-button .toolbarbutton-icon,
+#gspace_remoteCutFiles,
+#placesContext_cut,
+#appmenu-cut
+{ list-style-image: url("chrome://classic_theme_restorer/content/images/appmenu_cut.png") !important; -moz-image-region: auto !important; }
+
+/* edit-copy */
+menuitem[command="cmd_copy"],
+menuitem[cmd="cmd_copy"],
+#mnEditCopy,
+menuitem[oncommand="viewer.cmdCopyValue();"],
+#context-copyimage-contents,
+#copyPref,
+#context-copy,
+#copy,
+#perm-copy-menuitem,
+#cookie-copy-menuitem,
+menuitem[key="key_copyallurls"],
+menuitem[key="key_copy"],
+menuitem[commandname="cmd-copy-link-url"],
+menuitem[commandname="cmd-copy"],
+#cx-copy,
+toolbarbutton[oncommand="Firebug.CommandLine.copyBookmarklet(FirebugContext)"],
+menuitem[oncommand="foxytunesTrackTitleCopyToClipBoard();"],
+#gspace_remoteCopyFiles,
+#context-highlighter-copy,
+menuitem[oncommand="copyKey();"],
+.copyButtonImage,
+#tabberwocky-copytabtitle,
+menuitem[command="rikaichan-copy-cmd"],
+#rikaichan-lbar-copy,
+menuitem[oncommand="copyReminder()"],
+menuitem[oncommand="copyTodo()"],
+#placesContext_copy,
+#appmenu-copy,
+menuitem[oncommand="titoCommand.errorCopy(event);"],
+menuitem[value="duplicate"],
+#MultiLinks-Op3 + menu,
+menuitem[command="downloadsCmd_copyLocation"],
+#context-copylink,
+menuitem[commandname="copy-qual-name"],
+menuitem[command="cmdCopyValue"],
+#request-menu-context-copy-url
+{ list-style-image: url("chrome://classic_theme_restorer/content/images/appmenu_copy.png") !important; -moz-image-region: auto !important; }
+
+/* edit-paste */
+menuitem[command="cmd_paste"],
+menuitem[cmd="cmd_paste"],
+#mnEditPaste,
+#mnEditPasteMenu,
+#context-paste,
+#paste,
+menuitem[key="key_paste"],
+menuitem[commandname="cmd-paste"],
+#platypus-paste,
+#platypus-paste-button .toolbarbutton-icon,
+#gspace_remotePaste,
+#placesContext_paste,
+#appmenu-paste
+{ list-style-image: url("chrome://classic_theme_restorer/content/images/appmenu_paste.png") !important; -moz-image-region: auto !important; }
+
+/* exit */
+#menu_FileQuitItem,
+menuitem[oncommand="window.extensions.mook.minimizetotray.trayTurboClose();"],
+popup[id="extensions.mook.minimizetotray.traypopup"] menuitem[command="cmd_closeWindow"],
+#appmenu-quit,
+#MinTrayR_menu_FileQuitItem
+{ list-style-image: url("chrome://classic_theme_restorer/content/images/appmenu_close.png") !important; -moz-image-region: auto !important; }
+
+/* print */
+menuitem[command="cmd_print"],
+#context-printframe,
+menuitem[commandname="print"],
+menuitem[oncommand="minimapNS.minimapPrint();"],
+#appmenu_print
+{ list-style-image: url("chrome://classic_theme_restorer/content/images/appmenu_print.png") !important; -moz-image-region: auto !important; }

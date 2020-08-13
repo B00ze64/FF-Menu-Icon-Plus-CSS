@@ -1,0 +1,8 @@
+/* Web Developer fix */
+#web-developer-context menuitem .menu-iconic-left,
+#web-developer-menu menuitem .menu-iconic-left,
+#web-developer-app-menu menuitem .menu-iconic-left,
+#web-developer-toolbar menuitem .menu-iconic-left {
+  list-style-image: url("external.png");
+  -moz-image-region: rect(0, 16px, 16px, 0);
+}

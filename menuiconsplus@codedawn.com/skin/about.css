@@ -1,0 +1,28 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* About box */
+#menuiconsplus-about .url {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+#menuiconsplus-about groupbox {
+  margin: 5px;
+}
+#menuiconsplus-about groupbox > vbox {
+  padding: 5px;
+}
+
+#menuiconsplus-about image {
+  margin-right: 5px;
+}
+#menuiconsplus-about .thin {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+#menuiconsplus-about description {
+  margin: 0px;
+}
+#menuiconsplus-about spacer {
+  min-width: 50px;
+}

@@ -1,0 +1,30 @@
+<!ENTITY prefwindow.title "Preferencias de Menu Icons Plus">
+<!ENTITY header1.description "Puede ser necesario reiniciar Firefox para efectuar los cambios.">
+<!ENTITY header2.description "Algunas opciones posiblemente no sean compatibles con ciertas temas.">
+<!ENTITY iconset.prefpane "Juego de iconos">
+<!ENTITY iconset.caption "Vista preliminar del juego de iconos">
+<!ENTITY iconset.menulist.label "Juego de iconos:">
+<!ENTITY iconset.menulist.accesskey "J">
+<!ENTITY advanced.button.label "Opciones">
+<!ENTITY advanced.button.accesskey "O">
+<!ENTITY import.menuitem.label "Importar…">
+<!ENTITY import.menuitem.accesskey "I">
+<!ENTITY export.menuitem.label "Exportar…">
+<!ENTITY export.menuitem.accesskey "X">
+<!ENTITY delete.menuitem.label "Eliminar">
+<!ENTITY delete.menuitem.accesskey "E">
+<!ENTITY menu.prefpane "Menús">
+<!ENTITY menu.checkmarks.caption "Marcas de verificación y botones de opción en los menús">
+<!ENTITY menu.checkmarks.tooltip "Cambia la apariencia de las marcas de verificación (y los botones de opción) junto a los elementos de menú que los tiene.">
+<!ENTITY iconset.checkmarks.radio.label "Usar las marcas de verificación/botones de opción del juego de iconos">
+<!ENTITY iconset.checkmarks.radio.accesskey "U">
+<!ENTITY alt.checkmarks.radio.label "Usar marcas de verificación/botones de opción alternos">
+<!ENTITY alt.checkmarks.radio.accesskey "M">
+<!ENTITY default.checkmarks.radio.label "Estilo predeterminado de Firefox">
+<!ENTITY default.checkmarks.radio.accesskey "F">
+<!ENTITY hide.disabled.checkbox.label "Ocultar los iconos de elementos de menú deshabilitados">
+<!ENTITY hide.disabled.checkbox.accesskey "O">
+<!ENTITY hide.disabled.checkbox.tooltip "No muestra iconos junto a elementos de menú que están deshabilitados (atenuados).">
+<!ENTITY theme.icons.checkbox.label "Usar iconos del tema actual de Firefox donde sea posible">
+<!ENTITY theme.icons.checkbox.accesskey "T">
+<!ENTITY theme.icons.checkbox.tooltip "Reemplaza algunos iconos del juego de iconos actualmente seleccionado, mostrando iconos del tema de Firefox en su lugar.">

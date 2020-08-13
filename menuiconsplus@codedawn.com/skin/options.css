@@ -1,0 +1,41 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#menuiconsplus-preferences {
+  max-width: none;
+}
+
+#menuiconsplus-preferences radio[pane] {
+  list-style-image: url("chrome://menuiconsplus/skin/prefpanes.png");
+}
+radio[pane="menuiconsplus-prefpane1"] {
+  -moz-image-region: rect(0, 32px, 32px, 0);
+}
+radio[pane="menuiconsplus-prefpane2"] {
+  -moz-image-region: rect(0, 64px, 32px, 32px);
+}
+
+#menuiconsplus-preferences #iconset-menu {
+  min-width: 135px;
+}
+
+#menuiconsplus-preferences .heading1 {
+  margin-bottom: 0px;
+}
+#menuiconsplus-preferences .heading2 {
+  margin-top: 0px;
+}
+
+#iconset-box,
+#menuiconsplus-config-iconstylesheet-box {
+  -moz-box-align: center;
+}
+
+#iconset-preview-image {
+  background-color: white;
+  background-repeat: no-repeat;
+  border: 1px solid white;
+}
+
+#advanced-button {
+  min-width: 85px;
+}

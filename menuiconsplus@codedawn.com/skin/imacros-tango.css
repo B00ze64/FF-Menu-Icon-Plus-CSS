@@ -1,0 +1,74 @@
+@namespace url("http://www.w3.org/1999/xhtml");
+
+/* iMacros */
+img[src="chrome://imacros/content/editor/editarea/edit_area/images/save.gif"],
+img[src="chrome://imacros/content/editor/editarea/edit_area/images/load.gif"],
+img[src="chrome://imacros/content/editor/editarea/edit_area/images/undo.gif"],
+img[src="chrome://imacros/content/editor/editarea/edit_area/images/redo.gif"],
+img[src="chrome://imacros/content/editor/editarea/edit_area/images/search.gif"],
+img[src="chrome://imacros/content/editor/editarea/edit_area/images/new_document.gif"],
+img[src="chrome://imacros/content/editor/editarea/edit_area/images/go_to_line.gif"],
+img[src="chrome://imacros/content/editor/editarea/edit_area/images/change_smooth_selection.gif"],
+img[src="chrome://imacros/content/editor/editarea/edit_area/images/reset_highlight.gif"],
+img[src="chrome://imacros/content/editor/editarea/edit_area/images/highlight.gif"],
+img[src="chrome://imacros/content/editor/editarea/edit_area/images/help.gif"],
+img[src="chrome://imacros/content/editor/editarea/edit_area/images/fullscreen.gif"],
+img[src="chrome://imacros/content/editor/editarea/edit_area/images/autocompletion.gif"]
+{ display: none; max-width: 16px; max-height: 16px; }
+
+#toolbar_1 a#a_save
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Tango.png") no-repeat -128px -96px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+
+#toolbar_1 a#a_load
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Tango.png") no-repeat -96px -16px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+
+#toolbar_1 a#a_undo
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Tango.png") no-repeat 0px -16px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+
+#toolbar_1 a#a_redo
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Tango.png") no-repeat -16px -16px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+
+#toolbar_1 a#a_search
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Tango.png") no-repeat -48px -16px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+
+#toolbar_1 a#a_new_document
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Tango.png") no-repeat 0px -160px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+
+#toolbar_1 a#a_go_to_line
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Tango.png") no-repeat -128px -80px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+
+#toolbar_1 a#a_change_smooth_selection
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Tango.png") no-repeat -128px -192px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+
+#toolbar_1 a#a_reset_highlight
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Tango.png") no-repeat -128px -176px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+
+#toolbar_1 a#a_highlight
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Tango.png") no-repeat -64px -192px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+
+#toolbar_1 a#a_help
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Tango.png") no-repeat 0px -256px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+
+#toolbar_1 a#a_fullscreen
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Tango.png") no-repeat -112px -32px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+
+#toolbar_1 a#a_autocompletion
+{ min-width: 16px; min-height: 16px; max-width: 16px; max-height: 16px; background: url("Tango.png") no-repeat -32px -160px; display: inline-block; margin-left: 4px; margin-right: 4px; margin-top: 4px; }
+
+img.editAreaSeparatorLine[src="chrome://imacros/content/editor/editarea/edit_area/images/spacer.gif"]
+{ vertical-align: top !important; margin-top: 2px !important; }
+
+#toolbar_1 a#a_save:hover,
+#toolbar_1 a#a_load:hover,
+#toolbar_1 a#a_undo:hover,
+#toolbar_1 a#a_redo:hover,
+#toolbar_1 a#a_search:hover,
+#toolbar_1 a#a_new_document:hover,
+#toolbar_1 a#a_go_to_line:hover,
+#toolbar_1 a#a_change_smooth_selection:hover,
+#toolbar_1 a#a_reset_highlight:hover,
+#toolbar_1 a#a_highlight:hover,
+#toolbar_1 a#a_help:hover,
+#toolbar_1 a#a_fullscreen:hover,
+#toolbar_1 a#a_autocompletion:hover
+{ outline: 1px dotted black; outline-offset: 2px; }

@@ -1,0 +1,22 @@
+content menuiconsplus content/
+locale menuiconsplus en-US locale/en-US/
+locale menuiconsplus es-MX locale/es-MX/
+locale menuiconsplus fr-FR locale/fr-FR/
+locale menuiconsplus sv-SE locale/sv-SE/
+skin menuiconsplus classic/1.0 skin/
+overlay chrome://browser/content/browser.xul chrome://menuiconsplus/content/firefoxOverlay.xul
+overlay chrome://dta/content/dta/manager.xul chrome://menuiconsplus/content/secondaryOverlay.xul
+overlay chrome://dta/content/dta/select.xul chrome://menuiconsplus/content/secondaryOverlay.xul
+overlay chrome://gspace/content/gspaceWindow.xul chrome://menuiconsplus/content/secondaryOverlay.xul
+overlay chrome://scrapbook/content/scrapbook.xul chrome://menuiconsplus/content/secondaryOverlay.xul
+overlay chrome://scrapbook/content/manage.xul chrome://menuiconsplus/content/secondaryOverlay.xul
+overlay chrome://scrapbook/content/trade.xul chrome://menuiconsplus/content/secondaryOverlay.xul
+overlay chrome://mozimage/content/mozimage.xul chrome://menuiconsplus/content/secondaryOverlay.xul
+overlay chrome://smxtra5/content/smxtra.xul chrome://menuiconsplus/content/secondaryOverlay.xul
+overlay chrome://imacros/content/edit.xul chrome://menuiconsplus/content/secondaryOverlay.xul
+overlay chrome://imacros/content/share.xul chrome://menuiconsplus/content/secondaryOverlay.xul
+overlay chrome://minimap/content/minimap.xul chrome://menuiconsplus/content/secondaryOverlay.xul
+overlay chrome://minimap/content/maptab.xul chrome://menuiconsplus/content/secondaryOverlay.xul
+overlay chrome://tvmanager/content/sidebar/tvmanager.xul chrome://menuiconsplus/content/secondaryOverlay.xul
+overlay chrome://similarweb/content/similarweb.xul chrome://menuiconsplus/content/secondaryOverlay.xul
+overlay chrome://gmanager/content/options/options.xul chrome://menuiconsplus/content/secondaryOverlay.xul

@@ -1,0 +1,12 @@
+<!ENTITY wizard.title "Importar juego de iconos">
+<!ENTITY page1.description "Para importar un juego de iconos, primero debe proporcionar un archivo PNG con todos los iconos de 16x16 píxeles del juego, organizados en forma de cuadrícula y en un orden específico.  (Para mayor información, haga clic en el botón Ayuda).  El nombre de su archivo PNG será el nombre del nuevo juego de iconos.">
+<!ENTITY import.image.textbox.label "Archivo de imagen a importar:">
+<!ENTITY import.image.textbox.accesskey "M">
+<!ENTITY import.browse.button.label "Examinar...">
+<!ENTITY import.browse.button.accesskey "X">
+<!ENTITY page2.description "Además del archivo de imagen del juego de iconos, debe especificar una hoja de estilo para acompañarlo.  Si no dispone de una hoja de estilo pero ha colocado los iconos apropiadamente en el archivo de imagen, Menu Icons Plus puede generar una hoja de estilo básica para usted.  O bien, puede especificar su propia hoja de estilo.">
+<!ENTITY generate.stylesheet.radio.label "Generarme una hoja de estilo">
+<!ENTITY generate.stylesheet.radio.accesskey "G">
+<!ENTITY import.stylesheet.radio.label "Usar mi propia hoja de estilo:">
+<!ENTITY import.stylesheet.radio.accesskey "U">
+<!ENTITY page3.description "Las siguientes tareas serán realizadas:">

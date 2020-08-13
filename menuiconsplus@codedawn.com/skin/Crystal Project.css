@@ -1,0 +1,1706 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* blank (no icon) */
+menuitem[type="checkbox"],
+menuitem[type="radio"]:not([flagitem="true"]),
+#menuitem_learnMore_clone,
+menuitem[command="cmd_about"],
+menuitem[command="cmd_uninstall"],
+#links-mitem,
+#aios-sidebar-mitem-show,
+#aios-sidebar-mitem-hide,
+#viewSource-main-menubar #menu_close,
+#noscript-menu-blocked-objects,
+#misc #remove,
+#sbPopupProperty,
+menuitem[oncommand="addNote();"] .menu-iconic-icon,
+menuitem[command="cmd_fullZoomReset"],
+#menu_textReset,
+#placesContext_show\:info,
+#context-metadata,
+#aboutName,
+#context_closeOtherTabs,
+#orgClose,
+#context-copyemail,
+#context-copylink,
+#context-copyimage,
+#menuitem_copyLocation,
+#contextCopy,
+menuitem[oncommand="gContextMenu.copyMediaLocation();"],
+#placesContext_reloadMicrosummary,
+menuitem[command="cmd_enable"],
+menuitem[command="cmd_cancelUninstall"],
+menuitem[command="cmd_useTheme"],
+#appmenu_unsortedBookmarks,
+#BMB_unsortedBookmarks,
+#ctraddon_BMB_unsortedBookmarks,
+#selectinvert,
+#folder,
+#removeCompletedMenu > menuitem,
+#removeCompleted,
+#DownThemAll .menuitem-filter,
+#removeselected,
+#removeAll,
+#cleangone,
+#removeDupes,
+#selectinv,
+#movetop,
+#movebottom,
+#advancedMenu,
+#mirrors,
+#mirrors-cascaded,
+#privateTab-appMenu-openNewPrivateTab > .menu-iconic-left,
+#ceprestart,
+#ceprestart:hover
+{ -moz-image-region: rect(0, 16px, 16px, 0) !important; list-style-image: url("external.png") !important; }
+
+/* checkmark */
+menuitem[checked="true"],
+menuitem[type="checkbox"][checked="true"],
+menuitem[type="radio"][checked="true"],
+toolbarbutton#addAddressPanel.checked,
+toolbarbutton#addAddressPanel.checked:hover,
+.subviewbutton[checked="true"],
+#web-developer-context menuitem[type="checkbox"][checked="true"] .menu-iconic-left,
+#web-developer-menu menuitem[type="checkbox"][checked="true"] .menu-iconic-left,
+#web-developer-app-menu menuitem[type="checkbox"][checked="true"] .menu-iconic-left,
+#web-developer-toolbar menuitem[type="checkbox"][checked="true"] .menu-iconic-left
+{ -moz-image-region: rect(0, 16px, 16px, 0) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* browse-back (ltr) */
+menuitem[oncommand="BrowserBack(event, true)"],
+menuitem[oncommand="BrowserForward(event, true)"]:-moz-locale-dir(rtl),
+menuitem[command="Browser:Back"],
+menuitem[command="Browser:Forward"]:-moz-locale-dir(rtl),
+menuitem[command="Browser:BackOrBackDuplicate"],
+menuitem[command="Browser:ForwardOrForwardDuplicate"]:-moz-locale-dir(rtl),
+toolbarbutton[class="tabcatalog-thumbnail-toolbar-item goBack"],
+toolbarbutton[class="tabcatalog-thumbnail-toolbar-item goForward"]:-moz-locale-dir(rtl),
+#thumb-back .toolbarbutton-icon,
+#thumb-forward .toolbarbutton-icon:-moz-locale-dir(rtl),
+#prior-button,
+#next-button:-moz-locale-dir(rtl),
+menuitem[oncommand="prior_click();"],
+menuitem[oncommand="next_click();"]:-moz-locale-dir(rtl)
+{ -moz-image-region: rect(0, 32px, 16px, 16px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* browse-forward (ltr) */
+menuitem[oncommand="BrowserForward(event, true)"],
+menuitem[oncommand="BrowserBack(event, true)"]:-moz-locale-dir(rtl),
+menuitem[command="Browser:Forward"],
+menuitem[command="Browser:Back"]:-moz-locale-dir(rtl),
+menuitem[command="Browser:ForwardOrForwardDuplicate"],
+menuitem[command="Browser:BackOrBackDuplicate"]:-moz-locale-dir(rtl),
+toolbarbutton[class="tabcatalog-thumbnail-toolbar-item goForward"],
+toolbarbutton[class="tabcatalog-thumbnail-toolbar-item goBack"]:-moz-locale-dir(rtl),
+#thumb-forward .toolbarbutton-icon,
+#thumb-back .toolbarbutton-icon:-moz-locale-dir(rtl),
+#next-button,
+#prior-button:-moz-locale-dir(rtl),
+menuitem[oncommand="next_click();"],
+menuitem[oncommand="prior_click();"]:-moz-locale-dir(rtl)
+{ -moz-image-region: rect(0, 48px, 16px, 32px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* browse-reload */
+menuitem[command="Browser:Reload"],
+menuitem[command="Browser:ReloadOrDuplicate"],
+#placesContext_reload,
+#context_reloadTab,
+#context-reloadframe,
+toolbarbutton[class="tabcatalog-thumbnail-toolbar-item reload"],
+#fireftp-main-window .refreshButton,
+#web-developer-reset-dashboard,
+menuitem[command="cmd_reload"],
+#fastdial-menu-refresh,
+#thumb-reload .toolbarbutton-icon,
+toolbarbutton[oncommand="gs_gLocalTreeView.RefreshFolder()"],
+toolbarbutton[oncommand="gs_gRemoteTreeView.RefreshFolder();"],
+#refresh-menu,
+#cacheviewer #reload,
+.speeddial-reload-button,
+#groupcontext-refreshall,
+#thumbMenu #context-refresh,
+#context-reload,
+menuitem[commandname="reload-source-tab"]
+{ -moz-image-region: rect(0, 64px, 16px, 48px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* browse-cancel (stop) */
+menuitem[command="Browser:Stop"],
+toolbarbutton[class="tabcatalog-thumbnail-toolbar-item stop"],
+#thumb-stop .toolbarbutton-icon
+{ -moz-image-region: rect(0, 80px, 16px, 64px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* browse-home */
+menuitem[oncommand="BrowserGoHome(event);"],
+menuitem[command="cmd_homepage"],
+toolbarbutton#homemap,
+toolbarbutton#homemap:hover,
+menuitem[oncommand="minimapNS.setMapHome();"],
+menuitem[anonid="homepage"]
+{ -moz-image-region: rect(0, 96px, 16px, 80px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* edit */
+#mnEdit,
+#mnEditEdit,
+#modifySelected,
+.itemtreebox-edit,
+#mbEditButton,
+#edit-button,
+menuitem[oncommand="edit_click();"],
+#editmacro,
+menuitem[oncommand="minimapNS.edit_Kml()"],
+toolbarbutton#editalias,
+menuitem[command="cmd_editalias"],
+#edit-menu,
+menuitem[anonid="context-edit"],
+.speeddial-edit-button,
+#groupcontext-edit,
+#thumbMenu #context-edit,
+menuitem[oncommand="editReminder()"],
+menuitem[oncommand="editTodo()"],
+#catHbox > #catChange,
+#menuitem_userscript_edit,
+menuitem[commandname="change-value"]
+{ -moz-image-region: rect(0, 112px, 16px, 96px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* edit-cut */
+menuitem[command="cmd_cut"],
+menuitem[cmd="cmd_cut"],
+#mnEditCut,
+#context-cut,
+#cut,
+menuitem[key="key_cut"],
+menuitem[commandname="cmd-cut"],
+#platypus-smart_remove,
+#platypus-smart_remove-button .toolbarbutton-icon,
+#gspace_remoteCutFiles,
+#placesContext_cut,
+#appmenu-cut
+{ -moz-image-region: rect(0, 128px, 16px, 112px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* edit-copy */
+menuitem[command="cmd_copy"],
+menuitem[cmd="cmd_copy"],
+#mnEditCopy,
+menuitem[oncommand="viewer.cmdCopyValue();"],
+#context-copyimage-contents,
+#copyPref,
+#context-copy,
+#copy,
+#perm-copy-menuitem,
+#cookie-copy-menuitem,
+menuitem[key="key_copyallurls"],
+menuitem[key="key_copy"],
+menuitem[commandname="cmd-copy-link-url"],
+menuitem[commandname="cmd-copy"],
+#cx-copy,
+toolbarbutton[oncommand="Firebug.CommandLine.copyBookmarklet(FirebugContext)"],
+menuitem[oncommand="foxytunesTrackTitleCopyToClipBoard();"],
+#gspace_remoteCopyFiles,
+#context-highlighter-copy,
+menuitem[oncommand="copyKey();"],
+.copyButtonImage,
+#tabberwocky-copytabtitle,
+menuitem[command="rikaichan-copy-cmd"],
+#rikaichan-lbar-copy,
+menuitem[oncommand="copyReminder()"],
+menuitem[oncommand="copyTodo()"],
+#placesContext_copy,
+#appmenu-copy,
+menuitem[oncommand="titoCommand.errorCopy(event);"],
+menuitem[value="duplicate"],
+#MultiLinks-Op3 + menu,
+menuitem[command="downloadsCmd_copyLocation"],
+#context-copylink,
+menuitem[commandname="copy-qual-name"],
+menuitem[command="cmdCopyValue"],
+#request-menu-context-copy-url
+{ -moz-image-region: rect(0, 144px, 16px, 128px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* edit-paste */
+menuitem[command="cmd_paste"],
+menuitem[cmd="cmd_paste"],
+#mnEditPaste,
+#mnEditPasteMenu,
+#context-paste,
+#paste,
+menuitem[key="key_paste"],
+menuitem[commandname="cmd-paste"],
+#platypus-paste,
+#platypus-paste-button .toolbarbutton-icon,
+#gspace_remotePaste,
+#placesContext_paste,
+#appmenu-paste
+{ -moz-image-region: rect(0, 160px, 16px, 144px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* edit-undo */
+menuitem[cmd="cmd_undo"],
+menuitem[command="cmd_undo"],
+menuitem[command="cmdEditUndo"],
+#context_undoCloseTab,
+#tm-content-undoCloseTab,
+#autocopy-context-menu-undocopy,
+#nukeanything-undo-nuke,
+menuitem[commandname="cmd-undo"],
+toolbarbutton#undo,
+toolbarbutton#undo:hover,
+menuitem[oncommand="cmd_undo"],
+menuitem[key="key_undo"]
+{ -moz-image-region: rect(16px, 16px, 32px, 0) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* edit-redo */
+menuitem[command="cmd_redo"],
+menuitem[command="cmdEditRedo"],
+menuitem[commandname="cmd-redo"],
+#menuitem_retry,
+menuitem[key="key_redo"]
+{ -moz-image-region: rect(16px, 32px, 32px, 16px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* edit-delete */
+menuitem[cmd="cmd_delete"],
+menuitem[command="cmd_delete"],
+menuitem[command="cmdEditDelete"],
+#context-remove,
+#remove,
+#perm-delete-menuitem,
+#cookie-delete-menuitem,
+menuitem[oncommand="db_startDelete(db_findDLNode(document.popupNode), event);"],
+menuitem[oncommand="localTree.remove()"],
+menuitem[oncommand="remoteTree.remove()"],
+menuitem[id^="nukeanything-do-nuke"],
+menuitem[commandname="cmd-delete"],
+menuitem[oncommand="ybBookmarksMenu.deleteBookmark();"],
+menuitem[anonid="ybContextMenu-delete-bookmark"],
+#delete,
+#fastdial-menu-clear,
+#platypus-remove,
+#platypus-remove-button .toolbarbutton-icon,
+menuitem[oncommand="gs_gLocalTreeView.DeleteSelected();"],
+#gspace_remoteDeleteSelected,
+toolbarbutton[oncommand="gs_gLocalTreeView.DeleteSelected();"],
+toolbarbutton[oncommand="gs_gRemoteTreeView.DeleteSelected();"],
+#sbPopupRemove,
+menuitem[oncommand="sbPageEditor.cutter();"],
+#mbRemoveButton,
+menuitem[oncommand="sbTradeService.remove();"],
+#deletebookmark-button,
+#deleteCache,
+#delete-menuitem,
+#ctx-delete-feed,
+#ctx-delete-folder,
+#ctx-delete-tag,
+#remove,
+menuitem[oncommand="minimapNS.delete_Kml()"],
+#minimap-delete,
+#popup-remove,
+#menu_delete,
+#tm-sessionmanager menu[anonid="delete"] > .menu-iconic-left,
+#tm-sessionmanager:hover menu[anonid="delete"] > .menu-iconic-left,
+#tm-sm-Delete,
+menuitem[oncommand="deleteSearchPlugin();"],
+menuitem[oncommand="deleteCategory()"],
+#groupcontext-remove,
+#thumbMenu #context-deassign,
+menuitem[oncommand="userDeleteReminder()"],
+menuitem[oncommand="userDeleteTodo()"],
+#editdial-clear,
+menuitem[command="placesCmd_delete"],
+menuitem[value="remove"],
+menuitem#deleteItem,
+menuitem[key="key_delete"]
+{ -moz-image-region: rect(16px, 48px, 32px, 32px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* find */
+menuitem[command="cmd_find"],
+menuitem[oncommand="inspector.getViewer('dom').showFindDialog()"],
+#find,
+#btnFind,
+#searchMenuItem,
+#web-developer-search-dashboard,
+menuitem[commandname="find"],
+#fbSearchBox > hbox.autocomplete-textbox-container > image.autocomplete-icon,
+menuitem[command="cmd_focusFirebugSearch"],
+#rikaichan-lbar-search,
+menuitem[oncommand="doFind()"],
+toolbarbutton#qsChange,
+menuitem[commandname="find-string"],
+menuitem[key="tokenSearchKey"]
+{ -moz-image-region: rect(16px, 64px, 32px, 48px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* window-new */
+#menu_newNavigator,
+#placesContext_open\:newwindow,
+#context-openlink,
+#context-openframe,
+menuitem[commandname="goto-url-newwin"],
+#cx-openwindow,
+#yb-bookmarks-context-menu-open-in-new-window,
+menuitem[anonid="ybContextMenu-open-in-new-window"],
+#rssOpenNewWindowItem,
+toolbarbutton[oncommand="gs_viewHandler.OpenNewWindow();"],
+menuitem[oncommand="gperformancing.launchWindow('chrome://performancing/content/scribefire.xul')"],
+#tm-sm-OpenInNewWindow,
+#context_openTabInWindow,
+.speeddial-newwindow-button,
+#thumbMenu #context-openwindow,
+#itmOpenInNewWindow,
+#articleOpenInNewWindow,
+#appmenu_newNavigator,
+#MinTrayR_menu_newNavigator,
+menuitem[value="search:@newwindow"],
+#sp-menu-newscratchpad,
+#MultiLinks-Op2,
+#mnEditInspectInNewWindow
+{ -moz-image-region: rect(16px, 80px, 32px, 64px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* tab-new */
+#menu_newNavigatorTab,
+#placesContext_open\:newtab,
+#context_newTab,
+#context-openlinkintab,
+#context-openframeintab,
+#contextOpen,
+#autocopy-context-menu-openinnewtab,
+menuitem[key="key_openurls"],
+#ddg_menu_go_f,
+menuitem[commandname="goto-url-newtab"],
+#cx-opentab,
+#yb-bookmarks-context-menu-open-in-new-tab,
+menuitem[anonid="ybContextMenu-open-in-new-tab"],
+#mopen,
+#fastdial-menu-open-tab,
+#rssOpenNewTabItem,
+#sbPopupOpenNewTab,
+menuitem[oncommand="sbTradeService.open(true);"],
+menuitem[oncommand="sbCalcController.open(true);"],
+menuitem[oncommand="gperformancing.launchWindowInTab('chrome://performancing/content/scribefire.xul')"],
+menuitem[oncommand="CacheViewer.openCache();"],
+menuitem[oncommand^="minimap.minimapTab();"],
+#maptab-link-context,
+menuitem[oncommand="minimap.openSidebarFromPanel('maptab');"],
+.openintabs-menuitem,
+#placesContext_openContainer\:tabs,
+#placesContext_open\:newtab,
+#placesContext_openLinks\:tabs,
+#tabberwocky-openselectedlinks,
+.speeddial-newtab-button,
+.speeddial-backgroundtab-button,
+#groupcontext-openall,
+#thumbMenu #context-opentab,
+#itmOpenInNewTab,
+#articleOpenInNewTab,
+menuitem[oncommand="RemoteTabViewer.openSelected()"],
+#appmenu_newTab,
+#appmenu_newTab_popup,
+menuitem[value="search:@newtab"],
+#MultiLinks-Op1,
+menuitem[commandname="find-scriptinstance"],
+menuitem[commandname="find-url"]
+{ -moz-image-region: rect(16px, 96px, 32px, 80px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* file-open (file-browse/explore) */
+#menu_openFile,
+#restoreFromFile,
+#menuitem_open,
+menuitem[oncommand="db_startOpenFinished(db_findDLNode(document.popupNode));"],
+menuitem[key="key_open"],
+.filepicker-browse,
+#web-developer-open-dashboard,
+#cx-open-ext,
+#cx-open,
+#FirebugMenu_OpenWith,
+#menu_detachFirebug + menuseparator + menu,
+#FirebugMenu_Options + menuseparator + menu,
+menuitem[command="cmd_foxytunes-play-file"],
+#browsedir,
+#launch,
+#sbPopupOpen,
+menuitem[oncommand="sbTradeService.open(false);"],
+menuitem[oncommand="sbCalcController.open(false);"],
+#colorzilla-manage-palettes,
+#explorer-menu,
+#firefusk-openin-menu,
+#appmenu_openFile,
+#menuitem_userscript_show,
+#traceToolsMenu #loadFromFile,
+#sp-menu-open,
+.downloadShowMenuItem,
+menuitem[commandname="find-file"]
+{ -moz-image-region: rect(16px, 112px, 32px, 96px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* tab-close */
+menuitem[command="cmd_close"],
+#context_closeTab,
+#tm-content-closetab,
+menuitem[commandname="delete-view"],
+menuitem[command="cmd_closetab"],
+menuitem[commandname="close-source-tab"]
+{ -moz-image-region: rect(16px, 128px, 32px, 112px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* save as */
+#context-savelink,
+#context-saveimage,
+#context-savepage,
+#context-saveframe,
+menuitem[key="key_savePage"],
+menuitem[command="Browser:SaveFrame"],
+#mi-save,
+menuitem[oncommand="ddg_ges.SaveAs(this.parentNode.Data);"],
+menuitem[commandname="save"],
+#cx-saveas,
+menuitem[oncommand="save_click();"],
+menuitem[oncommand="CacheViewer.saveCache();"],
+menuitem[oncommand="gContextMenu.saveMedia();"],
+#sp-menu-saveas,
+menuitem[commandname="save-source-tab"],
+#appmenu_savePage
+{ -moz-image-region: rect(16px, 144px, 32px, 128px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* email-send link */
+#context-sendlink,
+#context-sendpage,
+#menu_sendLink,
+#context-sendimage,
+#gspace_remoteSendTo,
+.emailButtonImage,
+toolbarbutton#email,
+toolbarbutton#email:hover,
+menuitem[oncommand="minimapNS.shareLocation('email');"],
+menuitem[oncommand="gContextMenu.sendMedia();"],
+#appmenu_sendLink
+{ -moz-image-region: rect(16px, 160px, 32px, 144px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* page setup */
+menuitem[command="cmd_pageSetup"],
+menuitem[command="cmd_pagesetup"]
+{ -moz-image-region: rect(32px, 16px, 48px, 0) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* print preview */
+menuitem[command="cmd_printPreview"],
+menuitem[command="cmd_printpreview"]
+{ -moz-image-region: rect(32px, 32px, 48px, 16px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* print */
+menuitem[command="cmd_print"],
+#context-printframe,
+menuitem[commandname="print"],
+menuitem[oncommand="minimapNS.minimapPrint();"],
+#appmenu_print
+{ -moz-image-region: rect(32px, 48px, 48px, 32px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* exit */
+#menu_FileQuitItem,
+#platypus-stop_platypus,
+#platypus-stop_platypus-button .toolbarbutton-icon,
+menuitem[oncommand="window.extensions.mook.minimizetotray.trayTurboClose();"],
+popup[id="extensions.mook.minimizetotray.traypopup"] menuitem[command="cmd_closeWindow"],
+#appmenu-quit,
+#MinTrayR_menu_FileQuitItem
+{ -moz-image-region: rect(32px, 64px, 48px, 48px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* zoom in */
+menuitem[command="cmd_fullZoomEnlarge"],
+#menu_textEnlarge,
+menuitem[oncommand="webdeveloper_zoom(true)"] .menu-iconic-icon,
+#gspace_gZoom[zoomfit="false"],
+#zoomin-button,
+menuitem[oncommand="zoomin_click();"],
+#firefusk-plus,
+toolbarbutton#zoomin,
+toolbarbutton#zoomin:hover,
+#context-zoom-zin,
+#zoomsub-zin
+{ -moz-image-region: rect(32px, 80px, 48px, 64px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* zoom out */
+menuitem[command="cmd_fullZoomReduce"],
+#menu_textReduce,
+menuitem[oncommand="webdeveloper_zoom(false)"] .menu-iconic-icon,
+#gspace_gZoom[zoomfit="true"],
+#zoomout-button,
+menuitem[oncommand="zoomout_click();"],
+#firefusk-minus,
+toolbarbutton#zoomout,
+toolbarbutton#zoomout:hover,
+#context-zoom-zout,
+#zoomsub-zout
+{ -moz-image-region: rect(32px, 96px, 48px, 80px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* view source (file-html) */
+#context-viewframesource,
+#context-viewpartialsource-selection,
+#context-viewpartialsource-mathml,
+#context-viewsource,
+menuitem[command="View:PageSource"],
+menuitem[key="key_viewSource"],
+#cx-view-source,
+#platypus-view_source,
+#platypus-view_source-button .toolbarbutton-icon,
+menuitem[oncommand="doOpenTool(event, 'Real-time HTML Editor', 'chrome://extensiondev/content/htmledit.xul')"],
+menuitem[oncommand="minimapNS.embed_Kml()"],
+menuitem[oncommand="minimapNS.openMinimapEmbed();"],
+#view-userscript,
+.subviewbutton[key="key_viewSource"]
+{ -moz-image-region: rect(32px, 112px, 48px, 96px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* full screen */
+#fullScreenItem:not([checked="true"]),
+#appmenu_fullScreen:not([checked="true"])
+{ -moz-image-region: rect(32px, 128px, 48px, 112px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* history */
+menuitem[oncommand="toggleSidebar('viewHistorySidebar');"],
+menuitem[command="Browser:ShowAllHistory"],
+menuitem[key="key_gotoHistory"],
+#febe_tools_menu_restoreHistory,
+#history-menu,
+#appmenu_history,
+#appMenuViewHistorySidebar:not([checked="true"])
+{ -moz-image-region: rect(32px, 144px, 48px, 128px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* bookmarks */
+#bookmarksShowAll,
+menuitem[oncommand="toggleSidebar('viewBookmarksSidebar');"],
+menuitem[key="viewBookmarksSidebarKb"],
+#febe_tools_menu_restoreBookmarks,
+listbox#bookmark-listbox listitem,
+#bookmarksMenu,
+#appmenu_bookmarks,
+#appmenu_showAllBookmarks,
+#BMB_bookmarksShowAll,
+#panelMenu_viewBookmarksSidebar:not([checked="true"])
+{ -moz-image-region: rect(32px, 160px, 48px, 144px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* bookmark this page */
+menuitem[command="Browser:AddBookmarkAs"],
+#context_bookmarkTab,
+#context-bookmarklink,
+#context-bookmarkpage,
+#context-bookmarkframe,
+#addBookmarkContextItem,
+#placesContext_createBookmark,
+menuitem[oncommand="RemoteTabViewer.bookmarkSingleTab(event)"],
+#smxtra5-Favourites,
+#panelMenuBookmarkThisPage
+{ -moz-image-region: rect(48px, 16px, 64px, 0) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* bookmark-new (add bookmark) */
+#placesContext_new\:bookmark,
+menuitem[oncommand="ybBookmarksMenu.newBookmark(event);"],
+menuitem[anonid="ybContextMenu-new-bookmark"],
+.abhere-menuitem,
+#newbookmark,
+#smxtra5-FavContext[label^="Add "],
+#MultiLinks-Op5
+{ -moz-image-region: rect(48px, 32px, 64px, 16px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* folder-new */
+#placesContext_new\:folder,
+menuitem[oncommand="ddg_folderManager.addNewFolder(this.parentNode.Data);"],
+menuitem[key="key_dir"],
+#gspace_remoteAddFolder,
+menuitem[oncommand="gs_gLocalTreeView.AddFolder();"],
+toolbarbutton[oncommand="gs_gLocalTreeView.AddFolder();"],
+toolbarbutton[oncommand="gs_gRemoteTreeView.AddFolder();"],
+menuitem[oncommand="sbMainService.createFolder();"],
+menuitem#newfolder,
+toolbarbutton#newfolder,
+menuitem[command="cmd_new-folder"]
+{ -moz-image-region: rect(48px, 48px, 64px, 32px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* separator-new */
+#placesContext_new\:separator,
+menuitem[oncommand="sbMainService.createSeparator();"],
+toolbarbutton#newseparator,
+menuitem[command="cmd_new-separator"],
+menuitem#newseparator
+{ -moz-image-region: rect(48px, 64px, 64px, 48px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* bookmark this feed (add livemark) */
+#subscribeToPageMenuitem,
+#subscribeToPageMenupopup,
+menuitem[key="feedbar_key"],
+#appmenu_subscribeToPage,
+#appmenu_subscribeToPageMenu,
+#BMB_subscribeToPageMenuitem,
+#BMB_subscribeToPageMenupopup,
+#ctraddon_BMB_subscribeToPageMenuitem
+{ -moz-image-region: rect(48px, 80px, 64px, 64px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* web search */
+menuitem[command="Tools:Search"],
+#context-searchselect,
+menuitem[oncommand="autocopy_searchforselection();"],
+#context-searchmenu,
+#ddg_menu_search-f,
+menu[searchtype="general"],
+#febe_tools_menu_restoreSearchPlugins,
+toolbarbutton#dragzoom,
+toolbarbutton#dragzoom:hover,
+toolbarbutton[oncommand="displaySearch()"],
+menuitem[value="search:@page"]
+{ -moz-image-region: rect(48px, 96px, 64px, 80px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* downloads */
+menuitem[command="Tools:Downloads"],
+menuitem[key="key_openDownloads"],
+#remoteDownload,
+menuitem[oncommand="gs_gActionTreeView.AddToActionQ('download');"],
+menuitem[oncommand="gs_gActionTreeView.DownloadTo();"],
+#firefusk-saved,
+menuitem[key="key_dmtSidebar"]:not([checked="true"]),
+#MultiLinks-Op6,
+menuitem[observes="viewDmSidebar"]:not([checked="true"]),
+menuitem[observes="omnisidebar-viewDmgrPlacesSidebar"]:not([checked="true"])
+{ -moz-image-region: rect(48px, 112px, 64px, 96px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* add-ons (extension) */
+menuitem[command="Tools:Addons"],
+menuitem[key="aiosKey_addons"],
+#febe_tools_menu_restoreExtensions,
+menuitem[oncommand="BrowserOpenAddonsMgr()"],
+menuitem[observes="omnisidebar-viewAddonSidebar"]:not([checked="true"])
+{ -moz-image-region: rect(48px, 128px, 64px, 112px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* error console */
+#javascriptConsole,
+menuitem[oncommand="webdeveloper_openErrorConsole(true)"] .menu-iconic-icon,
+menuitem[key="aiosKey_console"],
+menuitem[key="key_errorConsole"],
+#sp-menu-errorConsole,
+#appmenu_errorConsole,
+menuitem[observes="viewConsole1Sidebar"]:not([checked="true"]),
+.subviewbutton[oncommand="toJavaScriptConsole()"]
+{ -moz-image-region: rect(48px, 144px, 64px, 128px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* dom inspector */
+#appmenu_inspector,
+menuitem[key="key_inspectPage"],
+menuitem[oncommand="webdeveloper_openDOMInspector()"] .menu-iconic-icon,
+menuitem[oncommand="czLaunchDOMInspector()"],
+menuitem[command="cmd_toggleInspecting"],
+#inspectthis-menu,
+menuitem[oncommand="inspectDOMDocument(document.popupNode);"],
+#InspectIndomTab,
+#context-inspect,
+menuitem[key="key_inspect"],
+menuitem[key="key_inspector"],
+menuitem[observes="omnisidebar-viewDOMInspectorSidebar"]:not([checked="true"]),
+menuitem[commandname="inspect"],
+.subviewbutton[key="key_inspector"],
+.subviewbutton[key="key_inspectPage"]
+{ -moz-image-region: rect(48px, 160px, 64px, 144px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* page info */
+menuitem[command="View:PageInfo"],
+#context-viewframeinfo,
+#context-viewinfo,
+menuitem[key="aiosKey_pageInfo"],
+menuitem[observes="omnisidebar-viewPageInfoSidebar"]:not([checked="true"])
+{ -moz-image-region: rect(64px, 16px, 80px, 0) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* security */
+listitem[value="chrome://gmanager/content/options/pages/security.xul"]
+{ -moz-image-region: rect(64px, 32px, 80px, 16px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* options */
+#menu_preferences,
+#abp-toolbar-options,
+#abp-status-options,
+#qlssettings,
+#sbpqlssettings,
+menuitem[oncommand="webdeveloper_options()"] .menu-iconic-icon,
+menuitem[oncommand="gPopupBlockerObserver.editPopupSettings();"],
+menuitem[oncommand="noscriptUtil.openOptionsDialog()"],
+menuitem[command="cmd_options"],
+#autocopy-statusbar-getoptions,
+menuitem[key^="key_openoption"],
+#db_openOptions,
+#prefbutton,
+#FirebugMenu_Options,
+#foxytunes-configure-player-menuitem + menuseparator + menu,
+menuitem[oncommand="foxytunesOpenSignatuensConfigurationWindow();"],
+#gtbOptionsMenuitem,
+#febe_tools_menu_options,
+menuitem[oncommand="window.openDialog('chrome://updatenotifier/content/options.xul', 'UN:Prefs', 'centerscreen,chrome,dependent');"],
+menuitem[id$="cus_new_m/cus_new_m01"],
+#showcaseOptionsMenuItem,
+menuitem[oncommand="sbMainService.openPrefWindow();"],
+menuitem[oncommand="objLinkify.Options()"],
+#colorzilla-menu-options,
+hbox#tab-settings image.tab-icon,
+#options-menu,
+#context-mystickies-popup #context-mystickies > .menu-iconic-left > image,
+#menu-mystickies-options,
+menuitem#options,
+menu#options,
+#firefusk-options,
+#ebayCompOptionsMenuItem,
+menuitem[oncommand="minimapNS.myOptions();"],
+menuitem[oncommand="autopagerMain.openCoreOptions();"],
+menuitem[oncommand="openGMOptions();"],
+#rikaichan-lbar-config,
+menuitem[command="rikaichan-options-cmd"],
+#speeddialContext > menupopup > menuitem:last-child,
+#btn_speeddial > menupopup > menuitem:last-child,
+#speeddialBookmarksMenu > menupopup > menuitem:last-child,
+menuitem[oncommand="reminderFox_openOptionsDialog();"],
+#nbascoreboard-options-menu,
+menuitem[oncommand="openPreferences('similarwebPane');"],
+.gmanager-account-info > menupopup > menuitem:last-child,
+#gmanager-context-menu > menupopup > menuitem:last-child,
+#gmanager-tools-menu > menupopup > menuitem:last-child,
+listitem[value="chrome://gmanager/content/options/pages/general.xul"],
+#appmenu_customize,
+#appmenu_preferences,
+#menuitem_preferences,
+statusbarpanel#preferences,
+menuitem.dta-prefs,
+#smxtra5-SmileyMenuOptions,
+#MultiLinks-menuOptions,
+#KeeFox_Options-Button,
+menuitem.autofillFormsSettingsIcon,
+menuitem[oncommand="SuperStart.onMenuOptions();"],
+menuitem[oncommand="findbartweak.doOpenOptions();"]
+{ -moz-image-region: rect(64px, 48px, 80px, 32px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* help */
+menuitem[oncommand="openHelpLink('firefox-help')"],
+menuitem[oncommand="gViewSourceChooseEditor.openHelp()"],
+menuitem[oncommand="webdeveloper_help()"] .menu-iconic-icon,
+menuitem[command="cmd_foxytunes-help-players"],
+#foxytunes-extras-menu + menuseparator + menu + menuseparator + menu + menuseparator + menu + menu,
+#gtbGoogleHelpMenu,
+maskbutton > toolbarbutton[popup="maskPopup"],
+menuitem[ytrack$="cus_new_m22"][yurl*="help.yahoo.com"],
+menuitem[id$="yas_2"],
+menuitem[oncommand='Bzzster_Go("/help?src=ff")'],
+#platypus-help-button .toolbarbutton-icon,
+menuitem[oncommand="sbCommonUtils.loadURL('chrome://scrapbook/locale/templateHelp.html', true);"],
+#colorzilla-about-menu-help,
+#context-mystickies-help,
+#menu-mystickies-help,
+menuitem#help,
+menuitem[oncommand="openUILink('http://www.yoono.com/help.html', event)"],
+menuitem[oncommand="minimapNS.minimapOpenUrl('help')"],
+#tx-autopager-about,
+#st-autopager-about,
+menuitem[oncommand="TVM.Util.openNewTab(\"http://www.tv-manager.org/support\");"],
+#helpMenu,
+#CMCE-setting .notice,
+dialog[windowtype="CompactMenuCEShowHide"] .notice,
+menuitem[oncommand="reminderFox_launchHelp();"],
+#GBTBilleo-OA-Toolbar > toolbarbutton:first-child > menupopup:first-child > menu:last-child,
+#GBTBilleo-Toolbar > toolbarbutton:first-child > menupopup:first-child > menu,
+listitem[value="chrome://gmanager/content/options/pages/help.xul"],
+#appmenu_help,
+#smxtra5-SmileyMenuHelp,
+#similarweb_help,
+#KeeFox_Help-Button,
+menuitem.autofillFormsHelpIcon,
+menuitem[commandname="help"],
+menuitem[key="key_openHelp"]
+{ -moz-image-region: rect(64px, 64px, 80px, 48px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* arrow down (move down) */
+#context-movedown,
+.itemtreebox-down,
+#web-developer-stick-dashboard,
+#movedown,
+#bookmarkdown-button,
+#context-down,
+menuitem[key="move-down"],
+menuitem[oncommand="moveTodoDown()"],
+menuitem[value="move:down"]
+{ -moz-image-region: rect(64px, 80px, 80px, 64px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* arrow up (move up) */
+#context-moveup,
+.itemtreebox-up,
+#web-developer-stick-dashboard.unstick,
+#moveup,
+#bookmarkup-button,
+#context-up,
+menuitem[key="move-up"],
+menuitem[oncommand="moveTodoUp()"],
+menuitem[value="move:up"]
+{ -moz-image-region: rect(64px, 96px, 80px, 80px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* clear all */
+#menuitem_cancel,
+menuitem[oncommand="db_clearAll();"],
+#gspace-window toolbarbutton[oncommand="gs_gPlaylistTreeView.ClearItems();"],
+menuitem[command="cmd_cancelUpgrade"],
+menuitem[command="cmd_cancelInstall"],
+#menuitem_removeFromList,
+#placesContext_deleteHost,
+#removeMenu > menuitem,
+menuitem[command="downloadsCmd_clearDownloads"],
+menuitem[command="downloadsCmd_clearList"]
+{ -moz-image-region: rect(64px, 112px, 80px, 96px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* colors (palette) */
+menu[id=":popup:motifs"],
+menuitem[oncommand="czShowColorPicker(0)"]
+{ -moz-image-region: rect(64px, 128px, 80px, 112px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* calculator */
+menuitem[oncommand="window.openDialog('chrome://scrapbook/content/calculate.xul','ScrapBook:Calculate','chrome,centerscreen,all,resizable,dialog=no');"],
+menuitem[command="cmd_wordcount"]
+{ -moz-image-region: rect(64px, 144px, 80px, 128px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* create shortcut */
+#create-shortcut-from-link,
+#create-shortcut-from-page
+{ -moz-image-region: rect(64px, 160px, 80px, 144px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* email */
+#getmail-menu > .menu-iconic-left,
+menuitem[key="key_viewMail"],
+#mailAppButton.image-button
+{ -moz-image-region: rect(80px, 16px, 96px, 0) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* file-css */
+#web-developer-apply-css-dashboard,
+menuitem[key="key_styleeditor"],
+.subviewbutton[key="key_styleeditor"]
+{ -moz-image-region: rect(80px, 32px, 96px, 16px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* file-txt (release notes) */
+menuitem[searchtype="lyrics"]
+{ -moz-image-region: rect(80px, 48px, 96px, 32px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* folder-closed */
+treechildren.fileTree::-moz-tree-image(isFolder),
+treechildren.dirTree::-moz-tree-image(closed),
+listbox#directory-listbox listitem,
+#Recorder treechildren:-moz-tree-image(container,closed),
+#file-menu
+{ -moz-image-region: rect(80px, 64px, 96px, 48px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* folder-open */
+treechildren.dirTree::-moz-tree-image(open),
+treechildren.dirTree::-moz-tree-image(current),
+#Recorder treechildren:-moz-tree-image(container,open)
+{ -moz-image-region: rect(80px, 80px, 96px, 64px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* folder up (parent folder) */
+#fireftp-main-window .upButton,
+#gspace-window toolbarbutton[oncommand="gs_gLocalTreeView.GotoParentFolder();"],
+#gspace-window toolbarbutton[oncommand="gs_gRemoteTreeView.GotoParentFolder();"],
+#gspace-panel toolbarbutton[oncommand="gs_gLocalTreeView.GotoParentFolder();"],
+#gspace-panel toolbarbutton[oncommand="gs_gRemoteTreeView.GotoParentFolder();"],
+#up-button
+{ -moz-image-region: rect(80px, 96px, 96px, 80px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* frame */
+#frame
+{ -moz-image-region: rect(80px, 112px, 96px, 96px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* ftp (network connection) */
+menuitem[id=":join"],
+menuitem[oncommand="reconnectFritzBox();"],
+#DownThemAllMirrors .mirror-item-icon
+{ -moz-image-region: rect(80px, 128px, 96px, 112px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* go to */
+#menu_goToLine,
+toolbarbutton#moveengine,
+menuitem[command="cmd_move-engine"],
+menuitem[key="lineSearchKey"],
+menuitem[key="key_gotoLine"]
+{ -moz-image-region: rect(80px, 144px, 96px, 128px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* image */
+#context-viewbgimage,
+#context-viewimage,
+menuitem[searchtype="images"],
+#firefusk-item:not([oncommand="showAdvisory();"])
+{ -moz-image-region: rect(80px, 160px, 96px, 144px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* keyboard shortcut */
+menuitem[oncommand="foxytunesOpenConfigureShortcutsDialog('false')"],
+#keyconfig,
+#menu_customizeShortcuts,
+#colorzilla-menu-eyedropper-shortcut,
+#menu_firebug_customizeShortcuts
+{ -moz-image-region: rect(96px, 16px, 112px, 0) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* log on/off */
+menuitem[oncommand="stopWatch()"],
+#gm-context-menu-logout,
+menuitem[oncommand="gmanager_Accounts.logoutAllAccounts();"]
+{ -moz-image-region: rect(96px, 32px, 112px, 16px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* multipanel */
+menuitem[key="aiosKey_multiPanel"]
+{ -moz-image-region: rect(96px, 48px, 112px, 32px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* news (newspaper) */
+menuitem[oncommand="toggleSidebar('WizzRSSSidebar');"]
+{ -moz-image-region: rect(96px, 64px, 112px, 48px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* note (posty) */
+menuitem[oncommand="sbMainService.createNote();"],
+tree#sbTree treechildren::-moz-tree-image(sbTreeColTitle, note),
+richlistbox richlistitem.note image.sblist-icon,
+#ScrapBookMenu menuitem.sb-item[sbtype="note"],
+#toolbar-mystickies-addNote,
+#context-mystickies > .menu-iconic-left > image,
+#menu-mystickies > .menu-iconic-left > image
+{ -moz-image-region: rect(96px, 80px, 112px, 64px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* offline (disconnect) */
+#goOfflineMenuitem:not([checked="true"]),
+menuitem[commandname="disconnect"],
+menuitem[oncommand="BrowserOffline.toggleOfflineStatus();"]:not([checked="true"]),
+.subviewbutton[observes="workOfflineMenuitemState"]:not([checked="true"])
+{ -moz-image-region: rect(96px, 96px, 112px, 80px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* page style (css) */
+#pageStyleMenu,
+#platypus-set_style,
+#platypus-set_style-button .toolbarbutton-icon
+{ -moz-image-region: rect(96px, 112px, 112px, 96px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* plus */
+.itemtreebox-new,
+#fastdial-menu-add,
+menuitem[oncommand="gs_gPlaylistTreeView.AddToPlayQ();"],
+#mbAddButton,
+#colorzilla-add-to-favorites-button,
+#addbookmark-button,
+#addbookmark,
+toolbarbutton#addAddress,
+toolbarbutton#addAddress:hover,
+toolbarbutton#addAddressPanel,
+toolbarbutton#addAddressPanel:hover,
+#tm-sm-AddThis,
+#addcategory,
+#groupcontext-add,
+#rmFxView-Editor .add-Button,
+#addchunk,
+menuitem[commandname="watch-expr"]
+{ -moz-image-region: rect(96px, 128px, 112px, 112px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* save */
+#tm-sessionmanager #tm-sm-saveone .menu-iconic-icon,
+#tm-sessionmanager:hover #tm-sm-saveone .menu-iconic-icon,
+#ddg_menu_saveMenu,
+#web-developer-save-dashboard,
+#platypus-save_script,
+#platypus-save_script-button .toolbarbutton-icon,
+#sbNoteToolbarS,
+#saveSearch,
+#tm-sm-Save,
+#rikaichan-lbar-save,
+#traceToolsMenu #saveToFile,
+#sp-menu-save
+{ -moz-image-region: rect(96px, 144px, 112px, 128px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* save all */
+menuitem[oncommand="saveall_click();"]
+{ -moz-image-region: rect(96px, 160px, 112px, 144px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* sidebar */
+#viewSidebarMenuMenu,
+#aios-context-mitem-panels,
+#minimap-button menuitem[oncommand="minimap.toggleMinimap(); event.stopPropagation();"],
+#context-minimap-sidebar,
+#minimap-link-context,
+menuitem[oncommand="minimap.openSidebarFromPanel('sidebar');"],
+toolbarbutton#preview,
+toolbarbutton#preview:hover
+{ -moz-image-region: rect(112px, 16px, 128px, 0) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* smiley */
+#smxContextFav,
+menuitem[key="smxtra5-OpenSmxtra"]:not([checked="true"]),
+#smxShowSmileyXtra,
+toolbarbutton[oncommand^="SmileyXtra5.insertSmiley"]
+{ -moz-image-region: rect(112px, 32px, 128px, 16px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* spellcheck */
+#spell-check-enabled:not([checked="true"]),
+menuitem[anonid="spell-check-enabled"]:not([checked="true"])
+{ -moz-image-region: rect(112px, 48px, 128px, 32px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* tab-duplicate */
+menuitem[key="key_tm_dupTab"],
+#tabberwocky-duplicatetab,
+#context_duplicateTab
+{ -moz-image-region: rect(112px, 64px, 128px, 48px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* text field (input) / rename */
+#copyValue + menu,
+toolbarbutton#share,
+toolbarbutton#share:hover,
+#tm-renameTab,
+menuitem[oncommand="db_renameFinished(db_findDLNode(document.popupNode));"],
+menuitem[key="key_rename"],
+#gspace_remoteRename,
+#renameitem,
+toolbarbutton#rename,
+menuitem[command="cmd_rename"],
+#tm-sessionmanager menu[anonid="rename"] > .menu-iconic-left,
+#tm-sessionmanager:hover menu[anonid="rename"] > .menu-iconic-left,
+#tm-sm-Rename,
+#mrenaming,
+#context_renameTab
+{ -moz-image-region: rect(112px, 80px, 128px, 64px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* theme */
+#febe_tools_menu_restoreThemes
+{ -moz-image-region: rect(112px, 96px, 128px, 80px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* tools */
+#platypus-auto_repair-button .toolbarbutton-icon,
+#sbSearchPopup menu,
+#sbPopupTools,
+menuitem[oncommand="performancingUI.openTechnorati()"],
+#tools-menu,
+toolbarbutton#myoptions,
+toolbarbutton#myoptions:hover,
+listitem[value="chrome://gmanager/content/options/pages/toolbar.xul"]
+{ -moz-image-region: rect(112px, 112px, 128px, 96px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* update (check for updates) */
+menuitem#checkForUpdates,
+menuitem[command="cmd_checkUpdate"],
+#checkUpdatesAllButton,
+#menuitem_updateall,
+#foxytunes-configuration-signatunes-check-for-updates,
+menuitem[oncommand="UN_getManager().checkUpdates();"],
+#brief-ctx-update-feeds,
+menuitem[anonid="find-update"],
+#utils-updateNow,
+#menuitem_findUpdates
+{ -moz-image-region: rect(112px, 128px, 128px, 112px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* user-group */
+toolbarbutton[oncommand="gs_gSession.ManageAccounts();"],
+#firefusk-share-menu,
+#gm-notifier-context-menu-accounts,
+#gm-notifier-context-menu-accounts-manage,
+listitem[value="chrome://gmanager/content/options/pages/accounts.xul"]
+{ -moz-image-region: rect(112px, 144px, 128px, 128px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* user-single (profile) */
+#profmenuitem,
+#febe_tools_menu_restoreProfile,
+#toolbar-mystickies-mystickies,
+menu.autofillFormsProfileIcon
+{ -moz-image-region: rect(112px, 160px, 128px, 144px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* view */
+#gspace_preview,
+#view-menu,
+#menu_view,
+menubar#mbrInspectorMain > #mnView,
+#editer-view-menu,
+toolbarbutton#view_Selection,
+#smxtra5-Preview
+{ -moz-image-region: rect(128px, 16px, 144px, 0) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* warning (alert) */
+#minimapNoItems
+{ -moz-image-region: rect(128px, 32px, 144px, 16px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* window-blank */
+#autosize-button,
+#context-openTextLink-current,
+menuitem[oncommand="textplain.openSelectionInCurrent();"],
+menuitem[oncommand="openInThisWindow();"]
+{ -moz-image-region: rect(128px, 48px, 144px, 32px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* wrench (configure/fix) */
+#platypus-fix_page,
+#platypus-fix_page-button .toolbarbutton-icon
+{ -moz-image-region: rect(128px, 64px, 144px, 48px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* connection (globe) */
+menuitem[searchtype="web"],
+#FirebugMenu_Sites
+{ -moz-image-region: rect(128px, 80px, 144px, 64px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* contact (id)
+
+{ -moz-image-region: rect(128px, 96px, 144px, 80px) !important; list-style-image: url("Crystal Project.png") !important; } */
+
+/* file-code */
+#insertPHPCode,
+menuitem[oncommand="doOpenTool(event, 'Real-time XUL Editor', 'chrome://extensiondev/content/xuledit.xul')"]
+{ -moz-image-region: rect(128px, 112px, 144px, 96px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* file-ini */
+#febe_tools_menu_restoreUserChrome
+{ -moz-image-region: rect(128px, 128px, 144px, 112px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* file-sys
+
+{ -moz-image-region: rect(128px, 144px, 144px, 128px) !important; list-style-image: url("Crystal Project.png") !important; } */
+
+/* movie (video) */
+menuitem[searchtype="videos"],
+#context-viewvideo
+{ -moz-image-region: rect(128px, 160px, 144px, 144px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* report (feedback) */
+menuitem[yurl*="suggestions.yahoo.com"],
+menuitem[id$="yas_4"],
+#toolbar-mystickies-feedback,
+#reportBrokenSmiley
+{ -moz-image-region: rect(144px, 16px, 160px, 0) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* player-alarm */
+#foxytunes-alarm-clock-menu-item,
+image.icoClock,
+#options-contextmenu-quickAlarm
+{ -moz-image-region: rect(144px, 32px, 160px, 16px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* player-sleep timer */
+#foxytunes-sleep-timer-menu-item
+{ -moz-image-region: rect(144px, 48px, 160px, 32px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* slideshow */
+#slideshow-button:not([checked="true"])
+{ -moz-image-region: rect(144px, 64px, 160px, 48px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* window-minimize (to tray) */
+#extensions.mook.minimizetotray.command.minimize,
+#extensions.mook.minimizetotray.menuitem.menuitem,
+menuitem[oncommand="window.extensions.mook.minimizetotray.minimizeWindow();"]
+{ -moz-image-region: rect(144px, 80px, 160px, 64px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* script (new script, file-js) */
+#jscrpt-command,
+menuitem[oncommand="GM_newUserScript();"],
+#jsInsertButton,
+#Recorder treechildren:-moz-tree-image(js-file),
+menuitem[key="viewJSCSidebarKey"]:not([checked="true"]),
+menuitem[key="key_scratchpad"],
+menuitem[observes="omnisidebar-viewScratchpadSidebar"]:not([checked="true"]),
+menuitem[key="key_jsterm"],
+.subviewbutton[key="key_scratchpad"]
+{ -moz-image-region: rect(144px, 96px, 160px, 80px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* rubbish bin (recycle) */
+.itemtreebox-delete,
+#ctx-empty-feed,
+#ctx-empty-folder,
+#ctx-empty-trash
+{ -moz-image-region: rect(144px, 112px, 160px, 96px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* file-new (blank page) */
+#localCreateFile,
+tree treechildren::-moz-tree-image(sbTreeColTitle, leaf),
+richlistbox richlistitem image.sblist-icon,
+#ScrapBookMenu menuitem.sb-item
+{ -moz-image-region: rect(144px, 128px, 160px, 112px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* information (message alert) */
+#showUpdateInfoButton,
+#hideUpdateInfoButton,
+menuitem[oncommand="webdeveloper_viewCookieInformation()"] .menu-iconic-icon,
+menuitem[oncommand="webdeveloper_viewStyleInformation(this)"] .menu-iconic-icon,
+menuitem[oncommand="webdeveloper_viewFormInformation()"] .menu-iconic-icon,
+menuitem[oncommand="webdeveloper_viewImageInformation()"] .menu-iconic-icon,
+menuitem[searchtype="info"],
+#info,
+#linky-info,
+hbox#tab-about image.tab-icon,
+#firefusk-item[oncommand="showAdvisory();"],
+#minimap-fireeagle-save-menuitem + menuseparator + menu + menu + menu,
+#CMCE-setting .info,
+#rmFxView-Editor .infoButton,
+#rmFxView-Editor .infoButton:hover,
+#menuitem_showDetails,
+#context-viewimageinfo
+{ -moz-image-region: rect(144px, 144px, 160px, 128px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* player-sound on (unmute) */
+#context-media-unmute
+{ -moz-image-region: rect(144px, 160px, 160px, 144px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* player-sound off (mute) */
+menuitem[command="cmd_foxytunes-toggle-mute"],
+#context-media-mute
+{ -moz-image-region: rect(160px, 16px, 176px, 0) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* select by click (domi) */
+menuitem[observes="cmd:selectByClick"],
+#btnSelecting,
+#btnSelecting[checked="true"]
+{ -moz-image-region: rect(160px, 32px, 176px, 16px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* install */
+menuitem[command="cmd_installUpdate"],
+menuitem[command="cmd_installSearchResult"],
+#installFileButton,
+#installUpdatesAllButton,
+#menuitem_install,
+#ddg_menu_install-addon,
+menuitem[oncommand="UN_getManager().installUpdates();"],
+#stylish-add-file,
+#utils-installFromFile,
+#menuitem_installItem
+{ -moz-image-region: rect(160px, 48px, 176px, 32px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* player-go to first (nav-first) */
+menuitem[command="cmd_foxytunes-previous"],
+#firstPleasePopupMenu,
+toolbar[iconsize="small"] #nextplease-firsttoolbutton-id
+{ -moz-image-region: rect(160px, 64px, 176px, 48px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* player-rewind
+
+{ -moz-image-region: rect(160px, 80px, 176px, 64px) !important; list-style-image: url("Crystal Project.png") !important; } */
+
+/* player-previous (nav-prev) */
+#prevPleasePopupMenu,
+toolbar[iconsize="small"] #nextplease-prevtoolbutton-id
+{ -moz-image-region: rect(160px, 96px, 176px, 80px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* player-play (nav-next) */
+#menuitem_resume,
+menuitem[oncommand="db_resumeAll();"],
+#ResumeLabel,
+menuitem[oncommand="db_startit(db_findDLNode(document.popupNode));"],
+menuitem[command="cmd_foxytunes-play"],
+menuitem#play,
+#nextPleasePopupMenu,
+toolbar[iconsize="small"] #nextplease-toolbutton-id,
+#context-media-play,
+.downloadResumeMenuItem,
+menuitem[commandname="cont"]
+{ -moz-image-region: rect(160px, 112px, 176px, 96px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* player-fast forward */
+#nextplease_topMenu
+{ -moz-image-region: rect(160px, 128px, 176px, 112px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* player-go to last (nav-last) */
+menuitem[command="cmd_foxytunes-next"],
+#lastPleasePopupMenu,
+toolbar[iconsize="small"] #nextplease-lasttoolbutton-id
+{ -moz-image-region: rect(160px, 144px, 176px, 128px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* player-pause */
+#menuitem_pause,
+menuitem[oncommand="db_pauseAll();"],
+#PauseLabel,
+menuitem[command="cmd_foxytunes-pause"],
+menuitem#pause,
+#context-media-pause,
+.downloadPauseMenuItem
+{ -moz-image-region: rect(160px, 160px, 176px, 144px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* player-stop */
+#menuitem_cancel,
+menuitem[command="cmd_foxytunes-stop"],
+menuitem#cancel,
+.downloadCancelMenuItem,
+menuitem[commandname="stop"]
+{ -moz-image-region: rect(176px, 16px, 192px, 0) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* clear (erase) */
+#web-developer-clear-dashboard,
+#platypus-erase,
+#platypus-erase-button .toolbarbutton-icon,
+#clear-menu,
+menuitem[oncommand="clear_click();"],
+menuitem.downloadRemoveFromHistoryMenuItem
+{ -moz-image-region: rect(176px, 32px, 192px, 16px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* cookie */
+#febe_tools_menu_restoreCookies
+{ -moz-image-region: rect(176px, 48px, 192px, 32px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* disable (block) */
+#abp-status-whitelistsite:not([checked="true"]),
+#abp-toolbar-whitelistsite:not([checked="true"]),
+#context-blockimage,
+menuitem[command="cmd_disable"],
+menuitem[commandname="ban"],
+menuitem[anonid="context-disable"],
+#menuitem_disableItem
+{ -moz-image-region: rect(176px, 64px, 192px, 48px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* export */
+#export,
+#fileExport,
+#exportMenuItem,
+#sbPopupExport,
+#tm-export,
+#ddg_export,
+#export-menuitem,
+menuitem[oncommand="minimapNS.myOptions();"] + menu + menu
+{ -moz-image-region: rect(176px, 80px, 192px, 64px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* eyedropper */
+menuitem[oncommand="setTimeout('czToggleColorMonitoring()', 10)"],
+menuitem[oncommand="openEyedropper();"],
+.subviewbutton[oncommand="openEyedropper();"]
+{ -moz-image-region: rect(176px, 96px, 192px, 80px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* filter (filter-new) */
+#addfilter,
+#gspace_localFilter,
+#selectfiltered
+{ -moz-image-region: rect(176px, 112px, 192px, 96px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* go (execute) */
+#PasteAndGoMenuitem,
+#pg2-go-menuitem,
+menuitem[oncommand="startWatch()"],
+#mozimage-window #go-button,
+#force,
+menuitem[key="sp-key-run"]
+{ -moz-image-region: rect(176px, 128px, 192px, 112px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* highlight */
+menuitem[oncommand="return contextHL.highlight(event,'phrase');"],
+#context-highlighter-highlight,
+#context-highlighter-submenu
+{ -moz-image-region: rect(176px, 144px, 192px, 128px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* import */
+menuitem[oncommand="BrowserImport();"],
+#import,
+#fileImport,
+#importMenuItem,
+#tm-import,
+#ddg_import,
+#import-menuitem,
+menuitem[oncommand="minimapNS.myOptions();"] + menu
+{ -moz-image-region: rect(176px, 160px, 192px, 144px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* read only */
+#gspace_remoteFolderAccess
+{ -moz-image-region: rect(192px, 16px, 208px, 0) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* select all */
+menuitem[command="cmd_selectAll"],
+menuitem[cmd="cmd_selectAll"],
+#menuitem_selectAll,
+menuitem[command="cmd_selectall"],
+menuitem[commandname="cmd-selectall"],
+#selectall,
+#menu_selectAll,
+menuitem[buttonType="selectAll"],
+menuitem[key="key_selectAll"]
+{ -moz-image-region: rect(192px, 32px, 208px, 16px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* session saver */
+#tm-sessionmanager > .menu-iconic-left,
+#tm-sessionmanager:hover > .menu-iconic-left,
+#tm-sessionmanager[disabled=true] > .menu-iconic-left
+{ -moz-image-region: rect(192px, 48px, 208px, 32px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* shut down
+
+{ -moz-image-region: rect(192px, 64px, 208px, 48px) !important; list-style-image: url("Crystal Project.png") !important; } */
+
+/* sort ascending */
+menuitem[id^="placesContext_sortBy"],
+#viewSortAscending:not([checked="true"]),
+menuitem[commandname="toggle-usort"]:not([checked="true"]),
+menuitem[oncommand="window.openDialog('chrome://scrapbook/content/sort.xul','','chrome,centerscreen,modal');"],
+#sbPopupSort,
+menuitem#ascending:not([checked="true"])
+{ -moz-image-region: rect(192px, 80px, 208px, 64px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* sort descending */
+#viewSortDescending:not([checked="true"]),
+menuitem#descending:not([checked="true"])
+{ -moz-image-region: rect(192px, 96px, 208px, 80px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* sync (exchange) */
+menuitem[command="cmd_switchTextDirection"],
+#context-bidi-page-direction-toggle,
+#diffMenuItem,
+menuitem[commandname="toggle-text-dir"],
+menuitem[oncommand="Xmarks.Synch()"],
+toolbarbutton#panelSwitch,
+toolbarbutton#panelSwitch:hover,
+menuitem[oncommand="gmanager_Accounts.checkAllAccounts();"],
+#wmn-context-menu-check-now,
+#gm-context-menu-check-now
+{ -moz-image-region: rect(192px, 112px, 208px, 96px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* tab-move to new window */
+menuitem[key="key_tm_detachTab"]
+{ -moz-image-region: rect(192px, 128px, 208px, 112px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* translate */
+#translator-maincontext-menu
+{ -moz-image-region: rect(192px, 144px, 208px, 128px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* web form */
+#febe_tools_menu_restoreFFhistory,
+toolbarbutton#panelsidebar,
+toolbarbutton#panelsidebar:hover
+{ -moz-image-region: rect(192px, 160px, 208px, 144px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* error
+{ -moz-image-region: rect(208px, 16px, 224px, 0) !important; list-style-image: url("Crystal Project.png") !important; } */
+
+/* list viewer (domi) */
+.viewer-list,
+#smxtra5-SmileyMenu
+{ -moz-image-region: rect(208px, 32px, 224px, 16px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* find all */
+.findbar-findall,
+.findbar-findall[disabled="true"]
+{ -moz-image-region: rect(208px, 48px, 224px, 32px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* edit-image */
+#apngedit-menu
+{ -moz-image-region: rect(208px, 64px, 224px, 48px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* font */
+menu[id=":popup:fonts"]
+{ -moz-image-region: rect(208px, 80px, 224px, 64px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* text size-increase */
+menuitem[commandname="font-size-bigger"],
+#menu_firebug_increaseTextSize,
+#menu_increaseTextSize
+{ -moz-image-region: rect(208px, 96px, 224px, 80px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* text size-decrease */
+menuitem[commandname="font-size-smaller"],
+#menu_firebug_decreaseTextSize,
+#menu_decreaseTextSize
+{ -moz-image-region: rect(208px, 112px, 224px, 96px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* platypus-center */
+#platypus-center,
+#platypus-center-button .toolbarbutton-icon
+{ -moz-image-region: rect(208px, 128px, 224px, 112px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* email-new message */
+menuitem[oncommand="NewMessage();"],
+#gmanager-context-menu menu:first-child,
+.gmanager-account-info menu:first-child,
+#gmanager-tools-menu menu:first-child,
+listitem[value="chrome://gmanager/content/options/pages/compose.xul"]
+{ -moz-image-region: rect(208px, 144px, 224px, 128px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* clear recent history */
+#sanitizeItem,
+#appmenu_sanitizeHistory,
+#appMenuClearRecentHistory,
+#ctraddon_history_sanitizeHistory
+{ -moz-image-region: rect(208px, 160px, 224px, 144px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* private browsing */
+#privateBrowsingItem,
+#appmenu_privateBrowsing,
+#context-openlinkprivate,
+#menu_newPrivateWindow,
+#appmenu_newPrivateWindow
+{ -moz-image-region: rect(224px, 16px, 240px, 0) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* location-open */
+#menu_openLocation,
+#placesContext_open,
+#menuitem_openReferrer,
+#yb-bookmarks-context-menu-open-in-window,
+menuitem[anonid="ybContextMenu-open-in-window"],
+#rssOpenItem,
+#sbPopupOpenSource,
+#ctx-open-website,
+menuitem[oncommand="minimapNS.openAddressService('self');"],
+.speeddial-open-button,
+#thumbMenu #context-open,
+#locationHbox > #launchLocationButton,
+#urlHbox > #launchUrlButton,
+menuitem[command="downloadsCmd_openReferrer"],
+menuitem[commandname="open-url"]
+{ -moz-image-region: rect(224px, 32px, 240px, 16px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* minus */
+menuitem[oncommand="removeFromCategory(document.popupNode);"],
+#rmFxView-Editor .remove-Button,
+#removechunk
+{ -moz-image-region: rect(224px, 48px, 240px, 32px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* web developer */
+#appmenu_webDeveloper,
+#webDeveloperMenu
+{ -moz-image-region: rect(224px, 64px, 240px, 48px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* web console */
+menuitem[key="key_webconsole"],
+#sp-menu-webConsole,
+.subviewbutton[key="key_webconsole"]
+{ -moz-image-region: rect(224px, 80px, 240px, 64px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* cache viewer */
+menuitem[oncommand="showCacheViewer()"]
+{ -moz-image-region: rect(224px, 96px, 240px, 80px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* text size */
+#FirebugMenu_TextSize,
+#menu_reload + menuseparator + menu
+{ -moz-image-region: rect(224px, 112px, 240px, 96px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* traffic */
+menuitem[oncommand="openTamper();"] > .menu-iconic-left,
+#appmenu-webDeveloper-tdiconmenu > .menu-iconic-left,
+#menu_webDeveloper_tdiconmenu > .menu-iconic-left,
+menuitem[observes="viewTamperSidebar"]:not([checked="true"]) > .menu-iconic-left
+{ -moz-image-region: rect(224px, 128px, 240px, 112px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* debug */
+menuitem[key="key_jsdebugger"],
+.subviewbutton[key="key_jsdebugger"]
+{ -moz-image-region: rect(224px, 144px, 240px, 128px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* profiler */
+menuitem[key="key_jsprofiler"],
+.subviewbutton[key="key_jsprofiler"]
+{ -moz-image-region: rect(224px, 160px, 240px, 144px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* network monitor */
+menuitem[key="key_netmonitor"],
+.subviewbutton[key="key_netmonitor"]
+{ -moz-image-region: rect(240px, 16px, 256px, 0) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* responsive design */
+menuitem[key="key_responsiveUI"],
+.subviewbutton[key="key_responsiveUI"]
+{ -moz-image-region: rect(240px, 32px, 256px, 16px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* connect */
+#appmenu_devtools_connect,
+#menu_devtools_connect
+{ -moz-image-region: rect(240px, 48px, 256px, 32px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* rotate right */
+#context-zoom-rotate-right,
+#rotatesub-rotate-right
+{ -moz-image-region: rect(240px, 64px, 256px, 48px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* rotate left */
+#context-zoom-rotate-left,
+#rotatesub-rotate-left
+{ -moz-image-region: rect(240px, 80px, 256px, 64px) !important; list-style-image: url("Crystal Project.png") !important; }
+
+/* ++++++++++++++++++++++++++++++++++++++ */
+
+/* Find All */
+.findbar-findall[disabled="true"]
+{ opacity: 0.4 !important; }
+
+/* DownThemAll */
+statusbarpanel[src="chrome://dta/skin/common/prefs.png"] .statusbarpanel-icon
+{ display: none !important; }
+
+/* Platypus */
+#platypus-isolate
+{ list-style-image: url("chrome://platypus/skin/platypus-isolate-small-.png") !important; }
+#platypus-make_bw
+{ list-style-image: url("chrome://platypus/skin/platypus-make_bw-small-.png") !important; }
+#platypus-relax
+{ list-style-image: url("chrome://platypus/skin/platypus-relax-small-.png") !important; }
+#platypus-modify_url
+{ list-style-image: url("chrome://platypus/skin/platypus-modify_url-small-.png") !important; }
+#platypus-modify_html
+{ list-style-image: url("chrome://platypus/skin/platypus-modify_html-small-.png") !important; }
+#platypus-insert_html
+{ list-style-image: url("chrome://platypus/skin/platypus-insert_html-small-.png") !important; }
+
+/* Scribefire */
+#tab-settings .tab-icon,
+#tab-about .tab-icon
+{ background-image: none !important; }
+#tab-settings,
+#tab-about
+{ -moz-box-align: center !important; }
+
+/* DOM Inspector */
+#winInspectorMain #btnSelecting,
+#winInspectorMain #btnFind,
+#winInspectorMain #stackedinspector-toolbarbutton
+{ margin: 2px !important; -moz-margin-end: 0px !important; }
+
+/* Stacked Inspector */
+#stackedinspector-toolbarbutton
+{ -moz-image-region: rect(2px, 18px, 18px, 2px) !important; }
+#stackedinspector-toolbarbutton:hover
+{ -moz-image-region: rect(23px, 18px, 39px, 2px) !important; }
+#stackedinspector-toolbarbutton:hover:active
+{ -moz-image-region: rect(44px, 18px, 60px, 2px) !important; }
+#stackedinspector-toolbarbutton .toolbarbutton-icon
+{ -moz-margin-end: 0 !important; }
+
+/* Cache Viewer */
+#cacheviewer #reload
+{ opacity: 0.4 !important; }
+#cacheviewer #reload[enable="true"]
+{ opacity: 1 !important; }
+
+/* Scrapbook */
+.sb-create .menu-iconic-icon,
+#sbPopupRenew .menu-iconic-icon,
+#sbPopupRemove .menu-iconic-icon,
+#sbPopupProperty .menu-iconic-icon {
+  width : 16px !important;
+  height: 16px !important;
+}
+
+/* Minimap Sidebar */
+toolbarbutton#maptype:hover,
+toolbarbutton#geonames:hover
+{ list-style-image: url("chrome://minimap/skin/map_but.png") !important; }
+toolbarbutton#traffic:hover
+{ list-style-image: url("chrome://minimap/skin/car.png") !important; }
+toolbarbutton#fireeagle:hover
+{ list-style-image: url("chrome://minimap/skin/fe_logo.png") !important; }
+toolbarbutton#zoominplus:hover
+{ list-style-image: url("chrome://minimap/skin/zoomin_plus.png") !important; }
+toolbarbutton#zoomoutplus:hover
+{ list-style-image: url("chrome://minimap/skin/zoomout_plus.png") !important; }
+toolbarbutton#google:hover
+{ list-style-image: url("chrome://minimap/skin/google-icon.png") !important; }
+toolbarbutton#yahoo:hover
+{ list-style-image: url("chrome://minimap/skin/yahoo.png") !important; }
+toolbarbutton#microsoft:hover
+{ list-style-image: url("chrome://minimap/skin/microsoft.png") !important; }
+toolbarbutton#osm:hover
+{ list-style-image: url("chrome://minimap/skin/osm.png") !important; }
+toolbarbutton#flickr:hover
+{ list-style-image: url("chrome://minimap/skin/flickrIcon.png") !important; }
+toolbarbutton#panoramio:hover
+{ list-style-image: url("chrome://minimap/skin/panoramio.png") !important; }
+toolbarbutton#tagzania:hover
+{ list-style-image: url("chrome://minimap/skin/tagzania.png") !important; }
+toolbarbutton#upcoming:hover
+{ list-style-image: url("chrome://minimap/skin/upcoming.png") !important; }
+toolbarbutton#geody:hover
+{ list-style-image: url("chrome://minimap/skin/geody.png") !important; }
+toolbarbutton#google-earth:hover
+{ list-style-image: url("chrome://minimap/skin/google-earth.png") !important; }
+toolbarbutton#geohash:hover
+{ list-style-image: url("chrome://minimap/skin/geohash.png") !important; }
+toolbarbutton#wikimapia:hover
+{ list-style-image: url("chrome://minimap/skin/wikimapia.png") !important; }
+toolbarbutton#addcrosshair:hover
+{ list-style-image: url("chrome://minimap/skin/crosshair_but.png") !important; }
+toolbarbutton#hybtype:hover
+{ list-style-image: url("chrome://minimap/skin/hyb_but.png") !important; }
+toolbarbutton#sattype:hover
+{ list-style-image: url("chrome://minimap/skin/sat_but.png") !important; }
+toolbarbutton#panadd:hover
+{ list-style-image: url("chrome://minimap/skin/panadd_but.png") !important; }
+toolbarbutton#pancoord:hover
+{ list-style-image: url("chrome://minimap/skin/pancoord_but.png") !important; }
+#minimap-fireeagle-save-menuitem + menuseparator + menu + menu
+{ -moz-image-region: rect(16px, 40px, 32px, 24px) !important; list-style-image: url("chrome://minimap/skin/toolbar.png") !important; }
+
+/* ReminderFox */
+#mailAppButton.image-button > .toolbarbutton-icon
+{ min-height: 16px !important; }

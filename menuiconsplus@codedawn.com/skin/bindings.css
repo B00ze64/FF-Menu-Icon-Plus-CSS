@@ -1,0 +1,44 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Menu & menuitem bindings */
+*:not(menulist) > menupopup menu:not(.menu-non-iconic):not(.splitmenu-menu) {
+  -moz-binding: url("chrome://menuiconsplus/content/bindings.xml#iconic-menu") !important;
+}
+*:not(menulist) > menupopup menuitem:not([description]):not(.menuitem-non-iconic):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip):not(.panel-subview-footer) {
+  -moz-binding: url("chrome://menuiconsplus/content/bindings.xml#iconic-menuitem") !important;
+}
+.menuitem-tooltip {
+  -moz-binding: url("chrome://menuiconsplus/content/bindings.xml#iconic-menuitem-tooltip") !important;
+}
+splitmenu {
+  -moz-binding: url("chrome://menuiconsplus/content/bindings.xml#iconic-splitmenu") !important;
+}
+
+/* temporary fix for Web Developer */
+*:not(menulist) > menupopup menuitem.web-developer-generated-menu:not([description]):not(.menuitem-non-iconic):not(.menuitem-tooltip):not(.menuitem-iconic-tooltip) {
+  -moz-binding: url("chrome://global/content/bindings/menu.xml#menuitem") !important;
+}
+
+/* fix for Gmail Manager */
+statusbarpanel.gmanager-account-info > menupopup > menuitem.gmanager-toolbar-menuitem {
+  -moz-binding: url("chrome://gmanager/content/overlay.xml#gmanager-toolbar-menuitem") !important;
+}
+
+/* fix for DownThemAll */
+#DownThemAll splitmenu {
+  -moz-binding: url("chrome://dta/content/common/bindings.xml#splitmenu") !important;
+}
+
+/* fix for Video DownloadHelper */
+#dwhelper-ctxmenu > #dwhelper-ctxmenupopup > menu.SCapMenu,
+#dwhelper-toolbaritem > #dwhelper-bctxmenupopup > menu.SCapMenu {
+  -moz-binding: url("chrome://dwhelper/content/scap.xml#SCapMenu") !important;
+}
+#dwhelper-ctxmenu > #dwhelper-ctxmenupopup > menuitem.SCapStopMenuitem,
+#dwhelper-toolbaritem > #dwhelper-bctxmenupopup > menuitem.SCapStopMenuitem {
+  -moz-binding: url("chrome://dwhelper/content/scap.xml#SCapStopMenuitem") !important;
+}
+#dwhelper-ctxmenu > #dwhelper-ctxmenupopup > menuitem.SCapMenuitem,
+#dwhelper-toolbaritem > #dwhelper-bctxmenupopup > menuitem.SCapMenuitem {
+  -moz-binding: url("chrome://dwhelper/content/scap.xml#SCapMenuitem") !important;
+}

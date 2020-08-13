@@ -1,0 +1,12 @@
+<!ENTITY wizard.title "Import icon set">
+<!ENTITY page1.description "To import an icon set, you must first provide a PNG file of all the 16x16 pixel icons in your set laid out in a grid format in a specific order.  (For more information, click the Help button.)  The name of your PNG file will be the name of the new icon set.">
+<!ENTITY import.image.textbox.label "Image file to import:">
+<!ENTITY import.image.textbox.accesskey "M">
+<!ENTITY import.browse.button.label "Browse...">
+<!ENTITY import.browse.button.accesskey "B">
+<!ENTITY page2.description "In addition to the icon set image file, you need to specify a stylesheet to go along with it.  If you do not have a stylesheet, yet have properly placed your icons in the image file, Menu Icons Plus can generate a basic stylesheet for you.  Or, you may specify your own stylesheet.">
+<!ENTITY generate.stylesheet.radio.label "Generate a stylesheet for me">
+<!ENTITY generate.stylesheet.radio.accesskey "G">
+<!ENTITY import.stylesheet.radio.label "Use my own stylesheet:">
+<!ENTITY import.stylesheet.radio.accesskey "U">
+<!ENTITY page3.description "The following tasks will be performed:">

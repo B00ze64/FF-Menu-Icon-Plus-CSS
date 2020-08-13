@@ -1,0 +1,30 @@
+<!ENTITY prefwindow.title "Menu Icons Plus preferences">
+<!ENTITY header1.description "It may be necessary to restart Firefox for changes to take effect.">
+<!ENTITY header2.description "Some options may not be compatible with certain themes.">
+<!ENTITY iconset.prefpane "Icon set">
+<!ENTITY iconset.caption "Icon set preview">
+<!ENTITY iconset.menulist.label "Icon set:">
+<!ENTITY iconset.menulist.accesskey "S">
+<!ENTITY advanced.button.label "Advanced">
+<!ENTITY advanced.button.accesskey "A">
+<!ENTITY import.menuitem.label "Import…">
+<!ENTITY import.menuitem.accesskey "I">
+<!ENTITY export.menuitem.label "Export…">
+<!ENTITY export.menuitem.accesskey "E">
+<!ENTITY delete.menuitem.label "Delete">
+<!ENTITY delete.menuitem.accesskey "D">
+<!ENTITY menu.prefpane "Menu options">
+<!ENTITY menu.checkmarks.caption "Menu checkmarks and radio buttons">
+<!ENTITY menu.checkmarks.tooltip "Changes the appearance of the checkmarks (and radio buttons) next to menu items that have them.">
+<!ENTITY iconset.checkmarks.radio.label "Use checkmarks/radio buttons from icon set">
+<!ENTITY iconset.checkmarks.radio.accesskey "U">
+<!ENTITY alt.checkmarks.radio.label "Use alternate checkmarks/radio buttons">
+<!ENTITY alt.checkmarks.radio.accesskey "A">
+<!ENTITY default.checkmarks.radio.label "Firefox default">
+<!ENTITY default.checkmarks.radio.accesskey "F">
+<!ENTITY hide.disabled.checkbox.label "Hide icons of disabled menu items">
+<!ENTITY hide.disabled.checkbox.accesskey "H">
+<!ENTITY hide.disabled.checkbox.tooltip "Does not show icons next to menu commands which are disabled (grayed out).">
+<!ENTITY theme.icons.checkbox.label "Use icons from current Firefox theme where possible">
+<!ENTITY theme.icons.checkbox.accesskey "W">
+<!ENTITY theme.icons.checkbox.tooltip "Overrides the currently selected menu icon set, displaying icons from your Firefox theme instead.">

@@ -1,0 +1,18 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Disabled menu icon state */
+menu[disabled="true"] image,
+menuitem[disabled="true"] image {
+  opacity: .4;
+}
+menuitem[checked="true"][disabled="true"] image {
+  opacity: 1;
+}
+
+/* Australis rules */
+.subviewbutton[disabled="true"] image {
+  opacity: .4;
+}
+.subviewbutton[checked="true"][disabled="true"] image {
+  opacity: 1;
+}

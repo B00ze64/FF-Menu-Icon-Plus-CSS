@@ -1,0 +1,30 @@
+<!ENTITY prefwindow.title "Inställningar för Menu Icons Plus">
+<!ENTITY header1.description "Firefox kan behöva startas om för att ändringar skall genomföras.">
+<!ENTITY header2.description "Vissa inställningar kan vara inkompatibla med en del teman.">
+<!ENTITY iconset.prefpane "Ikonpaket">
+<!ENTITY iconset.caption "Förhandsvisning av ikonpaket">
+<!ENTITY iconset.menulist.label "Ikonpaket:">
+<!ENTITY iconset.menulist.accesskey "P">
+<!ENTITY advanced.button.label "Avancerat">
+<!ENTITY advanced.button.accesskey "A">
+<!ENTITY import.menuitem.label "Importera…">
+<!ENTITY import.menuitem.accesskey "I">
+<!ENTITY export.menuitem.label "Exportera…">
+<!ENTITY export.menuitem.accesskey "E">
+<!ENTITY delete.menuitem.label "Ta bort">
+<!ENTITY delete.menuitem.accesskey "T">
+<!ENTITY menu.prefpane "Menyer">
+<!ENTITY menu.checkmarks.caption "Bockar och alternativknappar i menyer">
+<!ENTITY menu.checkmarks.tooltip "Ändrar utseende på bockarna och alternativknapparna bredvid menyobjekt som har sådana.">
+<!ENTITY iconset.checkmarks.radio.label "Använd bockar/alternativknappar från ikonpaket">
+<!ENTITY iconset.checkmarks.radio.accesskey "i">
+<!ENTITY alt.checkmarks.radio.label "Använd andra bockar/alternativknappar">
+<!ENTITY alt.checkmarks.radio.accesskey "A">
+<!ENTITY default.checkmarks.radio.label "Firefox standardschema">
+<!ENTITY default.checkmarks.radio.accesskey "F">
+<!ENTITY hide.disabled.checkbox.label "Göm ikoner för icke valbara menyobjekt">
+<!ENTITY hide.disabled.checkbox.accesskey "G">
+<!ENTITY hide.disabled.checkbox.tooltip "Visar inte ikoner bredvid menyobjekt som är inaktiverade (nedtonade i grått).">
+<!ENTITY theme.icons.checkbox.label "Använd om möjligt ikoner från aktuellt Firefox-tema">
+<!ENTITY theme.icons.checkbox.accesskey "t">
+<!ENTITY theme.icons.checkbox.tooltip "Åsidosätter det för tillfället valda menyikonpaketet, och visar istället ikoner från ditt aktiva Firefox-tema där det är möjligt att göra det.">

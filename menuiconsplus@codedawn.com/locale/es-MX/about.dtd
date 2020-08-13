@@ -1,0 +1,15 @@
+<!ENTITY about "Acerca de Menu Icons Plus">
+<!ENTITY extensionName "Menu Icons Plus">
+<!ENTITY version "Versión:">
+<!ENTITY createdBy "Creado por:">
+<!ENTITY contributors "Contribuyentes:">
+<!ENTITY contrib1 "Everaldo Coelho - iconos Crystal Project">
+<!ENTITY contrib2 "Mark James - iconos Silk">
+<!ENTITY contrib3 "Grupo Oxygen - iconos Oxygen">
+<!ENTITY contrib4 "Tango Desktop Project - iconos Tango">
+<!ENTITY contrib5 "Yusuke Kamiyamane - iconos Fugue">
+<!ENTITY translators "Traductores:">
+<!ENTITY translator1 "BlackJack - fr-FR">
+<!ENTITY translator2 "Mikael Hiort af Ornäs - sv-SE">
+<!ENTITY homepage "Página web:">
+<!ENTITY donate.tooltip "Donaciones con PayPal: Apoye el desarrollo de este complemento">

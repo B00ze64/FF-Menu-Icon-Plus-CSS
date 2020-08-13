@@ -1,0 +1,12 @@
+<!ENTITY wizard.title "Importera ikonpaket">
+<!ENTITY page1.description "För att importera ett ikonpaket måste du först tillhandahålla en PNG-fil av alla de 16×16 pixlar stora ikonerna i ditt paket, arrangerade i en specifik ordningsföljd i ett rutsystem.  (För mer information, klicka på Hjälp-knappen.)  Namnet på din PNG-fil kommer även att vara namnet på det nya ikonpaketet.">
+<!ENTITY import.image.textbox.label "Bildfil att importera:">
+<!ENTITY import.image.textbox.accesskey "M">
+<!ENTITY import.browse.button.label "Bläddra...">
+<!ENTITY import.browse.button.accesskey "B">
+<!ENTITY page2.description "Förutom ikonpaketets bildfil behöver du ange en stilmall som skall åtfölja den.  Om du inte har en stilmall, men på ett korrekt sätt har placerat ut dina ikoner i bildfilen, så kan Menu Icons Plus skapa en grundläggande stilmall åt dig.  Eller så kan du skapa din egen stilmall.">
+<!ENTITY generate.stylesheet.radio.label "Skapa en stilmall åt mig">
+<!ENTITY generate.stylesheet.radio.accesskey "S">
+<!ENTITY import.stylesheet.radio.label "Använd min egen stilmall:">
+<!ENTITY import.stylesheet.radio.accesskey "e">
+<!ENTITY page3.description "Följande uppgifter kommer att utföras:">

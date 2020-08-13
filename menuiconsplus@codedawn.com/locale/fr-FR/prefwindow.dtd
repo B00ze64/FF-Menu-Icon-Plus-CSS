@@ -1,0 +1,30 @@
+<!ENTITY prefwindow.title "Options de Menu Icons Plus">
+<!ENTITY header1.description "Il pourrait être nécessaire de redémarrer Firefox afin que les changements prennent effet.">
+<!ENTITY header2.description "Certaines options pourraient être incompatibles avec certains thèmes.">
+<!ENTITY iconset.prefpane "Jeu d'icones">
+<!ENTITY iconset.caption "Aperçu du jeu d'icones">
+<!ENTITY iconset.menulist.label "Jeu d'icones :">
+<!ENTITY iconset.menulist.accesskey "J">
+<!ENTITY advanced.button.label "Avancé">
+<!ENTITY advanced.button.accesskey "A">
+<!ENTITY import.menuitem.label "Importer…">
+<!ENTITY import.menuitem.accesskey "I">
+<!ENTITY export.menuitem.label "Exporter…">
+<!ENTITY export.menuitem.accesskey "E">
+<!ENTITY delete.menuitem.label "Supprimer">
+<!ENTITY delete.menuitem.accesskey "S">
+<!ENTITY menu.prefpane "Options de menu">
+<!ENTITY menu.checkmarks.caption "Coches de menu et boutons radio">
+<!ENTITY menu.checkmarks.tooltip "Modifie l'apparence des coches (et des boutons radio) à côté des éléments de menu qui les ont.">
+<!ENTITY iconset.checkmarks.radio.label "Utiliser les coches/boutons radio du jeu d'icones">
+<!ENTITY iconset.checkmarks.radio.accesskey "U">
+<!ENTITY alt.checkmarks.radio.label "Utiliser des coches/boutons radio alternatifs">
+<!ENTITY alt.checkmarks.radio.accesskey "a">
+<!ENTITY default.checkmarks.radio.label "Ceux de Firefox par défaut">
+<!ENTITY default.checkmarks.radio.accesskey "F">
+<!ENTITY hide.disabled.checkbox.label "Cacher les icones des éléments de menu désactivés">
+<!ENTITY hide.disabled.checkbox.accesskey "C">
+<!ENTITY hide.disabled.checkbox.tooltip "N'affiche pas d'icone à côté des commandes de menu qui sont inactives (grisées).">
+<!ENTITY theme.icons.checkbox.label "Utiliser les icones du thème actuel de Firefox lorsque c'est possible">
+<!ENTITY theme.icons.checkbox.accesskey "l">
+<!ENTITY theme.icons.checkbox.tooltip "Supplante le jeu d'icones de menu actuellement sélectionné, en affichant les icones depuis votre thème Firefox à la place.">
