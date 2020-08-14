@@ -59,30 +59,30 @@
 
 /* Replace Bookmarks Organizer Icon *********************************************/
 
-#menu_ToolsPopup menuitem[label="Open Bookmarks Organizer"] > hbox.menu-iconic-left { display: none !important; }
+	#menu_ToolsPopup menuitem[label="Open Bookmarks Organizer"] > hbox.menu-iconic-left { display: none !important; }
 
-#menu_ToolsPopup menuitem[label="Open Bookmarks Organizer"]::Before {
+	#menu_ToolsPopup menuitem[label="Open Bookmarks Organizer"]::Before {
 
-/*	content: url("chrome://browser/skin/library.svg");
-	content: url("../MipImages/Crystal/crystal_Bookmarks.png");
-	content: url("../MipImages/Fugue/fugue_Bookmarks-Opened.png");
-	content: url("../MipImages/Silk/silk_Bookmarks-Opened.png");
-	content: url("../MipImages/Tango/tango_Bookmarks-Organize.png");
-	*/
-	content: url("../MipImages/Oxygen/oxygen_Bookmarks-Organize.png");
+/*		content: url("chrome://browser/skin/library.svg");
+		content: url("../MipImages/Crystal/crystal_Bookmarks.png");
+		content: url("../MipImages/Fugue/fugue_Bookmarks-Opened.png");
+		content: url("../MipImages/Silk/silk_Bookmarks-Opened.png");
+		content: url("../MipImages/Tango/tango_Bookmarks-Organize.png");
+		*/
+		content: url("../MipImages/Oxygen/oxygen_Bookmarks-Organize.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#menu_ToolsPopup menuitem[label="Open Bookmarks Organizer"] > label {
+	#menu_ToolsPopup menuitem[label="Open Bookmarks Organizer"] > label {
 
-	margin-inline-start: 10px !important;
-	}
+		margin-inline-start: 10px !important;
+		}
 
 /********************************************************************************
  *
@@ -92,187 +92,187 @@
 
 /* Give Open Selected Links an icon *********************************************/
 
-#_63395548-7017-4407-a03a-31a553563e7b_-menuitem-_open-selected-links::Before {
+	#_63395548-7017-4407-a03a-31a553563e7b_-menuitem-_open-selected-links::Before {
 
-/*	content: url("chrome://browser/skin/zoom-in.svg");
-	content: url("../MipImages/Crystal/crystal_Plus.png");
-	content: url("../MipImages/Oxygen/oxygen_Plus.png");
-	content: url("../MipImages/Tango/tango_Plus.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_Plus.png");
+/*		content: url("chrome://browser/skin/zoom-in.svg");
+		content: url("../MipImages/Crystal/crystal_Plus.png");
+		content: url("../MipImages/Oxygen/oxygen_Plus.png");
+		content: url("../MipImages/Tango/tango_Plus.png");
+		*/
+		content: url("../MipImages/Fugue/fugue_Plus.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#_63395548-7017-4407-a03a-31a553563e7b_-menuitem-_open-selected-links > label {
+	#_63395548-7017-4407-a03a-31a553563e7b_-menuitem-_open-selected-links > label {
 
-	margin-inline-start: -20px !important;
-	}
+		margin-inline-start: -20px !important;
+		}
 
 /* Replace Dictionaries At Hand Icon and add icons to the sub-menu **************/
 
-#contentAreaContextMenu menu[label="Dictionaries At Hand"] > .menu-iconic-left > image { display: none !important; }
+	#contentAreaContextMenu menu[label="Dictionaries At Hand"] > .menu-iconic-left > image { display: none !important; }
 
-#contentAreaContextMenu menu[label="Dictionaries At Hand"]::Before {
+	#contentAreaContextMenu menu[label="Dictionaries At Hand"]::Before {
 
-/*	content: url("../MipImages/Misc/external_BigBook.png"); */
-	content: url("../MipImages/Misc/external_BigBook-darker.png");
+/*		content: url("../MipImages/Misc/external_BigBook.png"); */
+		content: url("../MipImages/Misc/external_BigBook-darker.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#contentAreaContextMenu menu[label="Dictionaries At Hand"] > menupopup > menuitem[label$="(English)"]::Before { /* Red Bookmark for the English dictionaries */
+	#contentAreaContextMenu menu[label="Dictionaries At Hand"] > menupopup > menuitem[label$="(English)"]::Before { /* Red Bookmark for the English dictionaries */
 
-/*	content: url("../MipImages/Fugue/fugue_Research.png"); */
-	content: url("../MipImages/Tango/tango_Research.png");
+/*		content: url("../MipImages/Fugue/fugue_Research.png"); */
+		content: url("../MipImages/Tango/tango_Research.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#contentAreaContextMenu menu[label="Dictionaries At Hand"] > menupopup > menuitem[label$="(French)"]::Before { /* Blue Bookmark for the French dictionaries */
+	#contentAreaContextMenu menu[label="Dictionaries At Hand"] > menupopup > menuitem[label$="(French)"]::Before { /* Blue Bookmark for the French dictionaries */
 
-/*	content: url("../MipImages/Fugue/fugue_Research.png"); */
-	content: url("../MipImages/Tango/tango_Research-blue.png");
+/*		content: url("../MipImages/Fugue/fugue_Research.png"); */
+		content: url("../MipImages/Tango/tango_Research-blue.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#contentAreaContextMenu menu[label="Dictionaries At Hand"] > label,
-#contentAreaContextMenu menu[label="Dictionaries At Hand"] > menupopup > menuitem > label {
+	#contentAreaContextMenu menu[label="Dictionaries At Hand"] > label,
+	#contentAreaContextMenu menu[label="Dictionaries At Hand"] > menupopup > menuitem > label {
 
-	margin-inline-start: -20px !important;
-	}
+		margin-inline-start: -20px !important;
+		}
 
 /* Replace ImTranslator Icon and make the contentAreaContextMenu label MUCH less wide *****/
 
-#contentAreaContextMenu menu[label^="ImTranslator"] > .menu-iconic-left > image { display: none !important; }
-#contentAreaContextMenu menuitem[label^="Translate this page to"] > .menu-iconic-left > image { display: none !important; }
+	#contentAreaContextMenu menu[label^="ImTranslator"] > .menu-iconic-left > image { display: none !important; }
+	#contentAreaContextMenu menuitem[label^="Translate this page to"] > .menu-iconic-left > image { display: none !important; }
 
-#contentAreaContextMenu menu[label^="ImTranslator"]::Before,
-#contentAreaContextMenu menuitem[label^="Translate this page to"]::Before,
-#toolbar-context-menu menuitem[label^="Translate this page to"]::Before {
+	#contentAreaContextMenu menu[label^="ImTranslator"]::Before,
+	#contentAreaContextMenu menuitem[label^="Translate this page to"]::Before,
+	#toolbar-context-menu menuitem[label^="Translate this page to"]::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Translate.png"); /* Babel Fish */
-/*	content: url("../MipImages/Fugue/fugue_Translate.png");
-	content: url("../MipImages/Oxygen/oxygen_Translate.png");
-	content: url("../MipImages/Tango/tango_Translate.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_Translate-USA.png");
+/*		content: url("../MipImages/Crystal/crystal_Translate.png"); /* Babel Fish */
+/*		content: url("../MipImages/Fugue/fugue_Translate.png");
+		content: url("../MipImages/Oxygen/oxygen_Translate.png");
+		content: url("../MipImages/Tango/tango_Translate.png");
+		*/
+		content: url("../MipImages/Fugue/fugue_Translate-USA.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#contentAreaContextMenu menu[label^="ImTranslator"] > label {
+	#contentAreaContextMenu menu[label^="ImTranslator"] > label {
 
-	margin-inline-start: -20px !important;
+		margin-inline-start: -20px !important;
 
-	width: 120px !important; /* This will mostly always be smaller than the other entries in the menu but will expand automatically */
-	}
+		width: 120px !important; /* This will mostly always be smaller than the other entries in the menu but will expand automatically */
+		}
 
-#contentAreaContextMenu menuitem[label^="Translate this page to"] > label,
-#toolbar-context-menu menuitem[label^="Translate this page to"] > label {
+	#contentAreaContextMenu menuitem[label^="Translate this page to"] > label,
+	#toolbar-context-menu menuitem[label^="Translate this page to"] > label {
 
-	margin-inline-start: -20px !important;
-	}
+		margin-inline-start: -20px !important;
+		}
 
-#contentAreaContextMenu menu[label^="ImTranslator"] menuitem[label^="Inline Translator"]::Before,
-#toolbar-context-menu menuitem[label^="Inline Translator"]::Before {
+	#contentAreaContextMenu menu[label^="ImTranslator"] menuitem[label^="Inline Translator"]::Before,
+	#toolbar-context-menu menuitem[label^="Inline Translator"]::Before {
 
-/*	content: url("../MipImages/Fugue/fugue_TranslateSelection.png");
-	content: url("../MipImages/Fugue/fugue_TranslateSelection-darker.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_TranslateSelection-green.png");
+/*		content: url("../MipImages/Fugue/fugue_TranslateSelection.png");
+		content: url("../MipImages/Fugue/fugue_TranslateSelection-darker.png");
+		*/
+		content: url("../MipImages/Fugue/fugue_TranslateSelection-green.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#contentAreaContextMenu menu[label^="ImTranslator"] menuitem[label^="Pop-Up Bubble"]::Before,
-#toolbar-context-menu menuitem[label^="Pop-Up Bubble"]::Before {
+	#contentAreaContextMenu menu[label^="ImTranslator"] menuitem[label^="Pop-Up Bubble"]::Before,
+	#toolbar-context-menu menuitem[label^="Pop-Up Bubble"]::Before {
 
-/*	content: url("../MipImages/FF/alwaysAsk-XP-lower.png");
-	content: url("../MipImages/FF/services-16.png");
-	content: url("../MipImages/Tango/tango_Alert.png");
-	*/
-	content: url("../MipImages/Silk/silk_Alert-bigger.png");
+/*		content: url("../MipImages/FF/alwaysAsk-XP-lower.png");
+		content: url("../MipImages/FF/services-16.png");
+		content: url("../MipImages/Tango/tango_Alert.png");
+		*/
+		content: url("../MipImages/Silk/silk_Alert-bigger.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#contentAreaContextMenu menu[label^="ImTranslator"] menuitem[label^="Inline Translator"] > label,
-#toolbar-context-menu menuitem[label^="Inline Translator"] > label,
-#contentAreaContextMenu menu[label^="ImTranslator"] menuitem[label^="Pop-Up Bubble"] > label,
-#toolbar-context-menu menuitem[label^="Pop-Up Bubble"] > label {
+	#contentAreaContextMenu menu[label^="ImTranslator"] menuitem[label^="Inline Translator"] > label,
+	#toolbar-context-menu menuitem[label^="Inline Translator"] > label,
+	#contentAreaContextMenu menu[label^="ImTranslator"] menuitem[label^="Pop-Up Bubble"] > label,
+	#toolbar-context-menu menuitem[label^="Pop-Up Bubble"] > label {
 
-	margin-inline-start: -20px !important;
-	}
+		margin-inline-start: -20px !important;
+		}
 
-toolbarbutton[label^="ImTranslator"] {
+	toolbarbutton[label^="ImTranslator"] {
 
-	list-style-image: url("../MipImages/Fugue/fugue_Translate-USA.png") !important;
-}
+		list-style-image: url("../MipImages/Fugue/fugue_Translate-USA.png") !important;
+		}
 
 /* Replace Simple Tab Groups Context Menu Icon **********************************/
 
-#simple-tab-groups_drive4ik-menuitem-_stg-move-tab-parent > hbox.menu-iconic-left { display: none !important; }
+	#simple-tab-groups_drive4ik-menuitem-_stg-move-tab-parent > hbox.menu-iconic-left { display: none !important; }
 
-#simple-tab-groups_drive4ik-menuitem-_stg-move-tab-parent::Before,
-#menu_simple-tab-groups_drive4ik-sidebar-action:not([checked=true])::Before {
+	#simple-tab-groups_drive4ik-menuitem-_stg-move-tab-parent::Before,
+	#menu_simple-tab-groups_drive4ik-sidebar-action:not([checked=true])::Before {
 
-/*	content: url("../MipImages/Misc/STG-TabGroups.svg"); */
-	content: url("../MipImages/Fugue/fugue_SimpleTabGroups.png");
+/*		content: url("../MipImages/Misc/STG-TabGroups.svg"); */
+		content: url("../MipImages/Fugue/fugue_SimpleTabGroups.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#simple-tab-groups_drive4ik-menuitem-_stg-move-tab-parent > label {
+	#simple-tab-groups_drive4ik-menuitem-_stg-move-tab-parent > label {
 
-	margin-inline-start: 10px !important;
-	}
+		margin-inline-start: 10px !important;
+		}
 
-#menu_simple-tab-groups_drive4ik-sidebar-action:not([checked=true]) > label {
+	#menu_simple-tab-groups_drive4ik-sidebar-action:not([checked=true]) > label {
 
-	margin-inline-start: -20px !important;
-	}
+		margin-inline-start: -20px !important;
+		}
 
 /********************************************************************************
  *
@@ -290,362 +290,386 @@ toolbarbutton[label^="ImTranslator"] {
 
 /* Skin Print Edit **************************************************************/
 
-toolbarbutton#printedit-we_dw-dev-browser-action {
+	toolbarbutton#printedit-we_dw-dev-browser-action {
 
-	list-style-image: url("../MipImages/Misc/PrintEdit(oxygen).png") !important;
-	}
+		list-style-image: url("../MipImages/Misc/PrintEdit(oxygen).png") !important;
+		}
 
-#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printedit::Before {
+	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printedit::Before {
 
-/*	content: url("../MipImages/Misc/PrintEdit(original).png"); */
-	content: url("../MipImages/Misc/PrintEdit(oxygen).png");
+/*		content: url("../MipImages/Misc/PrintEdit(original).png"); */
+		content: url("../MipImages/Misc/PrintEdit(oxygen).png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printpreview::Before {
+	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printpreview::Before {
 
-/*	content: url("chrome://devtools/skin/images/rules-view-print-simulation.svg");
-	content: url("../MipImages/Crystal/crystal_PrintPreview.png");
-	content: url("../MipImages/Oxygen/oxygen_PrintPreview.png");
-	content: url("../MipImages/Silk/silk_PrintPreview.png");
-	content: url("../MipImages/Tango/tango_PrintPreview.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_PrintPreview.png");
+/*		content: url("chrome://devtools/skin/images/rules-view-print-simulation.svg");
+		content: url("../MipImages/Crystal/crystal_PrintPreview.png");
+		content: url("../MipImages/Oxygen/oxygen_PrintPreview.png");
+		content: url("../MipImages/Silk/silk_PrintPreview.png");
+		content: url("../MipImages/Tango/tango_PrintPreview.png");
+		*/
+		content: url("../MipImages/Fugue/fugue_PrintPreview.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#toolbar-context-menu #printedit-we_dw-dev-menuitem-_print::Before {
+	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_print::Before {
 
-/*	content: url("chrome://browser/skin/print.svg");
-	content: url("../MipImages/FF/print.png");
-	content: url("../MipImages/Crystal/crystal_Print.png");
-	content: url("../MipImages/Fugue/fugue_Print.png");
-	content: url("../MipImages/Silk/silk_Print.png");
-	content: url("../MipImages/Tango/tango_Print.png");
-	*/
-	content: url("../MipImages/Oxygen/oxygen_Print.png");
+/*		content: url("chrome://browser/skin/print.svg");
+		content: url("../MipImages/FF/print.png");
+		content: url("../MipImages/Crystal/crystal_Print.png");
+		content: url("../MipImages/Fugue/fugue_Print.png");
+		content: url("../MipImages/Silk/silk_Print.png");
+		content: url("../MipImages/Tango/tango_Print.png");
+		*/
+		content: url("../MipImages/Oxygen/oxygen_Print.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#toolbar-context-menu #printedit-we_dw-dev-menuitem-_saveaspdf::Before {
+	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_saveaspdf::Before {
 		
-	content: url("../MipImages/Misc/PrintEdit_SavePageAsPDF.png");
+		content: url("../MipImages/Misc/PrintEdit_SavePageAsPDF.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printedit[disabled=true]::Before,
-#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printpreview[disabled=true]::Before,
-#toolbar-context-menu #printedit-we_dw-dev-menuitem-_print[disabled=true]::Before,
-#toolbar-context-menu #printedit-we_dw-dev-menuitem-_saveaspdf[disabled=true]::Before {
+	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printedit[disabled=true]::Before,
+	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printpreview[disabled=true]::Before,
+	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_print[disabled=true]::Before,
+	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_saveaspdf[disabled=true]::Before {
 
-	opacity: 0.4;
-	}
+		opacity: 0.4;
+		}
 
-#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printedit > label,
-#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printpreview > label,
-#toolbar-context-menu #printedit-we_dw-dev-menuitem-_print > label,
-#toolbar-context-menu #printedit-we_dw-dev-menuitem-_saveaspdf > label {
+	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printedit > label,
+	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printpreview > label,
+	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_print > label,
+	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_saveaspdf > label {
 
-	margin-inline-start: -20px !important;
-	}
+		margin-inline-start: -20px !important;
+		}
 
-/* Skin Save-Page-WE ************************************************************/
+/* Skin Save-Page-WE (Also context Menu) ****************************************/
 
 /*
-toolbarbutton#savepage-we_dw-dev-browser-action {
+	toolbarbutton#savepage-we_dw-dev-browser-action {
 
-	list-style-image: url("../MipImages/Fugue/fugue_Save.png") !important;
-	} */
+		list-style-image: url("../MipImages/Fugue/fugue_Save.png") !important;
+		} */
 
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs::Before {
+	#savepage-we_dw-dev-menuitem-_saveselectedtabs::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Save.png");
-	content: url("../MipImages/Oxygen/oxygen_Save.png");
-	content: url("../MipImages/Silk/silk_Save.png");
-	content: url("../MipImages/Tango/tango_Save.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_Save.png");
+/*		content: url("../MipImages/Crystal/crystal_Save.png");
+		content: url("../MipImages/Oxygen/oxygen_Save.png");
+		content: url("../MipImages/Silk/silk_Save.png");
+		content: url("../MipImages/Tango/tango_Save.png");
+		*/
+		content: url("../MipImages/Fugue/fugue_Save.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls::Before {
+	#savepage-we_dw-dev-menuitem-_savelistedurls::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls::Before {
 
-	content: url("../MipImages/Misc/SavePageWE_SaveListedURLs.png");
+		content: url("../MipImages/Misc/SavePageWE_SaveListedURLs.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_viewpageinfo::Before {
+	#savepage-we_dw-dev-menuitem-_viewpageinfo::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_viewpageinfo::Before {
 
-	content: url("../MipImages/Fugue/fugue_PageInfo(oxygen).png");
+		content: url("../MipImages/Fugue/fugue_PageInfo(oxygen).png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_cancelsave::Before {
+	#savepage-we_dw-dev-menuitem-_cancelsave::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_cancelsave::Before {
 
-	content: url("../MipImages/Fugue/fugue_ClearAll.png");
+		content: url("../MipImages/Fugue/fugue_ClearAll.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs[disabled=true]::Before,
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls[disabled=true]::Before,
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_viewpageinfo[disabled=true]::Before,
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_cancelsave[disabled=true]::Before {
+	#savepage-we_dw-dev-menuitem-_saveselectedtabs[disabled=true]::Before,
+	#savepage-we_dw-dev-menuitem-_savelistedurls[disabled=true]::Before,
+	#savepage-we_dw-dev-menuitem-_viewpageinfo[disabled=true]::Before,
+	#savepage-we_dw-dev-menuitem-_cancelsave[disabled=true]::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs[disabled=true]::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls[disabled=true]::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_viewpageinfo[disabled=true]::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_cancelsave[disabled=true]::Before {
 
-	opacity: 0.4;
-	}
+		opacity: 0.4;
+		}
 
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs > label,
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls > label,
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_viewpageinfo > label,
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_cancelsave > label {
+	#savepage-we_dw-dev-menuitem-_saveselectedtabs > label,
+	#savepage-we_dw-dev-menuitem-_savelistedurls > label,
+	#savepage-we_dw-dev-menuitem-_viewpageinfo > label,
+	#savepage-we_dw-dev-menuitem-_cancelsave > label,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs > label,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls > label,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_viewpageinfo > label,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_cancelsave > label {
 
-	margin-inline-start: -20px !important;
-	}
+		margin-inline-start: -20px !important;
+		}
 
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-basicitems::Before,
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-basicitems::Before {
+	#savepage-we_dw-dev-menuitem-_saveselectedtabs-basicitems::Before,
+	#savepage-we_dw-dev-menuitem-_savelistedurls-basicitems::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-basicitems::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-basicitems::Before {
 
-	content: url("../MipImages/Misc/SavePageWE-BasicItems.png");
+		content: url("../MipImages/Misc/SavePageWE-BasicItems.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-standarditems::Before,
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-standarditems::Before {
+	#savepage-we_dw-dev-menuitem-_saveselectedtabs-standarditems::Before,
+	#savepage-we_dw-dev-menuitem-_savelistedurls-standarditems::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-standarditems::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-standarditems::Before {
 
-	content: url("../MipImages/Misc/SavePageWE-StandardItems.png");
+		content: url("../MipImages/Misc/SavePageWE-StandardItems.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-customitems::Before,
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-customitems::Before {
+	#savepage-we_dw-dev-menuitem-_saveselectedtabs-customitems::Before,
+	#savepage-we_dw-dev-menuitem-_savelistedurls-customitems::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-customitems::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-customitems::Before {
 
-	content: url("../MipImages/Misc/SavePageWE-CustomItems.png");
+		content: url("../MipImages/Misc/SavePageWE-CustomItems.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-basicitems > label,
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-basicitems > label,
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-standarditems > label,
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-standarditems > label,
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-customitems > label,
-#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-customitems > label {
+	#savepage-we_dw-dev-menuitem-_saveselectedtabs-basicitems > label,
+	#savepage-we_dw-dev-menuitem-_savelistedurls-basicitems > label,
+	#savepage-we_dw-dev-menuitem-_saveselectedtabs-standarditems > label,
+	#savepage-we_dw-dev-menuitem-_savelistedurls-standarditems > label,
+	#savepage-we_dw-dev-menuitem-_saveselectedtabs-customitems > label,
+	#savepage-we_dw-dev-menuitem-_savelistedurls-customitems > label,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-basicitems > label,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-basicitems > label,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-standarditems > label,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-standarditems > label,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-customitems > label,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-customitems > label {
 
-	margin-inline-start: -20px !important;
-	}
+		margin-inline-start: -20px !important;
+		}
 
 /* DownThemAll context sub-menu *************************************************/
 
-#toolbar-context-menu menu[label="DownThemAll!"]::Before {
+	#toolbar-context-menu menu[label="DownThemAll!"]::Before {
 
-	content: url("../MipImages/Misc/DownThemAll.png");
+		content: url("../MipImages/Misc/DownThemAll.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#toolbar-context-menu menu[label="DownThemAll!"] > label {
+	#toolbar-context-menu menu[label="DownThemAll!"] > label {
 
-	margin-inline-start: -20px !important;
-	}
+		margin-inline-start: -20px !important;
+		}
 
-#toolbar-context-menu menu[label="DownThemAll!"] > menupopup > menuseparator:first-child { display: none; } /* Extraneous Separator */
+	#toolbar-context-menu menu[label="DownThemAll!"] > menupopup > menuseparator:first-child { display: none; } /* Extraneous Separator */
 
 /* Change Geolocation Extension *************************************************/
 
-#toolbar-context-menu menuitem[label="What is my Geolocation?"]::Before {
+	#toolbar-context-menu menuitem[label="What is my Geolocation?"]::Before {
 
-	content: url("../MipImages/Fugue/fugue_Globe.png");
+		content: url("../MipImages/Fugue/fugue_Globe.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#toolbar-context-menu menuitem[label="What is my Geolocation?"] > label {
+	#toolbar-context-menu menuitem[label="What is my Geolocation?"] > label {
 
-	margin-inline-start: -20px !important;
-	}
+		margin-inline-start: -20px !important;
+		}
 
 /* I Dont Care About Cookies ****************************************************/
 
-toolbarbutton#jid1-kkzogwgsw3ao4q_jetpack-browser-action .toolbarbutton-badge {
+	toolbarbutton#jid1-kkzogwgsw3ao4q_jetpack-browser-action .toolbarbutton-badge {
 	
-	background-clip: text !important;	/* Fix (remove) the border around the badge which is actually the text background */
-	font-weight: normal !important;		/* We dont need a bold-sized checkmark */
-	}
+		background-clip: text !important;	/* Fix (remove) the border around the badge which is actually the text background */
+		font-weight: normal !important;		/* We dont need a bold-sized checkmark */
+		}
 
 /* Skip Redirect ****************************************************************/
 
-#toolbar-context-menu #skipredirect_sblask-menuitem-_copy-last-source-url::Before {
+	#toolbar-context-menu #skipredirect_sblask-menuitem-_copy-last-source-url::Before {
 
-	content: url("../MipImages/Crystal/crystal_Copy.png");
+		content: url("../MipImages/Crystal/crystal_Copy.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#toolbar-context-menu #skipredirect_sblask-menuitem-_copy-last-source-url[disabled=true]::Before {
+	#toolbar-context-menu #skipredirect_sblask-menuitem-_copy-last-source-url[disabled=true]::Before {
 
-	opacity: 0.4;
-	}
+		opacity: 0.4;
+		}
 
-#toolbar-context-menu #skipredirect_sblask-menuitem-_copy-last-source-url > label {
+	#toolbar-context-menu #skipredirect_sblask-menuitem-_copy-last-source-url > label {
 
-	margin-inline-start: -20px !important;
-	}
+		margin-inline-start: -20px !important;
+		}
 
 /* Neat URL *********************************************************************/
 
-#toolbar-context-menu #neaturl_hugsmile_eu-menuitem-_neaturl-tb-preferences::Before {
+	#toolbar-context-menu #neaturl_hugsmile_eu-menuitem-_neaturl-tb-preferences::Before {
 
-	content: url("../MipImages/FF/settings.png");
+		content: url("../MipImages/FF/settings.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#toolbar-context-menu #neaturl_hugsmile_eu-menuitem-_neaturl-tb-preferences > label {
+	#toolbar-context-menu #neaturl_hugsmile_eu-menuitem-_neaturl-tb-preferences > label {
 
-	margin-inline-start: -20px !important;
-	}
+		margin-inline-start: -20px !important;
+		}
 
 /* Stylus ***********************************************************************/
 
-#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_show-badge:not([checked=true])::Before {
+	#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_show-badge:not([checked=true])::Before {
 
-	content: url("../MipImages/Fugue/fugue_NotificationCounter42.png");
+		content: url("../MipImages/Fugue/fugue_NotificationCounter42.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_disableAll:not([checked=true])::Before {
+	#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_disableAll:not([checked=true])::Before {
 
-	content: url("../MipImages/Fugue/fugue_DisableBlockEmpty.png");
+		content: url("../MipImages/Fugue/fugue_DisableBlockEmpty.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_open-manager::Before {
+	#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_open-manager::Before {
 
-	content: url("../MipImages/Tango/tango_Dev-Style.png");
+		content: url("../MipImages/Tango/tango_Dev-Style.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_open-options::Before {
+	#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_open-options::Before {
 
-	content: url("../MipImages/FF/settings.png");
+		content: url("../MipImages/FF/settings.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		margin-top: 2px;
+		vertical-align: middle;
+		}
 
-#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_show-badge:not([checked=true]) > label,
-#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_disableAll:not([checked=true]) > label,
-#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_open-manager > label,
-#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_open-options > label {
+	#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_show-badge:not([checked=true]) > label,
+	#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_disableAll:not([checked=true]) > label,
+	#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_open-manager > label,
+	#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_open-options > label {
 
-	margin-inline-start: -20px !important;
-	}
+		margin-inline-start: -20px !important;
+		}
 
 }
