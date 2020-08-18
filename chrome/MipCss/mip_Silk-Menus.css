@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.0 (MIP/CSS)
+ * Menu Icon Plus CSS v1.2 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -1513,28 +1513,6 @@ menuitem.searchbar-clear-history > label {
 	list-style-image: url("../MipImages/FF/container-unhide.svg");
 	}
 
-/* Mobile Bookmarks Menu/Menupopup is no longer used I think ********************/
-
-#menu_mobileBookmarks::Before {
-
-/*	content: url("chrome://devtools/skin/images/browsers/mobile.svg");
-	content: url("../MipImages/PublicDomain/Icon-Mobile-Phone.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_MobilePhone.png");
-
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	margin-top: 2px;
-	vertical-align: middle;
-	}
-
-#menu_mobileBookmarks > label {
-
-	margin-inline-start: -20px !important;
-	}
-
 /* Bookmark This Page Link Tab or Frame + Bookmark-New **************************/
 
 #menu_bookmarkThisPage::Before,
@@ -2001,6 +1979,18 @@ treechildren::-moz-tree-image(title, open) {
 	list-style-image: url("../MipImages/Tango/tango_FolderOpened.png") !important;
 	*/
 	list-style-image: url("../MipImages/Silk/silk_FolderOpened.png") !important;
+	-moz-image-region: auto !important;
+	}
+
+/* Mobile Bookmarks *************************************************************/
+
+#menu_mobileBookmarks {
+
+/*	list-style-image: url("chrome://devtools/skin/images/browsers/mobile.svg") !important;
+	list-style-image: url("../MipImages/PublicDomain/Icon-Mobile-Phone.png") !important;
+	list-style-image: url("../MipImages/Fugue/fugue_MobileBookmarksFolder.png") !important;
+	*/
+	list-style-image: url("../MipImages/Fugue/fugue_MobilePhone.png") !important;
 	-moz-image-region: auto !important;
 	}
 
@@ -3192,7 +3182,7 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 #placesContext_open\:newtab::Before,
 #placesContext_openLinks\:tabs::Before,
 #placesContext_openContainer\:tabs::Before,
-menuitem.openintabs-menuitem::Before,
+menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer)::Before,
 #historyUndoPopup menuitem.restoreallitem::Before,
 #syncedTabsOpenSelectedInTab::Before,
 #syncedTabsOpenAllInTabs::Before {
@@ -3219,7 +3209,7 @@ menuitem.openintabs-menuitem::Before,
 #placesContext_open\:newtab[disabled=true]::Before,
 #placesContext_openLinks\:tabs[disabled=true]::Before,
 #placesContext_openContainer\:tabs[disabled=true]::Before,
-.openintabs-menuitem[disabled=true]::Before {
+menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer)[disabled=true]::Before {
 
 	opacity: 0.4;
 	}
@@ -3230,7 +3220,7 @@ menuitem.openintabs-menuitem::Before,
 #placesContext_open\:newtab > label,
 #placesContext_openLinks\:tabs > label,
 #placesContext_openContainer\:tabs > label,
-menuitem.openintabs-menuitem > label,
+menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer) > label,
 #historyUndoPopup menuitem.restoreallitem > label,
 #syncedTabsOpenSelectedInTab > label,
 #syncedTabsOpenAllInTabs > label {
