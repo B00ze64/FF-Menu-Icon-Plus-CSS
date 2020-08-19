@@ -1000,7 +1000,8 @@ menuitem.searchbar-clear-history > label {
 
 /* Mobile Bookmarks *************************************************************/
 
-#menu_mobileBookmarks {
+#menu_mobileBookmarks,
+#BMB_mobileBookmarks {
 
 	list-style-image: url("chrome://devtools/skin/images/browsers/mobile.svg") !important;
 	-moz-context-properties: fill;

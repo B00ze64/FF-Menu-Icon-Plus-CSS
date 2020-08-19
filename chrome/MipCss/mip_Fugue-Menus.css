@@ -1988,7 +1988,8 @@ treechildren::-moz-tree-image(title, open) {
 
 /* Mobile Bookmarks *************************************************************/
 
-#menu_mobileBookmarks {
+#menu_mobileBookmarks,
+#BMB_mobileBookmarks {
 
 /*	list-style-image: url("chrome://devtools/skin/images/browsers/mobile.svg") !important;
 	list-style-image: url("../MipImages/PublicDomain/Icon-Mobile-Phone.png") !important;
