@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.0 (MIP/CSS)
+ * Menu Icon Plus CSS v1.3 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -1033,7 +1033,8 @@ menuitem[command="downloadsCmd_openReferrer"] > label {
 
 menuitem[checked=true]::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Checkmark.png");
+/*	content: url("../MipImages/FF/alerticon-info-positive(16x16).png");
+	content: url("../MipImages/Crystal/crystal_Checkmark.png");
 	content: url("../MipImages/Fugue/fugue_Checkmark.png");
 	content: url("../MipImages/Oxygen/oxygen_Checkmark.png");
 	content: url("../MipImages/Tango/tango_Checkmark.png");

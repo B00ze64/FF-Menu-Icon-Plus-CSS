@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.0 (MIP/CSS)
+ * Menu Icon Plus CSS v1.3 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -225,8 +225,8 @@ menuitem.downloadRemoveFromHistoryMenuItem > label { /* menuitem[command="cmd_de
 #placesContext_createBookmark::before, /* In the history context menu */
 #newbookmark::Before {
 
-/*	content: url("../MipImages/FF/bookmark-3.png"); */
-	content: url("../MipImages/FF/bookmark-2.png");
+/*	content: url("../MipImages/FF/bookmark-2.png"); */
+	content: url("../MipImages/FF/bookmark-1.png");
 
 	display: block;
 	width: 16px;
@@ -351,6 +351,36 @@ menuitem.downloadShowMenuItem::Before { /* [command="downloadsCmd_show"] */
 menuitem.downloadShowMenuItem > label {
 
 	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * Checkmarks
+ *
+ ********************************************************************************/
+
+menuitem[checked=true]::Before {
+
+	content: url("../MipImages/FF/alerticon-info-positive(16x16).png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem[checked=true][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+menuitem[checked=true] > hbox.menu-iconic-left { display: none; !important }
+
+menuitem[checked=true] > label {
+
+	margin-inline-start: 10px !important;
 	}
 
 }

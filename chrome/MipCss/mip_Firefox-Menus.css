@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.0 (MIP/CSS)
+ * Menu Icon Plus CSS v1.3 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -567,6 +567,11 @@ menu#viewToolbarsMenu::Before {
 	vertical-align: middle;
 	}
 
+#sanitizeItem[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
 #placesContext_deleteHost::Before,
 menuitem.downloadRemoveFromHistoryMenuItem::Before {
 
@@ -678,8 +683,8 @@ menuitem.downloadRemoveFromHistoryMenuItem > label {
 #syncedTabsBookmarkSelected::Before,
 #newbookmark::Before {
 
-/*	content: url("../MipImages/FF/bookmark-3.png"); */
-	content: url("../MipImages/FF/bookmark-2.png");
+/*	content: url("../MipImages/FF/bookmark-2.png"); */
+	content: url("../MipImages/FF/bookmark-1.png");
 
 	display: block;
 	width: 16px;
@@ -1436,6 +1441,136 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 #fill-login > #fill-login-popup > menuitem.context-login-item > label {
 
 	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * Toolbar Context Menu
+ *
+ ********************************************************************************/
+
+/* #toolbar-context-menu menuitem[data-l10n-id="toolbar-context-menu-manage-extension"]		*//* See Add-ons */
+/* #toolbar-context-menu menuitem[data-l10n-id="toolbar-context-menu-remove-extension"]		*//* See Delete */
+/* #toolbar-context-menu menuitem[data-l10n-id="toolbar-context-menu-report-extension"]		*//* See Report/Warning */
+/* #toolbar-context-menu menuitem[data-l10n-id="toolbar-context-menu-remove-from-toolbar"]	*//* See Page Action Menu */
+/* #toolbar-context-menu menuitem[data-l10n-id="toolbar-context-menu-pin-to-overflow-menu"]	*//* See Tab-Pin */
+
+/* Customize/Colors/Palette *****************************************************/
+
+#menu_customizeToolbars::Before,
+menuitem[command="cmd_CustomizeToolbars"]::Before, /* #customizationPanelContextMenu */
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"]::Before {
+
+	content: url("../MipImages/FF/themeGeneric-16.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+#menu_customizeToolbars[disabled=true]::Before,
+menuitem[command="cmd_CustomizeToolbars"][disabled=true]::Before
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#menu_customizeToolbars > label,
+menuitem[command="cmd_CustomizeToolbars"] > label,
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * Navigation Context Icons
+ *
+ ********************************************************************************/
+
+#context-back image {
+
+	list-style-image: url("../MipImages/FF/menu-back.png");
+	-moz-context-properties: none;
+	-moz-image-region: auto;
+	}
+
+#context-forward image {
+
+	list-style-image: url("../MipImages/FF/menu-forward.png");
+	-moz-context-properties: none;
+	-moz-image-region: auto;
+	}
+
+#context-reload image {
+
+	list-style-image: url("../MipImages/FF/reload-stop-go-Reload(16x16).png");
+	-moz-context-properties: none;
+	-moz-image-region: auto;
+	}
+
+#context-stop image {
+
+	list-style-image: url("../MipImages/FF/reload-stop-go-Stop(16x16).png");
+	-moz-context-properties: none;
+	-moz-image-region: auto;
+	}
+
+#context-bookmarkpage:not([starred=true]) image {
+
+	list-style-image: url("../MipImages/FF/bookmark-2.png");
+	list-style-image: url("../MipImages/FF/bookmark-1.png");
+	-moz-context-properties: none;
+	-moz-image-region: auto;
+	}
+
+#context-bookmarkpage[starred=true] image {
+
+	list-style-image: url("../MipImages/FF/bookmark-3.png");
+	-moz-context-properties: none;
+	-moz-image-region: auto;
+	}
+
+#context-back[disabled=true] image,
+#context-forward[disabled=true] image,
+#context-reload[disabled=true] image,
+#context-stop[disabled=true] image,
+#context-bookmarkpage[disabled=true] image {
+
+	opacity: 0.4;
+	}
+
+/********************************************************************************
+ *
+ * Checkmarks
+ *
+ ********************************************************************************/
+
+menuitem[checked=true]::Before {
+
+	content: url("../MipImages/FF/alerticon-info-positive(16x16).png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	margin-top: 2px;
+	vertical-align: middle;
+	}
+
+menuitem[checked=true][disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+menuitem[checked=true] > hbox.menu-iconic-left { display: none; !important }
+
+menuitem[checked=true] > label {
+
+	margin-inline-start: 10px !important;
 	}
 
 }

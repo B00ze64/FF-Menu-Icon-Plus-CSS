@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.2 (MIP/CSS)
+ * Menu Icon Plus CSS v1.3 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -1288,6 +1288,11 @@ menu#viewToolbarsMenu::Before {
 	margin-inline-start: 6px;
 	margin-top: 2px;
 	vertical-align: middle;
+	}
+
+#sanitizeItem[disabled=true]::Before {
+
+	opacity: 0.4;
 	}
 
 #placesContext_deleteHost::Before,
@@ -3730,6 +3735,11 @@ menuitem[command="Browser:OpenAboutContainers"]::Before { /* #new-tab-button, #n
 	vertical-align: middle;
 	}
 
+#menu_newUserContext[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
 #allTabsMenu-containerTabsButton > image { list-style-image: url("../MipImages/Fugue/fugue_Theme.png"); -moz-image-region: auto; }
 #allTabsMenu-containerTabsButton > label { padding-inline-start: 8px !important; }
 
@@ -4822,6 +4832,7 @@ menuitem[command="cmd_CustomizeToolbars"]::Before, /* #customizationPanelContext
 menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"]::Before {
 
 /*	content: url("chrome://browser/skin/customize.svg");
+	content: url("../MipImages/FF/themeGeneric-16.png");
 	content: url("../MipImages/Crystal/crystal_Palette.png");
 	content: url("../MipImages/Fugue/fugue_Palette.png");
 	content: url("../MipImages/Silk/silk_Palette.png");
@@ -4859,7 +4870,8 @@ menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"] > label {
 
 #context-back image {
 
-/*	list-style-image: url("../MipImages/Crystal/crystal_NavBack.png");
+/*	list-style-image: url("../MipImages/FF/menu-back.png");
+	list-style-image: url("../MipImages/Crystal/crystal_NavBack.png");
 	list-style-image: url("../MipImages/Fugue/fugue_NavBack.png");
 	list-style-image: url("../MipImages/Silk/silk_NavBack.png");
 	list-style-image: url("../MipImages/Tango/tango_NavBack.png");
@@ -4871,7 +4883,8 @@ menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"] > label {
 
 #context-forward image {
 
-/*	list-style-image: url("../MipImages/Crystal/crystal_NavForward.png");
+/*	list-style-image: url("../MipImages/FF/menu-forward.png");
+	list-style-image: url("../MipImages/Crystal/crystal_NavForward.png");
 	list-style-image: url("../MipImages/Fugue/fugue_NavForward.png");
 	list-style-image: url("../MipImages/Silk/silk_NavForward.png");
 	list-style-image: url("../MipImages/Tango/tango_NavForward.png");
@@ -4883,7 +4896,8 @@ menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"] > label {
 
 #context-reload image {
 
-/*	list-style-image: url("../MipImages/Crystal/crystal_Reload.png");
+/*	list-style-image: url("../MipImages/FF/reload-stop-go-Reload(16x16).png");
+	list-style-image: url("../MipImages/Crystal/crystal_Reload.png");
 	list-style-image: url("../MipImages/Fugue/fugue_Reload.png");
 	list-style-image: url("../MipImages/Oxygen/oxygen_Repeat.png");
 	list-style-image: url("../MipImages/Silk/silk_Reload.png");
@@ -4896,7 +4910,8 @@ menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"] > label {
 
 #context-stop image {
 
-/*	list-style-image: url("../MipImages/Crystal/crystal_NavStop.png");
+/*	list-style-image: url("../MipImages/FF/reload-stop-go-Stop(16x16).png");
+	list-style-image: url("../MipImages/Crystal/crystal_NavStop.png");
 	list-style-image: url("../MipImages/Fugue/fugue_NavStop.png");
 	list-style-image: url("../MipImages/Silk/silk_NavStop.png");
 	list-style-image: url("../MipImages/Tango/tango_NavStop.png");
@@ -4952,7 +4967,8 @@ menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"] > label {
 
 menuitem[checked=true]::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Checkmark.png");
+/*	content: url("../MipImages/FF/alerticon-info-positive(16x16).png");
+	content: url("../MipImages/Crystal/crystal_Checkmark.png");
 	content: url("../MipImages/Fugue/fugue_Checkmark.png");
 	content: url("../MipImages/Silk/silk_Checkmark.png");
 	content: url("../MipImages/Tango/tango_Checkmark.png");

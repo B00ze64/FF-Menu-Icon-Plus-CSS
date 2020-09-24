@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.2 (MIP/CSS)
+ * Menu Icon Plus CSS v1.3 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -836,6 +836,11 @@ menu#viewToolbarsMenu::Before {
 	margin-inline-start: 6px;
 	margin-top: 2px;
 	vertical-align: middle;
+	}
+
+#sanitizeItem[disabled=true]::Before {
+
+	opacity: 0.4;
 	}
 
 #placesContext_deleteHost::Before,
