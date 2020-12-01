@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.0 (MIP/CSS)
+ * Menu Icon Plus CSS v1.4 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -75,8 +75,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#menu_ToolsPopup menuitem[label="Open Bookmarks Organizer"] > label {
@@ -105,8 +104,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#_63395548-7017-4407-a03a-31a553563e7b_-menuitem-_open-selected-links > label {
@@ -127,8 +125,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#contentAreaContextMenu menu[label="Dictionaries At Hand"] > menupopup > menuitem[label$="(English)"]::Before { /* Red Bookmark for the English dictionaries */
@@ -140,8 +137,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#contentAreaContextMenu menu[label="Dictionaries At Hand"] > menupopup > menuitem[label$="(French)"]::Before { /* Blue Bookmark for the French dictionaries */
@@ -153,8 +149,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#contentAreaContextMenu menu[label="Dictionaries At Hand"] > label,
@@ -183,8 +178,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#contentAreaContextMenu menu[label^="ImTranslator"] > label {
@@ -212,8 +206,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#contentAreaContextMenu menu[label^="ImTranslator"] menuitem[label^="Pop-Up Bubble"]::Before,
@@ -229,8 +222,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#contentAreaContextMenu menu[label^="ImTranslator"] menuitem[label^="Inline Translator"] > label,
@@ -260,8 +252,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#simple-tab-groups_drive4ik-menuitem-_stg-move-tab-parent > label {
@@ -304,8 +295,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printpreview::Before {
@@ -322,8 +312,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_print::Before {
@@ -341,8 +330,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_saveaspdf::Before {
@@ -353,8 +341,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printedit[disabled=true]::Before,
@@ -395,8 +382,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#savepage-we_dw-dev-menuitem-_savelistedurls::Before,
@@ -408,8 +394,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#savepage-we_dw-dev-menuitem-_viewpageinfo::Before,
@@ -421,8 +406,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#savepage-we_dw-dev-menuitem-_cancelsave::Before,
@@ -434,8 +418,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#savepage-we_dw-dev-menuitem-_saveselectedtabs[disabled=true]::Before,
@@ -473,8 +456,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#savepage-we_dw-dev-menuitem-_saveselectedtabs-standarditems::Before,
@@ -488,8 +470,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#savepage-we_dw-dev-menuitem-_saveselectedtabs-customitems::Before,
@@ -503,8 +484,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#savepage-we_dw-dev-menuitem-_saveselectedtabs-basicitems > label,
@@ -533,8 +513,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#toolbar-context-menu menu[label="DownThemAll!"] > label {
@@ -554,8 +533,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#toolbar-context-menu menuitem[label="What is my Geolocation?"] > label {
@@ -581,8 +559,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#toolbar-context-menu #skipredirect_sblask-menuitem-_copy-last-source-url[disabled=true]::Before {
@@ -605,8 +582,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#toolbar-context-menu #neaturl_hugsmile_eu-menuitem-_neaturl-tb-preferences > label {
@@ -624,8 +600,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_disableAll:not([checked=true])::Before {
@@ -636,8 +611,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_open-manager::Before {
@@ -648,8 +622,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_open-options::Before {
@@ -660,8 +633,7 @@
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-		margin-top: 2px;
-		vertical-align: middle;
+			vertical-align: middle;
 		}
 
 	#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_show-badge:not([checked=true]) > label,

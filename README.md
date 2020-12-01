@@ -17,7 +17,7 @@ Besides copying all the project's files correctly in your profile/chrome folder 
 
 # The Icon Themes
 
-The original Menu Icon Plus XUL extension included 5 themes, and **FF-Menu-Icon-Plus-CSS (MIP/CSS)** includes all 5, plus 3 more: There is a **Firefox SVG** theme which uses exclusively built-in Firefox SVG icons, a Firefox "Theme" which you can use to override icons from other themes with the old PNG icons from Firefox 24 and 52, and **Fugue Plus** which is a mix of Fugue and whatever icon I find better looking from the other themes. I have tested all of them, but the only theme I've really spent a lot of time on is **Fugue Plus**. You are encouraged to open issues and make corrections or suggestions, especially for **Firefox SVG**.
+The original Menu Icon Plus XUL extension included 5 themes, and **FF-Menu-Icon-Plus-CSS (MIP/CSS)** includes all 5, plus 3 more: There is a **Firefox SVG** theme which uses exclusively built-in Firefox SVG icons, a **Firefox** "Theme" which you can use to override icons from other themes with the old PNG icons from Firefox 24 and 52, and **Fugue Plus** which is a mix of Fugue and whatever icon I find better looking from the other themes. I have tested all of them, but the only theme I've really spent a lot of time on is **Fugue Plus**. You are encouraged to open issues and make corrections or suggestions, especially for **Firefox SVG**.
 
 All the Major themes include the icons from all the other themes commented out. This makes it easy for you to pick the theme you like most, and exchange the icons you don't with ones you do. You are encouraged to do this.
 

@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.3 (MIP/CSS)
+ * Menu Icon Plus CSS v1.4 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -82,7 +82,6 @@
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -111,7 +110,6 @@
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -133,7 +131,6 @@
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -156,7 +153,6 @@
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -179,7 +175,6 @@
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -199,7 +194,6 @@
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -229,7 +223,6 @@ menuitem[cmd="cmd_cut"]::Before,
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -269,7 +262,6 @@ menuitem[cmd="cmd_copy"]::Before,
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -290,7 +282,6 @@ menuitem[command="downloadsCmd_copyLocation"]::Before,
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -337,7 +328,6 @@ menuitem[cmd="cmd_paste"]::Before,
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -372,7 +362,6 @@ menuitem.searchbar-paste-and-search::Before {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -400,7 +389,6 @@ menuitem.searchbar-paste-and-search > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -412,7 +400,6 @@ menuitem.searchbar-paste-and-search > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -446,7 +433,6 @@ menu#viewToolbarsMenu::Before {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -458,7 +444,6 @@ menu#viewToolbarsMenu::Before {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -470,7 +455,6 @@ menu#viewToolbarsMenu::Before {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -491,7 +475,6 @@ menu#viewToolbarsMenu::Before {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -513,7 +496,6 @@ menu#viewToolbarsMenu::Before {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -543,7 +525,6 @@ menu#viewToolbarsMenu::Before {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -563,7 +544,6 @@ menu#viewToolbarsMenu::Before {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -581,7 +561,6 @@ menuitem.downloadRemoveFromHistoryMenuItem::Before {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -602,7 +581,6 @@ menuitem.downloadRemoveFromHistoryMenuItem > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -632,7 +610,6 @@ menuitem.downloadRemoveFromHistoryMenuItem > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -644,7 +621,6 @@ menuitem.downloadRemoveFromHistoryMenuItem > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -690,7 +666,6 @@ menuitem.downloadRemoveFromHistoryMenuItem > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -731,7 +706,6 @@ menuitem.downloadRemoveFromHistoryMenuItem > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -763,7 +737,6 @@ menuitem.downloadRemoveFromHistoryMenuItem > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -775,7 +748,6 @@ menuitem.downloadRemoveFromHistoryMenuItem > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -787,7 +759,6 @@ menuitem.downloadRemoveFromHistoryMenuItem > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -815,7 +786,6 @@ menuitem.downloadRemoveFromHistoryMenuItem > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -834,7 +804,6 @@ menuitem.downloadShowMenuItem::Before { /* [command="downloadsCmd_show"] */
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -862,7 +831,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"]::Before {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -887,7 +855,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -912,7 +879,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -941,7 +907,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -967,7 +932,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1015,7 +979,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1029,7 +992,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1043,7 +1005,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1064,7 +1025,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1078,7 +1038,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1092,7 +1051,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1106,7 +1064,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1120,7 +1077,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1134,7 +1090,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1149,7 +1104,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	filter: grayscale(100%);
 	}
@@ -1164,7 +1118,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1176,7 +1129,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1190,7 +1142,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1204,7 +1155,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1242,7 +1192,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1262,7 +1211,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1281,7 +1229,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1302,7 +1249,6 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"]::Before {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1328,7 +1274,6 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1354,7 +1299,6 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1366,7 +1310,6 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1388,7 +1331,6 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1414,7 +1356,6 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1432,7 +1373,6 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1467,7 +1407,6 @@ menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"]::Before {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
@@ -1557,7 +1496,6 @@ menuitem[checked=true]::Before {
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 2px;
 	vertical-align: middle;
 	}
 
