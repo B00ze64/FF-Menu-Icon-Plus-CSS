@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.4 (MIP/CSS)
+ * Menu Icon Plus CSS v1.5 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -296,7 +296,8 @@
 /* Print ************************************************************************/
 
 #menu_print::Before,
-#context-printframe::Before {
+#context-printframe::Before,
+#context-print-selection::Before {
 
 /*	content: url("chrome://browser/skin/print.svg");
 	content: url("../MipImages/FF/print.png");
@@ -317,7 +318,8 @@
 #menu_printSetup > label,
 #menu_printPreview > label,
 #menu_print > label,
-#context-printframe > label {
+#context-printframe > label,
+#context-print-selection > label {
 
 	margin-inline-start: -20px !important;
 	}

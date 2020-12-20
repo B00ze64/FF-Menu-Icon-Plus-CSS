@@ -341,7 +341,8 @@
 /* Print ************************************************************************/
 
 #menu_print::Before,
-#context-printframe::Before {
+#context-printframe::Before,
+#context-print-selection::Before {
 
 	content: url("chrome://browser/skin/print.svg");
 	content: url("../MipImages/FF/print.png");
@@ -363,7 +364,8 @@
 #menu_printSetup > label,
 #menu_printPreview > label,
 #menu_print > label,
-#context-printframe > label {
+#context-printframe > label,
+#context-print-selection > label {
 
 	margin-inline-start: -20px !important;
 	}
