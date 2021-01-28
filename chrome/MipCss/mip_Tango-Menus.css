@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.5 (MIP/CSS)
+ * Menu Icon Plus CSS v1.5.1 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -2752,7 +2752,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #menu_browserConsole::Before {
 
-/*    	content: url("chrome://browser/skin/chevron.svg");
+/*    	content: url("chrome://global/skin/icons/chevron.svg");
     	content: url("chrome://devtools/skin/images/tool-webconsole.svg");
 	content: url("../MipImages/FF/commandline.png");
 	content: url("../MipImages/Crystal/crystal_Dev-Console.png");
