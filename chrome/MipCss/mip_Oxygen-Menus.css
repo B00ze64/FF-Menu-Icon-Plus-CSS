@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.5.1 (MIP/CSS)
+ * Menu Icon Plus CSS v1.5.2 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -2447,7 +2447,8 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 /* Get More Tools ***************************************************************/
 
-#getMoreDevtools::Before {
+#getMoreDevtools::Before,
+#extensionsForDevelopers::Before {
 
 /*	content: url("chrome://browser/skin/developer.svg");
 	content: url("../MipImages/FF/tools-grey.png");
@@ -2491,6 +2492,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #webDeveloperMenu > label,
 #getMoreDevtools > label,
+#extensionsForDevelopers > label,
 #menu_devToolbox:not([checked=true]) > label {
 
 	margin-inline-start: -20px !important;
@@ -2606,8 +2608,10 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	}
 
 /* Performance Profiler *********************************************************/
+/* Re-use this for Task Manager FF87 */
 
-#menuitem_performance::Before {
+#menuitem_performance::Before,
+#help_taskManager::Before {
 
 /*	content: url("chrome://devtools/skin/images/tool-profiler.svg");
 	content: url("../MipImages/FF/tool-profiler.png");
@@ -2820,6 +2824,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 #menuitem_netmonitor > label,
 #menuitem_styleeditor > label,
 #menuitem_performance > label,
+#help_taskManager > label,
 #menuitem_storage > label,
 #menuitem_accessibility > label,
 #menuitem_application > label,

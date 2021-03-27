@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.5.1 (MIP/CSS)
+ * Menu Icon Plus CSS v1.5.2 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -59,7 +59,8 @@
 
 /* Get More Tools ***************************************************************/
 
-#getMoreDevtools::Before {
+#getMoreDevtools::Before,
+#extensionsForDevelopers::Before {
 
 	content: url("chrome://browser/skin/developer.svg");
 	}
@@ -107,8 +108,10 @@
 	}
 
 /* Performance Profiler *********************************************************/
+/* Re-use this for Task Manager FF87 */
 
-#menuitem_performance::Before {
+#menuitem_performance::Before,
+#help_taskManager::Before {
 
 	content: url("chrome://devtools/skin/images/tool-profiler.svg");
 	}
