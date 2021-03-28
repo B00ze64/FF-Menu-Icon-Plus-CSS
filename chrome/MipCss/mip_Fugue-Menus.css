@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.5.2 (MIP/CSS)
+ * Menu Icon Plus CSS v1.5.3 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -1640,6 +1640,43 @@ menuitem.searchbar-clear-history > label {
 	margin-inline-start: -20px !important;
 	}
 
+/* FF85 Show Other Bookmarks ****************************************************/
+
+#show-other-bookmarks_PersonalToolbar[checked=false]::Before {
+
+/*	content: url("../MipImages/FF/unfiledBookmarks.svg"); */
+	content: url("../MipImages/FF/unsortedBookmarks.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	vertical-align: middle;
+	}
+
+#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"][checked=false]::Before {
+
+/*	content: url("../MipImages/FF/container-unhide-black.svg"); */
+	content: url("../MipImages/FF/container-unhide.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	vertical-align: middle;
+	}
+
+#show-other-bookmarks_PersonalToolbar[checked=false] > label,
+#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"][checked=false] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+#PlacesToolbar #OtherBookmarks {
+	list-style-image: url("../MipImages/FF/unsortedBookmarks.png") !important;
+	-moz-image-region: auto !important;
+}
+
 /********************************************************************************
  *
  * LIBRARY (Toolbar)
@@ -3095,6 +3132,8 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 
 /* Tab-New **********************************************************************/
 
+#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"][checked=false]::Before, /* FF85 Bookmarks Toolbar Sub-Menu */
+
 #menu_newNavigatorTab::Before,
 #context-openlinkintab::Before,
 #context-openframeintab::Before,
@@ -3131,6 +3170,8 @@ menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer)[disa
 
 	opacity: 0.4;
 	}
+
+#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"][checked=false] > label,
 
 #menu_newNavigatorTab > label,
 #context-openlinkintab > label,
@@ -4500,6 +4541,8 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 
 /* HIDE STUFF that has no Un-Hide / Downloads,FullScreenToolbar,PIP Auto-Hide ***/
 
+#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"][checked=false]::Before, /* FF85 Bookmarks Toolbar Sub-Menu */
+
 #toolbar-context-autohide-downloads-button:not([checked=true])::Before,
 #autohide-context menuitem[data-l10n-id="full-screen-autohide"]:not([checked=true])::Before,
 #pictureInPictureToggleContextMenu menuitem[oncommand="PictureInPicture.hideToggle();"]::Before,
@@ -4521,6 +4564,8 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 	margin-inline-start: 6px;
 	vertical-align: middle;
 	}
+
+#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"][checked=false] > label,
 
 #toolbar-context-autohide-downloads-button:not([checked=true]) > label,
 #autohide-context menuitem[data-l10n-id="full-screen-autohide"]:not([checked=true]) > label,

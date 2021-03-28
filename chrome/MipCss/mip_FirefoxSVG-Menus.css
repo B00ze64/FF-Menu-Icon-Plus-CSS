@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.5.2 (MIP/CSS)
+ * Menu Icon Plus CSS v1.5.3 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -202,7 +202,7 @@
 #context-printframe::Before,
 #context-print-selection::Before {
 
-	content: url("chrome://browser/skin/print.svg");
+	content: url("../MipImages/FF/print.svg");
 
 	display: block;
 	width: 16px;
@@ -276,7 +276,7 @@
 menuitem[cmd="cmd_undo"]::Before,
 #textbox-contextmenu menuitem[command="cmd_undo"]::Before {
 
-	content: url("chrome://browser/skin/undo.svg");
+	content: url("../MipImages/FF/undo.svg");
 
 	display: block;
 	width: 16px;
@@ -525,7 +525,7 @@ menuitem[cmd="cmd_delete"] > label,
 #context-searchselect::Before,
 #context-searchselect-private::Before {
 
-	content: url("chrome://browser/skin/search-glass.svg");
+	content: url("../MipImages/FF/search-glass.svg");
 
 	display: block;
 	width: 16px;
@@ -536,7 +536,7 @@ menuitem[cmd="cmd_delete"] > label,
 
 #menu_findAgain::Before {
 
-	content: url("chrome://browser/skin/search-glass.svg");
+	content: url("../MipImages/FF/search-glass.svg");
 
 	display: block;
 	width: 16px;
@@ -1051,6 +1051,41 @@ menuitem.searchbar-clear-history > label {
 	margin-inline-start: -20px !important;
 	}
 
+/* FF85 Show Other Bookmarks ****************************************************/
+
+#show-other-bookmarks_PersonalToolbar[checked=false]::Before {
+
+	content: url("../MipImages/FF/unfiledBookmarks.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	vertical-align: middle;
+	}
+
+#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"][checked=false]::Before {
+
+	content: url("../MipImages/FF/container-unhide-black.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	vertical-align: middle;
+	}
+
+#show-other-bookmarks_PersonalToolbar[checked=false] > label,
+#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"][checked=false] > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+#PlacesToolbar #OtherBookmarks {
+	list-style-image: url("../MipImages/FF/unfiledBookmarks.svg") !important;
+	-moz-image-region: auto !important;
+}
+
 /********************************************************************************
  *
  * LIBRARY (Toolbar)
@@ -1508,7 +1543,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 
 #menu_devToolbox:not([checked=true])::Before {
 
-	content: url("chrome://browser/skin/toggle.svg");
+	content: url("../MipImages/FF/toggle.svg");
 
 	display: block;
 	width: 16px;
@@ -1905,6 +1940,8 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 
 /* Tab-New **********************************************************************/
 
+#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"][checked=false]::Before, /* FF85 Bookmarks Toolbar Sub-Menu */
+
 #menu_newNavigatorTab::Before,
 #context-openlinkintab::Before,
 #context-openframeintab::Before,
@@ -1935,6 +1972,8 @@ menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer)[disa
 
 	opacity: 0.4;
 	}
+
+#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"][checked=false] > label,
 
 #menu_newNavigatorTab > label,
 #context-openlinkintab > label,
@@ -2540,6 +2579,8 @@ menuitem[generateditemid="16"]:not([checked=true]) > label {
 
 /* HIDE STUFF that has no Un-Hide / Downloads,FullScreenToolbar,PIP Auto-Hide ***/
 
+#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"][checked=false]::Before, /* FF85 Bookmarks Toolbar Sub-Menu */
+
 #toolbar-context-autohide-downloads-button:not([checked=true])::Before,
 #autohide-context menuitem[data-l10n-id="full-screen-autohide"]:not([checked=true])::Before,
 #pictureInPictureToggleContextMenu menuitem[oncommand="PictureInPicture.hideToggle();"]::Before,
@@ -2555,6 +2596,8 @@ menuitem[generateditemid="16"]:not([checked=true]) > label {
 	margin-inline-start: 6px;
 	vertical-align: middle;
 	}
+
+#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"][checked=false] > label,
 
 #toolbar-context-autohide-downloads-button:not([checked=true]) > label,
 #autohide-context menuitem[data-l10n-id="full-screen-autohide"]:not([checked=true]) > label,
