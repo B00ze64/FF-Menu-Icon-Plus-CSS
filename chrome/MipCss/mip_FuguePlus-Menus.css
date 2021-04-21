@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.5.3 (MIP/CSS)
+ * Menu Icon Plus CSS v1.5.4 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -470,6 +470,7 @@ menuitem[cmd="cmd_undo"] > label,
 
 /* Redo *************************************************************************/
 
+menuitem[data-l10n-id="text-action-redo"]::Before,
 #menu_redo::Before,
 #orgRedo::Before {
 
@@ -487,12 +488,14 @@ menuitem[cmd="cmd_undo"] > label,
 	vertical-align: middle;
 	}
 
+menuitem[data-l10n-id="text-action-redo"][disabled=true]::Before,
 #menu_redo[disabled=true]::Before,
 #orgRedo[disabled=true]::Before {
 
 	opacity: 0.4;
 	}
 
+menuitem[data-l10n-id="text-action-redo"] > label,
 #menu_redo > label,
 #orgRedo > label {
 
@@ -3483,7 +3486,8 @@ menuitem.customize-context-addToPanel > label {
 
 /* Tab-Move Start/End (and Close to the Right) **********************************/
 
-#context_moveToStart::Before {
+#context_moveToStart::Before,
+#context_closeTabsToTheStart::Before {
 
 /*	content: url("chrome://browser/skin/back.svg");
 	content: url("../MipImages/Crystal/crystal_ToStart.png");
@@ -3520,14 +3524,16 @@ menuitem.customize-context-addToPanel > label {
 
 #context_moveToStart[disabled=true]::Before,
 #context_moveToEnd[disabled=true]::Before,
-#context_closeTabsToTheEnd[disabled=true]::Before {
+#context_closeTabsToTheEnd[disabled=true]::Before,
+#context_closeTabsToTheStart[disabled=true]::Before {
 
 	opacity: 0.4;
 	}
 
 #context_moveToStart > label,
 #context_moveToEnd > label,
-#context_closeTabsToTheEnd > label {
+#context_closeTabsToTheEnd > label,
+#context_closeTabsToTheStart > label {
 
 	margin-inline-start: -20px !important;
 	}
@@ -4815,7 +4821,8 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-from-toolbar"] > label {
 
 #menu_customizeToolbars::Before,
 menuitem[command="cmd_CustomizeToolbars"]::Before, /* #customizationPanelContextMenu */
-menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"]::Before {
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"]::Before {
 
 /*	content: url("chrome://browser/skin/customize.svg");
 	content: url("../MipImages/FF/themeGeneric-16.png");
@@ -4834,15 +4841,17 @@ menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"]::Before {
 	}
 
 #menu_customizeToolbars[disabled=true]::Before,
-menuitem[command="cmd_CustomizeToolbars"][disabled=true]::Before
-menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"][disabled=true]::Before {
+menuitem[command="cmd_CustomizeToolbars"][disabled=true]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"][disabled=true]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"][disabled=true]::Before {
 
 	opacity: 0.4;
 	}
 
 #menu_customizeToolbars > label,
 menuitem[command="cmd_CustomizeToolbars"] > label,
-menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"] > label {
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"] > label,
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"] > label {
 
 	margin-inline-start: -20px !important;
 	}

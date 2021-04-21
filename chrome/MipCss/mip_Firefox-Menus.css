@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.5.2 (MIP/CSS)
+ * Menu Icon Plus CSS v1.5.4 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -1406,7 +1406,8 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 
 #menu_customizeToolbars::Before,
 menuitem[command="cmd_CustomizeToolbars"]::Before, /* #customizationPanelContextMenu */
-menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"]::Before {
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"]::Before {
 
 	content: url("../MipImages/FF/themeGeneric-16.png");
 
@@ -1418,15 +1419,17 @@ menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"]::Before {
 	}
 
 #menu_customizeToolbars[disabled=true]::Before,
-menuitem[command="cmd_CustomizeToolbars"][disabled=true]::Before
-menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"][disabled=true]::Before {
+menuitem[command="cmd_CustomizeToolbars"][disabled=true]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"][disabled=true]::Before,
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"][disabled=true]::Before {
 
 	opacity: 0.4;
 	}
 
 #menu_customizeToolbars > label,
 menuitem[command="cmd_CustomizeToolbars"] > label,
-menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"] > label {
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"] > label,
+menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"] > label {
 
 	margin-inline-start: -20px !important;
 	}
