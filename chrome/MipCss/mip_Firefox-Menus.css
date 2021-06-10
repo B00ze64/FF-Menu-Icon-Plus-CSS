@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.5.4 (MIP/CSS)
+ * Menu Icon Plus CSS v1.5.5 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -321,6 +321,7 @@ menuitem[command="downloadsCmd_copyLocation"] > label,
 #context-paste::Before,
 #orgPaste::Before,
 #placesContext_paste::Before,
+#placesContext_paste_group::Before,
 menuitem[cmd="cmd_paste"]::Before,
 #textbox-contextmenu menuitem[command="cmd_paste"]::Before {
 
@@ -337,6 +338,7 @@ menuitem[cmd="cmd_paste"]::Before,
 #context-paste[disabled=true]::Before,
 #orgPaste[disabled=true]::Before,
 #placesContext_paste[disabled=true]::Before,
+#placesContext_paste_group[disabled=true]::Before,
 menuitem[cmd="cmd_paste"][disabled=true]::Before,
 #textbox-contextmenu menuitem[command="cmd_paste"][disabled=true]::Before {
 
@@ -347,6 +349,7 @@ menuitem[cmd="cmd_paste"][disabled=true]::Before,
 #context-paste > label,
 #orgPaste > label,
 #placesContext_paste > label,
+#placesContext_paste_group > label,
 menuitem[cmd="cmd_paste"] > label,
 #textbox-contextmenu menuitem[command="cmd_paste"] > label {
 
@@ -418,6 +421,16 @@ menuitem.searchbar-paste-and-search > label {
 
 	margin-inline-start: -20px !important;
 	}
+
+/* Find Tabs (TABS PANEL) *******************************************************/
+
+#allTabsMenu-searchTabs > image {
+
+	list-style-image: url("../MipImages/FF/Search-glass-2.png");
+	-moz-image-region: auto;
+	}
+
+#allTabsMenu-searchTabs > label { padding-inline-start: 8px !important; }
 
 /********************************************************************************
  *
@@ -604,6 +617,7 @@ menuitem.downloadRemoveFromHistoryMenuItem > label {
 
 /* Bookmarks Show All/Sidebar ***************************************************/
 
+#placesContext_showAllBookmarks::Before,
 #bookmarksShowAll::Before {
 
 	content: url("../MipImages/FF/allBookmarks.png");
@@ -627,6 +641,7 @@ menuitem.downloadRemoveFromHistoryMenuItem > label {
 	}
 
 #bookmarksShowAll > label,
+#placesContext_showAllBookmarks > label,
 #menu_bookmarksSidebar:not([checked=true]) > label {
 
 	margin-inline-start: -20px !important;
@@ -646,6 +661,22 @@ menuitem.downloadRemoveFromHistoryMenuItem > label {
 	 list-style-image: url("../MipImages/FF/allBookmarks.png");
 	-moz-image-region: auto;
 	 }
+
+#BMB_bookmarksShowAll::Before { /* Alignment is broken in FF89 (fixing it) and the list-icon is missing */
+
+	content: url("../MipImages/FF/allBookmarks.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 1px;
+	vertical-align: middle;
+	}
+
+#BMB_bookmarksShowAll > label {
+
+	margin-inline-start: -25px !important;
+	}
 
 /* Bookmark This Page Link Tab or Frame + Bookmark-New **************************/
 
@@ -1085,9 +1116,10 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	}
 
 /* Performance Profiler *********************************************************/
-/* Re-use this for Task Manager FF87 */
+/* Re-use this for Task Manager FF87+ */
 
 #menuitem_performance::Before,
+#menu_taskManager::Before,
 #help_taskManager::Before {
 
 	content: url("../MipImages/FF/tool-profiler.png");
@@ -1173,6 +1205,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 #menuitem_netmonitor > label,
 #menuitem_styleeditor > label,
 #menuitem_performance > label,
+#menu_taskManager > label,
 #help_taskManager > label,
 #menu_devtools_remotedebugging > label,
 #menu_browserToolbox > label,

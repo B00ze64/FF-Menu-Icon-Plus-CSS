@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.4 (MIP/CSS)
+ * Menu Icon Plus CSS v1.5.5 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -259,7 +259,8 @@ menuitem[command="downloadsCmd_copyLocation"] > label {
 /* Paste ************************************************************************/
 
 #orgPaste::Before,
-#placesContext_paste::before {
+#placesContext_paste::before,
+#placesContext_paste_group::Before {
 
 /*	content: url("chrome://browser/skin/edit-paste.svg");
 	content: url("../MipImages/FF/paste.png");
@@ -278,13 +279,15 @@ menuitem[command="downloadsCmd_copyLocation"] > label {
 	}
 
 #orgPaste[disabled=true]::Before,
-#placesContext_paste[disabled=true]::before {
+#placesContext_paste[disabled=true]::before,
+#placesContext_paste_group[disabled=true]::Before {
 
 	opacity: .4;
 	}
 
 #orgPaste > label,
-#placesContext_paste > label {
+#placesContext_paste > label,
+#placesContext_paste_group > label {
 
 	margin-inline-start: -20px !important;
 	}
@@ -293,6 +296,8 @@ menuitem[command="downloadsCmd_copyLocation"] > label {
 
 #orgDelete::Before,
 #placesContext_delete::before,
+#placesContext_deleteBookmark::Before,
+#placesContext_deleteFolder::Before,
 #placesContext_delete_history::before {
 
 /*	content: url("chrome://devtools/skin/images/clear.svg");
@@ -317,6 +322,8 @@ menuitem[command="downloadsCmd_copyLocation"] > label {
 
 #orgDelete[disabled=true]::Before,
 #placesContext_delete[disabled=true]::before,
+#placesContext_deleteBookmark[disabled=true]::Before,
+#placesContext_deleteFolder[disabled=true]::Before,
 #placesContext_delete_history[disabled=true]::before {
 
 	opacity: .4;
@@ -324,6 +331,8 @@ menuitem[command="downloadsCmd_copyLocation"] > label {
 
 #orgDelete > label,
 #placesContext_delete > label,
+#placesContext_deleteBookmark > label,
+#placesContext_deleteFolder > label,
 #placesContext_delete_history > label {
 
 	margin-inline-start: -20px !important;
@@ -959,6 +968,8 @@ menuitem[command="downloadsCmd_openReferrer"] > label {
 
 /* Tab-New **********************************************************************/
 
+#placesContext_openBookmarkContainer\:tabs::Before, /* FF89 New Open All Bookmarks Menu Item (Bookmarks Toolbar and Library Folders) */
+
 #placesContext_open\:newtab::before,
 #placesContext_openLinks\:tabs::before,
 #placesContext_openContainer\:tabs::before {
@@ -978,6 +989,7 @@ menuitem[command="downloadsCmd_openReferrer"] > label {
 	vertical-align: middle;
 	}
 
+#placesContext_openBookmarkContainer\:tabs[disabled=true]::Before,
 #placesContext_open\:newtab[disabled=true]::Before,
 #placesContext_openLinks\:tabs[disabled=true]::Before,
 #placesContext_openContainer\:tabs[disabled=true]::Before {
@@ -985,6 +997,7 @@ menuitem[command="downloadsCmd_openReferrer"] > label {
 	opacity: .4;
 	}
 
+#placesContext_openBookmarkContainer\:tabs > label,
 #placesContext_open\:newtab > label,
 #placesContext_openLinks\:tabs > label,
 #placesContext_openContainer\:tabs > label {

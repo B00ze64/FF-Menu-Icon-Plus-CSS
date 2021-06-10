@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.5.4 (MIP/CSS)
+ * Menu Icon Plus CSS v1.5.5 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -633,6 +633,7 @@ menuitem[command="downloadsCmd_copyLocation"] > label,
 #context-paste::Before,
 #orgPaste::Before,
 #placesContext_paste::Before,
+#placesContext_paste_group::Before,
 menuitem[cmd="cmd_paste"]::Before,
 #textbox-contextmenu menuitem[command="cmd_paste"]::Before {
 
@@ -656,6 +657,7 @@ menuitem[cmd="cmd_paste"]::Before,
 #context-paste[disabled=true]::Before,
 #orgPaste[disabled=true]::Before,
 #placesContext_paste[disabled=true]::Before,
+#placesContext_paste_group[disabled=true]::Before,
 menuitem[cmd="cmd_paste"][disabled=true]::Before,
 #textbox-contextmenu menuitem[command="cmd_paste"][disabled=true]::Before {
 
@@ -666,6 +668,7 @@ menuitem[cmd="cmd_paste"][disabled=true]::Before,
 #context-paste > label,
 #orgPaste > label,
 #placesContext_paste > label,
+#placesContext_paste_group > label,
 menuitem[cmd="cmd_paste"] > label,
 #textbox-contextmenu menuitem[command="cmd_paste"] > label {
 
@@ -713,6 +716,8 @@ menuitem.searchbar-paste-and-search > label {
 #orgDelete::Before,
 #placesContext_delete::Before,
 #placesContext_delete_history::Before,
+#placesContext_deleteBookmark::Before,
+#placesContext_deleteFolder::Before,
 menuitem[cmd="cmd_delete"]::Before,
 #textbox-contextmenu menuitem[command="cmd_delete"]::Before {
 
@@ -741,6 +746,8 @@ menuitem[cmd="cmd_delete"]::Before,
 #orgDelete[disabled=true]::Before,
 #placesContext_delete[disabled=true]::Before,
 #placesContext_delete_history[disabled=true]::Before,
+#placesContext_deleteBookmark[disabled=true]::Before,
+#placesContext_deleteFolder[disabled=true]::Before,
 menuitem[cmd="cmd_delete"][disabled=true]::Before,
 #textbox-contextmenu menuitem[command="cmd_delete"][disabled=true]::Before {
 
@@ -752,6 +759,8 @@ menuitem[cmd="cmd_delete"][disabled=true]::Before,
 #orgDelete > label,
 #placesContext_delete > label,
 #placesContext_delete_history > label,
+#placesContext_deleteBookmark > label,
+#placesContext_deleteFolder > label,
 menuitem[cmd="cmd_delete"] > label,
 #textbox-contextmenu menuitem[command="cmd_delete"] > label {
 
@@ -861,6 +870,23 @@ menuitem[cmd="cmd_selectAll"] > label,
 
 	margin-inline-start: -20px !important;
 	}
+
+/* Find Tabs (TABS PANEL) *******************************************************/
+
+#allTabsMenu-searchTabs > image {
+
+/*	list-style-image: url("../MipImages/FF/search-glass.svg");
+	list-style-image: url("../MipImages/FF/Search-glass-2.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Find.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Find.png");
+	list-style-image: url("../MipImages/Silk/silk_Find.png");
+	list-style-image: url("../MipImages/Tango/tango_Find.png"); */
+
+	list-style-image: url("../MipImages/Crystal/crystal_Find.png");
+	-moz-image-region: auto;
+	}
+
+#allTabsMenu-searchTabs > label { padding-inline-start: 8px !important; }
 
 /********************************************************************************
  *
@@ -1395,6 +1421,7 @@ menuitem.searchbar-clear-history > label {
 
 /* Bookmarks Show All/Sidebar ***************************************************/
 
+#placesContext_showAllBookmarks::Before,
 #bookmarksShowAll::Before {
 
 /*	content: url("chrome://browser/skin/library.svg");
@@ -1433,6 +1460,7 @@ menuitem.searchbar-clear-history > label {
 	}
 
 #bookmarksShowAll > label,
+#placesContext_showAllBookmarks > label,
 #menu_bookmarksSidebar:not([checked=true]) > label {
 
 	margin-inline-start: -20px !important;
@@ -1466,6 +1494,29 @@ menuitem.searchbar-clear-history > label {
 	list-style-image: url("../MipImages/Crystal/crystal_Bookmarks.png");
 	-moz-image-region: auto;
 	 }
+
+#BMB_bookmarksShowAll::Before { /* Alignment is broken in FF89 (fixing it) and the list-icon is missing */
+
+/*	content: url("chrome://browser/skin/library.svg");
+	content: url("../MipImages/FF/allBookmarks.png");
+	content: url("../MipImages/Fugue/fugue_Bookmarks-Opened.png");
+	content: url("../MipImages/Oxygen/oxygen_Bookmarks-Organize.png");
+	content: url("../MipImages/Silk/silk_Bookmarks-Opened.png");
+	content: url("../MipImages/Tango/tango_Bookmarks-Organize.png");
+	*/
+	content: url("../MipImages/Crystal/crystal_Bookmarks.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 1px;
+	vertical-align: middle;
+	}
+
+#BMB_bookmarksShowAll > label {
+
+	margin-inline-start: -25px !important;
+	}
 
 #BMB_viewBookmarksToolbar[label^="Hide"] image.menu-iconic-icon {
 
@@ -1612,8 +1663,10 @@ menuitem.searchbar-clear-history > label {
 	margin-inline-start: -20px !important;
 	}
 
-/* Bookmark Properties **********************************************************/
+/* Bookmark/Folder Properties ***************************************************/
 
+#placesContext_show_bookmark\:info::Before,
+#placesContext_show_folder\:info::Before,
 #placesContext_show\:info::Before {
 
 /*	content: url("../MipImages/Fugue/fugue_FileIni.png");
@@ -1631,11 +1684,15 @@ menuitem.searchbar-clear-history > label {
 	vertical-align: middle;
 	}
 
+#placesContext_show_bookmark\:info[disabled=true]::Before,
+#placesContext_show_folder\:info[disabled=true]::Before,
 #placesContext_show\:info[disabled=true]::Before {
 
 	opacity: 0.4;
 	}
 
+#placesContext_show_bookmark\:info > label,
+#placesContext_show_folder\:info > label,
 #placesContext_show\:info > label {
 
 	margin-inline-start: -20px !important;
@@ -2648,9 +2705,10 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	}
 
 /* Performance Profiler *********************************************************/
-/* Re-use this for Task Manager FF87 */
+/* Re-use this for Task Manager FF87+ */
 
 #menuitem_performance::Before,
+#menu_taskManager::Before,
 #help_taskManager::Before {
 
 /*	content: url("chrome://devtools/skin/images/tool-profiler.svg");
@@ -2864,6 +2922,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 #menuitem_netmonitor > label,
 #menuitem_styleeditor > label,
 #menuitem_performance > label,
+#menu_taskManager > label,
 #help_taskManager > label,
 #menuitem_storage > label,
 #menuitem_accessibility > label,
@@ -3129,7 +3188,10 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 /* Tab-New **********************************************************************/
 
 #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"][checked=false]::Before, /* FF85 Bookmarks Toolbar Sub-Menu */
+#placesContext_openBookmarkContainer\:tabs::Before, /* FF89 New Open All Bookmarks Menu Item (Bookmarks Toolbar and Library Folders) */
 
+#context_openANewTab::Before,
+#toolbar-context-openANewTab::Before,
 #menu_newNavigatorTab::Before,
 #context-openlinkintab::Before,
 #context-openframeintab::Before,
@@ -3159,6 +3221,7 @@ menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer)::Bef
 #menu_newNavigatorTab[disabled=true]::Before,
 #context-openlinkintab[disabled=true]::Before,
 #context-openframeintab[disabled=true]::Before,
+#placesContext_openBookmarkContainer\:tabs[disabled=true]::Before,
 #placesContext_open\:newtab[disabled=true]::Before,
 #placesContext_openLinks\:tabs[disabled=true]::Before,
 #placesContext_openContainer\:tabs[disabled=true]::Before,
@@ -3168,10 +3231,12 @@ menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer)[disa
 	}
 
 #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"][checked=false] > label,
-
+#context_openANewTab > label,
+#toolbar-context-openANewTab > label,
 #menu_newNavigatorTab > label,
 #context-openlinkintab > label,
 #context-openframeintab > label,
+#placesContext_openBookmarkContainer\:tabs > label,
 #placesContext_open\:newtab > label,
 #placesContext_openLinks\:tabs > label,
 #placesContext_openContainer\:tabs > label,
@@ -4427,6 +4492,7 @@ menuitem[generateditemid="18"]:not([checked=true]) > label {
 
 #screenshots_mozilla_org-menuitem-_create-screenshot > hbox.menu-iconic-left { display: none !important; }
 
+#context-take-screenshot::Before,
 #screenshots_mozilla_org-menuitem-_create-screenshot::Before {
 
 /*	content: url("../MipImages/Crystal/crystal_SaveImage.png");
@@ -4451,6 +4517,11 @@ menuitem[generateditemid="18"]:not([checked=true]) > label {
 #screenshots_mozilla_org-menuitem-_create-screenshot > label {
 
 	margin-inline-start: 10px !important;
+	}
+
+#context-take-screenshot > label {
+	
+	margin-inline-start: -20px !important;
 	}
 
 /********************************************************************************

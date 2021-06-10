@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.4 (MIP/CSS)
+ * Menu Icon Plus CSS v1.5.5 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -169,7 +169,8 @@ menuitem[command="downloadsCmd_copyLocation"] > label {
 /* Paste ************************************************************************/
 
 #orgPaste::Before,
-#placesContext_paste::before {
+#placesContext_paste::before,
+#placesContext_paste_group::Before {
 
 	content: url("../MipImages/FF/paste.png");
 
@@ -181,13 +182,15 @@ menuitem[command="downloadsCmd_copyLocation"] > label {
 	}
 
 #orgPaste[disabled=true]::Before,
-#placesContext_paste[disabled=true]::before {
+#placesContext_paste[disabled=true]::before,
+#placesContext_paste_group[disabled=true]::Before {
 
 	opacity: .4;
 	}
 
 #orgPaste > label,
-#placesContext_paste > label {
+#placesContext_paste > label,
+#placesContext_paste_group > label {
 
 	margin-inline-start: -20px !important;
 	}

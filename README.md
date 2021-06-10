@@ -1,4 +1,4 @@
-# Menu Icon Plus CSS (MIP/CSS) v1.0
+# Menu Icon Plus CSS (MIP/CSS) v1.5.5
 ## Add Icons To Firefox Menus/Context-Menus
 
 This project is a bunch of CSS files (and images) that you *@import* in your *userChrome.css* and *userContent.css* in Firefox to add icons to the Firefox toolbar menus and to various context menus. It currently styles every menuitem that exists in XUL, but the **panels** (those new white pop-up menus, which are grey in Darkmode) are not yet styled, that will come later.
@@ -17,7 +17,7 @@ Besides copying all the project's files correctly in your profile/chrome folder 
 
 # The Icon Themes
 
-The original Menu Icon Plus XUL extension included 5 themes, and **FF-Menu-Icon-Plus-CSS (MIP/CSS)** includes all 5, plus 3 more: There is a **Firefox SVG** theme which uses exclusively built-in Firefox SVG icons, a **Firefox** "Theme" which you can use to override icons from other themes with the old PNG icons from Firefox 24 and 52, and **Fugue Plus** which is a mix of Fugue and whatever icon I find better looking from the other themes. I have tested all of them, but the only theme I've really spent a lot of time on is **Fugue Plus**. You are encouraged to open issues and make corrections or suggestions, especially for **Firefox SVG**.
+The original Menu Icon Plus XUL extension included 5 themes, and **FF-Menu-Icon-Plus-CSS (MIP/CSS)** includes all 5, plus 3 more: There is a **Firefox SVG** theme which uses exclusively built-in Firefox SVG icons, a **Firefox** "Theme" which you can use to override icons from other themes with the old PNG icons from Firefox 24 and 52, and **Fugue Plus** which is a mix of Fugue and whatever icon I find better looking from the other themes. I have tested all of them when I first created their CSS, but the only theme I've really spent a lot of time on is **Fugue Plus**, and it's the only one I really test when I do updates. You are encouraged to open issues and make corrections or suggestions, especially for **Firefox SVG**, which I am only keeping working and not looking at Mozilla's new SVG icons as they become available.
 
 All the Major themes include the icons from all the other themes commented out. This makes it easy for you to pick the theme you like most, and exchange the icons you don't with ones you do. You are encouraged to do this.
 
@@ -50,9 +50,9 @@ All the Themes in Alphabetical order:
 Every theme has up to 3 files, and some override files which only change the picture used but do not themselves insert the icon element (you use them AFTER a complete theme file). Let's take the Crystal theme for example, you will find:
 
 * mip_Crystal-Config.css:
-    * This is used in *userContent.css* and adds icons to the old about:config, which you can still get to as of now.
+    * This is used in *userContent.css* and adds icons to the old about:config. This is still in the project, but the old about:config page is now gone and the new page no longer has context menus; only useful for people running older versions of Firefox.
 * mip_Crystal-Library.css:
-    * This is also used in *userContent.css* and adds icons to the Library when you are opening it inside a TAB.
+    * This is also used in *userContent.css* and adds icons to the Library when you are opening it inside a Tab. The Library-In-A-Tab context menu spacing is broken on Win7 in FF89 (and maybe earlier). It's possible those menus are **panels** on Win10, I have not looked into this as I no longer open the Library inside a Tab. I am keeping the CSS updated, but until I get FF up and running on Win10, I'm not doing anything to fix the strange spacing...
 * mip_Crystal-Menus.css:
     * This is used in *userChrome.css* and adds icons to the Firefox menus and to the Library window.
 * mip_override_CutCopyPaste-Crystal.css:
