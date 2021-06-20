@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.5.5 (MIP/CSS)
+ * Menu Icon Plus CSS v2.0 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -8,6 +8,7 @@
  *   https://creativecommons.org/licenses/by/4.0/
  *
  * - The Original MIP Firefox Extension (c) Justin Rodes http://www.codedawn.com/menu-icons-plus.php
+ * - MOST OF THE PANELS CODE (c) Black7375 (https://github.com/black7375/Firefox-UI-Fix)
  *
  * + The icons come from ->
  *
@@ -33,7 +34,8 @@
  * + Contributors ->
  *
  *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
- *	Acid-Crash Discovered bug with the Responsive Design icon and suggested the fix for it.
+ *	Acid-Crash Discovered bug with the Responsive Design SVG icon and suggested the fix for it
+ *	Devtools/Help Menu SVG icons and Panels code by Black7375 (https://github.com/black7375/Firefox-UI-Fix)
  *
  * + NOTES:
  * - TabSize=8
@@ -44,10 +46,10 @@
  * STANDARD MENUS: FIREFOX SVG
  ********************************************************************************
  *
- * This is the main skinning file for the Firefox menus. This one uses only 
+ * This is the main skinning file for the Firefox menus. This one uses only
  * built-in Firefox SVG icons (and SVG icons extracted from Mozilla extensions).
- * You can use it alone, or you can load it AFTER one of the other skins to 
- * override them and use SVG icons whenever possible. Alternative icons are 
+ * You can use it alone, or you can load it AFTER one of the other skins to
+ * override them and use SVG icons whenever possible. Alternative icons are
  * commented-out.
  *
  */
@@ -75,7 +77,7 @@
 #syncedTabsOpenSelectedInWindow::Before,
 #_testpilot-containers-menuitem-_move-to-new-window-container::Before {
 
-	content: url("chrome://browser/skin/new-window.svg");
+	content: url("../MipImages/FF/new-window.svg");
 
 	display: block;
 	width: 16px;
@@ -144,7 +146,7 @@
 #menu_closeWindow::Before,
 #orgClose::Before {
 
-	content: url("chrome://global/skin/reader/close-16.svg");
+	content: url("chrome://global/skin/icons/close.svg");
 
 	display: block;
 	width: 16px;
@@ -202,6 +204,7 @@
 #context-printframe::Before,
 #context-print-selection::Before {
 
+/*	content: url("chrome://global/skin/icons/print.svg"); */
 	content: url("../MipImages/FF/print.svg");
 
 	display: block;
@@ -308,6 +311,13 @@ menuitem[cmd="cmd_undo"] > label,
 
 	margin-inline-start: -20px !important;
 	}
+
+#allTabsMenu-undoCloseTab {
+
+	list-style-image: url("../MipImages/FF/undo.svg");
+	}
+
+#allTabsMenu-undoCloseTab > label { padding-inline-start: 8px !important; }
 
 /* Cut **************************************************************************/
 
@@ -573,7 +583,6 @@ menuitem[cmd="cmd_delete"] > label,
 #allTabsMenu-searchTabs > image {
 
 	list-style-image: url("../MipImages/FF/search-glass.svg");
-	-moz-image-region: auto;
 	}
 
 #allTabsMenu-searchTabs > label { padding-inline-start: 8px !important; }
@@ -610,7 +619,8 @@ menu#viewToolbarsMenu::Before {
 
 #toggle_PersonalToolbar:not([checked=true])::Before {
 
-	content: url("chrome://browser/skin/places/bookmarksToolbar.svg");
+/*	content: url("chrome://browser/skin/places/bookmarksToolbar.svg"); */
+	content: url("chrome://browser/skin/bookmarks-toolbar.svg");
 
 	display: block;
 	width: 16px;
@@ -646,6 +656,18 @@ menu#viewToolbarsMenu::Before {
 
 /* Zoom/Zoom-In/Zoom-Out/Zoom-Reset**********************************************/
 
+#viewFullZoomMenu::Before {
+
+	content: url("../MipImages/Firefox-UI-Fix/screenshot.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	vertical-align: middle;
+	padding-top: 2px;
+	}
+
 #menu_zoomEnlarge::Before {
 
 	content: url("chrome://browser/skin/zoom-in.svg");
@@ -679,6 +701,7 @@ menu#viewToolbarsMenu::Before {
 	vertical-align: middle;
 	}
 
+#viewFullZoomMenu > label,
 #menu_zoomEnlarge > label,
 #menu_zoomReduce > label,
 #toggle_zoom:not([checked=true]) > label {
@@ -770,7 +793,7 @@ menu#viewToolbarsMenu::Before {
 #context-bidi-text-direction-toggle::Before,
 #context-bidi-page-direction-toggle::Before {
 
-/*	content: url("chrome://browser/skin/sync.svg"); */
+/*	content: url("../MipImages/FF/sync.svg"); */
 	content: url("chrome://browser/skin/toggle.svg");
 
 	display: block;
@@ -964,7 +987,8 @@ menuitem.searchbar-clear-history > label {
 	}
 
 /* Bookmarks toolbar Button PANEL
- * NOTE that this (and containers in +) are the only panels included so far in MIP/CSS */
+ * NOTE that this (and > tab-Overflow) are the only panels included in MIP/CSS's Standard Menus file
+ * The reason this is here is because Aris's bookmark-folders CSS already skins some of the BMB and because we skin containers here */
 
 #BMB_viewBookmarksSidebar .menu-iconic-icon {
 
@@ -994,12 +1018,12 @@ menuitem.searchbar-clear-history > label {
 	margin-inline-start: -25px !important;
 	}
 
-#BMB_viewBookmarksToolbar[label^="Hide"] image.menu-iconic-icon {
+#BMB_viewBookmarksToolbar.menuitem-iconic.subviewbutton[label^="Hide"] > .menu-iconic-left > image.menu-iconic-icon {
 
 	list-style-image: url("../MipImages/FF/container-hide-black.svg");
 	}
 
-#BMB_viewBookmarksToolbar[label^="View"] image.menu-iconic-icon {
+#BMB_viewBookmarksToolbar.menuitem-iconic.subviewbutton[label^="View"] > .menu-iconic-left > image.menu-iconic-icon {
 
 	list-style-image: url("../MipImages/FF/container-unhide-black.svg");
 	}
@@ -1067,7 +1091,7 @@ menuitem.searchbar-clear-history > label {
 #placesContext_new\:folder::Before,
 #newfolder::Before {
 
-	content: url("chrome://browser/skin/folder.svg");
+	content: url("../MipImages/FF/folder.svg");
 
 	display: block;
 	width: 16px;
@@ -1243,7 +1267,7 @@ menuitem.searchbar-clear-history > label {
 
 #menu_openDownloads::Before {
 
-	content: url("chrome://browser/skin/downloads/download-icons.svg#arrow-with-bar");
+	content: url("chrome://browser/skin/downloads/downloads.svg");
 
 	display: block;
 	width: 16px;
@@ -1293,7 +1317,7 @@ menuitem[data-l10n-id="downloads-cmd-resume"] > label {
 
 menuitem.downloadShowMenuItem::Before { /* [command="downloadsCmd_show"] */
 
-	content: url("chrome://browser/skin/folder.svg");
+	content: url("../MipImages/FF/folder.svg");
 
 	display: block;
 	width: 16px;
@@ -1362,7 +1386,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 #context-viewimagedesc::Before {
 
 /*	content: url("chrome://browser/skin/info.svg"); /* blue */
-	content: url("chrome://mozapps/skin/profile/information.svg");
+	content: url("chrome://devtools/skin/images/aboutdebugging-information.svg");
 
 	display: block;
 	width: 16px;
@@ -1383,6 +1407,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 /* Options **********************************************************************/
 
 #menu_preferences::Before,
+#syncedTabsManageDevices::Before,
 #blockedPopupOptions menuitem[oncommand="gPopupBlockerObserver.editPopupSettings();"]::Before {
 
 	content: url("chrome://global/skin/icons/settings.svg");
@@ -1395,6 +1420,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	}
 
 #menu_preferences > label,
+#syncedTabsManageDevices > label,
 #blockedPopupOptions menuitem[oncommand="gPopupBlockerObserver.editPopupSettings();"] > label {
 
 	margin-inline-start: -20px !important;
@@ -1412,7 +1438,8 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 #sync-unverifieditem::Before,
 #sync-reauthitem::Before {
 
-	content: url("chrome://browser/skin/fxa/avatar.svg");
+/*	content: url("chrome://browser/skin/fxa/avatar.svg"); */
+	content: url("chrome://browser/skin/fxa/avatar-empty.svg");
 
 	display: block;
 	width: 16px;
@@ -1437,7 +1464,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 #sync-tabs-menuitem::Before,
 #menu_tabsSidebar:not([checked=true])::Before {
 
-	content: url("chrome://browser/skin/sync.svg");
+	content: url("../MipImages/FF/sync.svg");
 
 	display: block;
 	width: 16px;
@@ -1475,22 +1502,23 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	}
 
 /* Manage Devices ***************************************************************/
+/* Moved to OPTIONS/SETTINGS
 
-#syncedTabsManageDevices::Before {
+	#syncedTabsManageDevices::Before {
 
-	content: url("chrome://browser/skin/fxa/add-device.svg");
+		content: url("chrome://browser/skin/fxa/add-device.svg");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		vertical-align: middle;
+		}
 
-#syncedTabsManageDevices > label {
+	#syncedTabsManageDevices > label {
 
-	margin-inline-start: -20px !important;
-	}
+		margin-inline-start: -20px !important;
+		} */
 
 /* Send To Device ***************************************************************/
 
@@ -1523,11 +1551,11 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 
 /* Send To Device: Device List **************************************************/
 
-#context_sendTabToDevicePopupMenu menuitem[label^="Connect Another Device"]::Before,
-#context-sendpagetodevice-popup menuitem[label^="Connect Another Device"]::Before,
-#context-sendlinktodevice-popup menuitem[label^="Connect Another Device"]::Before {
+#context_sendTabToDevicePopupMenu menuitem[label^="Send to All Devices"]::Before,
+#context-sendpagetodevice-popup menuitem[label^="Send to All Devices"]::Before,
+#context-sendlinktodevice-popup menuitem[label^="Send to All Devices"]::Before {
 
-	content: url("chrome://browser/skin/fxa/add-device.svg");
+	content: url("chrome://browser/skin/send-to-device.svg");
 
 	display: block;
 	width: 16px;
@@ -1536,9 +1564,26 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	vertical-align: middle;
 	}
 
-#context_sendTabToDevicePopupMenu menuitem[label^="Connect Another Device"] > label,
-#context-sendpagetodevice-popup menuitem[label^="Connect Another Device"] > label,
-#context-sendlinktodevice-popup menuitem[label^="Connect Another Device"] > label {
+#context_sendTabToDevicePopupMenu menuitem[label^="Manage Devices"]::Before,
+#context-sendpagetodevice-popup menuitem[label^="Manage Devices"]::Before,
+#context-sendlinktodevice-popup menuitem[label^="Manage Devices"]::Before {
+
+/*	content: url("chrome://browser/skin/fxa/add-device.svg"); */
+	content: url("chrome://global/skin/icons/settings.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	vertical-align: middle;
+	}
+
+#context_sendTabToDevicePopupMenu menuitem[label^="Send to All Devices"] > label,
+#context-sendpagetodevice-popup menuitem[label^="Send to All Devices"] > label,
+#context-sendlinktodevice-popup menuitem[label^="Send to All Devices"] > label,
+#context_sendTabToDevicePopupMenu menuitem[label^="Manage Devices"] > label,
+#context-sendpagetodevice-popup menuitem[label^="Manage Devices"] > label,
+#context-sendlinktodevice-popup menuitem[label^="Manage Devices"] > label {
 
 	margin-inline-start: -20px !important;
 	}
@@ -1553,7 +1598,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 
 #webDeveloperMenu::Before {
 
-	content: url("chrome://browser/skin/developer.svg");
+	content: url("chrome://browser/skin/ion.svg");
 
 	display: block;
 	width: 16px;
@@ -1567,7 +1612,8 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 #getMoreDevtools::Before,
 #extensionsForDevelopers::Before {
 
-	content: url("chrome://browser/skin/developer.svg");
+/*	content: url("chrome://browser/skin/developer.svg"); */
+	content: url("chrome://devtools/skin/images/debugging-addons.svg");
 
 	display: block;
 	width: 16px;
@@ -1580,7 +1626,8 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 
 #menu_devToolbox:not([checked=true])::Before {
 
-	content: url("../MipImages/FF/toggle.svg");
+/*	content: url("../MipImages/FF/toggle.svg"); */
+	content: url("chrome://browser/skin/developer.svg");
 
 	display: block;
 	width: 16px;
@@ -1662,8 +1709,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	vertical-align: middle;
 	}
 
-/* Performance Profiler *********************************************************/
-/* Re-use this for Task Manager FF87+ */
+/* Performance Profiler/Task Manager ********************************************/
 
 #menuitem_performance::Before,
 #menu_taskManager::Before,
@@ -1734,22 +1780,22 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 
 #menu_devtools_remotedebugging::Before {
 
-	content: url("../MipImages/FF/remote.png");
+/*	content: url("../MipImages/FF/remote.png"); filter: grayscale(100%) brightness(70%); */
+	content: url("../MipImages/Firefox-UI-Fix/bug.svg");
 
 	display: block;
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
 	vertical-align: middle;
-
-	filter: grayscale(100%) brightness(70%);
 	}
 
 /* Toolbox'es *******************************************************************/
 
 #menu_browserToolbox::Before {
 
-	content: url("../MipImages/FF/tilt-black.png");
+/*	content: url("../MipImages/FF/tilt-black.png"); */
+	content: url("../MipImages/Firefox-UI-Fix/webdeveloper.svg");
 
 	display: block;
 	width: 16px;
@@ -1760,7 +1806,8 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 
 #menu_browserContentToolbox::Before {
 
-	content: url("../MipImages/FF/tilt-black.png");
+/*	content: url("../MipImages/FF/tilt-black.png"); */
+	content: url("../MipImages/Firefox-UI-Fix/command-frames.svg");
 
 	display: block;
 	width: 16px;
@@ -1773,8 +1820,9 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 
 #menu_browserConsole::Before {
 
-    	content: url("chrome://devtools/skin/images/tool-webconsole.svg"); 
-/*    	content: url("chrome://global/skin/icons/chevron.svg"); */
+/*    	content: url("chrome://global/skin/icons/chevron.svg");
+    	content: url("chrome://devtools/skin/images/tool-webconsole.svg"); */
+	content: url("chrome://devtools/skin/images/command-console.svg");
 
 	display: block;
 	width: 16px;
@@ -1787,15 +1835,17 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 
 #menu_responsiveUI:not([checked=true])::Before {
 
-	content: url("chrome://devtools/skin/images/command-responsivemode.svg");
+/*	content: url("chrome://devtools/skin/images/command-responsivemode.svg");
+	-moz-context-properties: fill, fill-opacity;
+	 fill-opacity: 0; */
+
+	content: url("../MipImages/Firefox-UI-Fix/command-responsivemode.svg");
 
 	display: block;
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
 	vertical-align: middle;
-	-moz-context-properties: fill, fill-opacity;
-	 fill-opacity: 0;
 	}
 
 /* Eyedropper *******************************************************************/
@@ -1891,8 +1941,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 
 #troubleShooting::Before {
 
-/*	content: url("chrome://browser/skin/info.svg"); /* blue */
-	content: url("chrome://mozapps/skin/profile/information.svg");
+	content: url("chrome://global/skin/icons/more.svg");
 
 	display: block;
 	width: 16px;
@@ -1906,11 +1955,30 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	margin-inline-start: -20px !important;
 	}
 
+/* Submit Feedback **************************************************************/
+
+#feedbackPage::Before {
+
+	content: url("../MipImages/Firefox-UI-Fix/send.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	vertical-align: middle;
+	}
+
+#feedbackPage > label {
+
+	margin-inline-start: -20px !important;
+	}
+
 /* RESTART (in Safe Mode) *******************************************************/
 
 #helpSafeMode::Before {
 
-	content: url("chrome://browser/skin/reload.svg");
+/*	content: url("chrome://browser/skin/reload.svg"); */
+	content: url("chrome://devtools/skin/images/debugging-workers.svg");
 
 	display: block;
 	width: 16px;
@@ -1928,11 +1996,11 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 
 /* Report Phishing Website/Addon ************************************************/
 
+#help_reportSiteIssue::Before,
 #menu_HelpPopup_reportPhishingtoolmenu::Before,
 menuitem[data-l10n-id="toolbar-context-menu-report-extension"]::Before {
 
-/*	content: url("chrome://browser/skin/warning.svg"); /* yellow */
-	content: url("chrome://devtools/skin/images/alert.svg");
+	content: url("chrome://global/skin/icons/warning.svg");
 
 	display: block;
 	width: 16px;
@@ -1941,12 +2009,14 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"]::Before {
 	vertical-align: middle;
 	}
 
+#help_reportSiteIssue[disabled=true]::Before,
 #menu_HelpPopup_reportPhishingtoolmenu[disabled=true]::Before,
 menuitem[data-l10n-id="toolbar-context-menu-report-extension"][disabled=true]::Before {
 
 	opacity: 0.4;
 	}
 
+#help_reportSiteIssue > label,
 #menu_HelpPopup_reportPhishingtoolmenu > label,
 menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 
@@ -1957,7 +2027,8 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 
 #aboutName::Before {
 
-	content: url("chrome://browser/skin/welcome-back.svg");
+/*	content: url("chrome://browser/skin/welcome-back.svg"); */
+	content: url("chrome://global/skin/icons/info.svg");
 
 	display: block;
 	width: 16px;
@@ -2069,6 +2140,7 @@ menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer) > la
 #context-media-mute::Before {
 
 	content: url("chrome://browser/skin/tabbrowser/tab-audio-playing.svg");
+	content: url("chrome://global/skin/media/audio.svg");
 
 	display: block;
 	width: 16px;
@@ -2087,6 +2159,7 @@ menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer) > la
 #context-media-unmute::Before {
 
 	content: url("chrome://browser/skin/tabbrowser/tab-audio-muted.svg");
+	content: url("chrome://global/skin/media/audio-muted.svg");
 
 	display: block;
 	width: 16px;
@@ -2192,11 +2265,82 @@ menuitem.customize-context-addToPanel > label {
 	margin-inline-start: -20px !important;
 	}
 
+/* Tab-Close ********************************************************************/
+
+#context_closeTab::Before,
+#context_closeSelectedTabs::Before,
+#menu_close::Before {
+
+	content: url("chrome://global/skin/icons/close.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	vertical-align: middle;
+	}
+
+#context_closeTab > label,
+#context_closeSelectedTabs > label,
+#menu_close > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Tab Close All / Do NOT Show PopUp Bar ****************************************/
+
+#context_closeTabOptions::Before,
+#blockedPopupDontShowMessage:not([checked=true])::Before {
+
+	content: url("chrome://global/skin/icons/close.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	vertical-align: middle;
+	}
+
+#context_closeTabOptions[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context_closeTabOptions > label,
+#blockedPopupDontShowMessage:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* Tab Close Other Tabs *********************************************************/
+
+#context_closeOtherTabs::Before {
+
+	content: url("chrome://global/skin/icons/close.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	vertical-align: middle;
+	}
+
+#context_closeOtherTabs[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context_closeOtherTabs > label {
+
+	margin-inline-start: -20px !important;
+	}
+
 /* Tab-Hidden (History Menu) ****************************************************/
 
 #hiddenTabsMenu::Before {
 
-	content: url("chrome://browser/skin/tab.svg");
+/*	content: url("chrome://browser/skin/tab.svg"); */
+	content: url("../MipImages/FF/container-hide-black.svg");
 
 	display: block;
 	width: 16px;
@@ -2229,6 +2373,17 @@ menuitem.customize-context-addToPanel > label {
 	margin-inline-start: -20px !important;
 	}
 
+/* Tab-Hidden (Tabs Dropdown Panel) *********************************************/
+
+#allTabsMenu-hiddenTabsButton > image {
+
+	list-style-image: url("../MipImages/FF/container-hide-black.svg");
+	width: 16px;
+	height: 16px;
+	}
+
+#allTabsMenu-hiddenTabsButton > label { padding-inline-start: 8px !important; }
+
 /********************************************************************************
  *
  * CONTAINERS
@@ -2251,6 +2406,26 @@ menuitem[command="Browser:OpenAboutContainers"]::Before { /* #new-tab-button, #n
 #allTabsMenu-containerTabsView toolbarbutton[data-l10n-id="all-tabs-menu-manage-user-context"] > image { list-style-image: url("../MipImages/FF/container-site.svg"); }
 #allTabsMenu-containerTabsView toolbarbutton[data-l10n-id="all-tabs-menu-manage-user-context"] > label { padding-inline-start: 8px !important; }
 
+/* Single Same Container/Multiple Containers ************************************/
+
+#context-openlinkincontainertab::Before,
+#_testpilot-containers-menuitem-_open-in-this-container::Before,
+#menu_newUserContext::Before,
+#context_reopenInContainer::Before,
+#context-openlinkinusercontext-menu::Before {
+
+	content: url("../MipImages/FF/container-site.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	vertical-align: middle;
+	}
+
+#allTabsMenu-containerTabsButton > image { list-style-image: url("../MipImages/FF/container-site.svg"); -moz-image-region: auto; }
+#allTabsMenu-containerTabsButton > label { padding-inline-start: 8px !important; }
+
 /* No Containers ****************************************************************/
 
 menuitem[data-usercontextid="0"]::Before { /* #new-tab-button, #new-tab-button-popup, #context-openlinkinusercontext-menu */
@@ -2264,8 +2439,29 @@ menuitem[data-usercontextid="0"]::Before { /* #new-tab-button, #new-tab-button-p
 	vertical-align: middle;
 	}
 
+/* Bookmarks Context Menu *******************************************************/
+
+#_testpilot-containers-menuitem-_open-bookmark-in-container-tab > .menu-iconic-left > image { display: none !important; }
+
+#_testpilot-containers-menuitem-_open-bookmark-in-container-tab::Before {
+
+	content: url("../MipImages/FF/container-site.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	vertical-align: middle;
+	}
+
+#context-openlinkincontainertab > label,
+#_testpilot-containers-menuitem-_open-in-this-container > label,
 menuitem[command="Browser:OpenAboutContainers"] > label,
-menuitem[data-usercontextid="0"] > label {
+menuitem[data-usercontextid="0"] > label,
+#_testpilot-containers-menuitem-_open-bookmark-in-container-tab > label,
+#menu_newUserContext > label,
+#context_reopenInContainer > label,
+#context-openlinkinusercontext-menu > label {
 
 	margin-inline-start: -20px !important;
 	}
@@ -2284,7 +2480,6 @@ menuitem[data-usercontextid="0"] > label {
 #context-savepage::Before,
 #context-saveframe::Before,
 #context-savevideo::Before,
-#context-video-saveimage::Before,
 #context-saveaudio::Before {
 
 	content: url("chrome://browser/skin/save.svg");
@@ -2294,6 +2489,23 @@ menuitem[data-usercontextid="0"] > label {
 	height: 16px;
 	margin-inline-start: 6px;
 	vertical-align: middle;
+	}
+
+#context-video-saveimage::Before {
+	
+/*	content: url("chrome://browser/skin/save.svg"); */
+	content: url("chrome://devtools/skin/images/command-screenshot.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	vertical-align: middle;
+	}
+
+#context-video-saveimage[disabled=true]::Before {
+	
+	opacity: 0.4;
 	}
 
 #menu_savePage > label,
@@ -2325,6 +2537,33 @@ menuitem[data-usercontextid="0"] > label {
 
 #context-pocket > label,
 #context-savelinktopocket > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/* VIEW ALTERNATE (Now labeled View In New Tab) *********************************/
+
+#context-viewimage::Before,
+#context-viewbgimage::Before,
+#context-viewvideo::Before {
+
+	content: url("chrome://browser/skin/new-tab.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	vertical-align: middle;
+	}
+
+#context-viewbgimage[disabled=true]::Before {
+
+	opacity: 0.4;
+	}
+
+#context-viewimage > label,
+#context-viewbgimage > label,
+#context-viewvideo > label {
 
 	margin-inline-start: -20px !important;
 	}
@@ -2411,7 +2650,7 @@ menuitem[data-usercontextid="0"] > label {
 
 #context-video-pictureinpicture:not([checked=true])::Before {
 
-	content: url("chrome://global/skin/media/pictureinpicture.svg");
+	content: url("chrome://global/skin/media/picture-in-picture-open.svg");
 
 	display: block;
 	width: 16px;
@@ -2429,25 +2668,23 @@ menuitem[data-usercontextid="0"] > label {
 
 #context-media-play::Before {
 
-	content: url("chrome://global/skin/media/playButton.svg"); /* This is bigger than normal icons and needs a 1px top margin */
+	content: url("chrome://global/skin/media/play-fill.svg");
 
 	display: block;
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 1px;
 	vertical-align: middle;
 	}
 
 #context-media-pause::Before {
 
-	content: url("chrome://global/skin/media/pauseButton.svg"); /* This is bigger than normal icons and needs a 1px top margin */
+	content: url("chrome://global/skin/media/pause-fill.svg");
 
 	display: block;
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
-	margin-top: 1px;
 	vertical-align: middle;
 	}
 
@@ -2547,7 +2784,8 @@ menuitem[data-usercontextid="0"] > label {
 #context-viewsource::Before,
 #menu_pageSource::Before {
 
-	content: url("chrome://devtools/skin/images/tool-dom.svg");
+/*	content: url("chrome://devtools/skin/images/tool-dom.svg"); */
+	content: url("../MipImages/Firefox-UI-Fix/search-file.svg");
 
 	display: block;
 	width: 16px;
@@ -2588,6 +2826,36 @@ menuitem[generateditemid="16"]:not([checked=true])::Before {
 
 menuitem[label^="Go to Line"]:not([checked=true]) > label,
 menuitem[generateditemid="16"]:not([checked=true]) > label {
+
+	margin-inline-start: -20px !important;
+	}
+
+/********************************************************************************
+ *
+ * Screenshot BuiltIn Extension
+ *
+ ********************************************************************************/
+
+#screenshots_mozilla_org-menuitem-_create-screenshot > hbox.menu-iconic-left { display: none !important; }
+
+#context-take-screenshot::Before,
+#screenshots_mozilla_org-menuitem-_create-screenshot::Before {
+
+	content: url("chrome://devtools/skin/images/command-screenshot.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	vertical-align: middle;
+	}
+
+#screenshots_mozilla_org-menuitem-_create-screenshot > label {
+
+	margin-inline-start: 10px !important;
+	}
+
+#context-take-screenshot > label {
 
 	margin-inline-start: -20px !important;
 	}
@@ -2659,7 +2927,6 @@ menuitem[generateditemid="16"]:not([checked=true]) > label {
 /********************************************************************************
  *
  * LOGINS/PASSWORDS (Field Context Menu)
- * These are unfortunately Language-Dependent
  *
  ********************************************************************************/
 
@@ -2675,8 +2942,8 @@ menuitem[generateditemid="16"]:not([checked=true]) > label {
 	vertical-align: middle;
 	}
 
-#fill-login[label="Fill Password"]::Before,
-#fill-login[label="Fill Password"] > #fill-login-popup > menuitem.context-login-item::Before {
+#fill-login[data-l10n-id="main-context-menu-use-saved-password"]::Before,
+#fill-login[data-l10n-id="main-context-menu-use-saved-password"] > #fill-login-popup > menuitem.context-login-item::Before {
 
 	content: url("chrome://browser/skin/login.svg");
 	}

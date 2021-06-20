@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.5.5 (MIP/CSS)
+ * Menu Icon Plus CSS v2.0 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -8,6 +8,7 @@
  *   https://creativecommons.org/licenses/by/4.0/
  *
  * - The Original MIP Firefox Extension (c) Justin Rodes http://www.codedawn.com/menu-icons-plus.php
+ * - MOST OF THE PANELS CODE (c) Black7375 (https://github.com/black7375/Firefox-UI-Fix)
  *
  * + The icons come from ->
  *
@@ -33,6 +34,8 @@
  * + Contributors ->
  *
  *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
+ *	Acid-Crash Discovered bug with the Responsive Design SVG icon and suggested the fix for it
+ *	Devtools/Help Menu SVG icons and Panels code by Black7375 (https://github.com/black7375/Firefox-UI-Fix)
  *
  * + NOTES:
  * - TabSize=8
@@ -43,13 +46,14 @@
  * STANDARD MENUS: FIREFOX PNG
  ********************************************************************************
  *
- * This is the main skinning file for the Firefox menus. This one uses only icons 
- * from the old Firefox releases. You can use it alone, or you can load it AFTER 
- * one of the other skins to override them. I have not spent a lot of time on 
+ * This is the main skinning file for the Firefox menus. This one uses only icons
+ * from the old Firefox releases. You can use it alone, or you can load it AFTER
+ * one of the other skins to override them. I have not spent a lot of time on
  * this, I'm sure there are plenty of other Old-Firefox icons we can use; pull
- * requests welcomed. For now it is just incomplete work and the interesting 
- * bits have all been extracted into OVERRIDE files (e.g. mip_override_CutCopyPaste-
- * Firefox). Alternative icons are commented-out (mostly Windows-XP theme).
+ * requests welcomed. For now it is incomplete work. If you intend to use the (old)
+ * Firefox PNG panels override file, you will need to load a full theme before
+ * loading this (and before loading the panel). Alternative icons are
+ * commented-out (mostly Windows-XP theme).
  *
  */
 
@@ -169,7 +173,7 @@
 #menu_print::Before,
 #context-printframe::Before,
 #context-print-selection::Before {
-	
+
 	content: url("../MipImages/FF/print.png");
 
 	display: block;
@@ -427,7 +431,6 @@ menuitem.searchbar-paste-and-search > label {
 #allTabsMenu-searchTabs > image {
 
 	list-style-image: url("../MipImages/FF/Search-glass-2.png");
-	-moz-image-region: auto;
 	}
 
 #allTabsMenu-searchTabs > label { padding-inline-start: 8px !important; }
@@ -648,7 +651,8 @@ menuitem.downloadRemoveFromHistoryMenuItem > label {
 	}
 
 /* Bookmarks toolbar Button PANEL
- * NOTE that this (and containers in +) are the only panels included so far in MIP/CSS */
+ * NOTE that this (and > tab-Overflow) are the only panels included in MIP/CSS's Standard Menus file
+ * The reason this is here is because Aris's bookmark-folders CSS already skins some of the BMB and because we skin containers here */
 
 #BMB_viewBookmarksSidebar .menu-iconic-icon {
 
@@ -854,6 +858,8 @@ menuitem.downloadShowMenuItem > label {
 /* AddOns ***********************************************************************/
 
 #menu_openAddons::Before,
+#getMoreDevtools::Before,
+#extensionsForDevelopers::Before,
 menuitem[data-l10n-id="page-action-manage-extension"]::Before,
 menuitem[data-l10n-id="toolbar-context-menu-manage-extension"]::Before {
 
@@ -868,6 +874,8 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"]::Before {
 	}
 
 #menu_openAddons > label,
+#getMoreDevtools > label,
+#extensionsForDevelopers > label,
 menuitem[data-l10n-id="page-action-manage-extension"] > label,
 menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 
@@ -903,6 +911,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 /* Options **********************************************************************/
 
 #menu_preferences::Before,
+#syncedTabsManageDevices::Before,
 #blockedPopupOptions menuitem[oncommand="gPopupBlockerObserver.editPopupSettings();"]::Before {
 
 /*	content: url("../MipImages/FF/settings.png"); */
@@ -916,6 +925,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	}
 
 #menu_preferences > label,
+#syncedTabsManageDevices > label,
 #blockedPopupOptions menuitem[oncommand="gPopupBlockerObserver.editPopupSettings();"] > label {
 
 	margin-inline-start: -20px !important;
@@ -1016,18 +1026,19 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	}
 
 /* Get More Tools ***************************************************************/
+/* Merged with the AddOns icon
 
-#getMoreDevtools::Before,
-#extensionsForDevelopers::Before {
+	#getMoreDevtools::Before,
+	#extensionsForDevelopers::Before {
 
-	content: url("../MipImages/FF/tools-grey.png");
+		content: url("../MipImages/FF/tools-grey.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		vertical-align: middle;
+		} */
 
 /* Toggle Tools *****************************************************************/
 
@@ -1042,9 +1053,9 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	vertical-align: middle;
 	}
 
+/* #getMoreDevtools > label, */
+/* #extensionsForDevelopers > label, */
 #webDeveloperMenu > label,
-#getMoreDevtools > label,
-#extensionsForDevelopers > label,
 #menu_devToolbox:not([checked=true]) > label {
 
 	margin-inline-start: -20px !important;
@@ -1135,8 +1146,9 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 
 #menu_devtools_remotedebugging::Before {
 
+/*	content: url("../MipImages/FF/remote.png"); */
 /*	content: url("../MipImages/FF/remote-XP.png"); */
-	content: url("../MipImages/FF/remote.png");
+	content: url("../MipImages/FF/tool-debugger.png");
 
 	display: block;
 	width: 16px;
@@ -1279,6 +1291,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 
 /* Report Phishing Website/Addon ************************************************/
 
+#help_reportSiteIssue::Before,
 #menu_HelpPopup_reportPhishingtoolmenu::Before,
 menuitem[data-l10n-id="toolbar-context-menu-report-extension"]::Before {
 
@@ -1292,12 +1305,14 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"]::Before {
 	vertical-align: middle;
 	}
 
+#help_reportSiteIssue[disabled=true]::Before,
 #menu_HelpPopup_reportPhishingtoolmenu[disabled=true]::Before,
 menuitem[data-l10n-id="toolbar-context-menu-report-extension"][disabled=true]::Before {
 
 	opacity: 0.4;
 	}
 
+#help_reportSiteIssue > label,
 #menu_HelpPopup_reportPhishingtoolmenu > label,
 menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 
@@ -1378,11 +1393,10 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 
 	margin-inline-start: -20px !important;
 	}
-	
+
 /********************************************************************************
  *
  * LOGINS/PASSWORDS (Field Context Menu)
- * These are unfortunately Language-Dependent
  *
  ********************************************************************************/
 
@@ -1399,8 +1413,8 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 	vertical-align: middle;
 	}
 
-#fill-login[label="Fill Password"]::Before,
-#fill-login[label="Fill Password"] > #fill-login-popup > menuitem.context-login-item::Before {
+#fill-login[data-l10n-id="main-context-menu-use-saved-password"]::Before,
+#fill-login[data-l10n-id="main-context-menu-use-saved-password"] > #fill-login-popup > menuitem.context-login-item::Before {
 
 	content: url("../MipImages/FF/key.png");
 	}

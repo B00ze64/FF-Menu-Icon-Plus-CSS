@@ -1,11 +1,17 @@
-# Menu Icon Plus CSS (MIP/CSS) v1.5.5
-## Add Icons To Firefox Menus/Context-Menus
+# Menu Icon Plus CSS (MIP/CSS) v2.0
+## Add Icons To Firefox Menus/Context-Menus/Panels
 
-This project is a bunch of CSS files (and images) that you *@import* in your *userChrome.css* and *userContent.css* in Firefox to add icons to the Firefox toolbar menus and to various context menus. It currently styles every menuitem that exists in XUL, but the **panels** (those new white pop-up menus, which are grey in Darkmode) are not yet styled, that will come later.
+**Panels are here!** Most of the panels code comes from:
 
-The project is a *remake* of the classic [Menu Icon Plus XUL extension](http://www.codedawn.com/menu-icons-plus.php) for Firefox by **Justin Rodes**. The extension of course no longer works, but as I worked with its files, I discovered it wasn't working well in my FF52: It had a lot more icons than were applied in later Firefox versions, so you may discover many icons in **MIP/CSS** that you were not seeing before. Also, the Menu Icon Plus XUL extension styled all the Firefox Menus *and several other extensions on top of that.* **MIP/CSS** does not pretend to style extensions, except the built-in ones. There *is* a file included (mip_worksheet-AddIconsToExtensions.css) which does add icons to some extensions, but this is for my own use and not intended to be grown to support every extension out there.
+* Black7375's (MS_Y) Firefox-UI-Fix project (https://github.com/black7375/Firefox-UI-Fix).
+* Some of the SVG icons (SVG Theme) also come from Black7375's project.
+* The Avatar, and the Sync icon preceding the Sync Now label in the panels, would definitively NOT be here without that project. If you are not using the Firefox menus, and are using SVG icons, head over to Firefox-UI-Fix!
 
-AFAIK, I've styled every XUL menu/menuitem in Firefox; I've styled stuff I cannot even see, but if you find something I've forgotten, open an issue. The method used to add the icons was suggested by Aris-t2 (thanks!), and it inserts a CSS element before the menuitems. Because of this, it is not possible to globally make every disabled menuitem greyed-out in a single CSS statement. I think I have covered all the menuitems that *can* be disabled, but you may find some I've forgotten (open an issue to let me know).
+**Menu Icon Plus CSS** is a bunch of CSS files (and images) that you *@import* in your *userChrome.css* and *userContent.css* files in Firefox to add icons to the Firefox interface. It styles every menuitem that exists in XUL, and thanks to Black7375, it now also styles the panels (those white-background menus, like the hamburger button).
+
+The project is a remake of the classic [Menu Icon Plus XUL extension](http://www.codedawn.com/menu-icons-plus.php) for Firefox by **Justin Rodes**. The extension of course no longer works, but as I worked with its files, I discovered it wasn't working well in my FF52: It had a lot more icons than were applied, so you may discover many icons in **MIP/CSS** that you were not seeing before with the extension. Also, the Menu Icon Plus XUL extension styled all the Firefox Menus *and several other extensions on top of that.* **MIP/CSS** does not pretend to style extensions, except the built-in ones. There *is* a file included (*mip_worksheet-AddIconsToExtensions.css*) which does add icons to some extensions, but this is for my own use and not intended to be grown to support every extension out there.
+
+AFAIK, I've styled every XUL menu/menuitem in Firefox; I've styled stuff I cannot even see, but if you find something I've forgotten, open an issue. The method used to add the icons to the menus was suggested by Aris-t2 (thanks!), and it inserts an element (an image) before the menuitems. Because of this, when a menu item is greyed-out by Firefox, I have to know about it in advance, so that I can also grey-out the icon. I think I have covered all the menuitems that *can* be greyed-out, but you may find some I've forgotten (open an issue to let me know).
 
 You might not agree with some icons choices, or choice of selectors, feel free to open an issue. Note that some menuitems can only be selected by their labels, and labels change with the language used in Firefox, so some things, very few, will not style correctly if your Firefox is not in English; feel free to open an issue and we can add your own language's labels to the CSS files, or suggest a different selector.
 
@@ -13,22 +19,25 @@ This project is (c) Sylvain "B00ze64" B. and released under the Creative Commons
 
 # Pre-Requisites
 
-Besides copying all the project's files correctly in your profile/chrome folder and modifying your *userChrome.css* and *userContent.css*, there is only one pre-requisite. Basically, if you want to style the bookmarks folders correctly, you need **Aris-t2's css/generalui/bookmark_icons_colorized.css** and the images it references. That file needs to be *@import'ed* in your userChrome/userContent **BEFORE** the MIP/CSS files, which override the images used by the former. The **bookmark_icons_colorized.css** and related files can be found at Aris-t2's [CustomCSSforFx](https://github.com/Aris-t2/CustomCSSforFx).
+Besides copying all the project's files correctly in your profile/chrome folder and modifying your *userChrome.css* and *userContent.css*, there is only one pre-requisite. Basically, if you want to style the bookmarks folders correctly, you need **Aris-t2's css/generalui/bookmark_icons_colorized.css** file. For v2.0 of **MIP/CSS**, I've included the images that this file requires, in the "image" folder, so all you need is Aris's **bookmark_icons_colorized.css** file. That file needs to be in the **css/generalui** folder, and *@import'ed* in your userChrome/userContent files **BEFORE** the **MIP/CSS** files, the later of which override the images used by the former. The **bookmark_icons_colorized.css** and related files can be found at Aris-t2's [CustomCSSforFx](https://github.com/Aris-t2/CustomCSSforFx).
+
+# Supported Versions
+
+This project began with Firefox 78 if I recall correctly. Adjustments were made as Firefox evolved. Previous menus are still supported, but some icons might no longer work on previous versions. This is especially true for the SVG theme, where I've had to adjust to Mozilla moving and renaming icons.
+
+This project is currently tested on Windows 7 in 1080p 100% scaling with the Light Theme, where the PNG images look really good. If you use the Dark Theme, you might prefer the SVG icons. The same for very high DPI screens with 125% scaling or more, as SVG scales really well; PNG icons are resized instead of scaled on high DPI screens and they become a little blurry. I do have a Win10 installation in progress but I have not tested **MIP/CSS** on that yet, and if Firefox uses different menus/panels on that version of the O/S then things might not work as intended. I'll test this on Win10 eventually.
 
 # The Icon Themes
 
-The original Menu Icon Plus XUL extension included 5 themes, and **FF-Menu-Icon-Plus-CSS (MIP/CSS)** includes all 5, plus 3 more: There is a **Firefox SVG** theme which uses exclusively built-in Firefox SVG icons, a **Firefox** "Theme" which you can use to override icons from other themes with the old PNG icons from Firefox 24 and 52, and **Fugue Plus** which is a mix of Fugue and whatever icon I find better looking from the other themes. I have tested all of them when I first created their CSS, but the only theme I've really spent a lot of time on is **Fugue Plus**, and it's the only one I really test when I do updates. You are encouraged to open issues and make corrections or suggestions, especially for **Firefox SVG**, which I am only keeping working and not looking at Mozilla's new SVG icons as they become available.
-
-All the Major themes include the icons from all the other themes commented out. This makes it easy for you to pick the theme you like most, and exchange the icons you don't with ones you do. You are encouraged to do this.
+The original Menu Icon Plus XUL extension included 5 themes, and **Menu Icon Plus CSS (MIP/CSS)** includes all 5, plus 3 more: There is a **Firefox SVG** theme which uses exclusively built-in Firefox SVG icons, a **Firefox** "Theme" which you can use to override icons from other themes with the old PNG icons from Firefox 24 and 52, and **Fugue Plus** which is a mix of Fugue and whatever icon I find better looking from the other themes. I have tested all of them when I first created their CSS, but the only theme I've really spent a lot of time on is **Fugue Plus**, and it's the only one I really test when I do updates. You are encouraged to open issues and make corrections or suggestions, especially for **Firefox SVG**, which I am only keeping working and not looking at Mozilla's new SVG icons as they become available.
 
 All the Themes in Alphabetical order: 
 
 1. **The Crystal Project**
-
     1. http://www.everaldo.com/
     2. https://commons.wikimedia.org/wiki/Category:Crystal_Project
-
-2. The **Firefox** Theme (overrides some icons with old FF24/52 ones; can be used alone)
+    
+2. The **Firefox** Theme (overrides some icons with old FF24/52 ones; Menus can be used alone)
 
 3. The **Firefox SVG** Theme (uses built-in Firefox SVG icons)
 
@@ -47,26 +56,28 @@ All the Themes in Alphabetical order:
 
 # File Structure
 
-Every theme has up to 3 files, and some override files which only change the picture used but do not themselves insert the icon element (you use them AFTER a complete theme file). Let's take the Crystal theme for example, you will find:
+Every theme has up to 4 files, and some override files which only change the picture used but do not themselves insert the icon element (you use them AFTER a complete theme file). Let's take the Crystal theme for example, you will find:
 
 * mip_Crystal-Config.css:
     * This is used in *userContent.css* and adds icons to the old about:config. This is still in the project, but the old about:config page is now gone and the new page no longer has context menus; only useful for people running older versions of Firefox.
 * mip_Crystal-Library.css:
-    * This is also used in *userContent.css* and adds icons to the Library when you are opening it inside a Tab. The Library-In-A-Tab context menu spacing is broken on Win7 in FF89 (and maybe earlier). It's possible those menus are **panels** on Win10, I have not looked into this as I no longer open the Library inside a Tab. I am keeping the CSS updated, but until I get FF up and running on Win10, I'm not doing anything to fix the strange spacing...
-* mip_Crystal-Menus.css:
+    * This is also used in *userContent.css* and adds icons to the Bookmarks Library when you are opening it inside a Tab (I do not use this myself).
+* **mip_Crystal-Menus.css**:
     * This is used in *userChrome.css* and adds icons to the Firefox menus and to the Library window.
+* **mip_Crystal-Panels.css**:
+    * This is used in *userChrome.css* and adds icons to the Firefox panels.
 * mip_override_CutCopyPaste-Crystal.css:
-    * This gives whatever theme is used before it the Cut/Copy/Paste icons from Crystal.
+    * This gives whatever theme is used before it, the Cut/Copy/Paste icons from Crystal.
 
 # Installation
 
-Just extract the project into your *Profile/chrome* folder, so that you have *MipCss* and *MipImages* folders **inside** the *chrome* folder. Use the included *userChrome.css* and *userContent.css* as templates to modify your own. You are EXPECTED to edit the userChrome and userContent files to select WHICH theme you want to use. And as mentionned earlier, you are **strongly encouraged** to install the *bookmark_icons_colorized.css* file from Aris-t2's [CustomCSSforFx](https://github.com/Aris-t2/CustomCSSforFx).
+Just extract the project into your *Profile/chrome* folder, so that you have *MipCss*, *MipImages* and *image* folders **inside** the *chrome* folder. Use the included *userChrome.css* and *userContent.css* as templates to modify your own. You are EXPECTED to edit the userChrome and userContent files to select WHICH theme you want to use. And as mentionned earlier, you are **strongly encouraged** to install the *bookmark_icons_colorized.css* file from Aris-t2's [CustomCSSforFx](https://github.com/Aris-t2/CustomCSSforFx).
 
 # Public Domain Images
 
 There are a FEW images in the PublicDomain folder that I downloaded off from generic icon sites which have no attribution. If you recognize your work, please open an issue so that proper credits can be given.
 
-# Themes Previews
+# Themes Previews (v1.0)
 
 ### The Crystal Project
 ![preview](preview_Crystal.jpg)

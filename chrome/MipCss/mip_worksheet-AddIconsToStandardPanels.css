@@ -1,0 +1,1058 @@
+/********************************************************************************
+ * Menu Icon Plus CSS v2.0 (MIP/CSS)
+ * Add Icons To Firefox Standard Panels
+ *
+ * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
+ *   Project Homepage https://github.com/B00ze64/FF-Menu-Icon-Plus-CSS
+ *   Released under Creative Commons Attribution 4.0 License.
+ *   https://creativecommons.org/licenses/by/4.0/
+ *
+ * - The Original MIP Firefox Extension (c) Justin Rodes http://www.codedawn.com/menu-icons-plus.php
+ * - MOST OF THE PANELS CODE (c) Black7375 (https://github.com/black7375/Firefox-UI-Fix)
+ *
+ * + The icons come from ->
+ *
+ * - Crystal Project	http://www.everaldo.com/
+ *			https://commons.wikimedia.org/wiki/Category:Crystal_Project
+ *			LGPL
+ *
+ * - Fugue Icons	http://p.yusukekamiyamane.com/
+ *			by Yusuke Kamiyamane,
+ *			Creative Commons Attribution 3.0 License.
+ *
+ * - Oxygen Icons	http://www.oxygen-icons.org/ [use Wayback Machine]
+ *			https://github.com/pasnox/oxygen-icons-png
+ *			https://techbase.kde.org/Projects/Oxygen/Licensing
+ *
+ * - Silk Icons		http://www.famfamfam.com/
+ *			Mark James, Birmingham (UK),
+ *			Creative Commons Attribution 2.5 License.
+ *
+ * - Tango Icons	http://tango-project.org/
+ *			Public Domain
+ *
+ * + Contributors ->
+ *
+ *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
+ *	Acid-Crash Discovered bug with the Responsive Design SVG icon and suggested the fix for it
+ *	Devtools/Help Menu SVG icons and Panels code by Black7375 (https://github.com/black7375/Firefox-UI-Fix)
+ *
+ * + NOTES:
+ * - TabSize=8
+ *
+ */
+
+/********************************************************************************
+ * WORKSHEET
+ ********************************************************************************
+ *
+ * This is the file I use to try things out when I build the themes. None of the
+ * lines are commented-out so you should not be using this as your final CSS file.
+ * It's normally setup with FuguePlus as the last entry for each selector.
+ *
+ */
+
+@-moz-document	url("chrome://browser/content/browser.xhtml"),
+		url("chrome://browser/content/places/places.xhtml"),
+		url("chrome://browser/content/places/historySidebar.xhtml"),
+		url("chrome://browser/content/places/bookmarksSidebar.xhtml"),
+		url("chrome://browser/content/syncedtabs/sidebar.xhtml") {
+
+/********************************************************************************
+ *
+ * GENERAL PANEL PADDING
+ * Original Code by Black7375 (https://github.com/black7375/Firefox-UI-Fix)
+ *
+ ********************************************************************************/
+
+:root {
+	--arrowpanel-menuicon-padding:		8px;
+	--arrowpanel-menuitem-margin:		0 var(--arrowpanel-menuicon-padding) !important; /* Original: 0 8px */
+	--arrowpanel-menuitem-padding:		4px 8px !important; /* Original: 8px Black7375: 5px */
+	--arrowpanel-menublank-padding:		calc(var(--arrowpanel-menuicon-padding) * 2 + 8px) !important;
+	--arrowpanel-menuimageblank-padding:	calc(var(--arrowpanel-menuitem-padding) - 2px) !important;
+	}
+
+:root[uidensity=compact] {
+
+	--arrowpanel-menuitem-padding: 3px !important; } /* Original: 8px */
+
+:root[uidensity=touch] {
+
+	--arrowpanel-menuitem-padding: 8px !important; } /* Original: 8px */
+
+.subviewbutton > .toolbarbutton-text {
+
+	padding-inline-start: var(--arrowpanel-menuicon-padding) !important;
+	}
+
+.subviewbutton[disabled=true] > image { opacity: 0.4; }
+
+/* Miscellaneous Align (Update Banner, Disabled Images, lines with no image) ****/
+
+#downloadsHistory .button-text {
+
+	padding-inline-start: var(--arrowpanel-menuicon-padding) !important;
+	}
+
+#panelMenu_bookmarksMenu .subviewbutton[disabled=true] .toolbarbutton-text,
+#appMenu_historyMenu .subviewbutton[disabled=true] .toolbarbutton-text {
+
+	padding-inline-start: var(--arrowpanel-menublank-padding) !important;
+	}
+
+#appMenu-proton-update-banner {
+
+	margin-bottom: 2px !important;
+	}
+
+#appMenu-proton-update-banner::before {
+
+	margin-inline-start: var(--arrowpanel-menuitem-padding) !important;
+	}
+
+#appMenu-proton-update-banner .toolbarbutton-text {
+
+	margin-inline-start: 0 !important;
+	}
+
+#appMenu-proton-update-banner::before,
+#appMenu-multiView .subviewbutton::before {
+
+	display: -moz-inline-box;
+	margin-inline-end: var(--arrowpanel-menuicon-padding);
+	width:  16px !important;
+	height: 16px !important;
+	}
+
+#appMenu-fxa-status2,
+#appMenu-zoom-controls2 {
+
+	align-items: center;
+	padding-top:    var(--arrowpanel-menuimageblank-padding) !important;
+	padding-bottom: var(--arrowpanel-menuimageblank-padding) !important;
+	}
+
+#appMenu-zoom-controls2::before {
+
+	margin-inline-end: 0 !important;
+	}
+
+#appMenu-proton-addon-banners > .addon-banner-item > .toolbarbutton-icon {
+
+	display: -moz-inline-box !important;
+	margin-inline-start: var(--arrowpanel-menuicon-padding);
+	-moz-box-ordinal-group: 0 !important;
+	}
+
+/* SVG Icon Colors **************************************************************/
+
+#appMenu-multiView .subviewbutton::before,
+#appMenu-proton-update-banner::before,
+#downloadsHistory .button-icon,
+.subviewbutton > image {
+
+	fill: currentColor !important;
+	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
+	-moz-context-properties: fill !important;
+}
+
+/********************************************************************************
+ *
+ * SideBar Panel Menu (to select which sidebar to show)
+ *
+ ********************************************************************************/
+
+#sidebarMenu-popup.cui-widget-panel #sidebar-reverse-position[label$="Right"] > image.toolbarbutton-icon {
+
+	list-style-image: url("../MipImages/FF/dock-side-right.svg");
+	list-style-image: url("../MipImages/Silk/silk_Sidebar-Right.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Sidebar-Right.png");
+	width: 16px;
+	height: 16px;
+	}
+
+#sidebarMenu-popup.cui-widget-panel #sidebar-reverse-position[label$="Left"] > image.toolbarbutton-icon {
+
+	list-style-image: url("../MipImages/FF/dock-side-left.svg");
+	list-style-image: url("../MipImages/Silk/silk_Sidebar-Left.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Sidebar-Left.png");
+	width: 16px;
+	height: 16px;
+	}
+
+#sidebarMenu-popup.cui-widget-panel toolbarbutton[data-l10n-id="sidebar-menu-close"] > image.toolbarbutton-icon {
+
+	list-style-image: url("chrome://global/skin/icons/close.svg");
+
+	list-style-image: url("../MipImages/Crystal/crystal_ClearAll.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_ClearAll.png");
+	list-style-image: url("../MipImages/Tango/tango_ClearAll.png");
+	list-style-image: url("../MipImages/Silk/silk_ClearAll.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_ClearAll.png");
+	}
+
+/*
+#sidebarMenu-popup.cui-widget-panel #sidebar-reverse-position > label,
+#sidebarMenu-popup.cui-widget-panel toolbarbutton[data-l10n-id="sidebar-menu-close"] > label {
+
+	padding-inline-start: 8px !important;
+	}
+*/
+
+#sidebar-switcher-bookmarks.subviewbutton {
+
+	list-style-image: url("chrome://browser/skin/sidebars.svg");
+	list-style-image: url("../MipImages/FF/application.png");
+/*	list-style-image: url("../MipImages/FF/toolbarButton-sidebarToggle.png"); /* Alternate */
+	list-style-image: url("../MipImages/Crystal/crystal_Bookmarks.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmarks.png");
+	list-style-image: url("../MipImages/Silk/silk_Bookmarks-Closed.png");
+	list-style-image: url("../MipImages/Tango/tango_Bookmarks.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Bookmarks-Closed.png");
+	}
+
+#sidebar-switcher-history.subviewbutton,
+#appMenu-history-button,
+#appMenu-library-history-button,
+#PanelUI-historyMore {
+
+	list-style-image: url("chrome://browser/skin/history.svg");
+	list-style-image: url("../MipImages/FF/history.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_History.png");
+	list-style-image: url("../MipImages/Fugue/fugue_History.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_History.png");
+	list-style-image: url("../MipImages/Silk/silk_History.png");
+	list-style-image: url("../MipImages/Silk/silk_HistoryClock.png"); /* Alternative */
+	list-style-image: url("../MipImages/Tango/tango_History.png");
+
+	list-style-image: url("../MipImages/FF/history-XP.png");
+	}
+
+#sidebar-switcher-tabs.subviewbutton {
+
+	list-style-image: url("../MipImages/FF/sync.svg");
+	list-style-image: url("../MipImages/FF/sync-16.png");
+	list-style-image: url("../MipImages/Crystal/crystal_Sync.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Sync.png");
+	list-style-image: url("../MipImages/Silk/silk_Reload.png");
+	list-style-image: url("../MipImages/Tango/tango_Sync-bright.png");
+	list-style-image: url("../MipImages/Tango/tango_Sync.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Sync.png");
+	}
+
+/********************************************************************************
+ *
+ * Hamburger Button
+ * Original Code by Black7375 (https://github.com/black7375/Firefox-UI-Fix)
+ *
+ ********************************************************************************/
+
+/********************************************************************************
+/* Main Panel
+ ********************************************************************************/
+
+#appMenu-proton-update-banner::before {
+
+	content: url("chrome://browser/skin/whatsnew.svg");
+	content: url("../MipImages/Fugue/fugue_Present.png");
+	}
+
+#appMenu-fxa-status2::before {
+
+	content: url("chrome://browser/skin/fxa/avatar-empty.svg");
+	content: url("chrome://browser/skin/fxa/avatar.svg");
+
+	content: url("../MipImages/FF/profileicon.png");
+	content: url("../MipImages/FF/profileicon-XP.png");
+
+	content: url("../MipImages/Fugue/fugue_UserSingle.png");
+	content: url("../MipImages/Oxygen/oxygen_UserSingle.png");
+	content: url("../MipImages/Silk/silk_UserSingle.png");
+	content: url("../MipImages/Tango/tango_UserSingle.png");
+
+	content: url("../MipImages/Crystal/crystal_UserSingle.png");
+	}
+
+#appMenu-fxa-status2:is([fxastatus=signedin], [fxastatus=unverified], [fxastatus=login-failed])::before {
+
+	display: none;
+	}
+
+#appMenu-fxa-status2:is([fxastatus=signedin], [fxastatus=unverified], [fxastatus=login-failed]) #appMenu-fxa-label2::before { /* url("https://profile.accounts.firefox.com/v1/avatar/a") */
+
+	content: '';
+	border-radius: 50% !important;
+	background-size: 16px !important;
+	background-image: var(--avatar-image-url) !important;
+	}
+
+#appMenu-new-tab-button2,
+#appMenu-library-recentlyClosedTabs {
+
+	list-style-image: url("chrome://browser/skin/new-tab.svg");
+	list-style-image: url("../MipImages/Fugue/fugue_TabPlus.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_TabPlus.png");
+	list-style-image: url("../MipImages/Silk/silk_TabPlus.png");
+	list-style-image: url("../MipImages/Tango/tango_TabPlus.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_TabPlus.png");
+	}
+
+#appMenu-new-window-button2,
+#appMenu-library-recentlyClosedWindows {
+
+	list-style-image: url("chrome://browser/skin/window.svg");
+	list-style-image: url("../MipImages/FF/new-window.svg");
+
+	list-style-image: url("../MipImages/FF/aboutSessionRestore-window-icon.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_WindowNew.png");
+	list-style-image: url("../MipImages/Fugue/fugue_WindowNew.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_WindowNew.png");
+	list-style-image: url("../MipImages/Silk/silk_WindowNew.png");
+	list-style-image: url("../MipImages/Tango/tango_WindowNew.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_WindowNew(crystal).png");
+	}
+
+#appMenu-new-private-window-button2 {
+
+	list-style-image: url("chrome://browser/skin/privateBrowsing.svg");
+	list-style-image: url("chrome://browser/skin/privatebrowsing/favicon.svg"); /* purple */
+
+	list-style-image: url("../MipImages/Crystal/crystal_PrivateBrowsing-darker.png");
+	list-style-image: url("../MipImages/Crystal/crystal_PrivateBrowsing.png");
+	list-style-image: url("../MipImages/Fugue/fugue_PrivateBrowsing.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_UserSingle.png");
+	list-style-image: url("../MipImages/Silk/silk_PrivateBrowsing.png");
+	list-style-image: url("../MipImages/Tango/tango_PrivateBrowsing.png");
+
+	list-style-image: url("../MipImages/FF/privacy-16.png");
+	}
+
+#appMenu-bookmarks-button,
+#appMenu-library-bookmarks-button {
+
+	list-style-image: url("chrome://browser/skin/bookmark.svg");
+
+	list-style-image: url("../MipImages/FF/allBookmarks.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Bookmarks.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmarks.png");
+	list-style-image: url("../MipImages/Silk/silk_Bookmarks-Closed.png");
+	list-style-image: url("../MipImages/Tango/tango_Bookmarks.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Bookmarks-Closed.png");
+	}
+
+#appMenu-downloads-button,
+#appMenu-library-downloads-button,
+#downloadsHistory {
+
+	list-style-image: url("chrome://browser/skin/downloads/downloads.svg");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Download.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Download.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Download.png");
+	list-style-image: url("../MipImages/Silk/silk_Download.png");
+	list-style-image: url("../MipImages/Tango/tango_Download.png");
+
+	list-style-image: url("../MipImages/FF/saveFile-XP.png");
+	list-style-image: url("../MipImages/FF/saveFile.png");
+	}
+
+#appMenu-passwords-button {
+
+	list-style-image: url("chrome://browser/skin/login.svg");
+
+	list-style-image: url("../MipImages/FF/key.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_UserGroup.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_UserGroup.png");
+	list-style-image: url("../MipImages/Silk/silk_UserGroup.png");
+	list-style-image: url("../MipImages/Tango/tango_UserGroup.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_UserGroup.png");
+	list-style-image: url("../MipImages/Crystal/crystal_UserGroup2.png");
+	}
+
+#appMenu-extensions-themes-button,
+#appmenu-developer-tools-view .subviewbutton[label="Extensions for Developers"] {
+/* #appmenu-developer-tools-view .subviewbutton:nth-last-child(1) { */
+
+	list-style-image: url("chrome://mozapps/skin/extensions/extension.svg");
+
+	list-style-image: url("../MipImages/Crystal/crystal_AddOn.png");
+	list-style-image: url("../MipImages/Fugue/fugue_AddOn.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_AddOn.png");
+	list-style-image: url("../MipImages/Silk/silk_AddOn.png");
+	list-style-image: url("../MipImages/Tango/tango_AddOn.png");
+
+	list-style-image: url("../MipImages/FF/extensionGeneric-16.png");
+	list-style-image: url("../MipImages/FF/extensionGeneric-16-XP.png");
+	}
+
+#appMenu-print-button2 {
+
+	list-style-image: url("chrome://global/skin/icons/print.svg");
+	list-style-image: url("../MipImages/FF/print.svg");
+
+	list-style-image: url("../MipImages/FF/print.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Print.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Print.png");
+	list-style-image: url("../MipImages/Silk/silk_Print.png");
+	list-style-image: url("../MipImages/Tango/tango_Print.png");
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Print.png");
+	}
+
+#appMenu-save-file-button2 {
+
+	list-style-image: url("chrome://browser/skin/save.svg");
+
+	list-style-image: url("../MipImages/Crystal/crystal_SaveAs.png");
+	list-style-image: url("../MipImages/Fugue/fugue_SaveAs.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_SaveAs.png");
+	list-style-image: url("../MipImages/Silk/silk_SaveAs.png");
+	list-style-image: url("../MipImages/Tango/tango_SaveAs.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Save.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Save.png");
+	list-style-image: url("../MipImages/Silk/silk_Save.png");
+	list-style-image: url("../MipImages/Tango/tango_Save.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Save.png");
+	}
+
+#appMenu-find-button2, 
+#panelMenu_searchBookmarks {
+
+	list-style-image: url("chrome://global/skin/icons/search-glass.svg");
+	list-style-image: url("../MipImages/FF/search-glass.svg");
+
+	list-style-image: url("../MipImages/FF/Search-glass-2.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Find.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Find.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Find.png");
+	list-style-image: url("../MipImages/Tango/tango_Find.png");
+
+	list-style-image: url("../MipImages/Silk/silk_Find.png");
+	}
+
+#appMenu-zoom-controls2::before {
+
+	content: url("../MipImages/Firefox-UI-Fix/screenshot.svg");
+
+	content: url("../MipImages/Crystal/crystal_Zoom.png");
+	content: url("../MipImages/Oxygen/oxygen_Zoom.png");
+	content: url("../MipImages/Silk/silk_Zoom.png");
+	content: url("../MipImages/Tango/tango_Zoom.png");
+
+	content: url("../MipImages/Fugue/fugue_Zoom.png");
+	}
+
+#appMenu-settings-button,
+#PanelUI-fxa-menu-sync-prefs-button,
+#PanelUI-remotetabs-view-managedevices,
+.pageAction-sendToDevice-device.subviewbutton.sync-menuitem.sendtab-target:not([clientType]) { /* Send To Device -> Manage Devices */
+
+	list-style-image: url("chrome://global/skin/icons/settings.svg");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Options.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Gear.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Options-darker.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Options.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Options.png");
+	list-style-image: url("../MipImages/Silk/silk_Options.png");
+	list-style-image: url("../MipImages/Tango/tango_Options.png");
+
+	list-style-image: url("../MipImages/FF/gear_clicked.png");
+	list-style-image: url("../MipImages/FF/gear_default.png");
+	list-style-image: url("../MipImages/FF/option-icon-grey.png");
+	list-style-image: url("../MipImages/FF/option-icon-blue.png");
+	list-style-image: url("../MipImages/FF/options.png");
+
+	list-style-image: url("../MipImages/FF/settings.png");
+	}
+
+#appMenu-more-button2 {
+
+	list-style-image: url("chrome://browser/skin/ion.svg");
+	list-style-image: url("chrome://browser/skin/developer.svg");
+
+	list-style-image: url("../MipImages/FF/tools-grey.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Tools.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Tools.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Tools.png");
+	list-style-image: url("../MipImages/Silk/silk_Tools.png");
+	list-style-image: url("../MipImages/Tango/tango_Tools.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Wrench.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Wrench.png");
+	list-style-image: url("../MipImages/Misc/external_Wrench.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Wrench-darker.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Wrench.png");
+	list-style-image: url("../MipImages/Silk/silk_Wrench.png");
+	list-style-image: url("../MipImages/Tango/tango_Wrench.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_WebDeveloper.png");
+	list-style-image: url("../MipImages/Fugue/fugue_WebDeveloper.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_WebDeveloper.png");
+	list-style-image: url("../MipImages/Silk/silk_WebDeveloper.png");
+	list-style-image: url("../MipImages/Tango/tango_WebDeveloper.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_WebDeveloper-blocks.png");
+	}
+
+#appMenu-help-button2 {
+
+	list-style-image: url("chrome://global/skin/icons/help.svg");
+
+	list-style-image: url("../MipImages/FF/alwaysAsk-XP-lower.png");
+	list-style-image: url("../MipImages/FF/question-16.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Help.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Help.png");
+	list-style-image: url("../MipImages/Silk/silk_Help.png");
+	list-style-image: url("../MipImages/Tango/tango_Help.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Help.png");
+	}
+
+#appMenu-quit-button2 {
+
+	list-style-image: url("chrome://browser/skin/quit.svg");
+
+	list-style-image: url("../MipImages/FF/quit.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Quit.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Quit.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Quit.png");
+	list-style-image: url("../MipImages/Silk/silk_Quit.png");
+	list-style-image: url("../MipImages/Tango/tango_Quit.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_PowerDown.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_PowerDown-1.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_PowerDown-2.png");
+	list-style-image: url("../MipImages/Tango/tango_PowerDown.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_PowerDown.png");
+	}
+
+/********************************************************************************
+/* Account Sub-Panel
+ ********************************************************************************/
+
+/* #PanelUI-fxa-menu-syncnow-button */
+
+#PanelUI-fxa-menu-connect-device-button  .toolbarbutton-icon,
+#PanelUI-fxa-menu-account-signout-button .toolbarbutton-icon {
+
+	width:  16px !important;
+	height: 16px !important;
+	visibility: visible !important;
+	}
+
+#fxa-menu-avatar {
+
+	display: -moz-inline-box !important;
+	margin-inline-end: var(--arrowpanel-menuicon-padding); /*var(--arrowpanel-menuitem-padding);*/
+	}
+
+
+.syncNowBtn {
+
+	visibility: visible !important;
+	-moz-box-ordinal-group: 1 !important;
+	margin-inline-end: var(--arrowpanel-menuicon-padding);
+	}
+/*
+#PanelUI-fxa-menu-syncnow-button::Before {
+
+	content: url("../MipImages/Fugue/fugue_Sync.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--arrowpanel-menuimageblank-padding);
+	}
+*/
+#PanelUI-fxa-menu-setup-sync-button {
+
+	list-style-image: url("../MipImages/FF/sync.svg");
+	list-style-image: url("../MipImages/FF/sync-16.png");
+	list-style-image: url("../MipImages/Crystal/crystal_Sync.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Sync.png");
+	list-style-image: url("../MipImages/Silk/silk_Reload.png");
+	list-style-image: url("../MipImages/Tango/tango_Sync-bright.png");
+	list-style-image: url("../MipImages/Tango/tango_Sync.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Sync.png");
+	}
+
+#PanelUI-fxa-menu-connect-device-button {
+
+	list-style-image: url("chrome://browser/skin/fxa/add-device.svg") !important;
+	list-style-image: url("../MipImages/PublicDomain/Icon-Mobile-Phone.png") !important;
+	list-style-image: url("../MipImages/Fugue/fugue_MobilePhone.png") !important;
+	list-style-image: url("../MipImages/Fugue/fugue_MobilePhoneAdd(crystal).png") !important;
+	}
+
+#PanelUI-fxa-menu-sendtab-button,
+.pageAction-sendToDevice-device.subviewbutton.sync-menuitem.sendtab-target[clientType=""] { /* Send To All Devices */
+
+	list-style-image: url("chrome://browser/skin/send-to-device.svg");
+
+	list-style-image: url("../MipImages/Fugue/fugue_GoTo.png");
+	list-style-image: url("../MipImages/Fugue/fugue_MobilePhone.png");
+	list-style-image: url("../MipImages/PublicDomain/Icon-Mobile-Phone-SendTo(crystal).png");
+	list-style-image: url("../MipImages/PublicDomain/Icon-Mobile-Phone.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_MobilePhone-SendTo.png");
+	}
+
+#PanelUI-fxa-menu-account-signout-button {
+
+	list-style-image: url("chrome://browser/skin/sign-out.svg");
+	}
+
+.PanelUI-remotetabs-notabsforclient-label {
+
+	margin-inline-start: calc(var(--arrowpanel-menuicon-padding) + var(--arrowpanel-menuitem-padding)) !important;
+	padding-inline-start: var(--arrowpanel-menublank-padding) !important;
+	}
+
+#PanelUI-fxa-menu::before { /* Add a separator below the account name */
+
+	content: "";
+	display: -moz-box;
+	border-bottom: 1px solid var(--panel-separator-color);
+	margin: var(--panel-separator-margin);
+	padding: 0;
+	}
+
+#PanelUI-fxa-menu > :first-child { -moz-box-ordinal-group: 0; }
+
+/********************************************************************************
+/* Bookmarks Sub-Panel
+ ********************************************************************************/
+
+#panelMenuBookmarkThisPage {
+
+	list-style-image: url("chrome://browser/skin/bookmark-hollow.svg");
+
+	list-style-image: url("../MipImages/FF/bookmark-1.png");
+	list-style-image: url("../MipImages/FF/bookmark-2.png");
+	list-style-image: url("../MipImages/FF/bookmark-3.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Bookmark-New.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Bookmark-New.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmark-New.png");
+	list-style-image: url("../MipImages/Silk/silk_Bookmark-New.png");
+	list-style-image: url("../MipImages/Tango/tango_Bookmark-New.png");
+
+	list-style-image: url("../MipImages/Silk/silk_Bookmark-New(crystal).png");
+	}
+
+#panelMenuBookmarkThisPage[starred] {
+
+	list-style-image: url("chrome://browser/skin/bookmark.svg");
+
+	list-style-image: url("../MipImages/FF/bookmark-2.png");
+	list-style-image: url("../MipImages/FF/bookmark-3.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Bookmark.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Bookmark.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmark.png");
+	list-style-image: url("../MipImages/Tango/tango_Bookmark.png");
+
+	list-style-image: url("../MipImages/Silk/silk_Bookmark.png");
+	}
+
+#panelMenu_viewBookmarksToolbar {
+
+	list-style-image: url("chrome://browser/skin/bookmarks-toolbar.svg");
+	list-style-image: url("../MipImages/FF/bookmarksToolbar.png");
+	}
+
+#panelMenu_showAllBookmarks {
+
+	list-style-image: url("chrome://browser/skin/library.svg");
+
+	list-style-image: url("../MipImages/FF/allBookmarks.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Bookmarks.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmarks-Organize.png");
+	list-style-image: url("../MipImages/Silk/silk_Bookmarks-Opened.png");
+	list-style-image: url("../MipImages/Tango/tango_Bookmarks-Organize.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Bookmarks-Opened.png");
+	}
+
+/********************************************************************************
+/* History Sub-Panel
+ ********************************************************************************/
+
+#appMenuRecentlyClosedTabs {
+
+	list-style-image: url("chrome://browser/skin/tab.svg");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Tab.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Tab.png");
+	list-style-image: url("../MipImages/Silk/silk_Tab.png");
+	list-style-image: url("../MipImages/Tango/tango_Tab.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Tab.png");
+	}
+
+#appMenuRecentlyClosedWindows {
+
+	list-style-image: url("chrome://browser/skin/window.svg");
+
+	list-style-image: url("../MipImages/FF/aboutSessionRestore-window-icon.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Window.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Window.png");
+	list-style-image: url("../MipImages/Silk/silk_Window.png");
+	list-style-image: url("../MipImages/Tango/tango_Window.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Window.png");
+	}
+
+#appMenuRestoreSession {
+
+	list-style-image: url("chrome://browser/skin/restore-session.svg");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Session.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Session.png");
+	list-style-image: url("../MipImages/Fugue/fugue_RestoreSession(silk).png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_RestoreSession.png");
+	}
+
+#appMenuClearRecentHistory {
+
+	list-style-image: url("chrome://browser/skin/forget.svg");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Eraser.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Eraser.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_HistoryDelete.png"); /* Official Ones */
+	list-style-image: url("../MipImages/Fugue/fugue_HistoryDelete.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_HistoryDelete.png");
+	list-style-image: url("../MipImages/Silk/silk_HistoryDelete.png");
+
+	list-style-image: url("../MipImages/FF/broom.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Sweep.png");
+	list-style-image: url("../MipImages/Tango/tango_Sweep.png");
+	}
+
+/********************************************************************************
+/* More Tools Sub-Panel (DevTools)
+ ********************************************************************************/
+
+#appmenu-moreTools-button,
+#overflowMenu-customize-button {
+
+	list-style-image: url("chrome://browser/skin/customize.svg");
+
+	list-style-image: url("../MipImages/FF/themeGeneric-16.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Palette.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Palette.png");
+	list-style-image: url("../MipImages/Silk/silk_Palette.png");
+	list-style-image: url("../MipImages/Tango/tango_Palette.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Palette.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-child(1) { */
+   #appmenu-developer-tools-view .subviewbutton[key="key_toggleToolbox"] {  /* Web Developer Tools */
+
+	list-style-image: url("chrome://browser/skin/developer.svg");
+	list-style-image: url("chrome://browser/skin/toggle.svg");
+
+	list-style-image: url("../MipImages/Tango/tango_PowerDown.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Switch.png");
+	list-style-image: url("../MipImages/FF/switch.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-child(2) { */
+   #appmenu-developer-tools-view .subviewbutton[oncommand="switchToTabHavingURI('about:performance', true)"] {  /* Task Manager */
+
+	list-style-image: url("chrome://devtools/skin/images/tool-profiler.svg");
+
+	list-style-image: url("../MipImages/FF/tool-profiler.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Dev-Profiler.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Dev-Profiler.png");
+	list-style-image: url("../MipImages/Silk/silk_Dev-Profiler.png");
+	list-style-image: url("../MipImages/Tango/tango_Dev-Profiler.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Dev-Profiler.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Dev-Profiler-light.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-child(3) { */
+   #appmenu-developer-tools-view .subviewbutton[label="Remote Debugging"] {  /* Remote Debugging */
+
+	list-style-image: url("chrome://devtools/skin/images/tool-debugger.svg");
+	list-style-image: url("../MipImages/Firefox-UI-Fix/bug.svg");
+
+	list-style-image: url("../MipImages/FF/tool-debugger.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Connect.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Connect.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Connect.png");
+	list-style-image: url("../MipImages/Silk/silk_Connect.png");
+	list-style-image: url("../MipImages/Tango/tango_Connect.png");
+
+	list-style-image: url("../MipImages/FF/remote-XP.png");
+	list-style-image: url("../MipImages/FF/remote.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Dev-Debugger.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Dev-Debugger.png");
+	list-style-image: url("../MipImages/Silk/silk_Dev-Debugger.png");
+	list-style-image: url("../MipImages/Tango/tango_Dev-Debugger.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Dev-Bug.png"); /* Alternative (Just the bug) */
+	list-style-image: url("../MipImages/Fugue/fugue_Dev-Debugger.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-child(4) { */
+   #appmenu-developer-tools-view .subviewbutton[key="key_browserToolbox"] {  /* Browser Toolbox */
+
+	list-style-image: url("../MipImages/Firefox-UI-Fix/webdeveloper.svg");
+
+	list-style-image: url("../MipImages/FF/tilt.png");
+	list-style-image: url("../MipImages/FF/tilt-black.png");
+	list-style-image: url("../MipImages/FF/tilt-grey.png");
+	list-style-image: url("../MipImages/Crystal/crystal_WebDeveloper.png");
+	list-style-image: url("../MipImages/Silk/silk_WebDeveloper.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_WebDeveloper-blocks.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-child(5) { */
+   #appmenu-developer-tools-view .subviewbutton[label="Browser Content Toolbox"] { /* Browser Content Toolbaox */
+
+	list-style-image: url("../MipImages/Firefox-UI-Fix/command-frames.svg");
+
+	list-style-image: url("../MipImages/FF/tilt.png");
+	list-style-image: url("../MipImages/FF/tilt-black.png");
+	list-style-image: url("../MipImages/FF/tilt-grey.png");
+	list-style-image: url("../MipImages/Crystal/crystal_WebDeveloper.png");
+	list-style-image: url("../MipImages/Silk/silk_WebDeveloper.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Toolbox.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-last-child(5) { */
+   #appmenu-developer-tools-view .subviewbutton[key="key_browserConsole"] { /* Browser Console */
+
+    	list-style-image: url("chrome://global/skin/icons/chevron.svg");
+    	list-style-image: url("chrome://devtools/skin/images/tool-webconsole.svg");
+	list-style-image: url("chrome://devtools/skin/images/command-console.svg");
+
+	list-style-image: url("../MipImages/FF/commandline.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Dev-Console.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Dev-Console.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Dev-Console.png");
+	list-style-image: url("../MipImages/Silk/silk_Dev-Console.png");
+	list-style-image: url("../MipImages/Tango/tango_Dev-Console.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Dev-BrowserConsole.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-last-child(4) { */
+   #appmenu-developer-tools-view .subviewbutton[key="key_responsiveDesignMode"] {  /* Responsive Design Mode */
+
+	list-style-image: url("../MipImages/Firefox-UI-Fix/command-responsivemode.svg");
+
+	list-style-image: url("../MipImages/FF/tool-responsivemode.png");
+	list-style-image: url("../MipImages/FF/tool-responsivemode-black.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Dev-Responsive.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Dev-Responsive.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Dev-Responsive.png");
+	list-style-image: url("../MipImages/Silk/silk_Dev-Responsive.png");
+	list-style-image: url("../MipImages/Tango/tango_Dev-Responsive.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Dev-Responsive-Mobile.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-last-child(3) { */
+   #appmenu-developer-tools-view .subviewbutton[label="Eyedropper"] { /* Eyedropper */
+
+	list-style-image: url("chrome://devtools/skin/images/command-eyedropper.svg");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Eyedropper.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Eyedropper.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Eyedropper(silk).png");
+	list-style-image: url("../MipImages/Tango/tango_Eyedropper.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Eyedropper.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-last-child(2) { */
+   #appmenu-developer-tools-view .subviewbutton[key="key_viewSource"] { /* Page Source */
+
+	list-style-image: url("chrome://devtools/skin/images/tool-dom.svg");
+	list-style-image: url("../MipImages/Firefox-UI-Fix/search-file.svg");
+
+	list-style-image: url("../MipImages/Crystal/crystal_ViewSource.png");
+	list-style-image: url("../MipImages/Fugue/fugue_ViewSource.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_ViewSource.png");
+	list-style-image: url("../MipImages/Silk/silk_ViewSource.png");
+	list-style-image: url("../MipImages/Tango/tango_ViewSource-Brakets.png");
+	list-style-image: url("../MipImages/Tango/tango_ViewSource.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_ViewSource(silk).png");
+	}
+
+#appmenu-developer-tools-view .subviewbutton:last-child {
+
+	margin-bottom: 6px !important;
+	}
+
+/********************************************************************************
+/* Help Sub-Panel
+ ********************************************************************************/
+
+#appMenu_menu_openHelp {
+
+	list-style-image: url("chrome://global/skin/icons/help.svg");
+
+	list-style-image: url("../MipImages/FF/alwaysAsk-XP-lower.png");
+	list-style-image: url("../MipImages/FF/question-16.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Help.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Help.png");
+	list-style-image: url("../MipImages/Silk/silk_Help.png");
+	list-style-image: url("../MipImages/Tango/tango_Help.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Help.png");
+	}
+
+#appMenu_feedbackPage {
+
+	list-style-image: url("../MipImages/Firefox-UI-Fix/send.svg");
+
+	list-style-image: url("../MipImages/FF/services-16.png");
+	list-style-image: url("../MipImages/FF/alwaysAsk-XP-lower.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Alert.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Balloon-left.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Balloon-white-left.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Alert.png");
+	list-style-image: url("../MipImages/Silk/silk_Alert-bigger.png");
+	list-style-image: url("../MipImages/Silk/silk_Alert.png");
+	list-style-image: url("../MipImages/Tango/tango_Alert.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Smiley.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Smiley.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Smiley.png");
+	list-style-image: url("../MipImages/Silk/silk_Smiley.png");
+
+	list-style-image: url("../MipImages/Tango/tango_Smiley.png");
+	}
+
+#appMenu_helpSafeMode {
+
+	list-style-image: url("chrome://devtools/skin/images/debugging-workers.svg");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Restart.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Restart.png");
+	list-style-image: url("../MipImages/Silk/silk_Restart.png");
+	list-style-image: url("../MipImages/Tango/tango_Restart.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Restart.png");
+	}
+
+#appMenu_troubleShooting {
+
+	list-style-image: url("chrome://global/skin/icons/more.svg");
+
+	list-style-image: url("chrome://browser/skin/info.svg"); /* blue */
+	list-style-image: url("chrome://mozapps/skin/profile/information.svg");
+
+	list-style-image: url("../MipImages/FF/information-16.png");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Information.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Information.png");
+	list-style-image: url("../MipImages/Silk/silk_PageInfo.png");
+	list-style-image: url("../MipImages/Tango/tango_Information.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Information.png");
+	}
+
+#appMenu_help_reportSiteIssue,
+#appMenu_menu_HelpPopup_reportPhishingtoolmenu {
+
+	list-style-image: url("chrome://global/skin/icons/warning.svg"); /* black */
+
+	list-style-image: url("chrome://browser/skin/warning.svg"); /* yellow */
+
+	list-style-image: url("../MipImages/Crystal/crystal_Warning.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Warning-1.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Warning-2.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Warning.png");
+	list-style-image: url("../MipImages/Silk/silk_Warning.png");
+	list-style-image: url("../MipImages/Tango/tango_Warning.png");
+
+	list-style-image: url("../MipImages/FF/warning-16-XP.png");
+	list-style-image: url("../MipImages/FF/warning-16.png");
+	}
+
+#appMenu_aboutName {
+
+	list-style-image: url("chrome://global/skin/icons/info.svg");
+	list-style-image: url("chrome://browser/skin/welcome-back.svg");
+	list-style-image: url("../MipImages/FF/FIREFOX-78-icon16.png");
+	list-style-image: url("../MipImages/FF/FIREFOX-icon16.png");
+	}
+
+/********************************************************************************
+ *
+ * Library Panel
+ *
+ ********************************************************************************/
+
+/* See Main Panel
+
+	#appMenu-library-bookmarks-button {
+	#appMenu-library-history-button {
+	#appMenu-library-downloads-button { */
+
+/********************************************************************************
+ *
+ * Downloads Panel
+ *
+ ********************************************************************************/
+
+/* See Main Panel
+
+	#downloadsHistory { */
+
+/********************************************************************************
+ *
+ * Toolbar Overflow Panel
+ *
+ ********************************************************************************/
+
+/* See More Tools Sub-Panel
+
+	#overflowMenu-customize-button { */
+
+}

@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.5.5 (MIP/CSS)
+ * Menu Icon Plus CSS v2.0 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -8,6 +8,7 @@
  *   https://creativecommons.org/licenses/by/4.0/
  *
  * - The Original MIP Firefox Extension (c) Justin Rodes http://www.codedawn.com/menu-icons-plus.php
+ * - MOST OF THE PANELS CODE (c) Black7375 (https://github.com/black7375/Firefox-UI-Fix)
  *
  * + The icons come from ->
  *
@@ -33,6 +34,8 @@
  * + Contributors ->
  *
  *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
+ *	Acid-Crash Discovered bug with the Responsive Design SVG icon and suggested the fix for it
+ *	Devtools/Help Menu SVG icons and Panels code by Black7375 (https://github.com/black7375/Firefox-UI-Fix)
  *
  * + NOTES:
  * - TabSize=8
@@ -45,6 +48,7 @@
  *
  * This is the file I use to try things out when I build the themes. None of the
  * lines are commented-out so you should not be using this as your final CSS file.
+ * It's normally setup with FuguePlus as the last entry for each selector.
  *
  */
 
@@ -84,15 +88,14 @@
 				menuitem.forEach(query => query.classList.add('menuitem-iconic'));
 				const appMenuButton = document.querySelectorAll('toolbarbutton.subviewbutton');
 				appMenuButton.forEach(query => query.classList.add('subviewbutton-iconic'));
-	
+
 			},
 		}
 	ucjsAC.init();
 	}, 5000);
 	*/
 
-/* PANELS:
- * Up/Down Centering: When un-even prefer 1 less on the bottom
+/* Up/Down Centering: When un-even prefer 1 less on the bottom
  * Left/Right Centering: When un-even prefer 1 less on the left */
 
 /********************************************************************************
@@ -112,7 +115,9 @@
 #syncedTabsOpenSelectedInWindow::Before,
 #_testpilot-containers-menuitem-_move-to-new-window-container::Before {
 
-	content: url("chrome://browser/skin/open-in-new.svg");
+	content: url("chrome://browser/skin/window.svg");
+	content: url("../MipImages/FF/new-window.svg");
+
 	content: url("../MipImages/FF/aboutSessionRestore-window-icon.png");
 
 	content: url("../MipImages/Crystal/crystal_WindowNew.png");
@@ -242,7 +247,7 @@
 #menu_closeWindow::Before,
 #orgClose::Before {
 
-	content: url("chrome://global/skin/reader/close-16.svg");
+	content: url("chrome://global/skin/icons/close.svg");
 
 	content: url("../MipImages/Silk/silk_WindowClose.png");		/* Official One */
 	content: url("../MipImages/Tango/tango_WindowClose.png");	/* Official One */
@@ -344,7 +349,9 @@
 #context-printframe::Before,
 #context-print-selection::Before {
 
-	content: url("chrome://browser/skin/print.svg");
+	content: url("chrome://global/skin/icons/print.svg");
+	content: url("../MipImages/FF/print.svg");
+
 	content: url("../MipImages/FF/print.png");
 
 	content: url("../MipImages/Crystal/crystal_Print.png");
@@ -477,7 +484,7 @@
 menuitem[cmd="cmd_undo"]::Before,
 #textbox-contextmenu menuitem[command="cmd_undo"]::Before {
 
-	content: url("chrome://browser/skin/undo.svg");
+	content: url("chrome://global/skin/icons/undo.svg");
 
 	content: url("../MipImages/Crystal/crystal_Undo.png");
 	content: url("../MipImages/Oxygen/oxygen_Undo.png");
@@ -516,6 +523,20 @@ menuitem[cmd="cmd_undo"] > label,
 
 	margin-inline-start: -20px !important;
 	}
+
+#allTabsMenu-undoCloseTab {
+
+	list-style-image: url("../MipImages/FF/undo.svg");
+
+	list-style-image: url("../MipImages/Crystal/crystal_Undo.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Undo.png");
+	list-style-image: url("../MipImages/Silk/silk_Undo.png");
+	list-style-image: url("../MipImages/Tango/tango_Undo.png");
+
+	list-style-image: url("../MipImages/Fugue/fugue_Undo.png");
+	}
+
+#allTabsMenu-undoCloseTab > label { padding-inline-start: 8px !important; }
 
 /* Redo *************************************************************************/
 
@@ -879,7 +900,7 @@ menuitem[cmd="cmd_selectAll"] > label,
 #context-searchselect::Before,
 #context-searchselect-private::Before {
 
-	content: url("chrome://browser/skin/search-glass.svg");
+	content: url("chrome://global/skin/icons/search-glass.svg");
 	content: url("../MipImages/FF/Search-glass-2.png");
 
 	content: url("../MipImages/Crystal/crystal_Find.png");
@@ -932,18 +953,17 @@ menuitem[cmd="cmd_selectAll"] > label,
 
 /* Find Tabs (TABS PANEL) *******************************************************/
 
-#allTabsMenu-searchTabs > image { 
+#allTabsMenu-searchTabs > image {
 
 	list-style-image: url("../MipImages/FF/search-glass.svg");
 	list-style-image: url("../MipImages/FF/Search-glass-2.png");
 
 	list-style-image: url("../MipImages/Crystal/crystal_Find.png");
-	list-style-image: url("../MipImages/Fugue/fugue_Find.png");    
-	list-style-image: url("../MipImages/Oxygen/oxygen_Find.png");  
-	list-style-image: url("../MipImages/Tango/tango_Find.png");    
+	list-style-image: url("../MipImages/Fugue/fugue_Find.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Find.png");
+	list-style-image: url("../MipImages/Tango/tango_Find.png");
 
 	list-style-image: url("../MipImages/Silk/silk_Find.png");
-	-moz-image-region: auto;
 	}
 
 #allTabsMenu-searchTabs > label { padding-inline-start: 8px !important; }
@@ -1560,7 +1580,8 @@ menuitem.searchbar-clear-history > label {
 	}
 
 /* Bookmarks toolbar Button PANEL
- * NOTE that this (and containers in +) are the only panels included so far in MIP/CSS */
+ * NOTE that this (and > tab-Overflow) are the only panels included in MIP/CSS's Standard Menus file
+ * The reason this is here is because Aris's bookmark-folders CSS already skins some of the BMB and because we skin containers here */
 
 #BMB_viewBookmarksSidebar .menu-iconic-icon {
 
@@ -1573,7 +1594,7 @@ menuitem.searchbar-clear-history > label {
 	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmarks.png");
 	list-style-image: url("../MipImages/Silk/silk_Bookmarks-Closed.png");
 	list-style-image: url("../MipImages/Tango/tango_Bookmarks.png");
-	
+
 	list-style-image: url("../MipImages/Fugue/fugue_Bookmarks-Closed.png");
 	-moz-image-region: auto;
 	 }
@@ -1589,7 +1610,7 @@ menuitem.searchbar-clear-history > label {
 	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmarks.png");
 	list-style-image: url("../MipImages/Silk/silk_Bookmarks-Opened.png");
 	list-style-image: url("../MipImages/Tango/tango_Bookmarks-Organize.png");
-	
+
 	list-style-image: url("../MipImages/Fugue/fugue_Bookmarks-Opened.png");
 	-moz-image-region: auto;
 	 }
@@ -1618,16 +1639,47 @@ menuitem.searchbar-clear-history > label {
 	margin-inline-start: -25px !important;
 	}
 
-#BMB_viewBookmarksToolbar[label^="Hide"] image.menu-iconic-icon {
+/* Open All In Tabs in the BMB Folder Footer * Alignment is broken in FF89 (fixing it) */
 
-	list-style-image: url("../MipImages/FF/container-hide.svg");
-	list-style-image: url("../MipImages/FF/container-hide-black.svg");
+#BMB_bookmarksPopup menuseparator.bookmarks-actions-menuseparator + menuitem.openintabs-menuitem.subviewbutton::Before {
+/* menuitem.openintabs-menuitem.subviewbutton.panel-subview-footer::Before { */
+
+	content: url("chrome://browser/skin/new-tab.svg");
+
+	content: url("../MipImages/Fugue/fugue_TabPlus.png");
+	content: url("../MipImages/Oxygen/oxygen_TabPlus.png");
+	content: url("../MipImages/Silk/silk_TabPlus.png");
+	content: url("../MipImages/Tango/tango_TabPlus.png");
+
+	content: url("../MipImages/Crystal/crystal_TabPlus.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 1px;
+	vertical-align: middle;
 	}
 
-#BMB_viewBookmarksToolbar[label^="View"] image.menu-iconic-icon {
+#BMB_bookmarksPopup menuseparator.bookmarks-actions-menuseparator + menuitem.openintabs-menuitem.subviewbutton > label {
+/* menuitem.openintabs-menuitem.subviewbutton.panel-subview-footer > label { */
 
-	list-style-image: url("../MipImages/FF/container-unhide.svg");
-	list-style-image: url("../MipImages/FF/container-unhide-black.svg");
+	margin-inline-start: -25px !important;
+	}
+
+/*[here!]*/
+
+#BMB_viewBookmarksToolbar.menuitem-iconic.subviewbutton[label^="Hide"] > .menu-iconic-left > image.menu-iconic-icon {
+
+	list-style-image: url("../MipImages/FF/container-hide.svg") !important;
+	list-style-image: url("../MipImages/FF/container-hide-black.svg") !important;
+	-moz-image-region: unset !important;
+	}
+
+#BMB_viewBookmarksToolbar.menuitem-iconic.subviewbutton[label^="View"] > .menu-iconic-left > image.menu-iconic-icon {
+
+	list-style-image: url("../MipImages/FF/container-unhide.svg") !important;
+	list-style-image: url("../MipImages/FF/container-unhide-black.svg") !important;
+	-moz-image-region: unset !important;
 	}
 
 /* Bookmark This Page Link Tab or Frame + Bookmark-New **************************/
@@ -1705,7 +1757,7 @@ menuitem.searchbar-clear-history > label {
 #placesContext_new\:folder::Before,
 #newfolder::Before {
 
-	content: url("chrome://browser/skin/folder.svg");
+	content: url("../MipImages/FF/folder.svg");
 	content: url("../MipImages/FF/folder.png");
 
 	content: url("../MipImages/Crystal/crystal_Bookmark-NewFolder.png");
@@ -2068,12 +2120,15 @@ menuitem.searchbar-clear-history > label {
  *
  ********************************************************************************/
 
-/* Bookmarks Folders copied from Aris-t2 bookmark_icons_colorized, bugs are his ;-) */
+/* Bookmarks Folders copied from Aris-t2 bookmark_icons_colorized */
 /* You must import bookmark_icons_colorized FIRST */
 
-#editBMPanel_chooseFolderMenuItem .menu-iconic-icon,
+/*[here!]*/
+
 treechildren::-moz-tree-image(title, container),
-treechildren::-moz-tree-image(title, query, hostContainer) {
+treechildren::-moz-tree-image(title, query, hostContainer),
+#editBMPanel_chooseFolderMenuItem .menu-iconic-icon,
+menuitem.folder-icon {
 
 	list-style-image: url("../MipImages/Crystal/crystal_FolderClosed.png") !important;
 	list-style-image: url("../MipImages/Oxygen/oxygen_FolderClosed.png") !important;
@@ -2093,7 +2148,8 @@ treechildren::-moz-tree-image(title, open) {
 	-moz-image-region: auto !important;
 	}
 
-.bookmark-item[container]:not([query]):not([livemark]) {
+.bookmark-item[container]:not([query]):not([livemark]),
+.bookmark-item[container]:not([query]):not([livemark]) > .menu-iconic-left > .menu-iconic-icon {
 
 	list-style-image: url("../MipImages/Crystal/crystal_FolderClosed.png") !important;
 	list-style-image: url("../MipImages/Oxygen/oxygen_FolderClosed.png") !important;
@@ -2103,7 +2159,8 @@ treechildren::-moz-tree-image(title, open) {
 	-moz-image-region: auto !important;
 	}
 
-.bookmark-item[container]:not([query]):not([livemark])[open] {
+.bookmark-item[container]:not([query]):not([livemark])[open],
+.bookmark-item[container]:not([query]):not([livemark])[open] > .menu-iconic-left > .menu-iconic-icon {
 
 	list-style-image: url("../MipImages/Crystal/crystal_FolderOpened.png") !important;
 	list-style-image: url("../MipImages/Oxygen/oxygen_FolderOpened.png") !important;
@@ -2133,6 +2190,30 @@ treechildren::-moz-tree-image(title, open) {
 	-moz-image-region: auto !important;
 	}
 
+#editBMPanel_folderMenuList:-moz-any([label="Bookmarks Toolbar"],[label="Lesezeichen-Symbolleiste"]) .menulist-icon,
+#editBMPanel_toolbarFolderItem .menu-iconic-icon,
+treechildren::-moz-tree-image(container, OrganizerQuery_BookmarksToolbar),
+treechildren::-moz-tree-image(container, queryFolder_toolbar_____) {
+ list-style-image: url("../MipImages/FF/bookmarksToolbar.png") !important;
+ -moz-image-region: auto !important;
+}
+
+#editBMPanel_folderMenuList:-moz-any([label="Bookmarks Menu"],[label="Lesezeichen-Menü"]) .menulist-icon,
+#editBMPanel_bmRootItem .menu-iconic-icon,
+treechildren::-moz-tree-image(container, OrganizerQuery_BookmarksMenu),
+treechildren::-moz-tree-image(container, queryFolder_menu________) {
+ list-style-image: url("../MipImages/FF/bookmarksMenu.png") !important;
+ -moz-image-region: auto !important;
+}
+
+#editBMPanel_folderMenuList:-moz-any([label="Other Bookmarks"],[label="Weitere Lesezeichen"]) .menulist-icon,
+#editBMPanel_unfiledRootItem .menu-iconic-icon,
+treechildren::-moz-tree-image(container, OrganizerQuery_UnfiledBookmarks),
+treechildren::-moz-tree-image(container, queryFolder_unfiled_____) {
+ list-style-image: url("../MipImages/FF/unsortedBookmarks.png") !important;
+ -moz-image-region: auto !important;
+}
+
 /* Mobile Bookmarks *************************************************************/
 
 #menu_mobileBookmarks,
@@ -2155,7 +2236,7 @@ treechildren::-moz-tree-image(title, open) {
 
 #menu_openDownloads::Before {
 
-	content: url("chrome://browser/skin/downloads/download-icons.svg#arrow-with-bar");
+	content: url("chrome://browser/skin/downloads/downloads.svg");
 
 	content: url("../MipImages/Crystal/crystal_Download.png");
 	content: url("../MipImages/Fugue/fugue_Download.png");
@@ -2226,7 +2307,7 @@ menuitem[data-l10n-id="downloads-cmd-resume"] > label {
 
 menuitem.downloadShowMenuItem::Before { /* [command="downloadsCmd_show"] */
 
-	content: url("chrome://browser/skin/folder.svg");
+	content: url("../MipImages/FF/folder.svg");
 	content: url("../MipImages/FF/folder.png");
 
 	content: url("../MipImages/Fugue/fugue_FolderGoTo.png");
@@ -2296,6 +2377,8 @@ menuitem[command="downloadsCmd_openReferrer"] > label {
 	vertical-align: middle;
 	}
 
+#getMoreDevtools::Before,
+#extensionsForDevelopers::Before,
 menuitem[data-l10n-id="page-action-manage-extension"]::Before,
 menuitem[data-l10n-id="toolbar-context-menu-manage-extension"]::Before {
 
@@ -2318,6 +2401,8 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"]::Before {
 	}
 
 #menu_openAddons > label,
+#getMoreDevtools > label,
+#extensionsForDevelopers > label,
 menuitem[data-l10n-id="page-action-manage-extension"] > label,
 menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 
@@ -2399,6 +2484,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 /* Options **********************************************************************/
 
 #menu_preferences::Before,
+#syncedTabsManageDevices::Before,
 #blockedPopupOptions menuitem[oncommand="gPopupBlockerObserver.editPopupSettings();"]::Before {
 
 	content: url("chrome://global/skin/icons/settings.svg");
@@ -2426,6 +2512,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	}
 
 #menu_preferences > label,
+#syncedTabsManageDevices > label,
 #blockedPopupOptions menuitem[oncommand="gPopupBlockerObserver.editPopupSettings();"] > label {
 
 	margin-inline-start: -20px !important;
@@ -2444,6 +2531,8 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 #sync-reauthitem::Before {
 
 	content: url("chrome://browser/skin/fxa/avatar.svg");
+	content: url("chrome://browser/skin/fxa/avatar-empty.svg");
+
 	content: url("../MipImages/FF/profileicon.png");
 	content: url("../MipImages/FF/profileicon-XP.png");
 
@@ -2524,24 +2613,25 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	}
 
 /* Manage Devices ***************************************************************/
+/* Moved to OPTIONS/SETTINGS
 
-#syncedTabsManageDevices::Before {
+	#syncedTabsManageDevices::Before {
 
-	content: url("chrome://browser/skin/fxa/add-device.svg");
-	content: url("../MipImages/PublicDomain/Icon-Mobile-Phone.png");
-	content: url("../MipImages/Fugue/fugue_MobilePhone.png");
+		content: url("chrome://browser/skin/fxa/add-device.svg");
+		content: url("../MipImages/PublicDomain/Icon-Mobile-Phone.png");
+		content: url("../MipImages/Fugue/fugue_MobilePhone.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		vertical-align: middle;
+		}
 
-#syncedTabsManageDevices > label {
+	#syncedTabsManageDevices > label {
 
-	margin-inline-start: -20px !important;
-	}
+		margin-inline-start: -20px !important;
+		} */
 
 /* Send To Device ***************************************************************/
 
@@ -2599,24 +2689,47 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	vertical-align: middle;
 	}
 
-#context_sendTabToDevicePopupMenu menuitem[label^="Connect Another Device"]::Before,
-#context-sendpagetodevice-popup menuitem[label^="Connect Another Device"]::Before,
-#context-sendlinktodevice-popup menuitem[label^="Connect Another Device"]::Before {
+#context_sendTabToDevicePopupMenu menuitem[label^="Send to All Devices"]::Before,
+#context-sendpagetodevice-popup menuitem[label^="Send to All Devices"]::Before,
+#context-sendlinktodevice-popup menuitem[label^="Send to All Devices"]::Before {
+
+	content: url("chrome://browser/skin/send-to-device.svg");
+
+	content: url("../MipImages/Fugue/fugue_GoTo.png");
+	content: url("../MipImages/Fugue/fugue_MobilePhone.png");
+	content: url("../MipImages/PublicDomain/Icon-Mobile-Phone-SendTo(crystal).png");
+	content: url("../MipImages/PublicDomain/Icon-Mobile-Phone.png");
+
+	content: url("../MipImages/Fugue/fugue_MobilePhone-SendTo.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	vertical-align: middle;
+	}
+
+#context_sendTabToDevicePopupMenu menuitem[label^="Manage Devices"]::Before,
+#context-sendpagetodevice-popup menuitem[label^="Manage Devices"]::Before,
+#context-sendlinktodevice-popup menuitem[label^="Manage Devices"]::Before {
 
 	content: url("chrome://browser/skin/fxa/add-device.svg");
+	content: url("chrome://global/skin/icons/settings.svg");
 
-	content: url("../MipImages/Crystal/crystal_Connect.png");
-	content: url("../MipImages/Fugue/fugue_Connect.png");
-	content: url("../MipImages/Oxygen/oxygen_Connect.png");
-	content: url("../MipImages/Silk/silk_Connect.png");
-	content: url("../MipImages/Tango/tango_Connect.png");
+	content: url("../MipImages/Crystal/crystal_Options.png");
+	content: url("../MipImages/Fugue/fugue_Gear.png");
+	content: url("../MipImages/Fugue/fugue_Options-darker.png");
+	content: url("../MipImages/Fugue/fugue_Options.png");
+	content: url("../MipImages/Oxygen/oxygen_Options.png");
+	content: url("../MipImages/Silk/silk_Options.png");
+	content: url("../MipImages/Tango/tango_Options.png");
 
-	content: url("../MipImages/Crystal/crystal_ConnectedBrowser.png");
-	content: url("../MipImages/Oxygen/oxygen_ConnectedBrowser.png");
-	content: url("../MipImages/Silk/silk_ConnectedBrowser.png");
-	content: url("../MipImages/Tango/tango_ConnectedBrowser.png");
-
-	content: url("../MipImages/Fugue/fugue_ConnectedBrowser.png");
+	content: url("../MipImages/FF/gear_clicked.png");
+	content: url("../MipImages/FF/gear_default.png");
+	content: url("../MipImages/FF/option-icon-grey.png");
+	content: url("../MipImages/FF/option-icon-blue.png");
+	content: url("../MipImages/FF/options.png");
+	content: url("../MipImages/FF/settings.png");
 
 	display: block;
 	width: 16px;
@@ -2631,10 +2744,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #context_sendTabToDevicePopupMenu menuitem.sendtab-target > label,
 #context-sendpagetodevice-popup menuitem.sendtab-target > label,
-#context-sendlinktodevice-popup menuitem.sendtab-target > label,
-#context_sendTabToDevicePopupMenu menuitem[label^="Connect Another Device"] > label,
-#context-sendpagetodevice-popup menuitem[label^="Connect Another Device"] > label,
-#context-sendlinktodevice-popup menuitem[label^="Connect Another Device"] > label {
+#context-sendlinktodevice-popup menuitem.sendtab-target > label {
 
 	margin-inline-start: -20px !important;
 	}
@@ -2684,34 +2794,35 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	}
 
 /* Get More Tools ***************************************************************/
+/* Merged with the AddOns icon
 
-#getMoreDevtools::Before,
-#extensionsForDevelopers::Before {
+	#getMoreDevtools::Before,
+	#extensionsForDevelopers::Before {
 
-	content: url("chrome://browser/skin/developer.svg");
-	content: url("../MipImages/FF/tools-grey.png");
+		content: url("chrome://browser/skin/developer.svg");
+		content: url("../MipImages/FF/tools-grey.png");
 
-	content: url("../MipImages/Crystal/crystal_Tools.png");	/* Alternative */
-	content: url("../MipImages/Fugue/fugue_Tools.png");
-	content: url("../MipImages/Oxygen/oxygen_Tools.png");
-	content: url("../MipImages/Silk/silk_Tools.png");
-	content: url("../MipImages/Tango/tango_Tools.png");
+		content: url("../MipImages/Crystal/crystal_Tools.png");	/* Alternative */ /*
+		content: url("../MipImages/Fugue/fugue_Tools.png");
+		content: url("../MipImages/Oxygen/oxygen_Tools.png");
+		content: url("../MipImages/Silk/silk_Tools.png");
+		content: url("../MipImages/Tango/tango_Tools.png");
 
-	content: url("../MipImages/Crystal/crystal_Wrench.png");
-	content: url("../MipImages/Fugue/fugue_Wrench.png");
-	content: url("../MipImages/Misc/external_Wrench.png");
-	content: url("../MipImages/Silk/silk_Wrench.png");
-	content: url("../MipImages/Tango/tango_Wrench.png");
+		content: url("../MipImages/Crystal/crystal_Wrench.png");
+		content: url("../MipImages/Fugue/fugue_Wrench.png");
+		content: url("../MipImages/Misc/external_Wrench.png");
+		content: url("../MipImages/Silk/silk_Wrench.png");
+		content: url("../MipImages/Tango/tango_Wrench.png");
 
-	content: url("../MipImages/Oxygen/oxygen_Wrench.png");
-	content: url("../MipImages/Oxygen/oxygen_Wrench-darker.png");
+		content: url("../MipImages/Oxygen/oxygen_Wrench.png");
+		content: url("../MipImages/Oxygen/oxygen_Wrench-darker.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
-	}
+			display: block;
+			width: 16px;
+			height: 16px;
+			margin-inline-start: 6px;
+			vertical-align: middle;
+		} */
 
 /* Toggle Tools *****************************************************************/
 
@@ -2729,9 +2840,9 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	vertical-align: middle;
 	}
 
+/* #getMoreDevtools > label, */
+/* #extensionsForDevelopers > label, */
 #webDeveloperMenu > label,
-#getMoreDevtools > label,
-#extensionsForDevelopers > label,
 #menu_devToolbox:not([checked=true]) > label {
 
 	margin-inline-start: -20px !important;
@@ -2906,11 +3017,11 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	height: 16px;
 	margin-inline-start: 6px;
 	vertical-align: middle;
-	
+
 	-moz-context-properties: fill;
 	 fill: SlateGrey;
 	 fill: DimGrey;
-	
+
 	}
 
 /* Application ******************************************************************/
@@ -2962,13 +3073,16 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	content: url("../MipImages/FF/remote-XP.png");
 	content: url("../MipImages/FF/remote.png");
 
+	content: url("../MipImages/Fugue/fugue_Dev-Bug.png");		/* Alternative (Just the bug) */
+	content: url("../MipImages/Fugue/fugue_Dev-Debugger.png");
+
 	display: block;
 	width: 16px;
 	height: 16px;
 	margin-inline-start: 6px;
 	vertical-align: middle;
 
-	/* filter: grayscale(100%) brightness(70%); /* USe this when using black SVG icons */
+	/* filter: grayscale(100%) brightness(70%); /* Use this when using black SVG icons */
 
 	}
 
@@ -3105,7 +3219,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
  ********************************************************************************/
 
 /* #help_importFromAnotherBrowser (See File Menu) */
-/* Report Phishing Error Site Is OK (See #blockedPopupAllowSite) */
+/* Report Phishing Error->Site Is OK (See #blockedPopupAllowSite) */
 
 /* Firefox Help *****************************************************************/
 
@@ -3253,7 +3367,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 /* RESTART (in Safe Mode) *******************************************************/
 
-
 	/* #helpSafeMode::Before { /* For use with SVG icons */
 	/*
 		content: url("chrome://browser/skin/reload.svg");
@@ -3261,7 +3374,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 		width: 16px;
 		height: 16px;
 		margin-inline-start: 6px;
-			vertical-align: middle;
+		vertical-align: middle;
 		-moz-context-properties: fill;
 		transform: scaleX(-1);
 		fill: blue;
@@ -3299,7 +3412,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	list-style-image: url("../MipImages/Tango/tango_Restart.png");
 
 	list-style-image: url("../MipImages/Fugue/fugue_Restart-red.png");
-	 
+
 	-moz-image-region: auto;
 	transform: none !important;
 	fill: none !important;
@@ -3308,6 +3421,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 /* Report Phishing Website/Addon ************************************************/
 
+#help_reportSiteIssue::Before,
 #menu_HelpPopup_reportPhishingtoolmenu::Before,
 menuitem[data-l10n-id="toolbar-context-menu-report-extension"]::Before {
 
@@ -3331,12 +3445,14 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"]::Before {
 	vertical-align: middle;
 	}
 
+#help_reportSiteIssue[disabled=true]::Before,
 #menu_HelpPopup_reportPhishingtoolmenu[disabled=true]::Before,
 menuitem[data-l10n-id="toolbar-context-menu-report-extension"][disabled=true]::Before {
 
 	opacity: 0.4;
 	}
 
+#help_reportSiteIssue > label,
 #menu_HelpPopup_reportPhishingtoolmenu > label,
 menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 
@@ -3726,6 +3842,8 @@ menuitem.customize-context-addToPanel > label {
 #context_closeSelectedTabs::Before,
 #menu_close::Before {
 
+	content: url("chrome://global/skin/icons/close.svg");
+
 	content: url("../MipImages/Fugue/fugue_TabMinus.png");
 	content: url("../MipImages/Fugue/fugue_TabX.png");
 	content: url("../MipImages/Oxygen/oxygen_TabX.png");
@@ -3752,6 +3870,8 @@ menuitem.customize-context-addToPanel > label {
 
 #context_closeTabOptions::Before,
 #blockedPopupDontShowMessage:not([checked=true])::Before {
+
+	content: url("chrome://global/skin/icons/close.svg");
 
 	content: url("../MipImages/Crystal/crystal_ClearAll.png");
 	content: url("../MipImages/Oxygen/oxygen_ClearAll.png");
@@ -3781,6 +3901,8 @@ menuitem.customize-context-addToPanel > label {
 /* Tab Close Other Tabs *********************************************************/
 
 #context_closeOtherTabs::Before {
+
+	content: url("chrome://global/skin/icons/close.svg");
 
 	content: url("../MipImages/Crystal/crystal_TabsOthers.png");
 	content: url("../MipImages/Oxygen/oxygen_TabsOthers.png");
@@ -3859,15 +3981,17 @@ menuitem.customize-context-addToPanel > label {
 
 /* Tab-Hidden (Tabs Dropdown Panel) *********************************************/
 
-#allTabsMenu-hiddenTabsButton > image { 
+#allTabsMenu-hiddenTabsButton > image {
 
+	list-style-image: url("../MipImages/FF/container-hide-black.svg");
 	list-style-image: url("../MipImages/Fugue/fugue_TabHidden.png");
 	list-style-image: url("../MipImages/Oxygen/oxygen_TabHidden.png");
 	list-style-image: url("../MipImages/Silk/silk_TabHidden.png");
 	list-style-image: url("../MipImages/Tango/tango_TabHidden.png");
 
 	list-style-image: url("../MipImages/Crystal/crystal_TabHidden.png");
-	-moz-image-region: auto;
+	width: 16px;
+	height: 16px;
 	}
 
 #allTabsMenu-hiddenTabsButton > label { padding-inline-start: 8px !important; }
@@ -3967,7 +4091,7 @@ menuitem[data-usercontextid="0"]::Before { /* #new-tab-button, #new-tab-button-p
 	vertical-align: middle;
 	}
 
-menuitem[command="Browser:OpenAboutContainers"] > label, 
+menuitem[command="Browser:OpenAboutContainers"] > label,
 #context-openlinkincontainertab > label,
 #menu_newUserContext > label,
 #context_reopenInContainer > label,
@@ -4016,6 +4140,11 @@ menuitem[data-usercontextid="0"] > label,
 	height: 16px;
 	margin-inline-start: 6px;
 	vertical-align: middle;
+	}
+
+#context-video-saveimage[disabled=true]::Before {
+	
+	opacity: 0.4;
 	}
 
 #context-saveimage::Before,
@@ -4592,6 +4721,7 @@ menuitem[data-usercontextid="0"] > label,
 #menu_pageSource::Before {
 
 	content: url("chrome://devtools/skin/images/tool-dom.svg");
+	content: url("../MipImages/Firefox-UI-Fix/search-file.svg");
 
 	content: url("../MipImages/Crystal/crystal_ViewSource.png");
 	content: url("../MipImages/Fugue/fugue_ViewSource.png");
@@ -4732,7 +4862,7 @@ menuitem[generateditemid="18"]:not([checked=true]) > label {
 	}
 
 #context-take-screenshot > label {
-	
+
 	margin-inline-start: -20px !important;
 	}
 
@@ -4867,7 +4997,6 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 /********************************************************************************
  *
  * LOGINS/PASSWORDS (Field Context Menu)
- * These are unfortunately Language-Dependent
  *
  ********************************************************************************/
 
@@ -4893,8 +5022,8 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 	vertical-align: middle;
 	}
 
-#fill-login[label="Fill Password"]::Before,
-#fill-login[label="Fill Password"] > #fill-login-popup > menuitem.context-login-item::Before {
+#fill-login[data-l10n-id="main-context-menu-use-saved-password"]::Before,
+#fill-login[data-l10n-id="main-context-menu-use-saved-password"] > #fill-login-popup > menuitem.context-login-item::Before {
 
 	content: url("chrome://browser/skin/login.svg");
 	content: url("../MipImages/FF/key-16.png");
@@ -4907,6 +5036,7 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 	content: url("../MipImages/Fugue/fugue_Key.png");
 	}
 
+#manage-saved-logins::Before,
 #fill-login-saved-passwords::Before {
 
 	content: url("../MipImages/Fugue/fugue_UserGroup.png");
@@ -4915,6 +5045,7 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 	content: url("../MipImages/Tango/tango_UserGroup.png");
 
 	content: url("../MipImages/Crystal/crystal_UserGroup.png");
+	content: url("../MipImages/Crystal/crystal_UserGroup2.png");
 
 	display: block;
 	width: 16px;
@@ -4944,6 +5075,7 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 	}
 
 #fill-login > label,
+#manage-saved-logins > label,
 #fill-login-saved-passwords > label,
 #fill-login-generated-password > label,
 #fill-login > #fill-login-popup > menuitem.context-login-item > label {

@@ -1,0 +1,363 @@
+/********************************************************************************
+ * Menu Icon Plus CSS v2.0 (MIP/CSS)
+ * Add Icons To Firefox Standard Panels
+ *
+ * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
+ *   Project Homepage https://github.com/B00ze64/FF-Menu-Icon-Plus-CSS
+ *   Released under Creative Commons Attribution 4.0 License.
+ *   https://creativecommons.org/licenses/by/4.0/
+ *
+ * - The Original MIP Firefox Extension (c) Justin Rodes http://www.codedawn.com/menu-icons-plus.php
+ * - MOST OF THE PANELS CODE (c) Black7375 (https://github.com/black7375/Firefox-UI-Fix)
+ *
+ * + The icons come from ->
+ *
+ * - Crystal Project	http://www.everaldo.com/
+ *			https://commons.wikimedia.org/wiki/Category:Crystal_Project
+ *			LGPL
+ *
+ * - Fugue Icons	http://p.yusukekamiyamane.com/
+ *			by Yusuke Kamiyamane,
+ *			Creative Commons Attribution 3.0 License.
+ *
+ * - Oxygen Icons	http://www.oxygen-icons.org/ [use Wayback Machine]
+ *			https://github.com/pasnox/oxygen-icons-png
+ *			https://techbase.kde.org/Projects/Oxygen/Licensing
+ *
+ * - Silk Icons		http://www.famfamfam.com/
+ *			Mark James, Birmingham (UK),
+ *			Creative Commons Attribution 2.5 License.
+ *
+ * - Tango Icons	http://tango-project.org/
+ *			Public Domain
+ *
+ * + Contributors ->
+ *
+ *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
+ *	Acid-Crash Discovered bug with the Responsive Design SVG icon and suggested the fix for it
+ *	Devtools/Help Menu SVG icons and Panels code by Black7375 (https://github.com/black7375/Firefox-UI-Fix)
+ *
+ * + NOTES:
+ * - TabSize=8
+ *
+ */
+
+/********************************************************************************
+ * OVERRIDE FILE: FIREFOX PNG PANELS
+ ********************************************************************************
+ *
+ * YOU MUST LOAD THIS AFTER LOADING ONE OF THE PANELS THEME FILES.
+ * Due to the nature of the Firefox Panels it is not possible to use a single CSS
+ * file to both allow overriding icons from other themes, and also allow using old
+ * Firefox icons all by themselves -> All the labels for the panel items would need
+ * to be adjusted manually since some entries have no icon, and I cannot use a global
+ * toolbarbutton-text > padding entry, like Black7375 did (and my panels code is his).
+ * This works fine in Menus because the menus have a space for an icon, even when
+ * no icon is displayed; panels work differently. So all I am including in the
+ * project for Old-Firefox panel icons is an override file.
+ *
+ */
+
+@-moz-document	url("chrome://browser/content/browser.xhtml"),
+		url("chrome://browser/content/places/places.xhtml"),
+		url("chrome://browser/content/places/historySidebar.xhtml"),
+		url("chrome://browser/content/places/bookmarksSidebar.xhtml"),
+		url("chrome://browser/content/syncedtabs/sidebar.xhtml") {
+
+/********************************************************************************
+ *
+ * SideBar Panel Menu (to select which sidebar to show)
+ *
+ ********************************************************************************/
+
+#sidebar-switcher-bookmarks.subviewbutton {
+
+	list-style-image: url("../MipImages/FF/application.png");
+	}
+
+#sidebar-switcher-history.subviewbutton,
+#appMenu-history-button,
+#appMenu-library-history-button,
+#PanelUI-historyMore {
+
+/*	list-style-image: url("../MipImages/FF/history-XP.png"); */
+	list-style-image: url("../MipImages/FF/history.png");
+	}
+
+#sidebar-switcher-tabs.subviewbutton {
+
+	list-style-image: url("../MipImages/FF/sync-16.png");
+	}
+
+/********************************************************************************
+ *
+ * Hamburger Button
+ * Original Code by Black7375 (https://github.com/black7375/Firefox-UI-Fix)
+ *
+ ********************************************************************************/
+
+/********************************************************************************
+/* Main Panel
+ ********************************************************************************/
+
+#appMenu-fxa-status2::before {
+
+/*	content: url("../MipImages/FF/profileicon-XP.png"); */
+	content: url("../MipImages/FF/profileicon.png");
+	}
+
+#appMenu-fxa-status2:is([fxastatus=signedin], [fxastatus=unverified], [fxastatus=login-failed])::before {
+
+	display: none;
+	}
+
+#appMenu-fxa-status2:is([fxastatus=signedin], [fxastatus=unverified], [fxastatus=login-failed]) #appMenu-fxa-label2::before { /* url("https://profile.accounts.firefox.com/v1/avatar/a") */
+
+	content: '';
+	border-radius: 50% !important;
+	background-size: 16px !important;
+	background-image: var(--avatar-image-url) !important;
+	}
+
+#appMenu-new-window-button2,
+#appMenu-library-recentlyClosedWindows {
+
+	list-style-image: url("../MipImages/FF/aboutSessionRestore-window-icon.png");
+	}
+
+#appMenu-new-private-window-button2 {
+
+	list-style-image: url("../MipImages/FF/privacy-16.png");
+	}
+
+#appMenu-bookmarks-button,
+#appMenu-library-bookmarks-button {
+
+	list-style-image: url("../MipImages/FF/allBookmarks.png");
+	}
+
+#appMenu-downloads-button,
+#appMenu-library-downloads-button,
+#downloadsHistory {
+
+/*	list-style-image: url("../MipImages/FF/saveFile-XP.png"); */
+	list-style-image: url("../MipImages/FF/saveFile.png");
+	}
+
+#appMenu-passwords-button {
+
+	list-style-image: url("../MipImages/FF/key.png");
+	}
+
+#appMenu-extensions-themes-button,
+#appmenu-developer-tools-view .subviewbutton[label="Extensions for Developers"] {
+/* #appmenu-developer-tools-view .subviewbutton:nth-last-child(1) { */
+
+/*	list-style-image: url("../MipImages/FF/extensionGeneric-16-XP.png"); */
+	list-style-image: url("../MipImages/FF/extensionGeneric-16.png");
+	}
+
+#appMenu-print-button2 {
+
+	list-style-image: url("../MipImages/FF/print.png");
+	}
+
+#appMenu-find-button2,
+#panelMenu_searchBookmarks {
+
+	list-style-image: url("../MipImages/FF/Search-glass-2.png");
+	}
+
+#appMenu-settings-button,
+#PanelUI-fxa-menu-sync-prefs-button,
+#PanelUI-remotetabs-view-managedevices,
+.pageAction-sendToDevice-device.subviewbutton.sync-menuitem.sendtab-target:not([clientType]) { /* Send To Device -> Manage Devices */
+
+/*	list-style-image: url("../MipImages/FF/settings.png"); */
+	list-style-image: url("../MipImages/FF/options.png");
+	}
+
+#appMenu-more-button2 {
+
+	list-style-image: url("../MipImages/FF/tools-grey.png");
+	}
+
+#appMenu-help-button2 {
+
+	list-style-image: url("../MipImages/FF/question-16.png");
+	}
+
+#appMenu-quit-button2 {
+
+	list-style-image: url("../MipImages/FF/quit.png");
+	}
+
+/********************************************************************************
+/* Account Sub-Panel
+ ********************************************************************************/
+
+#PanelUI-fxa-menu-setup-sync-button {
+
+	list-style-image: url("../MipImages/FF/sync-16.png");
+	}
+
+/********************************************************************************
+/* Bookmarks Sub-Panel
+ ********************************************************************************/
+
+#panelMenuBookmarkThisPage {
+
+/*	list-style-image: url("../MipImages/FF/bookmark-2.png"); */
+	list-style-image: url("../MipImages/FF/bookmark-1.png");
+	}
+
+#panelMenuBookmarkThisPage[starred] {
+
+	list-style-image: url("../MipImages/FF/bookmark-3.png");
+	}
+
+#panelMenu_viewBookmarksToolbar {
+
+	list-style-image: url("../MipImages/FF/bookmarksToolbar.png");
+	}
+
+#panelMenu_showAllBookmarks {
+
+	list-style-image: url("../MipImages/FF/allBookmarks.png");
+	}
+
+/********************************************************************************
+/* History Sub-Panel
+ ********************************************************************************/
+
+#appMenuRecentlyClosedWindows {
+
+	list-style-image: url("../MipImages/FF/aboutSessionRestore-window-icon.png");
+	}
+
+#appMenuClearRecentHistory {
+
+	list-style-image: url("../MipImages/FF/broom.png");
+	}
+
+/********************************************************************************
+/* More Tools Sub-Panel (DevTools)
+ ********************************************************************************/
+
+#appmenu-moreTools-button,
+#overflowMenu-customize-button {
+
+	list-style-image: url("../MipImages/FF/themeGeneric-16.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-child(1) { */
+   #appmenu-developer-tools-view .subviewbutton[key="key_toggleToolbox"] {  /* Web Developer Tools */
+
+	list-style-image: url("../MipImages/FF/switch.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-child(2) { */
+   #appmenu-developer-tools-view .subviewbutton[oncommand="switchToTabHavingURI('about:performance', true)"] {  /* Task Manager */
+
+	list-style-image: url("../MipImages/FF/tool-profiler.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-child(3) { */
+   #appmenu-developer-tools-view .subviewbutton[label="Remote Debugging"] {  /* Remote Debugging */
+
+	list-style-image: url("../MipImages/FF/tool-debugger.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-child(4) { */
+   #appmenu-developer-tools-view .subviewbutton[key="key_browserToolbox"] {  /* Browser Toolbox */
+
+	list-style-image: url("../MipImages/FF/tilt-grey.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-child(5) { */
+   #appmenu-developer-tools-view .subviewbutton[label="Browser Content Toolbox"] { /* Browser Content Toolbaox -  */
+
+	list-style-image: url("../MipImages/FF/tilt-grey.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-last-child(5) { */
+   #appmenu-developer-tools-view .subviewbutton[key="key_browserConsole"] { /* Browser Console */
+
+	list-style-image: url("../MipImages/FF/commandline.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-last-child(4) { */
+   #appmenu-developer-tools-view .subviewbutton[key="key_responsiveDesignMode"] {  /* Responsive Design Mode */
+
+	list-style-image: url("../MipImages/FF/tool-responsivemode.png");
+	}
+
+#appmenu-developer-tools-view .subviewbutton:last-child {
+
+	margin-bottom: 6px !important;
+	}
+
+/********************************************************************************
+/* Help Sub-Panel
+ ********************************************************************************/
+
+#appMenu_menu_openHelp {
+
+	list-style-image: url("../MipImages/FF/question-16.png");
+	}
+
+#appMenu_feedbackPage {
+
+	list-style-image: url("../MipImages/FF/alwaysAsk-XP-lower.png");
+	}
+
+#appMenu_troubleShooting {
+
+	list-style-image: url("../MipImages/FF/information-16.png");
+	}
+
+#appMenu_help_reportSiteIssue,
+#appMenu_menu_HelpPopup_reportPhishingtoolmenu {
+
+/*	list-style-image: url("../MipImages/FF/warning-16-XP.png"); */
+	list-style-image: url("../MipImages/FF/warning-16.png");
+	}
+
+#appMenu_aboutName{
+
+	list-style-image: url("../MipImages/FF/FIREFOX-icon16.png");
+	}
+
+/********************************************************************************
+ *
+ * Library Panel
+ *
+ ********************************************************************************/
+
+/* See Main Panel
+
+	#appMenu-library-bookmarks-button {
+	#appMenu-library-history-button {
+	#appMenu-library-downloads-button { */
+
+/********************************************************************************
+ *
+ * Downloads Panel
+ *
+ ********************************************************************************/
+
+/* See Main Panel
+
+	#downloadsHistory { */
+
+/********************************************************************************
+ *
+ * Toolbar Overflow Panel
+ *
+ ********************************************************************************/
+
+/* See More Tools Sub-Panel
+
+	#overflowMenu-customize-button { */
+
+}

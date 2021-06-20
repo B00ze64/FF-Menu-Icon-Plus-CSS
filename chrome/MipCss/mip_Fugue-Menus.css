@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.5.5 (MIP/CSS)
+ * Menu Icon Plus CSS v2.0 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -8,6 +8,7 @@
  *   https://creativecommons.org/licenses/by/4.0/
  *
  * - The Original MIP Firefox Extension (c) Justin Rodes http://www.codedawn.com/menu-icons-plus.php
+ * - MOST OF THE PANELS CODE (c) Black7375 (https://github.com/black7375/Firefox-UI-Fix)
  *
  * + The icons come from ->
  *
@@ -33,6 +34,8 @@
  * + Contributors ->
  *
  *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
+ *	Acid-Crash Discovered bug with the Responsive Design SVG icon and suggested the fix for it
+ *	Devtools/Help Menu SVG icons and Panels code by Black7375 (https://github.com/black7375/Firefox-UI-Fix)
  *
  * + NOTES:
  * - TabSize=8
@@ -45,12 +48,6 @@
  *
  * This is the main skinning file for the Firefox menus. This one uses Fugue
  * icons when they are available - missing icons are taken from the other themes.
- *
- * This being one of the main themes I have commented-out the icons from other
- * themes but I've left them here, so you can tweak the css easily to your needs.
- * Obvious alternate icons are not commented out, so if you use a syntax-
- * highlighting editor you can quickly spot where some alternatives exist.
- * But really every commented image is a valid alternative.
  *
  */
 
@@ -77,12 +74,6 @@
 #syncedTabsOpenSelectedInWindow::Before,
 #_testpilot-containers-menuitem-_move-to-new-window-container::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_WindowNew.png");
-	content: url("../MipImages/Fugue/fugue_WindowNew(crystal).png");
-	content: url("../MipImages/Oxygen/oxygen_WindowNew.png");
-	content: url("../MipImages/Silk/silk_WindowNew.png");
-	content: url("../MipImages/Tango/tango_WindowNew.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_WindowNew.png");
 
 	display: block;
@@ -111,15 +102,6 @@
 #placesContext_open\:newprivatewindow::Before,
 #syncedTabsOpenSelectedInPrivateWindow::Before {
 
-/*	content: url("chrome://browser/skin/privateBrowsing.svg");
-	content: url("chrome://browser/skin/privatebrowsing/favicon.svg"); /* purple */
-/*	content: url("../MipImages/FF/privacy-16.png");
-	content: url("../MipImages/Crystal/crystal_PrivateBrowsing.png");
-	content: url("../MipImages/Crystal/crystal_PrivateBrowsing-darker.png");
-	content: url("../MipImages/Oxygen/oxygen_UserSingle.png");
-	content: url("../MipImages/Silk/silk_PrivateBrowsing.png");
-	content: url("../MipImages/Tango/tango_PrivateBrowsing.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_PrivateBrowsing.png");
 
 	display: block;
@@ -144,18 +126,7 @@
 #context-openlinkincurrent::Before,
 #syncedTabsOpenSelected::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_OpenLocation.png");
-	content: url("../MipImages/Fugue/fugue_OpenLocation.png");
-	content: url("../MipImages/Oxygen/oxygen_OpenLocation.png");
-	content: url("../MipImages/Silk/silk_OpenLocation.png");
-	content: url("../MipImages/Tango/tango_OpenLocation.png");
-	content: url("../MipImages/Crystal/crystal_Globe.png");
-	content: url("../MipImages/Fugue/fugue_Globe.png");
-	content: url("../MipImages/Oxygen/oxygen_Globe.png");
-	content: url("../MipImages/Silk/silk_Globe.png");
-	content: url("../MipImages/Tango/tango_Globe.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_OpenLocation.png");
+/*	content: url("../MipImages/Fugue/fugue_OpenLocation.png"); */
 	content: url("../MipImages/Fugue/fugue_Globe.png");
 
 	display: block;
@@ -177,13 +148,6 @@
 
 #menu_openFile::Before {
 
-/*	content: url("chrome://browser/skin/open.svg");
-	content: url("../MipImages/FF/folder.png");
-	content: url("../MipImages/Crystal/crystal_FileOpen.png");
-	content: url("../MipImages/Oxygen/oxygen_FileOpen.png");
-	content: url("../MipImages/Silk/silk_FileOpen.png");
-	content: url("../MipImages/Tango/tango_FileOpen.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_FileOpen.png");
 
 	display: block;
@@ -203,13 +167,6 @@
 #menu_closeWindow::Before,
 #orgClose::Before {
 
-/*	content: url("../MipImages/Silk/silk_WindowClose.png");
-	content: url("../MipImages/Tango/tango_WindowClose.png");
-	content: url("../MipImages/Crystal/crystal_ClearAll.png");
-	content: url("../MipImages/Oxygen/oxygen_ClearAll.png");
-	content: url("../MipImages/Silk/silk_ClearAll.png");
-	content: url("../MipImages/Tango/tango_ClearAll.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_ClearAll.png");
 
 	display: block;
@@ -232,14 +189,6 @@
 #context-sendvideo::Before,
 #context-sendaudio::Before {
 
-/*	content: url("chrome://browser/skin/mail.svg");
-	content: url("../MipImages/FF/mail-1.png");
-	content: url("../MipImages/FF/mail-2.png");
-	content: url("../MipImages/Crystal/crystal_Mail.png");
-	content: url("../MipImages/Oxygen/oxygen_Mail.png");
-	content: url("../MipImages/Silk/silk_Mail.png");
-	content: url("../MipImages/Tango/tango_Mail.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Mail.png");
 
 	display: block;
@@ -261,11 +210,6 @@
 
 #menu_printSetup::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_PrintPageSetup.png");
-	content: url("../MipImages/Oxygen/oxygen_PrintPageSetup.png");
-	content: url("../MipImages/Silk/silk_PrintPageSetup.png");
-	content: url("../MipImages/Tango/tango_PrintPageSetup.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_PrintPageSetup.png");
 
 	display: block;
@@ -279,12 +223,6 @@
 
 #menu_printPreview::Before {
 
-/*	content: url("chrome://devtools/skin/images/rules-view-print-simulation.svg");
-	content: url("../MipImages/Crystal/crystal_PrintPreview.png");
-	content: url("../MipImages/Oxygen/oxygen_PrintPreview.png");
-	content: url("../MipImages/Silk/silk_PrintPreview.png");
-	content: url("../MipImages/Tango/tango_PrintPreview.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_PrintPreview.png");
 
 	display: block;
@@ -300,13 +238,6 @@
 #context-printframe::Before,
 #context-print-selection::Before {
 
-/*	content: url("chrome://browser/skin/print.svg");
-	content: url("../MipImages/FF/print.png");
-	content: url("../MipImages/Crystal/crystal_Print.png");
-	content: url("../MipImages/Oxygen/oxygen_Print.png");
-	content: url("../MipImages/Silk/silk_Print.png");
-	content: url("../MipImages/Tango/tango_Print.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Print.png");
 
 	display: block;
@@ -331,15 +262,8 @@
 #help_importFromAnotherBrowser::Before,
 #browserImport::Before {
 
-/*	content: url("chrome://devtools/skin/images/import.svg");
-	content: url("../MipImages/Crystal/crystal_ImportWindow.png");
-	content: url("../MipImages/Crystal/crystal_ImportWindow-green.png");
-	content: url("../MipImages/Oxygen/oxygen_ImportWindow.png");
-	content: url("../MipImages/Silk/silk_ImportWindow.png");
-	content: url("../MipImages/Tango/tango_ImportWindow.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_Step.png");
-	content: url("../MipImages/Fugue/fugue_ImportWindow.png");
+/*	content: url("../MipImages/Fugue/fugue_Step.png");
+	content: url("../MipImages/Fugue/fugue_ImportWindow.png"); */
 	content: url("../MipImages/Fugue/fugue_ImportWindow-blue.png");
 
 	display: block;
@@ -360,13 +284,7 @@
 
 #goOfflineMenuitem:not([checked=true])::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Offline.png");
-	content: url("../MipImages/Crystal/crystal_Offline-darker.png");
-	content: url("../MipImages/Oxygen/oxygen_Offline.png");
-	content: url("../MipImages/Silk/silk_Offline.png");
-	content: url("../MipImages/Tango/tango_Offline.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_Plug.png");
+/*	content: url("../MipImages/Fugue/fugue_Plug.png"); */
 	content: url("../MipImages/Fugue/fugue_Offline.png");
 
 	display: block;
@@ -385,18 +303,7 @@
 
 #menu_FileQuitItem::Before {
 
-/*	content: url("chrome://browser/skin/quit.svg");
-	content: url("../MipImages/FF/quit.png");
-	content: url("../MipImages/Crystal/crystal_Quit.png");
-	content: url("../MipImages/Oxygen/oxygen_Quit.png");
-	content: url("../MipImages/Silk/silk_Quit.png");
-	content: url("../MipImages/Tango/tango_Quit.png");
-	content: url("../MipImages/Crystal/crystal_PowerDown.png");
-	content: url("../MipImages/Oxygen/oxygen_PowerDown-1.png");
-	content: url("../MipImages/Oxygen/oxygen_PowerDown-2.png");
-	content: url("../MipImages/Tango/tango_PowerDown.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_PowerDown.png");
+/*	content: url("../MipImages/Fugue/fugue_PowerDown.png"); */
 	content: url("../MipImages/Fugue/fugue_Quit.png");
 
 	display: block;
@@ -428,12 +335,6 @@
 menuitem[cmd="cmd_undo"]::Before,
 #textbox-contextmenu menuitem[command="cmd_undo"]::Before {
 
-/*	content: url("chrome://browser/skin/undo.svg");
-	content: url("../MipImages/Crystal/crystal_Undo.png");
-	content: url("../MipImages/Oxygen/oxygen_Undo.png");
-	content: url("../MipImages/Silk/silk_Undo.png");
-	content: url("../MipImages/Tango/tango_Undo.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Undo.png");
 
 	display: block;
@@ -467,17 +368,19 @@ menuitem[cmd="cmd_undo"] > label,
 	margin-inline-start: -20px !important;
 	}
 
+#allTabsMenu-undoCloseTab {
+
+	list-style-image: url("../MipImages/Fugue/fugue_Undo.png");
+	}
+
+#allTabsMenu-undoCloseTab > label { padding-inline-start: 8px !important; }
+
 /* Redo *************************************************************************/
 
 menuitem[data-l10n-id="text-action-redo"]::Before,
 #menu_redo::Before,
 #orgRedo::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Redo.png");
-	content: url("../MipImages/Oxygen/oxygen_Redo.png");
-	content: url("../MipImages/Silk/silk_Redo.png");
-	content: url("../MipImages/Tango/tango_Redo.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Redo.png");
 
 	display: block;
@@ -510,13 +413,6 @@ menuitem[data-l10n-id="text-action-redo"] > label,
 menuitem[cmd="cmd_cut"]::Before,
 #textbox-contextmenu menuitem[command="cmd_cut"]::Before {
 
-/*	content: url("chrome://browser/skin/edit-cut.svg");
-	content: url("../MipImages/FF/cut.png");
-	content: url("../MipImages/Crystal/crystal_Cut.png");
-	content: url("../MipImages/Oxygen/oxygen_Cut.png");
-	content: url("../MipImages/Silk/silk_Cut.png");
-	content: url("../MipImages/Tango/tango_Cut.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Cut.png");
 
 	display: block;
@@ -556,13 +452,6 @@ menuitem[cmd="cmd_cut"] > label,
 menuitem[cmd="cmd_copy"]::Before,
 #textbox-contextmenu menuitem[command="cmd_copy"]::Before {
 
-/*	content: url("chrome://browser/skin/edit-copy.svg");
-	content: url("../MipImages/FF/copy.png");
-	content: url("../MipImages/Crystal/crystal_Copy.png");
-	content: url("../MipImages/Oxygen/oxygen_Copy.png");
-	content: url("../MipImages/Silk/silk_Copy.png");
-	content: url("../MipImages/Tango/tango_Copy.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Copy.png");
 
 	display: block;
@@ -583,13 +472,6 @@ menuitem[cmd="cmd_copy"]::Before,
 menuitem[command="downloadsCmd_copyLocation"]::Before,
 #syncedTabsCopySelected::Before {
 
-/*	content: url("chrome://browser/skin/link.svg");
-	content: url("../MipImages/FF/copy.png");
-	content: url("../MipImages/Crystal/crystal_CopyLink.png");
-	content: url("../MipImages/Oxygen/oxygen_Copy.png");
-	content: url("../MipImages/Silk/silk_CopyLink.png");
-	content: url("../MipImages/Tango/tango_Copy.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_CopyLink.png");
 
 	display: block;
@@ -637,13 +519,6 @@ menuitem[command="downloadsCmd_copyLocation"] > label,
 menuitem[cmd="cmd_paste"]::Before,
 #textbox-contextmenu menuitem[command="cmd_paste"]::Before {
 
-/*	content: url("chrome://browser/skin/edit-paste.svg");
-	content: url("../MipImages/FF/paste.png");
-	content: url("../MipImages/Crystal/crystal_Paste.png");
-	content: url("../MipImages/Oxygen/oxygen_Paste.png");
-	content: url("../MipImages/Silk/silk_Paste.png");
-	content: url("../MipImages/Tango/tango_Paste.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Paste.png");
 
 	display: block;
@@ -680,14 +555,7 @@ menuitem[cmd="cmd_paste"] > label,
 #paste-and-go::Before,
 menuitem.searchbar-paste-and-search::Before {
 
-/*	content: url("chrome://browser/skin/forward.svg");
-	content: url("../MipImages/FF/paste.png");
-	content: url("../MipImages/Crystal/crystal_Go.png");
-	content: url("../MipImages/Oxygen/oxygen_Go.png");
-	content: url("../MipImages/Silk/silk_GoTo.png");
-	content: url("../MipImages/Tango/tango_Go.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_Go.png");
+/*	content: url("../MipImages/Fugue/fugue_Go.png"); */
 	content: url("../MipImages/Fugue/fugue_PasteAndGo.png");
 
 	display: block;
@@ -721,17 +589,7 @@ menuitem.searchbar-paste-and-search > label {
 menuitem[cmd="cmd_delete"]::Before,
 #textbox-contextmenu menuitem[command="cmd_delete"]::Before {
 
-/*	content: url("chrome://devtools/skin/images/clear.svg");
-	content: url("../MipImages/Crystal/crystal_Delete.png");
-	content: url("../MipImages/Oxygen/oxygen_Delete.png");
-	content: url("../MipImages/Silk/silk_Delete.png");
-	content: url("../MipImages/Tango/tango_Delete.png");
-	content: url("../MipImages/Crystal/crystal_Recycle.png");
-	content: url("../MipImages/Oxygen/oxygen_Recycle.png");
-	content: url("../MipImages/Silk/silk_Recycle.png");
-	content: url("../MipImages/Tango/tango_Recycle.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_Recycle.png");
+/*	content: url("../MipImages/Fugue/fugue_Recycle.png"); */
 	content: url("../MipImages/Fugue/fugue_Delete.png");
 
 	display: block;
@@ -779,10 +637,6 @@ menuitem[cmd="cmd_delete"] > label,
 menuitem[cmd="cmd_selectAll"]::Before,
 #textbox-contextmenu menuitem[command="cmd_selectAll"]::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_SelectAll.png");
-	content: url("../MipImages/Oxygen/oxygen_SelectAll.png");
-	content: url("../MipImages/Tango/tango_SelectAll.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_SelectAll.png");
 
 	display: block;
@@ -822,13 +676,6 @@ menuitem[cmd="cmd_selectAll"] > label,
 #context-searchselect::Before,
 #context-searchselect-private::Before {
 
-/*	content: url("chrome://browser/skin/search-glass.svg");
-	content: url("../MipImages/FF/Search-glass-2.png");
-	content: url("../MipImages/Crystal/crystal_Find.png");
-	content: url("../MipImages/Oxygen/oxygen_Find.png");
-	content: url("../MipImages/Silk/silk_Find.png");
-	content: url("../MipImages/Tango/tango_Find.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Find.png");
 
 	display: block;
@@ -840,14 +687,6 @@ menuitem[cmd="cmd_selectAll"] > label,
 
 #menu_findAgain::Before {
 
-/*	content: url("chrome://browser/skin/search-glass.svg");
-	content: url("../MipImages/FF/Search-glass-2.png");
-	content: url("../MipImages/Crystal/crystal_Find.png");
-	content: url("../MipImages/Oxygen/oxygen_Find.png");
-	content: url("../MipImages/Silk/silk_FindAgain.png");
-	content: url("../MipImages/Silk/silk_FindAgain(fugue).png");
-	content: url("../MipImages/Tango/tango_Find.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_FindAgain.png");
 
 	display: block;
@@ -875,15 +714,7 @@ menuitem[cmd="cmd_selectAll"] > label,
 
 #allTabsMenu-searchTabs > image {
 
-/*	list-style-image: url("../MipImages/FF/search-glass.svg");
-	list-style-image: url("../MipImages/FF/Search-glass-2.png");
-	list-style-image: url("../MipImages/Crystal/crystal_Find.png");
-	list-style-image: url("../MipImages/Oxygen/oxygen_Find.png");
-	list-style-image: url("../MipImages/Silk/silk_Find.png");
-	list-style-image: url("../MipImages/Tango/tango_Find.png"); */
-
 	list-style-image: url("../MipImages/Fugue/fugue_Find.png");
-	-moz-image-region: auto;
 	}
 
 #allTabsMenu-searchTabs > label { padding-inline-start: 8px !important; }
@@ -940,14 +771,6 @@ menu#viewToolbarsMenu::Before {
 
 #viewSidebarMenuMenu::Before { /* Note that individual Sidebars are in their respective sections (e.g. History) */
 
-/*	content: url("chrome://browser/skin/sidebars.svg");
-	content: url("../MipImages/FF/application.png");
-	content: url("../MipImages/FF/toolbarButton-sidebarToggle.png");
-	content: url("../MipImages/Crystal/crystal_Sidebar.png");
-	content: url("../MipImages/Oxygen/oxygen_Sidebar.png");
-	content: url("../MipImages/Silk/silk_Sidebar.png");
-	content: url("../MipImages/Tango/tango_Sidebar.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Sidebar.png");
 
 	display: block;
@@ -966,11 +789,6 @@ menu#viewToolbarsMenu::Before {
 
 #viewFullZoomMenu::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Zoom.png");
-	content: url("../MipImages/Oxygen/oxygen_Zoom.png");
-	content: url("../MipImages/Silk/silk_Zoom.png");
-	content: url("../MipImages/Tango/tango_Zoom.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Zoom.png");
 
 	display: block;
@@ -982,12 +800,6 @@ menu#viewToolbarsMenu::Before {
 
 #menu_zoomEnlarge::Before {
 
-/*	content: url("chrome://browser/skin/zoom-in.svg");
-	content: url("../MipImages/Crystal/crystal_ZoomPlus.png");
-	content: url("../MipImages/Oxygen/oxygen_ZoomPlus.png");
-	content: url("../MipImages/Silk/silk_ZoomPlus.png");
-	content: url("../MipImages/Tango/tango_ZoomPlus.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_ZoomPlus.png");
 
 	display: block;
@@ -999,12 +811,6 @@ menu#viewToolbarsMenu::Before {
 
 #menu_zoomReduce::Before {
 
-/*	content: url("chrome://browser/skin/zoom-out.svg");
-	content: url("../MipImages/Crystal/crystal_ZoomMinus.png");
-	content: url("../MipImages/Oxygen/oxygen_ZoomMinus.png");
-	content: url("../MipImages/Silk/silk_ZoomMinus.png");
-	content: url("../MipImages/Tango/tango_ZoomMinus.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_ZoomMinus.png");
 
 	display: block;
@@ -1016,11 +822,6 @@ menu#viewToolbarsMenu::Before {
 
 #menu_zoomReset::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_ZoomReset.png");
-	content: url("../MipImages/Oxygen/oxygen_ZoomReset.png");
-	content: url("../MipImages/Silk/silk_ZoomReset.png");
-	content: url("../MipImages/Tango/tango_ZoomReset.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_ZoomReset.png");
 
 	display: block;
@@ -1032,14 +833,7 @@ menu#viewToolbarsMenu::Before {
 
 #toggle_zoom:not([checked=true])::Before {
 
-/*	content: url("chrome://devtools/skin/images/case-match.svg");
-	content: url("../MipImages/Crystal/crystal_TextSize.png");
-	content: url("../MipImages/Oxygen/oxygen_Font.png");
-	content: url("../MipImages/Silk/silk_Font.png");
-	content: url("../MipImages/Tango/tango_Font.png");
-	content: url("../MipImages/Tango/tango_TextSize.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_TextSize.png");
+/*	content: url("../MipImages/Fugue/fugue_TextSize.png"); */
 	content: url("../MipImages/Fugue/fugue_Font.png");
 
 	display: block;
@@ -1062,11 +856,6 @@ menu#viewToolbarsMenu::Before {
 
 #pageStyleMenu::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_PageStyle.png");
-	content: url("../MipImages/Oxygen/oxygen_PageStyle.png");
-	content: url("../MipImages/Silk/silk_PageStyle.png");
-	content: url("../MipImages/Tango/tango_PageStyle.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_PageStyle.png");
 
 	display: block;
@@ -1085,11 +874,6 @@ menu#viewToolbarsMenu::Before {
 
 #charsetMenu::Before {
 
-/*	content: url("chrome://browser/skin/characterEncoding.svg");
-	content: url("../MipImages/Oxygen/oxygen_Encoding.png");
-	content: url("../MipImages/Silk/silk_Encoding.png");
-	content: url("../MipImages/Tango/tango_Encoding.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Encoding.png");
 
 	display: block;
@@ -1114,16 +898,7 @@ menu#viewToolbarsMenu::Before {
 #context-video-fullscreen::Before,
 #fullScreenItem:not([checked=true])::Before {
 
-/*	content: url("chrome://browser/skin/fullscreen.svg");
-	content: url("chrome://global/skin/media/fullscreenEnterButton.svg");
-	content: url("../MipImages/Crystal/crystal_FullScreen.png");
-	content: url("../MipImages/Oxygen/oxygen_FullScreen.png");
-	content: url("../MipImages/Silk/silk_FullScreen.png");
-	content: url("../MipImages/Tango/tango_FullScreen.png");
-	content: url("../MipImages/Tango/tango_FullScreen(crystal).png");
-	content: url("../MipImages/Tango/tango_FullScreen(oxygen).png");
-	*/
-	content: url("../MipImages/Tango/tango_FullScreen(fugue).png");
+/*	content: url("../MipImages/Tango/tango_FullScreen(fugue).png"); */
 	content: url("../MipImages/Fugue/fugue_FullScreen.png");
 
 	display: block;
@@ -1136,16 +911,7 @@ menu#viewToolbarsMenu::Before {
 #context-leave-dom-fullscreen::Before,
 #autohide-context menuitem[data-l10n-id="full-screen-exit"]::Before {
 
-/*	content: url("chrome://browser/skin/fullscreen-exit.svg");
-	content: url("chrome://global/skin/media/fullscreenExitButton.svg");
-	content: url("../MipImages/Crystal/crystal_FullScreen.png");
-	content: url("../MipImages/Oxygen/oxygen_FullScreen.png");
-	content: url("../MipImages/Silk/silk_FullScreenExit.png");
-	content: url("../MipImages/Tango/tango_FullScreenExit.png");
-	content: url("../MipImages/Tango/tango_FullScreenExit(crystal).png");
-	content: url("../MipImages/Tango/tango_FullScreenExit(oxygen).png");
-	*/
-	content: url("../MipImages/Tango/tango_FullScreenExit(fugue).png");
+/*	content: url("../MipImages/Tango/tango_FullScreenExit(fugue).png"); */
 	content: url("../MipImages/Fugue/fugue_FullScreenExit.png");
 
 	display: block;
@@ -1167,16 +933,7 @@ menu#viewToolbarsMenu::Before {
 
 #menu_readerModeItem::Before {
 
-/*	content: url("chrome://browser/skin/readerMode.svg");
-	content: url("../MipImages/Crystal/crystal_Script.png");
-	content: url("../MipImages/Oxygen/oxygen_Script.png");
-	content: url("../MipImages/Silk/silk_Script.png");
-	content: url("../MipImages/Oxygen/oxygen_View.png");
-	content: url("../MipImages/Oxygen/oxygen_View-darker.png");
-	content: url("../MipImages/Tango/tango_PrivateBrowsing.png");
-	content: url("../MipImages/Tango/tango_Script.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_Script.png");
+/*	content: url("../MipImages/Fugue/fugue_Script.png"); */
 	content: url("../MipImages/Fugue/fugue_ReaderView.png");
 
 	display: block;
@@ -1198,15 +955,6 @@ menu#viewToolbarsMenu::Before {
 #context-bidi-text-direction-toggle::Before,
 #context-bidi-page-direction-toggle::Before {
 
-/*	content: url("chrome://browser/skin/sync.svg");
-	content: url("chrome://browser/skin/toggle.svg");
-	content: url("../MipImages/FF/sync-16.png");
-	content: url("../MipImages/Crystal/crystal_Sync.png");
-	content: url("../MipImages/Oxygen/oxygen_Sync.png");
-	content: url("../MipImages/Silk/silk_Bidi.png");
-	content: url("../MipImages/Tango/tango_Sync.png");
-	content: url("../MipImages/Tango/tango_Sync-bright.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Bidi.png");
 
 	display: block;
@@ -1235,15 +983,6 @@ menu#viewToolbarsMenu::Before {
 #menu_showAllHistory::Before,
 #menu_historySidebar:not([checked=true])::Before {
 
-/*	content: url("chrome://browser/skin/history.svg");
-	content: url("../MipImages/FF/history.png");
-	content: url("../MipImages/FF/history-XP.png");
-	content: url("../MipImages/Crystal/crystal_History.png");
-	content: url("../MipImages/Oxygen/oxygen_History.png");
-	content: url("../MipImages/Silk/silk_HistoryClock.png");
-	content: url("../MipImages/Silk/silk_History.png");
-	content: url("../MipImages/Tango/tango_History.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_History.png");
 
 	display: block;
@@ -1263,16 +1002,8 @@ menu#viewToolbarsMenu::Before {
 
 #sanitizeItem::Before {
 
-/*	content: url("chrome://browser/skin/forget.svg");
-	content: url("../MipImages/Crystal/crystal_Eraser.png");
-	content: url("../MipImages/Crystal/crystal_HistoryDelete.png");
-	content: url("../MipImages/Oxygen/oxygen_HistoryDelete.png");
-	content: url("../MipImages/Silk/silk_HistoryDelete.png");
-	content: url("../MipImages/FF/broom.png");
-	content: url("../MipImages/Tango/tango_Sweep.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_Sweep.png");
-	content: url("../MipImages/Fugue/fugue_Eraser.png");
+/*	content: url("../MipImages/Fugue/fugue_Sweep.png");
+	content: url("../MipImages/Fugue/fugue_Eraser.png"); */
 	content: url("../MipImages/Fugue/fugue_HistoryDelete.png");
 
 	display: block;
@@ -1290,16 +1021,8 @@ menu#viewToolbarsMenu::Before {
 #placesContext_deleteHost::Before,
 menuitem.downloadRemoveFromHistoryMenuItem::Before {
 
-/*	content: url("chrome://browser/skin/forget.svg");
-	content: url("../MipImages/Crystal/crystal_Eraser.png");
-	content: url("../MipImages/Crystal/crystal_HistoryDelete.png");
-	content: url("../MipImages/Oxygen/oxygen_HistoryDelete.png");
-	content: url("../MipImages/Silk/silk_HistoryDelete.png");
-	content: url("../MipImages/FF/broom.png");
-	content: url("../MipImages/Tango/tango_Sweep.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_Sweep.png");
-	content: url("../MipImages/Fugue/fugue_Eraser.png");
+/*	content: url("../MipImages/Fugue/fugue_Sweep.png");
+	content: url("../MipImages/Fugue/fugue_Eraser.png"); */
 	content: url("../MipImages/Fugue/fugue_HistoryDelete.png");
 
 	display: block;
@@ -1322,19 +1045,7 @@ menuitem[command="downloadsCmd_clearList"]::Before,
 menuitem[command="downloadsCmd_clearDownloads"]::Before,
 menuitem.searchbar-clear-history::Before {
 
-/*	content: url("chrome://devtools/skin/images/clear.svg");
-	content: url("../MipImages/Crystal/crystal_Recycle.png");
-	content: url("../MipImages/Fugue/fugue_Recycle.png");
-	content: url("../MipImages/Oxygen/oxygen_Recycle.png");
-	content: url("../MipImages/Silk/silk_Recycle.png");
-	content: url("../MipImages/Tango/tango_Recycle.png");
-	content: url("../MipImages/Crystal/crystal_ClearAll.png");
-	content: url("../MipImages/Fugue/fugue_ClearAll.png");
-	content: url("../MipImages/Oxygen/oxygen_ClearAll.png");
-	content: url("../MipImages/Silk/silk_ClearAll.png");
-	content: url("../MipImages/Tango/tango_ClearAll.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_ClearAll.png");
+/*	content: url("../MipImages/Fugue/fugue_ClearAll.png"); */
 	content: url("../MipImages/Fugue/fugue_Recycle.png");
 
 	display: block;
@@ -1361,11 +1072,6 @@ menuitem.searchbar-clear-history > label {
 
 #historyRestoreLastSession::Before {
 
-/*	content: url("chrome://browser/skin/restore-session.svg");
-	content: url("../MipImages/Crystal/crystal_Session.png");
-	content: url("../MipImages/Fugue/fugue_RestoreSession(silk).png");
-	content: url("../MipImages/Oxygen/oxygen_Session.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_RestoreSession.png");
 
 	display: block;
@@ -1389,13 +1095,6 @@ menuitem.searchbar-clear-history > label {
 
 #historyUndoWindowMenu::Before {
 
-/*	content: url("chrome://browser/skin/window.svg");
-	content: url("../MipImages/FF/aboutSessionRestore-window-icon.png");
-	content: url("../MipImages/Crystal/crystal_Window.png");
-	content: url("../MipImages/Oxygen/oxygen_Window.png");
-	content: url("../MipImages/Silk/silk_Window.png");
-	content: url("../MipImages/Tango/tango_Window.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Window.png");
 
 	display: block;
@@ -1426,13 +1125,6 @@ menuitem.searchbar-clear-history > label {
 #placesContext_showAllBookmarks::Before,
 #bookmarksShowAll::Before {
 
-/*	content: url("chrome://browser/skin/library.svg");
-	content: url("../MipImages/FF/allBookmarks.png");
-	content: url("../MipImages/Crystal/crystal_Bookmarks.png");
-	content: url("../MipImages/Oxygen/oxygen_Bookmarks-Organize.png");
-	content: url("../MipImages/Silk/silk_Bookmarks-Opened.png");
-	content: url("../MipImages/Tango/tango_Bookmarks-Organize.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Bookmarks-Opened.png");
 
 	display: block;
@@ -1444,14 +1136,6 @@ menuitem.searchbar-clear-history > label {
 
 #menu_bookmarksSidebar:not([checked=true])::Before {
 
-/*	content: url("chrome://browser/skin/sidebars.svg");
-	content: url("../MipImages/FF/application.png");
-	content: url("../MipImages/FF/toolbarButton-sidebarToggle.png");
-	content: url("../MipImages/Crystal/crystal_Bookmarks.png");
-	content: url("../MipImages/Oxygen/oxygen_Bookmarks.png");
-	content: url("../MipImages/Silk/silk_Bookmarks-Closed.png");
-	content: url("../MipImages/Tango/tango_Bookmarks.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Bookmarks-Closed.png");
 
 	display: block;
@@ -1469,43 +1153,23 @@ menuitem.searchbar-clear-history > label {
 	}
 
 /* Bookmarks toolbar Button PANEL
- * NOTE that this (and containers in +) are the only panels included so far in MIP/CSS */
+ * NOTE that this (and > tab-Overflow) are the only panels included in MIP/CSS's Standard Menus file
+ * The reason this is here is because Aris's bookmark-folders CSS already skins some of the BMB and because we skin containers here */
 
 #BMB_viewBookmarksSidebar .menu-iconic-icon {
 
-/*	list-style-image: url("../MipImages/FF/application.png");
-	list-style-image: url("../MipImages/FF/toolbarButton-sidebarToggle.png");
-	list-style-image: url("../MipImages/Crystal/crystal_Bookmarks.png");
-	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmarks.png");
-	list-style-image: url("../MipImages/Silk/silk_Bookmarks-Closed.png");
-	list-style-image: url("../MipImages/Tango/tango_Bookmarks.png");
-	 */
 	list-style-image: url("../MipImages/Fugue/fugue_Bookmarks-Closed.png");
 	-moz-image-region: auto;
 	 }
 
 #BMB_bookmarksShowAllTop .menu-iconic-icon {
 
-/*	list-style-image: url("../MipImages/FF/allBookmarks.png");
-	list-style-image: url("../MipImages/Crystal/crystal_Bookmarks.png");
-	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmarks.png");
-	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmarks-Organize.png");
-	list-style-image: url("../MipImages/Silk/silk_Bookmarks-Opened.png");
-	list-style-image: url("../MipImages/Tango/tango_Bookmarks-Organize.png");
-	 */
 	list-style-image: url("../MipImages/Fugue/fugue_Bookmarks-Opened.png");
 	-moz-image-region: auto;
 	 }
 
 #BMB_bookmarksShowAll::Before { /* Alignment is broken in FF89 (fixing it) and the list-icon is missing */
 
-/*	content: url("chrome://browser/skin/library.svg");
-	content: url("../MipImages/FF/allBookmarks.png");
-	content: url("../MipImages/Crystal/crystal_Bookmarks.png");
-	content: url("../MipImages/Oxygen/oxygen_Bookmarks-Organize.png");
-	content: url("../MipImages/Silk/silk_Bookmarks-Opened.png");
-	content: url("../MipImages/Tango/tango_Bookmarks-Organize.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Bookmarks-Opened.png");
 
 	display: block;
@@ -1520,16 +1184,36 @@ menuitem.searchbar-clear-history > label {
 	margin-inline-start: -25px !important;
 	}
 
-#BMB_viewBookmarksToolbar[label^="Hide"] image.menu-iconic-icon {
+/* Open All In Tabs in the BMB Folder Footer * Alignment is broken in FF89 (fixing it) */
 
-/*	list-style-image: url("../MipImages/FF/container-hide-black.svg"); */
-	list-style-image: url("../MipImages/FF/container-hide.svg");
+#BMB_bookmarksPopup menuseparator.bookmarks-actions-menuseparator + menuitem.openintabs-menuitem.subviewbutton::Before {
+/* menuitem.openintabs-menuitem.subviewbutton.panel-subview-footer::Before { */
+
+	content: url("../MipImages/Fugue/fugue_TabPlus.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 1px;
+	vertical-align: middle;
 	}
 
-#BMB_viewBookmarksToolbar[label^="View"] image.menu-iconic-icon {
+#BMB_bookmarksPopup menuseparator.bookmarks-actions-menuseparator + menuitem.openintabs-menuitem.subviewbutton > label {
+/* menuitem.openintabs-menuitem.subviewbutton.panel-subview-footer > label { */
 
-/*	list-style-image: url("../MipImages/FF/container-unhide-black.svg"); */
+	margin-inline-start: -25px !important;
+	}
+
+#BMB_viewBookmarksToolbar.menuitem-iconic.subviewbutton[label^="Hide"] > .menu-iconic-left > image.menu-iconic-icon {
+
+	list-style-image: url("../MipImages/FF/container-hide.svg");
+/*	list-style-image: url("../MipImages/FF/container-hide-black.svg"); */
+	}
+
+#BMB_viewBookmarksToolbar.menuitem-iconic.subviewbutton[label^="View"] > .menu-iconic-left > image.menu-iconic-icon {
+
 	list-style-image: url("../MipImages/FF/container-unhide.svg");
+/*	list-style-image: url("../MipImages/FF/container-unhide-black.svg"); */
 	}
 
 /* Bookmark This Page Link Tab or Frame + Bookmark-New **************************/
@@ -1546,17 +1230,6 @@ menuitem.searchbar-clear-history > label {
 #syncedTabsBookmarkSelected::Before,
 #newbookmark::Before {
 
-/*	content: url("chrome://browser/skin/bookmark.svg");
-	content: url("chrome://browser/skin/bookmark-hollow.svg");
-	content: url("../MipImages/FF/bookmark-1.png");
-	content: url("../MipImages/FF/bookmark-2.png");
-	content: url("../MipImages/FF/bookmark-3.png");
-	content: url("../MipImages/Crystal/crystal_Bookmark-New.png");
-	content: url("../MipImages/Oxygen/oxygen_Bookmark-New.png");
-	content: url("../MipImages/Silk/silk_Bookmark-New(crystal).png");
-	content: url("../MipImages/Silk/silk_Bookmark-New.png");
-	content: url("../MipImages/Tango/tango_Bookmark-New.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Bookmark-New.png");
 
 	display: block;
@@ -1568,14 +1241,6 @@ menuitem.searchbar-clear-history > label {
 
 #menu_bookmarkThisPage[data-l10n-id="menu-bookmark-edit"]::Before { /* Edit This Bookmark */
 
-/*	content: url("chrome://browser/skin/bookmark.svg");
-	content: url("../MipImages/FF/bookmark-2.png");
-	content: url("../MipImages/FF/bookmark-3.png");
-	content: url("../MipImages/Crystal/crystal_Bookmark.png");
-	content: url("../MipImages/Oxygen/oxygen_Bookmark.png");
-	content: url("../MipImages/Silk/silk_Bookmark.png");
-	content: url("../MipImages/Tango/tango_Bookmark.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Bookmark.png");
 	}
 
@@ -1605,14 +1270,6 @@ menuitem.searchbar-clear-history > label {
 #placesContext_new\:folder::Before,
 #newfolder::Before {
 
-/*	content: url("chrome://browser/skin/folder.svg");
-	content: url("../MipImages/FF/folder.png");
-	content: url("../MipImages/Crystal/crystal_Bookmark-NewFolder.png");
-	content: url("../MipImages/Fugue/fugue_Bookmark-NewFolder(crystal).png");
-	content: url("../MipImages/Oxygen/oxygen_Bookmark-NewFolder.png");
-	content: url("../MipImages/Silk/silk_Bookmark-NewFolder.png");
-	content: url("../MipImages/Tango/tango_Bookmark-NewFolder.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Bookmark-NewFolder.png");
 
 	display: block;
@@ -1639,11 +1296,6 @@ menuitem.searchbar-clear-history > label {
 #placesContext_new\:separator::Before,
 #newseparator::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Bookmark-NewSeparator.png");
-	content: url("../MipImages/Silk/silk_Bookmark-NewSeparator.png");
-	content: url("../MipImages/Silk/silk_Bookmark-NewSeparator-2.png");
-	content: url("../MipImages/Tango/tango_Bookmark-NewSeparator.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Bookmark-NewSeparator.png");
 
 	display: block;
@@ -1671,12 +1323,7 @@ menuitem.searchbar-clear-history > label {
 #placesContext_show_folder\:info::Before,
 #placesContext_show\:info::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_ViewSource.png");
-	content: url("../MipImages/Oxygen/oxygen_FileUnknown.png");
-	content: url("../MipImages/Silk/silk_FileSys.png");
-	content: url("../MipImages/Tango/tango_Properties.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_FileIni.png");
+/*	content: url("../MipImages/Fugue/fugue_FileIni.png"); */
 	content: url("../MipImages/Fugue/fugue_Properties.png");
 
 	display: block;
@@ -1716,8 +1363,8 @@ menuitem.searchbar-clear-history > label {
 
 #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"][checked=false]::Before {
 
-/*	content: url("../MipImages/FF/container-unhide-black.svg"); */
 	content: url("../MipImages/FF/container-unhide.svg");
+/*	content: url("../MipImages/FF/container-unhide-black.svg"); */
 
 	display: block;
 	width: 16px;
@@ -1747,9 +1394,6 @@ menuitem.searchbar-clear-history > label {
 
 #viewColumns::Before {
 
-/*	content: url("chrome://global/skin/icons/columnpicker.svg");
-	content: url("../MipImages/Fugue/fugue_Columns-cyan.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Columns-blue.png");
 
 	display: block;
@@ -1768,12 +1412,7 @@ menuitem.searchbar-clear-history > label {
 
 #viewSort::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Sort-AZ.png");
-	content: url("../MipImages/Oxygen/oxygen_Sort-AZ.png");
-	content: url("../MipImages/Silk/silk_Sort-Menu.png");
-	content: url("../MipImages/Tango/tango_Sort-AZ.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_Sort-Menu-Document.png");
+/*	content: url("../MipImages/Fugue/fugue_Sort-Menu-Document.png"); */
 	content: url("../MipImages/Fugue/fugue_Sort-Menu.png");
 
 	display: block;
@@ -1786,13 +1425,7 @@ menuitem.searchbar-clear-history > label {
 #viewSortAscending:not([checked=true])::Before,
 #placesContext_sortBy\:name::Before {
 
-/*	content: url("chrome://global/skin/icons/find-next-arrow.svg");
-	content: url("../MipImages/Crystal/crystal_Sort-AZ.png");
-	content: url("../MipImages/Oxygen/oxygen_Sort-AZ.png");
-	content: url("../MipImages/Silk/silk_Sort-AZ.png");
-	content: url("../MipImages/Tango/tango_Sort-AZ.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_Sort-AZ-Document.png");
+/*	content: url("../MipImages/Fugue/fugue_Sort-AZ-Document.png"); */
 	content: url("../MipImages/Fugue/fugue_Sort-AZ.png");
 
 	display: block;
@@ -1804,13 +1437,7 @@ menuitem.searchbar-clear-history > label {
 
 #viewSortDescending:not([checked=true])::Before {
 
-/*	content: url("chrome://global/skin/icons/find-previous-arrow.svg");
-	content: url("../MipImages/Crystal/crystal_Sort-ZA.png");
-	content: url("../MipImages/Oxygen/oxygen_Sort-ZA.png");
-	content: url("../MipImages/Silk/silk_Sort-ZA.png");
-	content: url("../MipImages/Tango/tango_Sort-ZA.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_Sort-ZA-Document.png");
+/*	content: url("../MipImages/Fugue/fugue_Sort-ZA-Document.png"); */
 	content: url("../MipImages/Fugue/fugue_Sort-ZA.png");
 
 	display: block;
@@ -1832,15 +1459,6 @@ menuitem.searchbar-clear-history > label {
 
 #backupBookmarks::Before {
 
-/*	content: url("chrome://browser/skin/save.svg");
-	content: url("../MipImages/Crystal/crystal_Save.png");
-	content: url("../MipImages/Fugue/fugue_Save.png");
-	content: url("../MipImages/Oxygen/oxygen_Save.png");
-	content: url("../MipImages/Silk/silk_Save.png");
-	content: url("../MipImages/Silk/silk_Backup.png");
-	content: url("../MipImages/Tango/tango_Save.png");
-	content: url("../MipImages/Tango/tango_Backup.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Database-export.png");
 
 	display: block;
@@ -1852,14 +1470,6 @@ menuitem.searchbar-clear-history > label {
 
 #fileRestoreMenu::Before {
 
-/*	content: url("chrome://browser/skin/open.svg");
-	content: url("../MipImages/FF/folder.png");
-	content: url("../MipImages/Crystal/crystal_FileOpen.png");
-	content: url("../MipImages/Fugue/fugue_FileOpen.png");
-	content: url("../MipImages/Oxygen/oxygen_FileOpen.png");
-	content: url("../MipImages/Silk/silk_FileOpen.png");
-	content: url("../MipImages/Tango/tango_FileOpen.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Database-import.png");
 
 	display: block;
@@ -1871,13 +1481,6 @@ menuitem.searchbar-clear-history > label {
 
 #restoreFromFile::Before {
 
-/*	content: url("chrome://browser/skin/open.svg");
-	content: url("../MipImages/FF/folder.png");
-	content: url("../MipImages/Crystal/crystal_FileOpen.png");
-	content: url("../MipImages/Oxygen/oxygen_FileOpen.png");
-	content: url("../MipImages/Silk/silk_FileOpen.png");
-	content: url("../MipImages/Tango/tango_FileOpen.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_FileOpen.png");
 
 	display: block;
@@ -1889,13 +1492,6 @@ menuitem.searchbar-clear-history > label {
 
 #fileRestorePopup menuitem[oncommand="PlacesOrganizer.onRestoreMenuItemClick(this);"]::Before { /* The File Chooser Saved Backups */
 
-/*	content: url("chrome://browser/skin/bookmark.svg");
-	content: url("../MipImages/FF/bookmark-3.png");
-	content: url("../MipImages/Crystal/crystal_Bookmark.png");
-	content: url("../MipImages/Oxygen/oxygen_Bookmark.png");
-	content: url("../MipImages/Silk/silk_Bookmark.png");
-	content: url("../MipImages/Tango/tango_Bookmark.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Bookmark.png");
 
 	display: block;
@@ -1917,11 +1513,6 @@ menuitem.searchbar-clear-history > label {
 
 #fileImport::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Import.png");
-	content: url("../MipImages/Oxygen/oxygen_Import.png");
-	content: url("../MipImages/Silk/silk_Import.png");
-	content: url("../MipImages/Tango/tango_Import.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Import.png");
 
 	display: block;
@@ -1933,11 +1524,6 @@ menuitem.searchbar-clear-history > label {
 
 #fileExport::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Export.png");
-	content: url("../MipImages/Oxygen/oxygen_Export.png");
-	content: url("../MipImages/Silk/silk_Export.png");
-	content: url("../MipImages/Tango/tango_Export.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Export.png");
 
 	display: block;
@@ -1959,86 +1545,79 @@ menuitem.searchbar-clear-history > label {
  *
  ********************************************************************************/
 
-/* Bookmarks Folders copied from Aris-t2 bookmark_icons_colorized, bugs are his ;-) */
+/* Bookmarks Folders copied from Aris-t2 bookmark_icons_colorized */
 /* You must import bookmark_icons_colorized FIRST */
 
-#editBMPanel_chooseFolderMenuItem .menu-iconic-icon,
 treechildren::-moz-tree-image(title, container),
-treechildren::-moz-tree-image(title, query, hostContainer) {
+treechildren::-moz-tree-image(title, query, hostContainer),
+#editBMPanel_chooseFolderMenuItem .menu-iconic-icon,
+menuitem.folder-icon {
 
-/*	list-style-image: url("../MipImages/Crystal/crystal_FolderClosed.png") !important;
-	list-style-image: url("../MipImages/Oxygen/oxygen_FolderClosed.png") !important;
-	list-style-image: url("../MipImages/Silk/silk_FolderClosed.png") !important;
-	list-style-image: url("../MipImages/Tango/tango_FolderClosed.png") !important;
-	*/
 	list-style-image: url("../MipImages/Fugue/fugue_FolderClosed.png") !important;
 	-moz-image-region: auto !important;
 	}
 
 treechildren::-moz-tree-image(title, open) {
 
-/*	list-style-image: url("../MipImages/Crystal/crystal_FolderOpened.png") !important;
-	list-style-image: url("../MipImages/Oxygen/oxygen_FolderOpened.png") !important;
-	list-style-image: url("../MipImages/Silk/silk_FolderOpened.png") !important;
-	list-style-image: url("../MipImages/Tango/tango_FolderOpened.png") !important;
-	*/
 	list-style-image: url("../MipImages/Fugue/fugue_FolderOpened.png") !important;
 	-moz-image-region: auto !important;
 	}
 
-.bookmark-item[container]:not([query]):not([livemark]) {
+.bookmark-item[container]:not([query]):not([livemark]),
+.bookmark-item[container]:not([query]):not([livemark]) > .menu-iconic-left > .menu-iconic-icon {
 
-/*	list-style-image: url("../MipImages/Crystal/crystal_FolderClosed.png") !important;
-	list-style-image: url("../MipImages/Oxygen/oxygen_FolderClosed.png") !important;
-	list-style-image: url("../MipImages/Silk/silk_FolderClosed.png") !important;
-	list-style-image: url("../MipImages/Tango/tango_FolderClosed.png") !important;
-	*/
 	list-style-image: url("../MipImages/Fugue/fugue_FolderClosed.png") !important;
 	-moz-image-region: auto !important;
 	}
 
-.bookmark-item[container]:not([query]):not([livemark])[open] {
+.bookmark-item[container]:not([query]):not([livemark])[open],
+.bookmark-item[container]:not([query]):not([livemark])[open] > .menu-iconic-left > .menu-iconic-icon {
 
-/*	list-style-image: url("../MipImages/Crystal/crystal_FolderOpened.png") !important;
-	list-style-image: url("../MipImages/Oxygen/oxygen_FolderOpened.png") !important;
-	list-style-image: url("../MipImages/Silk/silk_FolderOpened.png") !important;
-	list-style-image: url("../MipImages/Tango/tango_FolderOpened.png") !important;
-	*/
 	list-style-image: url("../MipImages/Fugue/fugue_FolderOpened.png") !important;
 	-moz-image-region: auto !important;
 	}
 
 .bookmark-item[query][hostContainer] {
 
-/*	list-style-image: url("../MipImages/Crystal/crystal_FolderClosed.png") !important;
-	list-style-image: url("../MipImages/Oxygen/oxygen_FolderClosed.png") !important;
-	list-style-image: url("../MipImages/Silk/silk_FolderClosed.png") !important;
-	list-style-image: url("../MipImages/Tango/tango_FolderClosed.png") !important;
-	*/
 	list-style-image: url("../MipImages/Fugue/fugue_FolderClosed.png") !important;
 	-moz-image-region: auto !important;
 	}
 
 .bookmark-item[query][hostContainer][open] {
 
-/*	list-style-image: url("../MipImages/Crystal/crystal_FolderOpened.png") !important;
-	list-style-image: url("../MipImages/Oxygen/oxygen_FolderOpened.png") !important;
-	list-style-image: url("../MipImages/Silk/silk_FolderOpened.png") !important;
-	list-style-image: url("../MipImages/Tango/tango_FolderOpened.png") !important;
-	*/
 	list-style-image: url("../MipImages/Fugue/fugue_FolderOpened.png") !important;
 	-moz-image-region: auto !important;
 	}
+
+#editBMPanel_folderMenuList:-moz-any([label="Bookmarks Toolbar"],[label="Lesezeichen-Symbolleiste"]) .menulist-icon,
+#editBMPanel_toolbarFolderItem .menu-iconic-icon,
+treechildren::-moz-tree-image(container, OrganizerQuery_BookmarksToolbar),
+treechildren::-moz-tree-image(container, queryFolder_toolbar_____) {
+ list-style-image: url("../MipImages/FF/bookmarksToolbar.png") !important;
+ -moz-image-region: auto !important;
+}
+
+#editBMPanel_folderMenuList:-moz-any([label="Bookmarks Menu"],[label="Lesezeichen-Menü"]) .menulist-icon,
+#editBMPanel_bmRootItem .menu-iconic-icon,
+treechildren::-moz-tree-image(container, OrganizerQuery_BookmarksMenu),
+treechildren::-moz-tree-image(container, queryFolder_menu________) {
+ list-style-image: url("../MipImages/FF/bookmarksMenu.png") !important;
+ -moz-image-region: auto !important;
+}
+
+#editBMPanel_folderMenuList:-moz-any([label="Other Bookmarks"],[label="Weitere Lesezeichen"]) .menulist-icon,
+#editBMPanel_unfiledRootItem .menu-iconic-icon,
+treechildren::-moz-tree-image(container, OrganizerQuery_UnfiledBookmarks),
+treechildren::-moz-tree-image(container, queryFolder_unfiled_____) {
+ list-style-image: url("../MipImages/FF/unsortedBookmarks.png") !important;
+ -moz-image-region: auto !important;
+}
 
 /* Mobile Bookmarks *************************************************************/
 
 #menu_mobileBookmarks,
 #BMB_mobileBookmarks {
 
-/*	list-style-image: url("chrome://devtools/skin/images/browsers/mobile.svg") !important;
-	list-style-image: url("../MipImages/PublicDomain/Icon-Mobile-Phone.png") !important;
-	list-style-image: url("../MipImages/Fugue/fugue_MobilePhone.png") !important;
-	*/
 	list-style-image: url("../MipImages/Fugue/fugue_MobileBookmarksFolder.png") !important;
 	-moz-image-region: auto !important;
 	}
@@ -2053,14 +1632,6 @@ treechildren::-moz-tree-image(title, open) {
 
 #menu_openDownloads::Before {
 
-/*	content: url("chrome://browser/skin/downloads/download-icons.svg#arrow-with-bar");
-	content: url("../MipImages/FF/saveFile.png");
-	content: url("../MipImages/FF/saveFile-XP.png");
-	content: url("../MipImages/Crystal/crystal_Download.png");
-	content: url("../MipImages/Oxygen/oxygen_Download.png");
-	content: url("../MipImages/Silk/silk_Download.png");
-	content: url("../MipImages/Tango/tango_Download.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Download.png");
 
 	display: block;
@@ -2079,12 +1650,6 @@ treechildren::-moz-tree-image(title, open) {
 
 menuitem[data-l10n-id="downloads-cmd-pause"]::Before {
 
-/*	content: url("chrome://global/skin/media/pauseButton.svg");
-	content: url("../MipImages/Crystal/crystal_Player-Pause.png");
-	content: url("../MipImages/Oxygen/oxygen_Player-Pause.png");
-	content: url("../MipImages/Silk/silk_Player-Pause.png");
-	content: url("../MipImages/Tango/tango_Player-Pause.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Player-Pause.png");
 
 	display: block;
@@ -2096,12 +1661,6 @@ menuitem[data-l10n-id="downloads-cmd-pause"]::Before {
 
 menuitem[data-l10n-id="downloads-cmd-resume"]::Before {
 
-/*	content: url("chrome://global/skin/media/playButton.svg");
-	content: url("../MipImages/Crystal/crystal_Player-Play.png");
-	content: url("../MipImages/Oxygen/oxygen_Player-Play.png");
-	content: url("../MipImages/Silk/silk_Player-Play.png");
-	content: url("../MipImages/Tango/tango_Player-Play.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Player-Play.png");
 
 	display: block;
@@ -2121,15 +1680,6 @@ menuitem[data-l10n-id="downloads-cmd-resume"] > label {
 
 menuitem.downloadShowMenuItem::Before { /* [command="downloadsCmd_show"] */
 
-/*	content: url("chrome://browser/skin/folder.svg");
-	content: url("../MipImages/FF/folder.png");
-	content: url("../MipImages/Crystal/crystal_FolderOpened.png");
-	content: url("../MipImages/Fugue/fugue_FolderOpened.png");
-	content: url("../MipImages/Oxygen/oxygen_FolderOpened.png");
-	content: url("../MipImages/Silk/silk_FolderOpened.png");
-	content: url("../MipImages/Silk/silk_FolderGoTo.png");
-	content: url("../MipImages/Tango/tango_FolderOpened.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_FolderGoTo.png");
 
 	display: block;
@@ -2148,12 +1698,6 @@ menuitem.downloadShowMenuItem > label {
 
 menuitem[command="downloadsCmd_openReferrer"]::Before {
 
-/*	content: url("chrome://browser/skin/forward.svg");
-	content: url("../MipImages/Crystal/crystal_GoTo.png");
-	content: url("../MipImages/Oxygen/oxygen_GoTo.png");
-	content: url("../MipImages/Silk/silk_GoTo.png");
-	content: url("../MipImages/Tango/tango_GoTo.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_GoTo.png");
 
 	display: block;
@@ -2177,17 +1721,11 @@ menuitem[command="downloadsCmd_openReferrer"] > label {
 /* AddOns ***********************************************************************/
 
 #menu_openAddons::Before,
+#getMoreDevtools::Before,
+#extensionsForDevelopers::Before,
 menuitem[data-l10n-id="page-action-manage-extension"]::Before,
 menuitem[data-l10n-id="toolbar-context-menu-manage-extension"]::Before {
 
-/*	content: url("chrome://mozapps/skin/extensions/extension.svg");
-	content: url("../MipImages/FF/extensionGeneric-16.png");
-	content: url("../MipImages/FF/extensionGeneric-16-XP.png");
-	content: url("../MipImages/Crystal/crystal_AddOn.png");
-	content: url("../MipImages/Oxygen/oxygen_AddOn.png");
-	content: url("../MipImages/Silk/silk_AddOn.png");
-	content: url("../MipImages/Tango/tango_AddOn.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_AddOn.png");
 
 	display: block;
@@ -2198,6 +1736,8 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"]::Before {
 	}
 
 #menu_openAddons > label,
+#getMoreDevtools > label,
+#extensionsForDevelopers > label,
 menuitem[data-l10n-id="page-action-manage-extension"] > label,
 menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 
@@ -2209,13 +1749,6 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 menuitem[data-l10n-id="page-action-remove-extension"]::Before,
 menuitem[data-l10n-id="toolbar-context-menu-remove-extension"]::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Delete.png");
-	content: url("../MipImages/Fugue/fugue_Delete.png");
-	content: url("../MipImages/Oxygen/oxygen_Delete.png");
-	content: url("../MipImages/Silk/silk_Delete.png");
-	content: url("../MipImages/Silk/silk_AddOnRemove.png");
-	content: url("../MipImages/Tango/tango_Delete.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_AddOnRemove.png");
 
 	display: block;
@@ -2245,16 +1778,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 #context-viewimageinfo::Before,
 #context-viewimagedesc::Before {
 
-/*	content: url("chrome://browser/skin/info.svg");	/* blue */
-/*	content: url("chrome://mozapps/skin/profile/information.svg");
-
-	content: url("../MipImages/FF/information-16.png");
-	content: url("../MipImages/Crystal/crystal_PageInfo.png");
-	content: url("../MipImages/Fugue/fugue_PageInfo(oxygen).png");
-	content: url("../MipImages/Oxygen/oxygen_PageInfo.png");
-	content: url("../MipImages/Silk/silk_PageInfo.png");
-	content: url("../MipImages/Tango/tango_PageInfo.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_PageInfo.png");
 
 	display: block;
@@ -2276,22 +1799,10 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 /* Options **********************************************************************/
 
 #menu_preferences::Before,
+#syncedTabsManageDevices::Before,
 #blockedPopupOptions menuitem[oncommand="gPopupBlockerObserver.editPopupSettings();"]::Before {
 
-/*	content: url("chrome://global/skin/icons/settings.svg");
-	content: url("../MipImages/FF/gear_clicked.png");
-	content: url("../MipImages/FF/gear_default.png");
-	content: url("../MipImages/FF/option-icon-grey.png");
-	content: url("../MipImages/FF/option-icon-blue.png");
-	content: url("../MipImages/FF/options.png");
-	content: url("../MipImages/FF/settings.png");
-	content: url("../MipImages/Crystal/crystal_Options.png");
-	content: url("../MipImages/Fugue/fugue_Options.png");
-	content: url("../MipImages/Oxygen/oxygen_Options.png");
-	content: url("../MipImages/Silk/silk_Options.png");
-	content: url("../MipImages/Tango/tango_Options.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_Gear.png");
+/*	content: url("../MipImages/Fugue/fugue_Gear.png"); */
 	content: url("../MipImages/Fugue/fugue_Options-darker.png");
 
 	display: block;
@@ -2302,6 +1813,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	}
 
 #menu_preferences > label,
+#syncedTabsManageDevices > label,
 #blockedPopupOptions menuitem[oncommand="gPopupBlockerObserver.editPopupSettings();"] > label {
 
 	margin-inline-start: -20px !important;
@@ -2319,14 +1831,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 #sync-unverifieditem::Before,
 #sync-reauthitem::Before {
 
-/*	content: url("chrome://browser/skin/fxa/avatar.svg");
-	content: url("../MipImages/FF/profileicon-XP.png");
-	content: url("../MipImages/FF/profileicon.png");
-	content: url("../MipImages/Crystal/crystal_UserSingle.png");
-	content: url("../MipImages/Oxygen/oxygen_UserSingle.png");
-	content: url("../MipImages/Silk/silk_UserSingle.png");
-	content: url("../MipImages/Tango/tango_UserSingle.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_UserSingle.png");
 
 	display: block;
@@ -2352,14 +1856,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 #sync-tabs-menuitem::Before,
 #menu_tabsSidebar:not([checked=true])::Before {
 
-/*	content: url("chrome://browser/skin/sync.svg");
-	content: url("../MipImages/FF/sync-16.png");
-	content: url("../MipImages/Crystal/crystal_Sync.png");
-	content: url("../MipImages/Oxygen/oxygen_Sync.png");
-	content: url("../MipImages/Silk/silk_Reload.png");
-	content: url("../MipImages/Tango/tango_Sync.png");
-	content: url("../MipImages/Tango/tango_Sync-bright.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Sync.png");
 
 	display: block;
@@ -2398,25 +1894,23 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	}
 
 /* Manage Devices ***************************************************************/
+/* Moved to OPTIONS/SETTINGS
 
-#syncedTabsManageDevices::Before {
+	#syncedTabsManageDevices::Before {
 
-/*	content: url("chrome://browser/skin/fxa/add-device.svg");
-	content: url("../MipImages/PublicDomain/Icon-Mobile-Phone.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_MobilePhone.png");
+		content: url("../MipImages/Fugue/fugue_MobilePhone.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		vertical-align: middle;
+		}
 
-#syncedTabsManageDevices > label {
+	#syncedTabsManageDevices > label {
 
-	margin-inline-start: -20px !important;
-	}
+		margin-inline-start: -20px !important;
+		} */
 
 /* Send To Device ***************************************************************/
 
@@ -2424,12 +1918,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 #context-sendpagetodevice::Before,
 #context-sendlinktodevice::Before {
 
-/*	content: url("chrome://browser/skin/send-to-device.svg");
-	content: url("../MipImages/Fugue/fugue_GoTo.png");
-	content: url("../MipImages/Fugue/fugue_MobilePhone.png");
-	content: url("../MipImages/PublicDomain/Icon-Mobile-Phone.png");
-	content: url("../MipImages/PublicDomain/Icon-Mobile-Phone-SendTo(crystal).png");
-	*/
 	content: url("../MipImages/Fugue/fugue_MobilePhone-SendTo.png");
 
 	display: block;
@@ -2459,11 +1947,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 #context-sendpagetodevice-popup menuitem.sendtab-target::Before,
 #context-sendlinktodevice-popup menuitem.sendtab-target::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_ConnectedBrowser.png");
-	content: url("../MipImages/Oxygen/oxygen_ConnectedBrowser.png");
-	content: url("../MipImages/Silk/silk_ConnectedBrowser.png");
-	content: url("../MipImages/Tango/tango_ConnectedBrowser.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_ConnectedBrowser.png");
 
 	display: block;
@@ -2473,23 +1956,11 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	vertical-align: middle;
 	}
 
-#context_sendTabToDevicePopupMenu menuitem[label^="Connect Another Device"]::Before,
-#context-sendpagetodevice-popup menuitem[label^="Connect Another Device"]::Before,
-#context-sendlinktodevice-popup menuitem[label^="Connect Another Device"]::Before {
+#context_sendTabToDevicePopupMenu menuitem[label^="Send to All Devices"]::Before,
+#context-sendpagetodevice-popup menuitem[label^="Send to All Devices"]::Before,
+#context-sendlinktodevice-popup menuitem[label^="Send to All Devices"]::Before {
 
-/*	content: url("chrome://browser/skin/fxa/add-device.svg");
-	content: url("../MipImages/Crystal/crystal_Connect.png");
-	content: url("../MipImages/Oxygen/oxygen_Connect.png");
-	content: url("../MipImages/Silk/silk_Connect.png");
-	content: url("../MipImages/Tango/tango_Connect.png");
-	content: url("../MipImages/Crystal/crystal_ConnectedBrowser.png");
-	content: url("../MipImages/Oxygen/oxygen_ConnectedBrowser.png");
-	content: url("../MipImages/Silk/silk_ConnectedBrowser.png");
-	content: url("../MipImages/Tango/tango_ConnectedBrowser.png");
-	*/
-
-	content: url("../MipImages/Fugue/fugue_Connect.png");
-	content: url("../MipImages/Fugue/fugue_ConnectedBrowser.png");
+	content: url("../MipImages/Fugue/fugue_MobilePhone-SendTo.png");
 
 	display: block;
 	width: 16px;
@@ -2497,13 +1968,28 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	margin-inline-start: 6px;
 	vertical-align: middle;
 	}
+
+#context_sendTabToDevicePopupMenu menuitem[label^="Manage Devices"]::Before,
+#context-sendpagetodevice-popup menuitem[label^="Manage Devices"]::Before,
+#context-sendlinktodevice-popup menuitem[label^="Manage Devices"]::Before {
+
+	content: url("../MipImages/Fugue/fugue_Gear.png");
+	content: url("../MipImages/Fugue/fugue_Options-darker.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 6px;
+	vertical-align: middle;
+	}
+
+/* #context_sendTabToDevicePopupMenu menuitem[label^="Learn About Sending Tabs"]::Before,
+   #context-sendpagetodevice-popup   menuitem[label^="Learn About Sending Tabs"]::Before,
+   #context-sendlinktodevice-popup   menuitem[label^="Learn About Sending Tabs"]::Before, /* See Firefox Tour/Tips */
 
 #context_sendTabToDevicePopupMenu menuitem.sendtab-target > label,
 #context-sendpagetodevice-popup menuitem.sendtab-target > label,
-#context-sendlinktodevice-popup menuitem.sendtab-target > label,
-#context_sendTabToDevicePopupMenu menuitem[label^="Connect Another Device"] > label,
-#context-sendpagetodevice-popup menuitem[label^="Connect Another Device"] > label,
-#context-sendlinktodevice-popup menuitem[label^="Connect Another Device"] > label {
+#context-sendlinktodevice-popup menuitem.sendtab-target > label {
 
 	margin-inline-start: -20px !important;
 	}
@@ -2518,27 +2004,8 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #webDeveloperMenu::Before {
 
-/*	content: url("chrome://browser/skin/developer.svg");
-	content: url("../MipImages/FF/tools-grey.png");
-	content: url("../MipImages/Crystal/crystal_Tools.png");
-	content: url("../MipImages/Fugue/fugue_Tools.png");
-	content: url("../MipImages/Oxygen/oxygen_Tools.png");
-	content: url("../MipImages/Silk/silk_Tools.png");
-	content: url("../MipImages/Tango/tango_Tools.png");
-	content: url("../MipImages/Crystal/crystal_Wrench.png");
-	content: url("../MipImages/Misc/external_Wrench.png");
-	content: url("../MipImages/Oxygen/oxygen_Wrench.png");
-	content: url("../MipImages/Oxygen/oxygen_Wrench-darker.png");
-	content: url("../MipImages/Silk/silk_Wrench.png");
-	content: url("../MipImages/Tango/tango_Wrench.png");
-	content: url("../MipImages/Crystal/crystal_WebDeveloper.png");
-	content: url("../MipImages/Oxygen/oxygen_WebDeveloper.png");
-	content: url("../MipImages/Silk/silk_WebDeveloper.png");
-	content: url("../MipImages/Tango/tango_WebDeveloper.png");
-	*/
-
-	content: url("../MipImages/Fugue/fugue_Wrench.png");
-	content: url("../MipImages/Fugue/fugue_WebDeveloper-blocks.png");
+/*	content: url("../MipImages/Fugue/fugue_Wrench.png");
+	content: url("../MipImages/Fugue/fugue_WebDeveloper-blocks.png"); */
 	content: url("../MipImages/Fugue/fugue_WebDeveloper.png");
 
 	display: block;
@@ -2549,41 +2016,24 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	}
 
 /* Get More Tools ***************************************************************/
+/* Merged with the AddOns icon
 
-#getMoreDevtools::Before,
-#extensionsForDevelopers::Before {
+	#getMoreDevtools::Before,
+	#extensionsForDevelopers::Before {
 
-/*	content: url("chrome://browser/skin/developer.svg");
-	content: url("../MipImages/FF/tools-grey.png");
-	content: url("../MipImages/Crystal/crystal_Tools.png");
-	content: url("../MipImages/Oxygen/oxygen_Tools.png");
-	content: url("../MipImages/Silk/silk_Tools.png");
-	content: url("../MipImages/Tango/tango_Tools.png");
-	content: url("../MipImages/Crystal/crystal_Wrench.png");
-	content: url("../MipImages/Fugue/fugue_Wrench.png");
-	content: url("../MipImages/Misc/external_Wrench.png");
-	content: url("../MipImages/Oxygen/oxygen_Wrench.png");
-	content: url("../MipImages/Oxygen/oxygen_Wrench-darker.png");
-	content: url("../MipImages/Silk/silk_Wrench.png");
-	content: url("../MipImages/Tango/tango_Wrench.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_Tools.png");
+		content: url("../MipImages/Fugue/fugue_Tools.png");
 
-	display: block;
-	width: 16px;
-	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
-	}
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: 6px;
+		vertical-align: middle;
+		} */
 
 /* Toggle Tools *****************************************************************/
 
 #menu_devToolbox:not([checked=true])::Before {
 
-/*	content: url("chrome://browser/skin/toggle.svg");
-	content: url("../MipImages/FF/switch.png");
-	content: url("../MipImages/Tango/tango_PowerDown.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Switch.png");
 
 	display: block;
@@ -2593,9 +2043,9 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	vertical-align: middle;
 	}
 
+/* #getMoreDevtools > label, */
+/* #extensionsForDevelopers > label, */
 #webDeveloperMenu > label,
-#getMoreDevtools > label,
-#extensionsForDevelopers > label,
 #menu_devToolbox:not([checked=true]) > label {
 
 	margin-inline-start: -20px !important;
@@ -2605,14 +2055,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #menuitem_inspector::Before {
 
-/*	content: url("chrome://devtools/skin/images/tool-inspector.svg");
-	content: url("../MipImages/FF/tool-inspector.png");
-	content: url("../MipImages/Crystal/crystal_Dev-Inspect.png");
-	content: url("../MipImages/Fugue/fugue_Dev-Inspect.png");
-	content: url("../MipImages/Oxygen/oxygen_Dev-Inspect.png");
-	content: url("../MipImages/Silk/silk_Dev-Inspect.png");
-	content: url("../MipImages/Tango/tango_Dev-Inspect.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Dev-Inspect-darker.png");
 
 	display: block;
@@ -2626,13 +2068,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #menuitem_webconsole::Before {
 
-/*	content: url("chrome://devtools/skin/images/tool-webconsole.svg");
-	content: url("../MipImages/FF/tool-webconsole.png");
-	content: url("../MipImages/Crystal/crystal_Dev-WebConsole.png");
-	content: url("../MipImages/Oxygen/oxygen_Dev-WebConsole.png");
-	content: url("../MipImages/Silk/silk_Dev-WebConsole.png");
-	content: url("../MipImages/Tango/tango_Dev-WebConsole.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Dev-WebConsole.png");
 
 	display: block;
@@ -2646,14 +2081,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #menuitem_jsdebugger::Before {
 
-/*	content: url("chrome://devtools/skin/images/tool-debugger.svg");
-	content: url("../MipImages/FF/tool-debugger.png");
-	content: url("../MipImages/Crystal/crystal_Dev-Debugger.png");
-	content: url("../MipImages/Oxygen/oxygen_Dev-Debugger.png");
-	content: url("../MipImages/Silk/silk_Dev-Debugger.png");
-	content: url("../MipImages/Tango/tango_Dev-Debugger.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_Dev-Bug.png");
+/*	content: url("../MipImages/Fugue/fugue_Dev-Bug.png"); */
 	content: url("../MipImages/Fugue/fugue_Dev-Debugger.png");
 
 	display: block;
@@ -2667,13 +2095,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #menuitem_netmonitor::Before {
 
-/*	content: url("chrome://devtools/skin/images/tool-network.svg");
-	content: url("../MipImages/FF/tool-network.png");
-	content: url("../MipImages/Crystal/crystal_Dev-NetMonitor.png");
-	content: url("../MipImages/Oxygen/oxygen_Dev-NetMonitor.png");
-	content: url("../MipImages/Silk/silk_Globe.png");
-	content: url("../MipImages/Tango/tango_Connect.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Dev-NetMonitor.png");
 
 	display: block;
@@ -2687,20 +2108,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #menuitem_styleeditor::Before {
 
-/*	content: url("chrome://devtools/skin/images/tool-styleeditor.svg");
-	content: url("../MipImages/FF/tool-styleeditor.png");
-	content: url("../MipImages/Crystal/crystal_Dev-CSS.png");
-	content: url("../MipImages/Oxygen/oxygen_Dev-CSS.png");
-	content: url("../MipImages/Silk/silk_Dev-CSS.png");
-	content: url("../MipImages/Tango/tango_Dev-CSS.png");
-	content: url("../MipImages/Crystal/crystal_PageStyle.png");
-	content: url("../MipImages/Crystal/crystal_PageStyle.png");
-	content: url("../MipImages/Fugue/fugue_PageStyle.png");
-	content: url("../MipImages/Oxygen/oxygen_PageStyle.png");
-	content: url("../MipImages/Silk/silk_PageStyle.png");
-	content: url("../MipImages/Tango/tango_PageStyle.png");
-	content: url("../MipImages/Tango/tango_Dev-Style.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Dev-CSS.png");
 
 	display: block;
@@ -2717,14 +2124,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 #menu_taskManager::Before,
 #help_taskManager::Before {
 
-/*	content: url("chrome://devtools/skin/images/tool-profiler.svg");
-	content: url("../MipImages/FF/tool-profiler.png");
-	content: url("../MipImages/Crystal/crystal_Dev-Profiler.png");
-	content: url("../MipImages/Fugue/fugue_Dev-Profiler.png");
-	content: url("../MipImages/Oxygen/oxygen_Dev-Profiler.png");
-	content: url("../MipImages/Silk/silk_Dev-Profiler.png");
-	content: url("../MipImages/Tango/tango_Dev-Profiler.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Dev-Profiler-light.png");
 
 	display: block;
@@ -2738,11 +2137,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #menuitem_storage::Before {
 
-/*	content: url("chrome://devtools/skin/images/tool-storage.svg");
-	content: url("../MipImages/Fugue/fugue_Explore.png");
-	content: url("../MipImages/Fugue/fugue_ExploreFolders.png");
-	content: url("../MipImages/Tango/tango_Explore.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Database-inspect.png");
 
 	display: block;
@@ -2805,14 +2199,8 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #menu_devtools_remotedebugging::Before {
 
-/*	content: url("../MipImages/FF/remote.png");
-	content: url("../MipImages/FF/remote-XP.png");
-	content: url("../MipImages/Crystal/crystal_Connect.png");
-	content: url("../MipImages/Oxygen/oxygen_Connect.png");
-	content: url("../MipImages/Silk/silk_Connect.png");
-	content: url("../MipImages/Tango/tango_Connect.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_Connect.png");
+/*	content: url("../MipImages/Fugue/fugue_Dev-Bug.png"); */
+	content: url("../MipImages/Fugue/fugue_Dev-Debugger.png");
 
 	display: block;
 	width: 16px;
@@ -2825,12 +2213,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #menu_browserToolbox::Before {
 
-/*	content: url("../MipImages/FF/tilt.png");
-	content: url("../MipImages/FF/tilt-grey.png");
-	content: url("../MipImages/FF/tilt-black.png");
-	content: url("../MipImages/Crystal/crystal_WebDeveloper.png");
-	content: url("../MipImages/Silk/silk_WebDeveloper.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_WebDeveloper-blocks.png");
 
 	display: block;
@@ -2842,13 +2224,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #menu_browserContentToolbox::Before {
 
-/*	content: url("../MipImages/FF/tilt-grey.png");
-	content: url("../MipImages/FF/tilt-black.png");
-	content: url("../MipImages/Crystal/crystal_WebDeveloper.png");
 	content: url("../MipImages/Fugue/fugue_Toolbox.png");
-	content: url("../MipImages/Silk/silk_WebDeveloper.png");
-	*/
-	content: url("../MipImages/FF/tilt.png");
 
 	display: block;
 	width: 16px;
@@ -2861,15 +2237,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #menu_browserConsole::Before {
 
-/*    	content: url("chrome://global/skin/icons/chevron.svg");
-    	content: url("chrome://devtools/skin/images/tool-webconsole.svg");
-	content: url("../MipImages/FF/commandline.png");
-	content: url("../MipImages/Crystal/crystal_Dev-Console.png");
-	content: url("../MipImages/Oxygen/oxygen_Dev-Console.png");
-	content: url("../MipImages/Silk/silk_Dev-Console.png");
-	content: url("../MipImages/Tango/tango_Dev-Console.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_Dev-Console.png");
+/*	content: url("../MipImages/Fugue/fugue_Dev-Console.png"); */
 	content: url("../MipImages/Fugue/fugue_Dev-BrowserConsole.png");
 
 	display: block;
@@ -2883,14 +2251,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #menu_responsiveUI:not([checked=true])::Before {
 
-/*	content: url("chrome://devtools/skin/images/command-responsivemode.svg");
-	content: url("../MipImages/FF/tool-responsivemode.png");
-	content: url("../MipImages/FF/tool-responsivemode-black.png");
-	content: url("../MipImages/Crystal/crystal_Dev-Responsive.png");
-	content: url("../MipImages/Oxygen/oxygen_Dev-Responsive.png");
-	content: url("../MipImages/Silk/silk_Dev-Responsive.png");
-	content: url("../MipImages/Tango/tango_Dev-Responsive.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Dev-Responsive.png");
 
 	display: block;
@@ -2904,12 +2264,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #menu_eyedropper::Before {
 
-/*	content: url("chrome://devtools/skin/images/command-eyedropper.svg");
-	content: url("../MipImages/Crystal/crystal_Eyedropper.png");
-	content: url("../MipImages/Oxygen/oxygen_Eyedropper.png");
-	content: url("../MipImages/Oxygen/oxygen_Eyedropper(silk).png");
-	content: url("../MipImages/Tango/tango_Eyedropper.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Eyedropper.png");
 
 	display: block;
@@ -2954,14 +2308,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 #menu_openHelp::Before,
 #helpPolicySupport::Before {
 
-/*	content: url("chrome://global/skin/icons/help.svg");
-	content: url("../MipImages/FF/alwaysAsk-XP-lower.png");
-	content: url("../MipImages/FF/question-16.png");
-	content: url("../MipImages/Crystal/crystal_Help.png");
-	content: url("../MipImages/Oxygen/oxygen_Help.png");
-	content: url("../MipImages/Silk/silk_Help.png");
-	content: url("../MipImages/Tango/tango_Help.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Help.png");
 
 	display: block;
@@ -2985,10 +2331,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 #context-sendpagetodevice-popup menuitem[label^="Learn About Sending Tabs"]::Before,
 #context-sendlinktodevice-popup menuitem[label^="Learn About Sending Tabs"]::Before {
 
-/*	content: url("chrome://browser/skin/tip.svg");
-	content: url("../MipImages/Tango/tango_Information.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_LightBulb-off.png");
+/*	content: url("../MipImages/Fugue/fugue_LightBulb-off.png"); */
 	content: url("../MipImages/Fugue/fugue_LightBulb.png");
 
 	display: block;
@@ -3011,11 +2354,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #menu_keyboardShortcuts::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_KeyboardShortcut.png");
-	content: url("../MipImages/Oxygen/oxygen_KeyboardShortcut.png");
-	content: url("../MipImages/Silk/silk_KeyboardShortcut.png");
-	content: url("../MipImages/Tango/tango_KeyboardShortcut.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_KeyboardShortcut.png");
 
 	display: block;
@@ -3034,15 +2372,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #troubleShooting::Before {
 
-/*	content: url("chrome://browser/skin/info.svg"); /* blue */
-/*	content: url("chrome://mozapps/skin/profile/information.svg");
-
-	content: url("../MipImages/FF/information-16.png");
-	content: url("../MipImages/Crystal/crystal_Information.png");
-	content: url("../MipImages/Oxygen/oxygen_Information.png");
-	content: url("../MipImages/Silk/silk_PageInfo.png");
-	content: url("../MipImages/Tango/tango_Information.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Information.png");
 
 	display: block;
@@ -3061,20 +2390,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #feedbackPage::Before {
 
-/*	content: url("../MipImages/FF/services-16.png");
-	content: url("../MipImages/FF/alwaysAsk-XP-lower.png");
-	content: url("../MipImages/Fugue/fugue_Alert.png");
-	content: url("../MipImages/Fugue/fugue_Balloon-left.png");
-	content: url("../MipImages/Fugue/fugue_Balloon-white-left.png");
-	content: url("../MipImages/Oxygen/oxygen_Alert.png");
-	content: url("../MipImages/Silk/silk_Alert-bigger.png");
-	content: url("../MipImages/Silk/silk_Alert.png");
-	content: url("../MipImages/Tango/tango_Alert.png");
-	content: url("../MipImages/Crystal/crystal_Smiley.png");
-	content: url("../MipImages/Oxygen/oxygen_Smiley.png");
-	content: url("../MipImages/Silk/silk_Smiley.png");
-	content: url("../MipImages/Tango/tango_Smiley.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Smiley.png");
 
 	display: block;
@@ -3093,11 +2408,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #helpSafeMode::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Restart.png");
-	content: url("../MipImages/Oxygen/oxygen_Restart.png");
-	content: url("../MipImages/Silk/silk_Restart.png");
-	content: url("../MipImages/Tango/tango_Restart.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Restart.png");
 
 	display: block;
@@ -3116,11 +2426,6 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 #fileMenu-restart-item .menu-iconic-icon {
 
-/*	list-style-image: url("../MipImages/Crystal/crystal_Restart.png");
-	list-style-image: url("../MipImages/Oxygen/oxygen_Restart.png");
-	list-style-image: url("../MipImages/Silk/silk_Restart.png");
-	list-style-image: url("../MipImages/Tango/tango_Restart.png");
-	*/
 	list-style-image: url("../MipImages/Fugue/fugue_Restart-red.png");
 
 	-moz-image-region: auto;
@@ -3131,19 +2436,11 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
 /* Report Phishing Website/Addon ************************************************/
 
+#help_reportSiteIssue::Before,
 #menu_HelpPopup_reportPhishingtoolmenu::Before,
 menuitem[data-l10n-id="toolbar-context-menu-report-extension"]::Before {
 
-/*	content: url("chrome://browser/skin/warning.svg"); /* yellow */
-/*	content: url("chrome://devtools/skin/images/alert.svg");
-	content: url("../MipImages/FF/warning-16.png");
-	content: url("../MipImages/FF/warning-16-XP.png");
-	content: url("../MipImages/Crystal/crystal_Warning.png");
-	content: url("../MipImages/Oxygen/oxygen_Warning.png");
-	content: url("../MipImages/Silk/silk_Warning.png");
-	content: url("../MipImages/Tango/tango_Warning.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_Warning-1.png");
+/*	content: url("../MipImages/Fugue/fugue_Warning-1.png"); */
 	content: url("../MipImages/Fugue/fugue_Warning-2.png");
 
 	display: block;
@@ -3153,12 +2450,14 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"]::Before {
 	vertical-align: middle;
 	}
 
+#help_reportSiteIssue[disabled=true]::Before,
 #menu_HelpPopup_reportPhishingtoolmenu[disabled=true]::Before,
 menuitem[data-l10n-id="toolbar-context-menu-report-extension"][disabled=true]::Before {
 
 	opacity: 0.4;
 	}
 
+#help_reportSiteIssue > label,
 #menu_HelpPopup_reportPhishingtoolmenu > label,
 menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 
@@ -3169,10 +2468,8 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 
 #aboutName::Before {
 
-/*	content: url("chrome://browser/skin/welcome-back.svg");
+/*	content: url("../MipImages/FF/FIREFOX-78-icon16.png"); */
 	content: url("../MipImages/FF/FIREFOX-icon16.png");
-	*/
-	content: url("../MipImages/FF/FIREFOX-78-icon16.png");
 
 	display: block;
 	width: 16px;
@@ -3210,12 +2507,6 @@ menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer)::Bef
 #syncedTabsOpenSelectedInTab::Before,
 #syncedTabsOpenAllInTabs::Before {
 
-/*	content: url("chrome://browser/skin/new-tab.svg");
-	content: url("../MipImages/Crystal/crystal_TabPlus.png");
-	content: url("../MipImages/Oxygen/oxygen_TabPlus.png");
-	content: url("../MipImages/Silk/silk_TabPlus.png");
-	content: url("../MipImages/Tango/tango_TabPlus.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_TabPlus.png");
 
 	display: block;
@@ -3264,13 +2555,6 @@ menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer) > la
 #context-reloadframe::Before,
 #context-reloadimage::Before {
 
-/*	content: url("chrome://browser/skin/reload.svg");
-	content: url("../MipImages/Crystal/crystal_Reload.png");
-	content: url("../MipImages/Oxygen/oxygen_Repeat.png");
-	content: url("../MipImages/Oxygen/oxygen_Reload.png");
-	content: url("../MipImages/Silk/silk_Reload.png");
-	content: url("../MipImages/Tango/tango_Reload.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Reload.png");
 
 	display: block;
@@ -3296,12 +2580,6 @@ menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer) > la
 #context_toggleMuteSelectedTabs::Before,
 #context-media-mute::Before {
 
-/*	content: url("chrome://browser/skin/tabbrowser/tab-audio-playing.svg");
-	content: url("../MipImages/Crystal/crystal_AudioPlaying.png");
-	content: url("../MipImages/Oxygen/oxygen_AudioPlaying.png");
-	content: url("../MipImages/Silk/silk_AudioPlaying.png");
-	content: url("../MipImages/Tango/tango_AudioPlaying.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_AudioPlaying.png");
 
 	display: block;
@@ -3320,12 +2598,6 @@ menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer) > la
 #context_toggleMuteSelectedTabs[muted=true]::Before,
 #context-media-unmute::Before {
 
-/*	content: url("chrome://browser/skin/tabbrowser/tab-audio-muted.svg");
-	content: url("../MipImages/Crystal/crystal_AudioMuted.png");
-	content: url("../MipImages/Oxygen/oxygen_AudioMuted.png");
-	content: url("../MipImages/Silk/silk_AudioMuted.png");
-	content: url("../MipImages/Tango/tango_AudioMuted.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_AudioMuted.png");
 
 	display: block;
@@ -3351,10 +2623,6 @@ menuitem[data-l10n-id="toolbar-context-menu-pin-to-overflow-menu"]::Before,
 #customizationPanelItemContextMenuPin::Before,
 menuitem.customize-context-addToPanel::Before {
 
-/*	content: url("chrome://browser/skin/pin-tab.svg");
-	content: url("../MipImages/Fugue/fugue_Pin.png");
-	content: url("../MipImages/Fugue/fugue_Pin-Purple.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Pin-Blue.png");
 
 	display: block;
@@ -3368,10 +2636,6 @@ menuitem.customize-context-addToPanel::Before {
 #context_unpinSelectedTabs::Before,
 #customizationPanelItemContextMenuUnpin::Before {
 
-/*	content: url("chrome://browser/skin/unpin-tab.svg");
-	content: url("../MipImages/Fugue/fugue_Pin-Blue.png");
-	content: url("../MipImages/Fugue/fugue_Pin-Purple.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Pin.png");
 
 	display: block;
@@ -3403,11 +2667,6 @@ menuitem.customize-context-addToPanel > label {
 #context_duplicateTab::Before,
 #context_duplicateTabs::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_TabDuplicate.png");
-	content: url("../MipImages/Oxygen/oxygen_TabDuplicate.png");
-	content: url("../MipImages/Silk/silk_TabDuplicate.png");
-	content: url("../MipImages/Tango/tango_TabDuplicate.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_TabDuplicate.png");
 
 	display: block;
@@ -3457,12 +2716,6 @@ menuitem.customize-context-addToPanel > label {
 
 #context_moveTabOptions::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_TabMove.png");
-	content: url("../MipImages/Crystal/crystal_TabMove-Blue.png");
-	content: url("../MipImages/Oxygen/oxygen_TabMove.png");
-	content: url("../MipImages/Silk/silk_TabMove.png");
-	content: url("../MipImages/Tango/tango_TabMove.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_TabMove.png");
 
 	display: block;
@@ -3487,12 +2740,6 @@ menuitem.customize-context-addToPanel > label {
 #context_moveToStart::Before,
 #context_closeTabsToTheStart::Before {
 
-/*	content: url("chrome://browser/skin/back.svg");
-	content: url("../MipImages/Crystal/crystal_ToStart.png");
-	content: url("../MipImages/Oxygen/oxygen_ToStart.png");
-	content: url("../MipImages/Silk/silk_ToStart.png");
-	content: url("../MipImages/Tango/tango_ToStart.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_ToStart.png");
 
 	display: block;
@@ -3505,12 +2752,6 @@ menuitem.customize-context-addToPanel > label {
 #context_moveToEnd::Before,
 #context_closeTabsToTheEnd::Before {
 
-/*	content: url("chrome://browser/skin/forward.svg");
-	content: url("../MipImages/Crystal/crystal_ToEnd.png");
-	content: url("../MipImages/Oxygen/oxygen_ToEnd.png");
-	content: url("../MipImages/Silk/silk_ToEnd.png");
-	content: url("../MipImages/Tango/tango_ToEnd.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_ToEnd.png");
 
 	display: block;
@@ -3542,12 +2783,7 @@ menuitem.customize-context-addToPanel > label {
 #context_closeSelectedTabs::Before,
 #menu_close::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_TabMinus.png");
-	content: url("../MipImages/Oxygen/oxygen_TabX.png");
-	content: url("../MipImages/Silk/silk_TabMinus.png");
-	content: url("../MipImages/Tango/tango_TabX.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_TabX.png");
+/*	content: url("../MipImages/Fugue/fugue_TabX.png"); */
 	content: url("../MipImages/Fugue/fugue_TabMinus.png");
 
 	display: block;
@@ -3569,11 +2805,6 @@ menuitem.customize-context-addToPanel > label {
 #context_closeTabOptions::Before,
 #blockedPopupDontShowMessage:not([checked=true])::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_ClearAll.png");
-	content: url("../MipImages/Oxygen/oxygen_ClearAll.png");
-	content: url("../MipImages/Silk/silk_ClearAll.png");
-	content: url("../MipImages/Tango/tango_ClearAll.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_ClearAll.png");
 
 	display: block;
@@ -3598,11 +2829,6 @@ menuitem.customize-context-addToPanel > label {
 
 #context_closeOtherTabs::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_TabsOthers.png");
-	content: url("../MipImages/Oxygen/oxygen_TabsOthers.png");
-	content: url("../MipImages/Silk/silk_TabsOther.png");
-	content: url("../MipImages/Tango/tango_TabsOthers.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_TabsOthers.png");
 
 	display: block;
@@ -3626,12 +2852,6 @@ menuitem.customize-context-addToPanel > label {
 
 #hiddenTabsMenu::Before {
 
-/*	content: url("chrome://browser/skin/tab.svg");
-	content: url("../MipImages/Crystal/crystal_TabHidden.png");
-	content: url("../MipImages/Oxygen/oxygen_TabHidden.png");
-	content: url("../MipImages/Silk/silk_TabHidden.png");
-	content: url("../MipImages/Tango/tango_TabHidden.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_TabHidden.png");
 
 	display: block;
@@ -3645,12 +2865,6 @@ menuitem.customize-context-addToPanel > label {
 
 #historyUndoMenu::Before {
 
-/*	content: url("chrome://browser/skin/tab.svg");
-	content: url("../MipImages/Crystal/crystal_Tab.png");
-	content: url("../MipImages/Oxygen/oxygen_Tab.png");
-	content: url("../MipImages/Silk/silk_Tab.png");
-	content: url("../MipImages/Tango/tango_Tab.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Tab.png");
 
 	display: block;
@@ -3675,13 +2889,9 @@ menuitem.customize-context-addToPanel > label {
 
 #allTabsMenu-hiddenTabsButton > image {
 
-/*	list-style-image: url("../MipImages/Crystal/crystal_TabHidden.png");
-	list-style-image: url("../MipImages/Oxygen/oxygen_TabHidden.png");
-	list-style-image: url("../MipImages/Silk/silk_TabHidden.png");
-	list-style-image: url("../MipImages/Tango/tango_TabHidden.png");
-	*/
 	list-style-image: url("../MipImages/Fugue/fugue_TabHidden.png");
-	-moz-image-region: auto;
+	width: 16px;
+	height: 16px;
 	}
 
 #allTabsMenu-hiddenTabsButton > label { padding-inline-start: 8px !important; }
@@ -3765,12 +2975,6 @@ menuitem[command="Browser:OpenAboutContainers"]::Before { /* #new-tab-button, #n
 
 menuitem[data-usercontextid="0"]::Before { /* #new-tab-button, #new-tab-button-popup, #context-openlinkinusercontext-menu */
 
-/*	content: url("chrome://global/skin/icons/error.svg");
-	content: url("../MipImages/Crystal/crystal_DisableBlockEmpty.png");
-	content: url("../MipImages/Oxygen/oxygen_DisableBlockEmpty.png");
-	content: url("../MipImages/Silk/silk_DisableBlockEmpty.png");
-	content: url("../MipImages/Tango/tango_DisableBlockEmpty.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_DisableBlockEmpty.png");
 
 	display: block;
@@ -3809,17 +3013,7 @@ menuitem[data-usercontextid="0"] > label,
 #context-video-saveimage::Before,
 #context-saveaudio::Before {
 
-/*	content: url("chrome://browser/skin/save.svg");
-	content: url("../MipImages/Crystal/crystal_SaveAs.png");
-	content: url("../MipImages/Oxygen/oxygen_SaveAs.png");
-	content: url("../MipImages/Silk/silk_SaveAs.png");
-	content: url("../MipImages/Tango/tango_SaveAs.png");
-	content: url("../MipImages/Crystal/crystal_Save.png");
-	content: url("../MipImages/Oxygen/oxygen_Save.png");
-	content: url("../MipImages/Silk/silk_Save.png");
-	content: url("../MipImages/Tango/tango_Save.png");
-	*/
-	content: url("../MipImages/Fugue/fugue_SaveAs.png");
+/*	content: url("../MipImages/Fugue/fugue_SaveAs.png"); */
 	content: url("../MipImages/Fugue/fugue_Save.png");
 
 	display: block;
@@ -3829,37 +3023,27 @@ menuitem[data-usercontextid="0"] > label,
 	vertical-align: middle;
 	}
 
+#context-video-saveimage[disabled=true]::Before {
+	
+	opacity: 0.4;
+	}
+
 #context-saveimage::Before,
 #context-video-saveimage::Before {
 /* File-Save-Image [Overrides Above] */
 
-/*	content: url("../MipImages/Crystal/crystal_SaveImage.png");
-	content: url("../MipImages/Oxygen/oxygen_SaveImage.png");
-	content: url("../MipImages/Silk/silk_SaveImage.png");
-	content: url("../MipImages/Tango/tango_SaveImage.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_SaveImage.png");
 	}
 
 #context-savevideo::Before {
 /* File-Save-Video [Overrides Above] */
 
-/*	content: url("../MipImages/Crystal/crystal_SaveVideo.png");
-	content: url("../MipImages/Oxygen/oxygen_SaveVideo.png");
-	content: url("../MipImages/Silk/silk_SaveVideo.png");
-	content: url("../MipImages/Tango/tango_SaveVideo.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_SaveVideo.png");
 	}
 
 #context-saveaudio::Before {
 /* File-Save-Audio [Overrides Above] */
 
-/*	content: url("../MipImages/Crystal/crystal_SaveAudio.png");
-	content: url("../MipImages/Oxygen/oxygen_SaveAudio.png");
-	content: url("../MipImages/Silk/silk_SaveAudio.png");
-	content: url("../MipImages/Tango/tango_SaveAudio.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_SaveAudio.png");
 	}
 
@@ -3880,12 +3064,6 @@ menuitem[data-usercontextid="0"] > label,
 #context-pocket::Before,
 #context-savelinktopocket::Before {
 
-/*	content: url("chrome://browser/skin/pocket.svg");
-	content: url("chrome://browser/skin/pocket-outline.svg");
-	content: url("../MipImages/PublicDomain/pocket-alt-red-icon.png");
-	content: url("../MipImages/PublicDomain/pocket-icon-colorful.png");
-	content: url("../MipImages/PublicDomain/pocket-alt-demin-icon.png");
-	*/
 	content: url("../MipImages/PublicDomain/pocket-alt-demin-icon-light.png");
 
 	display: block;
@@ -3906,11 +3084,6 @@ menuitem[data-usercontextid="0"] > label,
 #context-viewimage::Before,
 #context-viewbgimage::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Image.png");
-	content: url("../MipImages/Oxygen/oxygen_Image.png");
-	content: url("../MipImages/Silk/silk_Image.png");
-	content: url("../MipImages/Tango/tango_Image.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Image.png");
 
 	display: block;
@@ -3929,12 +3102,6 @@ menuitem[data-usercontextid="0"] > label,
 
 #context-setDesktopBackground::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Image.png");
-	content: url("../MipImages/Fugue/fugue_Image.png");
-	content: url("../MipImages/Oxygen/oxygen_Image.png");
-	content: url("../MipImages/Silk/silk_Image.png");
-	content: url("../MipImages/Tango/tango_Image.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Desktop.png");	/* This is only available for fugue but works for all */
 
 	display: block;
@@ -3955,11 +3122,6 @@ menuitem[data-usercontextid="0"] > label,
 
 #context-viewvideo::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Video.png");
-	content: url("../MipImages/Oxygen/oxygen_Video.png");
-	content: url("../MipImages/Silk/silk_Video.png");
-	content: url("../MipImages/Tango/tango_Video.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Video.png");
 
 	display: block;
@@ -3999,11 +3161,6 @@ menuitem[data-usercontextid="0"] > label,
 #context-searchselect::Before,
 #context-searchselect-private::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Zoom.png");
-	content: url("../MipImages/Oxygen/oxygen_WebSearch.png");
-	content: url("../MipImages/Silk/silk_WebSearch.png");
-	content: url("../MipImages/Tango/tango_WebSearch.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_WebSearch.png");
 
 	display: block;
@@ -4023,13 +3180,6 @@ menuitem[data-usercontextid="0"] > label,
 
 #context-keywordfield::Before {
 
-/*	content: url("chrome://devtools/skin/images/animation-fast-track.svg");
-	content: url("../MipImages/Crystal/crystal_Lightning.png");
-	content: url("../MipImages/Fugue/fugue_Lightning.png");
-	content: url("../MipImages/Oxygen/oxygen_Lightning.png");
-	content: url("../MipImages/Silk/silk_Lightning.png");
-	content: url("../MipImages/Tango/tango_Lightning.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Lightning-saturated.png");
 
 	display: block;
@@ -4049,12 +3199,6 @@ menuitem[data-usercontextid="0"] > label,
 #frame::Before,
 #context-showonlythisframe::Before {
 
-/*	content: url("chrome://devtools/skin/images/command-frames.svg");
-	content: url("../MipImages/Crystal/crystal_Frame.png");
-	content: url("../MipImages/Oxygen/oxygen_Frame.png");
-	content: url("../MipImages/Silk/silk_Frame.png");
-	content: url("../MipImages/Tango/tango_Frame.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Frame.png");
 
 	display: block;
@@ -4075,12 +3219,6 @@ menuitem[data-usercontextid="0"] > label,
 #spell-add-to-dictionary::Before,
 #spell-check-enabled:not([checked=true])::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_CheckSpelling.png");
-	content: url("../MipImages/Oxygen/oxygen_CheckSpelling-longer.png");
-	content: url("../MipImages/Oxygen/oxygen_CheckSpelling.png");
-	content: url("../MipImages/Silk/silk_CheckSpelling.png");
-	content: url("../MipImages/Tango/tango_CheckSpelling.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_CheckSpelling.png");
 
 	display: block;
@@ -4101,21 +3239,6 @@ menuitem[data-usercontextid="0"] > label,
 #spell-dictionaries::Before,
 #spell-add-dictionaries-main::Before {
 
-/*	content: url("../MipImages/Tango/tango_SetLanguage.png");
-	content: url("../MipImages/FF/alwaysAsk-XP-lower.png");		/* Alternatives: Speech Bubbles */
-/*	content: url("../MipImages/FF/services-16.png");
-	content: url("../MipImages/Fugue/fugue_Balloon-left.png");
-	content: url("../MipImages/Fugue/fugue_Balloon-white-left.png");
-	content: url("../MipImages/Silk/silk_Alert.png");
-	content: url("../MipImages/Silk/silk_Alert-bigger.png");
-	content: url("../MipImages/Tango/tango_Alert.png");
-	content: url("../MipImages/FF/dictionaryGeneric-16.png");	/* Alternatives: Dictionaries */
-/*	content: url("../MipImages/Fugue/fugue_Encoding.png");
-	content: url("../MipImages/Oxygen/oxygen_Encoding.png");
-	content: url("../MipImages/Fugue/fugue_Research.png");
-	content: url("../MipImages/Oxygen/oxygen_Research.png");
-	content: url("../MipImages/Tango/tango_Research.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_SetLanguage.png");
 
 	display: block;
@@ -4127,10 +3250,6 @@ menuitem[data-usercontextid="0"] > label,
 
 #spell-add-dictionaries::Before {
 
-/*	content: url("../MipImages/FF/dictionaryGeneric-16.png");
-	content: url("../MipImages/Oxygen/oxygen_Research.png");
-	content: url("../MipImages/Tango/tango_Research.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Research.png");
 
 	display: block;
@@ -4151,17 +3270,6 @@ menuitem[data-usercontextid="0"] > label,
 
 #context-inspect::Before {
 
-/*	content: url("chrome://devtools/skin/images/command-pick.svg");
-	content: url("chrome://devtools/skin/images/tool-inspector.svg");
-	content: url("../MipImages/FF/inspect-blue.png");
-	content: url("../MipImages/FF/inspect-contrast.png");
-	content: url("../MipImages/FF/tool-inspector.png");
-	content: url("../MipImages/Crystal/crystal_Dev-Inspect.png");
-	content: url("../MipImages/Fugue/fugue_Dev-Inspect.png");
-	content: url("../MipImages/Oxygen/oxygen_Dev-Inspect.png");
-	content: url("../MipImages/Silk/silk_Dev-Inspect.png");
-	content: url("../MipImages/Tango/tango_Dev-Inspect.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Dev-Inspect-darker.png");
 
 	display: block;
@@ -4203,12 +3311,6 @@ menuitem[data-usercontextid="0"] > label,
 
 #context-video-pictureinpicture:not([checked=true])::Before {
 
-/*	content: url("chrome://global/skin/media/pictureinpicture.svg");
-	content: url("../MipImages/Crystal/crystal_Pip.png");
-	content: url("../MipImages/Oxygen/oxygen_Pip.png");
-	content: url("../MipImages/Silk/silk_Pip.png");
-	content: url("../MipImages/Tango/tango_Pip.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Pip.png");
 
 	display: block;
@@ -4227,12 +3329,6 @@ menuitem[data-usercontextid="0"] > label,
 
 #context-media-play::Before {
 
-/*	content: url("chrome://global/skin/media/playButton.svg");
-	content: url("../MipImages/Crystal/crystal_Player-Play.png");
-	content: url("../MipImages/Oxygen/oxygen_Player-Play.png");
-	content: url("../MipImages/Silk/silk_Player-Play.png");
-	content: url("../MipImages/Tango/tango_Player-Play.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Player-Play.png");
 
 	display: block;
@@ -4244,12 +3340,6 @@ menuitem[data-usercontextid="0"] > label,
 
 #context-media-pause::Before {
 
-/*	content: url("chrome://global/skin/media/pauseButton.svg");
-	content: url("../MipImages/Crystal/crystal_Player-Pause.png");
-	content: url("../MipImages/Oxygen/oxygen_Player-Pause.png");
-	content: url("../MipImages/Silk/silk_Player-Pause.png");
-	content: url("../MipImages/Tango/tango_Player-Pause.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Player-Pause.png");
 
 	display: block;
@@ -4261,11 +3351,6 @@ menuitem[data-usercontextid="0"] > label,
 
 #context-media-playbackrate::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Player-Forward.png");
-	content: url("../MipImages/Oxygen/oxygen_Player-Forward.png");
-	content: url("../MipImages/Silk/silk_Player-Forward.png");
-	content: url("../MipImages/Tango/tango_Player-Forward.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Player-Forward.png");
 
 	display: block;
@@ -4292,14 +3377,6 @@ menuitem[data-usercontextid="0"] > label,
 
 #context-media-loop:not([checked=true])::Before {
 
-/*	content: url("chrome://browser/skin/reload.svg");
-	content: url("../MipImages/Crystal/crystal_Reload.png");
-	content: url("../MipImages/Oxygen/oxygen_Reload.png");
-	content: url("../MipImages/Oxygen/oxygen_Repeat.png");
-	content: url("../MipImages/Silk/silk_Reload.png");
-	content: url("../MipImages/Silk/silk_Repeat.png");
-	content: url("../MipImages/Tango/tango_Reload.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Reload.png");
 	content: url("../MipImages/Fugue/fugue_Repeat.png");
 
@@ -4319,8 +3396,8 @@ menuitem[data-usercontextid="0"] > label,
 
 #context-media-hidecontrols::Before {
 
-/*	content: url("../MipImages/FF/container-hide-black.svg"); */
 	content: url("../MipImages/FF/container-hide.svg");
+/*	content: url("../MipImages/FF/container-hide-black.svg"); */
 
 	display: block;
 	width: 16px;
@@ -4331,8 +3408,8 @@ menuitem[data-usercontextid="0"] > label,
 
 #context-media-showcontrols::Before {
 
-/*	content: url("../MipImages/FF/container-unhide-black.svg"); */
 	content: url("../MipImages/FF/container-unhide.svg");
+/*	content: url("../MipImages/FF/container-unhide-black.svg"); */
 
 	display: block;
 	width: 16px;
@@ -4357,10 +3434,6 @@ menuitem[data-usercontextid="0"] > label,
 
 #context-ctp-play::Before { /* Activate This Plugin */
 
-/*	content: url("chrome://global/skin/plugins/plugin.svg");
-	content: url("../MipImages/Fugue/fugue_Allow.png");
-	content: url("../MipImages/Silk/silk_Allow.png");
-	*/
 	content: url("../MipImages/Silk/silk_Plugin.png");
 
 	display: block;
@@ -4388,14 +3461,6 @@ menuitem[data-usercontextid="0"] > label,
 #context-viewsource::Before,
 #menu_pageSource::Before {
 
-/*	content: url("chrome://devtools/skin/images/tool-dom.svg");
-	content: url("../MipImages/Crystal/crystal_ViewSource.png");
-	content: url("../MipImages/Fugue/fugue_ViewSource(silk).png");
-	content: url("../MipImages/Oxygen/oxygen_ViewSource.png");
-	content: url("../MipImages/Silk/silk_ViewSource.png");
-	content: url("../MipImages/Tango/tango_ViewSource.png");
-	content: url("../MipImages/Tango/tango_ViewSource-Brakets.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_ViewSource.png");
 
 	display: block;
@@ -4426,12 +3491,6 @@ menuitem[data-usercontextid="0"] > label,
 menuitem[label^="Go to Line"]:not([checked=true])::Before,
 menuitem[generateditemid="16"]:not([checked=true])::Before {
 
-/*	content: url("chrome://browser/skin/forward.svg");
-	content: url("../MipImages/Crystal/crystal_GoTo.png");
-	content: url("../MipImages/Oxygen/oxygen_GoTo.png");
-	content: url("../MipImages/Silk/silk_GoTo.png");
-	content: url("../MipImages/Tango/tango_GoTo.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_GoTo.png");
 
 	display: block;
@@ -4446,11 +3505,6 @@ menuitem[generateditemid="16"]:not([checked=true])::Before {
 menuitem[label="Wrap Long Lines"]:not([checked=true])::Before,
 menuitem[generateditemid="17"]:not([checked=true])::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Wrap.png");
-	content: url("../MipImages/Oxygen/oxygen_Wrap.png");
-	content: url("../MipImages/Silk/silk_Wrap.png");
-	content: url("../MipImages/Tango/tango_Wrap.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Wrap.png");
 
 	display: block;
@@ -4465,12 +3519,6 @@ menuitem[generateditemid="17"]:not([checked=true])::Before {
 menuitem[label="Syntax Highlighting"]:not([checked=true])::Before,
 menuitem[generateditemid="18"]:not([checked=true])::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Highlight.png");
-	content: url("../MipImages/Crystal/crystal_Highlight-green.png");
-	content: url("../MipImages/Oxygen/oxygen_Highlight.png");
-	content: url("../MipImages/Silk/silk_Highlight.png");
-	content: url("../MipImages/Tango/tango_Highlight.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Highlight.png");
 
 	display: block;
@@ -4501,16 +3549,6 @@ menuitem[generateditemid="18"]:not([checked=true]) > label {
 #context-take-screenshot::Before,
 #screenshots_mozilla_org-menuitem-_create-screenshot::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_SaveImage.png");
-	content: url("../MipImages/Fugue/fugue_SaveImage.png");
-	content: url("../MipImages/Oxygen/oxygen_SaveImage.png");
-	content: url("../MipImages/Silk/silk_SaveImage.png");
-	content: url("../MipImages/Tango/tango_SaveImage.png");
-	content: url("../MipImages/Crystal/crystal_ScreenshotSaveImage.png");
-	content: url("../MipImages/Oxygen/oxygen_ScreenshotSaveImage.png");
-	content: url("../MipImages/Silk/silk_ScreenshotSaveImage.png");
-	content: url("../MipImages/Tango/tango_ScreenshotSaveImage.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_ScreenshotSaveImage.png");
 
 	display: block;
@@ -4539,7 +3577,6 @@ menuitem[generateditemid="18"]:not([checked=true]) > label {
 #blockedPopupAllowSite::Before,
 #menu_HelpPopup_reportPhishingErrortoolmenu::Before {
 
-/*	content: url("../MipImages/Silk/silk_Allow.png"); */
 	content: url("../MipImages/Fugue/fugue_Allow.png");
 
 	display: block;
@@ -4557,12 +3594,6 @@ menuitem[generateditemid="18"]:not([checked=true]) > label {
 
 menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"]::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_View.png");
-	content: url("../MipImages/Oxygen/oxygen_View-darker.png");
-	content: url("../MipImages/Oxygen/oxygen_View.png");
-	content: url("../MipImages/Silk/silk_View.png");
-	content: url("../MipImages/Tango/tango_View.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_View.png");
 
 	display: block;
@@ -4591,12 +3622,6 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 #context-sendpagetodevice-popup menuitem[label="No Devices Connected"]::Before,
 #context-sendlinktodevice-popup menuitem[label="No Devices Connected"]::Before {
 
-/*	content: url("chrome://global/skin/icons/error.svg");
-	content: url("../MipImages/Crystal/crystal_DisableBlockEmpty.png");
-	content: url("../MipImages/Oxygen/oxygen_DisableBlockEmpty.png");
-	content: url("../MipImages/Silk/silk_DisableBlockEmpty.png");
-	content: url("../MipImages/Tango/tango_DisableBlockEmpty.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_DisableBlockEmpty.png");
 
 	display: block;
@@ -4626,13 +3651,6 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 #_testpilot-containers-menuitem-_hide-container::Before,
 #context-ctp-hide::Before {
 
-/*	content: url("../MipImages/FF/container-hide-black.svg");
-	content: url("../MipImages/FF/container-hide.svg");
-	content: url("../MipImages/Crystal/crystal_PrivateBrowsing.png");
-	content: url("../MipImages/Crystal/crystal_PrivateBrowsing-darker.png");	/* Use this only when not using Crystal */
-/*	content: url("../MipImages/PublicDomain/public-ghost-16x16-bright.png");
-	content: url("../MipImages/PublicDomain/vector-ghost-icon-bold.png");		/* Suitable for use with built-in SVG */
-
 	content: url("../MipImages/PublicDomain/fugue-ghost.png");
 
 	display: block;
@@ -4656,21 +3674,12 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 /********************************************************************************
  *
  * LOGINS/PASSWORDS (Field Context Menu)
- * These are unfortunately Language-Dependent
  *
  ********************************************************************************/
 
 #fill-login::Before,
 #fill-login > #fill-login-popup > menuitem.context-login-item::Before {
 
-/*	content: url("chrome://browser/skin/fxa/avatar.svg");
-	content: url("../MipImages/FF/profileicon.png");
-	content: url("../MipImages/FF/profileicon-XP.png");
-	content: url("../MipImages/Crystal/crystal_UserSingle.png");
-	content: url("../MipImages/Oxygen/oxygen_UserSingle.png");
-	content: url("../MipImages/Silk/silk_UserSingle.png");
-	content: url("../MipImages/Tango/tango_UserSingle.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_UserSingle.png");
 
 	display: block;
@@ -4680,26 +3689,15 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 	vertical-align: middle;
 	}
 
-#fill-login[label="Fill Password"]::Before,
-#fill-login[label="Fill Password"] > #fill-login-popup > menuitem.context-login-item::Before {
+#fill-login[data-l10n-id="main-context-menu-use-saved-password"]::Before,
+#fill-login[data-l10n-id="main-context-menu-use-saved-password"] > #fill-login-popup > menuitem.context-login-item::Before {
 
-/*	content: url("chrome://browser/skin/login.svg");
-	content: url("../MipImages/FF/key.png");
-	content: url("../MipImages/FF/key-16.png");
-	content: url("../MipImages/Fugue/fugue_Fingerprint.png");
-	content: url("../MipImages/Fugue/fugue_Key-solid.png");
-	content: url("../MipImages/Silk/silk_Key.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Key.png");
 	}
 
+#manage-saved-logins::Before,
 #fill-login-saved-passwords::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_UserGroup.png");
-	content: url("../MipImages/Oxygen/oxygen_UserGroup.png");
-	content: url("../MipImages/Silk/silk_UserGroup.png");
-	content: url("../MipImages/Tango/tango_UserGroup.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_UserGroup.png");
 
 	display: block;
@@ -4711,14 +3709,6 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 
 #fill-login-generated-password::Before { /* Use Generated Password */
 
-/*	content: url("chrome://browser/skin/login.svg");
-	content: url("../MipImages/FF/key-16.png");
-	content: url("../MipImages/FF/key.png");
-	content: url("../MipImages/Fugue/fugue_Fingerprint.png");
-	content: url("../MipImages/Fugue/fugue_Key.png");
-	content: url("../MipImages/Silk/silk_Key.png");
-	content: url("../MipImages/Tango/tango_Go.png"); /* Double Gears */
-	*/
 	content: url("../MipImages/Fugue/fugue_Key-solid.png"); /* Different Key */
 
 	display: block;
@@ -4729,6 +3719,7 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 	}
 
 #fill-login > label,
+#manage-saved-logins > label,
 #fill-login-saved-passwords > label,
 #fill-login-generated-password > label,
 #fill-login > #fill-login-popup > menuitem.context-login-item > label {
@@ -4745,12 +3736,6 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 menuitem[data-l10n-id="page-action-add-to-urlbar"]::Before,
 menuitem.customize-context-addToToolbar::Before {
 
-/*	content: url("chrome://browser/skin/add.svg");
-	content: url("../MipImages/Crystal/crystal_Plus.png");
-	content: url("../MipImages/Oxygen/oxygen_Plus.png");
-	content: url("../MipImages/Silk/silk_Plus.png");
-	content: url("../MipImages/Tango/tango_Plus.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Plus.png");
 
 	display: block;
@@ -4763,11 +3748,6 @@ menuitem.customize-context-addToToolbar::Before {
 menuitem[data-l10n-id="page-action-remove-from-urlbar"]::Before,
 menuitem[data-l10n-id="toolbar-context-menu-remove-from-toolbar"]::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Minus.png");
-	content: url("../MipImages/Oxygen/oxygen_Minus.png");
-	content: url("../MipImages/Silk/silk_Delete.png");
-	content: url("../MipImages/Tango/tango_Minus.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Minus.png");
 
 	display: block;
@@ -4805,13 +3785,6 @@ menuitem[command="cmd_CustomizeToolbars"]::Before, /* #customizationPanelContext
 menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"]::Before,
 menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"]::Before {
 
-/*	content: url("chrome://browser/skin/customize.svg");
-	content: url("../MipImages/FF/themeGeneric-16.png");
-	content: url("../MipImages/Crystal/crystal_Palette.png");
-	content: url("../MipImages/Oxygen/oxygen_Palette.png");
-	content: url("../MipImages/Silk/silk_Palette.png");
-	content: url("../MipImages/Tango/tango_Palette.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Palette.png");
 
 	display: block;
@@ -4845,12 +3818,6 @@ menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"] > label {
 
 #context-back image {
 
-/*	list-style-image: url("../MipImages/FF/menu-back.png");
-	list-style-image: url("../MipImages/Crystal/crystal_NavBack.png");
-	list-style-image: url("../MipImages/Oxygen/oxygen_NavBack.png");
-	list-style-image: url("../MipImages/Silk/silk_NavBack.png");
-	list-style-image: url("../MipImages/Tango/tango_NavBack.png");
-	*/
 	list-style-image: url("../MipImages/Fugue/fugue_NavBack.png");
 	-moz-context-properties: none;
 	-moz-image-region: auto;
@@ -4858,12 +3825,6 @@ menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"] > label {
 
 #context-forward image {
 
-/*	list-style-image: url("../MipImages/FF/menu-forward.png");
-	list-style-image: url("../MipImages/Crystal/crystal_NavForward.png");
-	list-style-image: url("../MipImages/Oxygen/oxygen_NavForward.png");
-	list-style-image: url("../MipImages/Silk/silk_NavForward.png");
-	list-style-image: url("../MipImages/Tango/tango_NavForward.png");
-	*/
 	list-style-image: url("../MipImages/Fugue/fugue_NavForward.png");
 	-moz-context-properties: none;
 	-moz-image-region: auto;
@@ -4871,14 +3832,6 @@ menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"] > label {
 
 #context-reload image {
 
-/*	list-style-image: url("../MipImages/FF/reload-stop-go-Reload(16x16).png");
-	list-style-image: url("../MipImages/Crystal/crystal_Reload.png");
-	list-style-image: url("../MipImages/Oxygen/oxygen_Repeat.png");
-	list-style-image: url("../MipImages/Oxygen/oxygen_Reload.png");
-	list-style-image: url("../MipImages/Silk/silk_Repeat.png");
-	list-style-image: url("../MipImages/Silk/silk_Reload.png");
-	list-style-image: url("../MipImages/Tango/tango_Reload.png");
-	*/
 	list-style-image: url("../MipImages/Fugue/fugue_Reload.png");
 	-moz-context-properties: none;
 	-moz-image-region: auto;
@@ -4886,12 +3839,6 @@ menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"] > label {
 
 #context-stop image {
 
-/*	list-style-image: url("../MipImages/FF/reload-stop-go-Stop(16x16).png");
-	list-style-image: url("../MipImages/Crystal/crystal_NavStop.png");
-	list-style-image: url("../MipImages/Oxygen/oxygen_NavStop.png");
-	list-style-image: url("../MipImages/Silk/silk_NavStop.png");
-	list-style-image: url("../MipImages/Tango/tango_NavStop.png");
-	*/
 	list-style-image: url("../MipImages/Fugue/fugue_NavStop.png");
 	-moz-context-properties: none;
 	-moz-image-region: auto;
@@ -4899,15 +3846,6 @@ menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"] > label {
 
 #context-bookmarkpage:not([starred=true]) image {
 
-/*	list-style-image: url("../MipImages/FF/bookmark-1.png");
-	list-style-image: url("../MipImages/FF/bookmark-2.png");
-	list-style-image: url("../MipImages/FF/bookmark-3.png");
-	list-style-image: url("../MipImages/Crystal/crystal_Bookmark-New.png");
-	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmark-New.png");
-	list-style-image: url("../MipImages/Silk/silk_Bookmark-New(crystal).png");
-	list-style-image: url("../MipImages/Silk/silk_Bookmark-New.png");
-	list-style-image: url("../MipImages/Tango/tango_Bookmark-New.png");
-	*/
 	list-style-image: url("../MipImages/Fugue/fugue_Bookmark-New.png");
 	-moz-context-properties: none;
 	-moz-image-region: auto;
@@ -4915,12 +3853,6 @@ menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"] > label {
 
 #context-bookmarkpage[starred=true] image {
 
-/*	list-style-image: url("../MipImages/FF/bookmark-3.png");
-	list-style-image: url("../MipImages/Crystal/crystal_Bookmark.png");
-	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmark.png");
-	list-style-image: url("../MipImages/Silk/silk_Bookmark.png");
-	list-style-image: url("../MipImages/Tango/tango_Bookmark.png");
-	*/
 	list-style-image: url("../MipImages/Fugue/fugue_Bookmark.png");
 	-moz-context-properties: none;
 	-moz-image-region: auto;
@@ -4943,12 +3875,6 @@ menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"] > label {
 
 menuitem[checked=true]::Before {
 
-/*	content: url("../MipImages/FF/alerticon-info-positive(16x16).png");
-	content: url("../MipImages/Crystal/crystal_Checkmark.png");
-	content: url("../MipImages/Oxygen/oxygen_Checkmark.png");
-	content: url("../MipImages/Silk/silk_Checkmark.png");
-	content: url("../MipImages/Tango/tango_Checkmark.png");
-	*/
 	content: url("../MipImages/Fugue/fugue_Checkmark.png");
 
 	display: block;

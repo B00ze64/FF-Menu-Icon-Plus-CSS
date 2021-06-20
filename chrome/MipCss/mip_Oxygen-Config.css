@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.4 (MIP/CSS)
+ * Menu Icon Plus CSS v2.0 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -8,6 +8,7 @@
  *   https://creativecommons.org/licenses/by/4.0/
  *
  * - The Original MIP Firefox Extension (c) Justin Rodes http://www.codedawn.com/menu-icons-plus.php
+ * - MOST OF THE PANELS CODE (c) Black7375 (https://github.com/black7375/Firefox-UI-Fix)
  *
  * + The icons come from ->
  *
@@ -33,6 +34,8 @@
  * + Contributors ->
  *
  *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
+ *	Acid-Crash Discovered bug with the Responsive Design SVG icon and suggested the fix for it
+ *	Devtools/Help Menu SVG icons and Panels code by Black7375 (https://github.com/black7375/Firefox-UI-Fix)
  *
  * + NOTES:
  * - TabSize=8
@@ -44,14 +47,8 @@
  ********************************************************************************
  *
  * This is the old About:Config skinning file for use with userContent.css.
- * This one uses Oxygen icons when they are available - missing icons are taken 
+ * This one uses Oxygen icons when they are available - missing icons are taken
  * from the other themes.
- *
- * This being one of the main themes I have commented-out the icons from other
- * themes but I've left them here, so you can tweak the css easily to your needs.
- * Obvious alternate icons are not commented out, so if you use a syntax-
- * highlighting editor you can quickly spot where some alternatives exist.
- * But really every commented image is a valid alternative.
  *
  */
 
@@ -59,11 +56,6 @@
 
 #toggleSelected::Before {
 
-/*	content: url("chrome://browser/skin/toggle.svg");
-	content: url("../MipImages/Tango/tango_Sync-bright.png");
-	content: url("../MipImages/Fugue/fugue_Bidi.png");
-	content: url("../MipImages/Silk/silk_Bidi.png");
-	*/
 	content: url("../MipImages/Tango/tango_Sync.png");
 
 	display: block;
@@ -82,13 +74,6 @@
 #copyName::Before,
 #copyValue::Before {
 
-/*	content: url("chrome://browser/skin/edit-copy.svg");
-	content: url("../MipImages/FF/copy.png");
-	content: url("../MipImages/Crystal/crystal_Copy.png");
-	content: url("../MipImages/Fugue/fugue_Copy.png");
-	content: url("../MipImages/Silk/silk_Copy.png");
-	content: url("../MipImages/Tango/tango_Copy.png");
-	*/
 	content: url("../MipImages/Oxygen/oxygen_Copy.png");
 
 	display: block;
@@ -107,11 +92,6 @@
 
 #modifySelected::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_TextField.png");
-	content: url("../MipImages/Fugue/fugue_TextField.png");
-	content: url("../MipImages/Silk/silk_TextField.png");
-	content: url("../MipImages/Tango/tango_TextField.png");
-	*/
 	content: url("../MipImages/Oxygen/oxygen_TextField.png");
 
 	display: block;
@@ -128,12 +108,6 @@
 
 #configContext > menu[label="New"]::Before {
 
-/*	content: url("chrome://browser/skin/add.svg");
-	content: url("../MipImages/Crystal/crystal_Plus.png");
-	content: url("../MipImages/Fugue/fugue_Plus.png");
-	content: url("../MipImages/Silk/silk_Plus.png");
-	content: url("../MipImages/Tango/tango_Plus.png");
-	*/
 	content: url("../MipImages/Oxygen/oxygen_Plus.png");
 
 	display: block;
@@ -190,11 +164,6 @@
 
 #resetSelected::Before {
 
-/*	content: url("../MipImages/Crystal/crystal_Restart.png");
-	content: url("../MipImages/Fugue/fugue_Restart.png");
-	content: url("../MipImages/Silk/silk_Restart.png");
-	content: url("../MipImages/Tango/tango_Restart.png");
-	*/
 	content: url("../MipImages/Oxygen/oxygen_Restart.png");
 
 	display: block;

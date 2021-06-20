@@ -1,0 +1,574 @@
+/********************************************************************************
+ * Menu Icon Plus CSS v2.0 (MIP/CSS)
+ * Add Icons To Firefox Standard Panels
+ *
+ * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
+ *   Project Homepage https://github.com/B00ze64/FF-Menu-Icon-Plus-CSS
+ *   Released under Creative Commons Attribution 4.0 License.
+ *   https://creativecommons.org/licenses/by/4.0/
+ *
+ * - The Original MIP Firefox Extension (c) Justin Rodes http://www.codedawn.com/menu-icons-plus.php
+ * - MOST OF THE PANELS CODE (c) Black7375 (https://github.com/black7375/Firefox-UI-Fix)
+ *
+ * + The icons come from ->
+ *
+ * - Crystal Project	http://www.everaldo.com/
+ *			https://commons.wikimedia.org/wiki/Category:Crystal_Project
+ *			LGPL
+ *
+ * - Fugue Icons	http://p.yusukekamiyamane.com/
+ *			by Yusuke Kamiyamane,
+ *			Creative Commons Attribution 3.0 License.
+ *
+ * - Oxygen Icons	http://www.oxygen-icons.org/ [use Wayback Machine]
+ *			https://github.com/pasnox/oxygen-icons-png
+ *			https://techbase.kde.org/Projects/Oxygen/Licensing
+ *
+ * - Silk Icons		http://www.famfamfam.com/
+ *			Mark James, Birmingham (UK),
+ *			Creative Commons Attribution 2.5 License.
+ *
+ * - Tango Icons	http://tango-project.org/
+ *			Public Domain
+ *
+ * + Contributors ->
+ *
+ *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
+ *	Acid-Crash Discovered bug with the Responsive Design SVG icon and suggested the fix for it
+ *	Devtools/Help Menu SVG icons and Panels code by Black7375 (https://github.com/black7375/Firefox-UI-Fix)
+ *
+ * + NOTES:
+ * - TabSize=8
+ *
+ */
+
+/********************************************************************************
+ * STANDARD PANELS: OXYGEN
+ ********************************************************************************
+ *
+ * This is the main skinning file for the Firefox panels. This one uses Oxygen
+ * icons when they are available - missing icons are taken from the other themes.
+ *
+ */
+
+@-moz-document	url("chrome://browser/content/browser.xhtml"),
+		url("chrome://browser/content/places/places.xhtml"),
+		url("chrome://browser/content/places/historySidebar.xhtml"),
+		url("chrome://browser/content/places/bookmarksSidebar.xhtml"),
+		url("chrome://browser/content/syncedtabs/sidebar.xhtml") {
+
+/********************************************************************************
+ *
+ * GENERAL PANEL PADDING
+ * Original Code by Black7375 (https://github.com/black7375/Firefox-UI-Fix)
+ *
+ ********************************************************************************/
+
+:root {
+	--arrowpanel-menuicon-padding:		8px;
+	--arrowpanel-menuitem-margin:		0 var(--arrowpanel-menuicon-padding) !important; /* Original: 0 8px */
+	--arrowpanel-menuitem-padding:		4px 8px !important; /* Original: 8px Black7375: 5px */
+	--arrowpanel-menublank-padding:		calc(var(--arrowpanel-menuicon-padding) * 2 + 8px) !important;
+	--arrowpanel-menuimageblank-padding:	calc(var(--arrowpanel-menuitem-padding) - 2px) !important;
+	}
+
+:root[uidensity=compact] {
+
+	--arrowpanel-menuitem-padding: 3px !important; } /* Original: 8px */
+
+:root[uidensity=touch] {
+
+	--arrowpanel-menuitem-padding: 8px !important; } /* Original: 8px */
+
+.subviewbutton > .toolbarbutton-text {
+
+	padding-inline-start: var(--arrowpanel-menuicon-padding) !important;
+	}
+
+.subviewbutton[disabled=true] > image { opacity: 0.4; }
+
+/* Miscellaneous Align (Update Banner, Disabled Images, lines with no image) ****/
+
+#downloadsHistory .button-text {
+
+	padding-inline-start: var(--arrowpanel-menuicon-padding) !important;
+	}
+
+#panelMenu_bookmarksMenu .subviewbutton[disabled=true] .toolbarbutton-text,
+#appMenu_historyMenu .subviewbutton[disabled=true] .toolbarbutton-text {
+
+	padding-inline-start: var(--arrowpanel-menublank-padding) !important;
+	}
+
+#appMenu-proton-update-banner {
+
+	margin-bottom: 2px !important;
+	}
+
+#appMenu-proton-update-banner::before {
+
+	margin-inline-start: var(--arrowpanel-menuitem-padding) !important;
+	}
+
+#appMenu-proton-update-banner .toolbarbutton-text {
+
+	margin-inline-start: 0 !important;
+	}
+
+#appMenu-proton-update-banner::before,
+#appMenu-multiView .subviewbutton::before {
+
+	display: -moz-inline-box;
+	margin-inline-end: var(--arrowpanel-menuicon-padding);
+	width:  16px !important;
+	height: 16px !important;
+	}
+
+#appMenu-fxa-status2,
+#appMenu-zoom-controls2 {
+
+	align-items: center;
+	padding-top:    var(--arrowpanel-menuimageblank-padding) !important;
+	padding-bottom: var(--arrowpanel-menuimageblank-padding) !important;
+	}
+
+#appMenu-zoom-controls2::before {
+
+	margin-inline-end: 0 !important;
+	}
+
+#appMenu-proton-addon-banners > .addon-banner-item > .toolbarbutton-icon {
+
+	display: -moz-inline-box !important;
+	margin-inline-start: var(--arrowpanel-menuicon-padding);
+	-moz-box-ordinal-group: 0 !important;
+	}
+
+/* SVG Icon Colors **************************************************************/
+
+#appMenu-multiView .subviewbutton::before,
+#appMenu-proton-update-banner::before,
+#downloadsHistory .button-icon,
+.subviewbutton > image {
+
+	fill: currentColor !important;
+	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
+	-moz-context-properties: fill !important;
+}
+
+/********************************************************************************
+ *
+ * SideBar Panel Menu (to select which sidebar to show)
+ *
+ ********************************************************************************/
+
+#sidebarMenu-popup.cui-widget-panel #sidebar-reverse-position[label$="Right"] > image.toolbarbutton-icon {
+
+	list-style-image: url("../MipImages/Fugue/fugue_Sidebar-Right.png");
+	width: 16px;
+	height: 16px;
+	}
+
+#sidebarMenu-popup.cui-widget-panel #sidebar-reverse-position[label$="Left"] > image.toolbarbutton-icon {
+
+	list-style-image: url("../MipImages/Fugue/fugue_Sidebar-Left.png");
+	width: 16px;
+	height: 16px;
+	}
+
+#sidebarMenu-popup.cui-widget-panel toolbarbutton[data-l10n-id="sidebar-menu-close"] > image.toolbarbutton-icon {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_ClearAll.png");
+	}
+
+#sidebar-switcher-bookmarks.subviewbutton {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmarks.png");
+	}
+
+#sidebar-switcher-history.subviewbutton,
+#appMenu-history-button,
+#appMenu-library-history-button,
+#PanelUI-historyMore {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_History.png");
+	}
+
+#sidebar-switcher-tabs.subviewbutton {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Sync.png");
+	}
+
+/********************************************************************************
+ *
+ * Hamburger Button
+ * Original Code by Black7375 (https://github.com/black7375/Firefox-UI-Fix)
+ *
+ ********************************************************************************/
+
+/********************************************************************************
+/* Main Panel
+ ********************************************************************************/
+
+#appMenu-proton-update-banner::before {
+
+	content: url("../MipImages/Fugue/fugue_Present.png");
+	}
+
+#appMenu-fxa-status2::before {
+
+	content: url("../MipImages/Oxygen/oxygen_UserSingle.png");
+	}
+
+#appMenu-fxa-status2:is([fxastatus=signedin], [fxastatus=unverified], [fxastatus=login-failed])::before {
+
+	display: none;
+	}
+
+ #appMenu-fxa-status2:is([fxastatus=signedin], [fxastatus=unverified], [fxastatus=login-failed]) #appMenu-fxa-label2::before { /* url("https://profile.accounts.firefox.com/v1/avatar/a") */
+
+	content: '';
+	border-radius: 50% !important;
+	background-size: 16px !important;
+	background-image: var(--avatar-image-url) !important;
+	}
+
+
+#appMenu-new-tab-button2,
+#appMenu-library-recentlyClosedTabs {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_TabPlus.png");
+	}
+
+#appMenu-new-window-button2,
+#appMenu-library-recentlyClosedWindows {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_WindowNew.png");
+	}
+
+#appMenu-new-private-window-button2 {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_UserSingle.png");
+	}
+
+#appMenu-bookmarks-button,
+#appMenu-library-bookmarks-button {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmarks.png");
+	}
+
+#appMenu-downloads-button,
+#appMenu-library-downloads-button,
+#downloadsHistory {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Download.png");
+	}
+
+#appMenu-passwords-button {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_UserGroup.png");
+	}
+
+#appMenu-extensions-themes-button,
+#appmenu-developer-tools-view .subviewbutton[label="Extensions for Developers"] {
+/* #appmenu-developer-tools-view .subviewbutton:nth-last-child(1) { */
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_AddOn.png");
+	}
+
+#appMenu-print-button2 {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Print.png");
+	}
+
+#appMenu-save-file-button2 {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Save.png");
+	}
+
+#appMenu-find-button2,
+#panelMenu_searchBookmarks {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Find.png");
+	}
+
+#appMenu-zoom-controls2::before {
+
+	content: url("../MipImages/Oxygen/oxygen_Zoom.png");
+	}
+
+#appMenu-settings-button,
+#PanelUI-fxa-menu-sync-prefs-button,
+#PanelUI-remotetabs-view-managedevices,
+.pageAction-sendToDevice-device.subviewbutton.sync-menuitem.sendtab-target:not([clientType]) { /* Send To Device -> Manage Devices */
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Options.png");
+	}
+
+#appMenu-more-button2 {
+
+/*	list-style-image: url("../MipImages/Oxygen/oxygen_Wrench.png"); */
+	list-style-image: url("../MipImages/Oxygen/oxygen_WebDeveloper.png");
+	}
+
+#appMenu-help-button2 {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Help.png");
+	}
+
+#appMenu-quit-button2 {
+
+/*	list-style-image: url("../MipImages/Oxygen/oxygen_PowerDown-1.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_PowerDown-2.png"); */
+	list-style-image: url("../MipImages/Oxygen/oxygen_Quit.png");
+	}
+
+/********************************************************************************
+/* Account Sub-Panel
+ ********************************************************************************/
+
+#PanelUI-fxa-menu-connect-device-button  .toolbarbutton-icon,
+#PanelUI-fxa-menu-account-signout-button .toolbarbutton-icon {
+
+	width:  16px !important;
+	height: 16px !important;
+	visibility: visible !important;
+	}
+
+#fxa-menu-avatar {
+
+	display: -moz-inline-box !important;
+	margin-inline-end: var(--arrowpanel-menuicon-padding); /*var(--arrowpanel-menuitem-padding);*/
+	}
+
+.syncNowBtn {
+
+	visibility: visible !important;
+	-moz-box-ordinal-group: 1 !important;
+	margin-inline-end: var(--arrowpanel-menuicon-padding);
+	}
+
+#PanelUI-fxa-menu-setup-sync-button {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Sync.png");
+	}
+
+#PanelUI-fxa-menu-connect-device-button {
+
+	list-style-image: url("../MipImages/Fugue/fugue_MobilePhone.png") !important;
+	}
+
+#PanelUI-fxa-menu-sendtab-button,
+.pageAction-sendToDevice-device.subviewbutton.sync-menuitem.sendtab-target[clientType=""] { /* Send To All Devices */
+
+	list-style-image: url("../MipImages/Fugue/fugue_MobilePhone.png");
+	}
+
+#PanelUI-fxa-menu-account-signout-button {
+
+	list-style-image: url("chrome://browser/skin/sign-out.svg");
+	}
+
+.PanelUI-remotetabs-notabsforclient-label {
+
+	margin-inline-start: calc(var(--arrowpanel-menuicon-padding) + var(--arrowpanel-menuitem-padding)) !important;
+	padding-inline-start: var(--arrowpanel-menublank-padding) !important;
+	}
+
+#PanelUI-fxa-menu::before { /* Add a separator below the account name */
+
+	content: "";
+	display: -moz-box;
+	border-bottom: 1px solid var(--panel-separator-color);
+	margin: var(--panel-separator-margin);
+	padding: 0;
+	}
+
+#PanelUI-fxa-menu > :first-child { -moz-box-ordinal-group: 0; }
+
+/********************************************************************************
+/* Bookmarks Sub-Panel
+ ********************************************************************************/
+
+#panelMenuBookmarkThisPage {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmark-New.png");
+	}
+
+#panelMenuBookmarkThisPage[starred] {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmark.png");
+	}
+
+#panelMenu_viewBookmarksToolbar {
+
+	list-style-image: url("../MipImages/FF/bookmarksToolbar.png");
+	}
+
+#panelMenu_showAllBookmarks {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmarks-Organize.png");
+	}
+
+/********************************************************************************
+/* History Sub-Panel
+ ********************************************************************************/
+
+#appMenuRecentlyClosedTabs {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Tab.png");
+	}
+
+#appMenuRecentlyClosedWindows {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Window.png");
+	}
+
+#appMenuRestoreSession {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Session.png");
+	}
+
+#appMenuClearRecentHistory {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_HistoryDelete.png");
+	}
+
+/********************************************************************************
+/* More Tools Sub-Panel (DevTools)
+ ********************************************************************************/
+
+#appmenu-moreTools-button,
+#overflowMenu-customize-button {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Palette.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-child(1) { */
+   #appmenu-developer-tools-view .subviewbutton[key="key_toggleToolbox"] {  /* Web Developer Tools */
+
+	list-style-image: url("../MipImages/Fugue/fugue_Switch.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-child(2) { */
+   #appmenu-developer-tools-view .subviewbutton[oncommand="switchToTabHavingURI('about:performance', true)"] {  /* Task Manager */
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Dev-Profiler.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-child(3) { */
+   #appmenu-developer-tools-view .subviewbutton[label="Remote Debugging"] {  /* Remote Debugging */
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Dev-Debugger.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-child(4) { */
+   #appmenu-developer-tools-view .subviewbutton[key="key_browserToolbox"] {  /* Browser Toolbox */
+
+	list-style-image: url("../MipImages/FF/tilt.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-child(5) { */
+   #appmenu-developer-tools-view .subviewbutton[label="Browser Content Toolbox"] { /* Browser Content Toolbaox */
+
+	list-style-image: url("../MipImages/FF/tilt.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-last-child(5) { */
+   #appmenu-developer-tools-view .subviewbutton[key="key_browserConsole"] { /* Browser Console */
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Dev-Console.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-last-child(4) { */
+   #appmenu-developer-tools-view .subviewbutton[key="key_responsiveDesignMode"] {  /* Responsive Design Mode */
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Dev-Responsive.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-last-child(3) { */
+   #appmenu-developer-tools-view .subviewbutton[label="Eyedropper"] { /* Eyedropper */
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Eyedropper.png");
+	}
+
+/* #appmenu-developer-tools-view .subviewbutton:nth-last-child(2) { */
+   #appmenu-developer-tools-view .subviewbutton[key="key_viewSource"] { /* Page Source */
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_ViewSource.png");
+	}
+
+#appmenu-developer-tools-view .subviewbutton:last-child {
+
+	margin-bottom: 6px !important;
+	}
+
+/********************************************************************************
+/* Help Sub-Panel
+ ********************************************************************************/
+
+#appMenu_menu_openHelp {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Help.png");
+	}
+
+#appMenu_feedbackPage {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Smiley.png");
+	}
+
+#appMenu_helpSafeMode {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Restart.png");
+	}
+
+#appMenu_troubleShooting {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Information.png");
+	}
+
+#appMenu_help_reportSiteIssue,
+#appMenu_menu_HelpPopup_reportPhishingtoolmenu {
+
+	list-style-image: url("../MipImages/Oxygen/oxygen_Warning.png");
+	}
+
+#appMenu_aboutName {
+
+/*	list-style-image: url("../MipImages/FF/FIREFOX-icon16.png"); */
+	list-style-image: url("../MipImages/FF/FIREFOX-78-icon16.png");
+	}
+
+/********************************************************************************
+ *
+ * Library Panel
+ *
+ ********************************************************************************/
+
+/* See Main Panel
+
+	#appMenu-library-bookmarks-button {
+	#appMenu-library-history-button {
+	#appMenu-library-downloads-button { */
+
+/********************************************************************************
+ *
+ * Downloads Panel
+ *
+ ********************************************************************************/
+
+/* See Main Panel
+
+	#downloadsHistory { */
+
+/********************************************************************************
+ *
+ * Toolbar Overflow Panel
+ *
+ ********************************************************************************/
+
+/* See More Tools Sub-Panel
+
+	#overflowMenu-customize-button { */
+
+}
