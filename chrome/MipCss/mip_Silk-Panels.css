@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.0 (MIP/CSS)
+ * Menu Icon Plus CSS v2.1 (MIP/CSS)
  * Add Icons To Firefox Standard Panels
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -80,6 +80,7 @@
 
 	--arrowpanel-menuitem-padding: 8px !important; } /* Original: 8px */
 
+#downloadsHistory .button-text,
 .subviewbutton > .toolbarbutton-text {
 
 	padding-inline-start: var(--arrowpanel-menuicon-padding) !important;
@@ -88,11 +89,6 @@
 .subviewbutton[disabled=true] > image { opacity: 0.4; }
 
 /* Miscellaneous Align (Update Banner, Disabled Images, lines with no image) ****/
-
-#downloadsHistory .button-text {
-
-	padding-inline-start: var(--arrowpanel-menuicon-padding) !important;
-	}
 
 #panelMenu_bookmarksMenu .subviewbutton[disabled=true] .toolbarbutton-text,
 #appMenu_historyMenu .subviewbutton[disabled=true] .toolbarbutton-text {
