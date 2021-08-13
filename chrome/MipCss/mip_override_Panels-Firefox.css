@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.0 (MIP/CSS)
+ * Menu Icon Plus CSS v2.2 (MIP/CSS)
  * Add Icons To Firefox Standard Panels
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -150,7 +150,7 @@
 	}
 
 #appMenu-extensions-themes-button,
-#appmenu-developer-tools-view .subviewbutton[label="Extensions for Developers"] {
+#appmenu-developer-tools-view .subviewbutton[data-l10n-id="appmenu-developer-tools-extensions"] {
 /* #appmenu-developer-tools-view .subviewbutton:nth-last-child(1) { */
 
 /*	list-style-image: url("../MipImages/FF/extensionGeneric-16-XP.png"); */

@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v1.6 (MIP/CSS)
+ * Menu Icon Plus CSS v2.2 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -453,8 +453,12 @@
 
 	#savepage-we_dw-dev-menuitem-_saveselectedtabs-basicitems::Before,
 	#savepage-we_dw-dev-menuitem-_savelistedurls-basicitems::Before,
+	#savepage-we_dw-dev-menuitem-_saveselectedtabs-w-basicitems::Before,
+	#savepage-we_dw-dev-menuitem-_savelistedurls-w-basicitems::Before,
 	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-basicitems::Before,
-	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-basicitems::Before {
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-basicitems::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-w-basicitems::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-w-basicitems::Before {
 
 		content: url("../MipImages/Misc/SavePageWE-BasicItems.png");
 
@@ -467,8 +471,12 @@
 
 	#savepage-we_dw-dev-menuitem-_saveselectedtabs-standarditems::Before,
 	#savepage-we_dw-dev-menuitem-_savelistedurls-standarditems::Before,
+	#savepage-we_dw-dev-menuitem-_saveselectedtabs-w-standarditems::Before,
+	#savepage-we_dw-dev-menuitem-_savelistedurls-w-standarditems::Before,
 	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-standarditems::Before,
-	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-standarditems::Before {
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-standarditems::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-w-standarditems::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-w-standarditems::Before {
 
 		content: url("../MipImages/Misc/SavePageWE-StandardItems.png");
 
@@ -481,8 +489,12 @@
 
 	#savepage-we_dw-dev-menuitem-_saveselectedtabs-customitems::Before,
 	#savepage-we_dw-dev-menuitem-_savelistedurls-customitems::Before,
+	#savepage-we_dw-dev-menuitem-_saveselectedtabs-w-customitems::Before,
+	#savepage-we_dw-dev-menuitem-_savelistedurls-w-customitems::Before,
 	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-customitems::Before,
-	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-customitems::Before {
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-customitems::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-w-customitems::Before,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-w-customitems::Before {
 
 		content: url("../MipImages/Misc/SavePageWE-CustomItems.png");
 
@@ -499,12 +511,27 @@
 	#savepage-we_dw-dev-menuitem-_savelistedurls-standarditems > label,
 	#savepage-we_dw-dev-menuitem-_saveselectedtabs-customitems > label,
 	#savepage-we_dw-dev-menuitem-_savelistedurls-customitems > label,
+
+	#savepage-we_dw-dev-menuitem-_saveselectedtabs-w-basicitems > label,
+	#savepage-we_dw-dev-menuitem-_savelistedurls-w-basicitems > label,
+	#savepage-we_dw-dev-menuitem-_saveselectedtabs-w-standarditems > label,
+	#savepage-we_dw-dev-menuitem-_savelistedurls-w-standarditems > label,
+	#savepage-we_dw-dev-menuitem-_saveselectedtabs-w-customitems > label,
+	#savepage-we_dw-dev-menuitem-_savelistedurls-w-customitems > label,
+
 	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-basicitems > label,
 	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-basicitems > label,
 	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-standarditems > label,
 	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-standarditems > label,
 	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-customitems > label,
-	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-customitems > label {
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-customitems > label,
+
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-w-basicitems > label,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-w-basicitems > label,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-w-standarditems > label,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-w-standarditems > label,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-w-customitems > label,
+	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-w-customitems > label {
 
 		margin-inline-start: -20px !important;
 		}
