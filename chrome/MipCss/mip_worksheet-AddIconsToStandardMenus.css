@@ -1175,6 +1175,7 @@ menu#viewToolbarsMenu::Before {
 
 /* Char Encoding ****************************************************************/
 
+#repair-text-encoding::Before,
 #charsetMenu::Before {
 
 	content: url("chrome://browser/skin/characterEncoding.svg");
@@ -1192,11 +1193,13 @@ menu#viewToolbarsMenu::Before {
 	vertical-align: middle;
 	}
 
+#repair-text-encoding[disabled=true]::Before,
 #charsetMenu[disabled=true]::Before {
 
 	opacity: 0.4;
 	}
 
+#repair-text-encoding > label,
 #charsetMenu > label {
 
 	margin-inline-start: -20px !important;

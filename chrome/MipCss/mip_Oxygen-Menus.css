@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.0 (MIP/CSS)
+ * Menu Icon Plus CSS v2.3 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -869,6 +869,7 @@ menu#viewToolbarsMenu::Before {
 
 /* Char Encoding ****************************************************************/
 
+#repair-text-encoding::Before,
 #charsetMenu::Before {
 
 	content: url("../MipImages/Oxygen/oxygen_Encoding.png");
@@ -880,11 +881,13 @@ menu#viewToolbarsMenu::Before {
 	vertical-align: middle;
 	}
 
+#repair-text-encoding[disabled=true]::Before,
 #charsetMenu[disabled=true]::Before {
 
 	opacity: 0.4;
 	}
 
+#repair-text-encoding > label,
 #charsetMenu > label {
 
 	margin-inline-start: -20px !important;
