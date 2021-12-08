@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.3 (MIP/CSS)
+ * Menu Icon Plus CSS v2.4 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -993,19 +993,28 @@ menuitem.searchbar-clear-history > label {
  * NOTE that this (and > tab-Overflow) are the only panels included in MIP/CSS's Standard Menus file
  * The reason this is here is because Aris's bookmark-folders CSS already skins some of the BMB and because we skin containers here */
 
-#BMB_viewBookmarksSidebar .menu-iconic-icon {
+#BMB_viewBookmarksSidebar::Before {
 
-	list-style-image: url("chrome://browser/skin/sidebars.svg");
-	-moz-context-properties: fill;
-	 }
+	content: url("chrome://browser/skin/sidebars.svg");
 
-#BMB_bookmarksShowAllTop .menu-iconic-icon {
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 1px;
+	vertical-align: middle;
+	}
 
-	list-style-image: url("chrome://browser/skin/library.svg");
-	-moz-context-properties: fill;
-	 }
+#BMB_bookmarksShowAllTop::Before {
 
-#BMB_bookmarksShowAll::Before { /* Alignment is broken in FF89 (fixing it) and the list-icon is missing */
+	content: url("chrome://browser/skin/library.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 1px;
+	vertical-align: middle;
+	}
+#BMB_bookmarksShowAll::Before {
 
 	content: url("chrome://browser/skin/library.svg");
 
@@ -1016,19 +1025,40 @@ menuitem.searchbar-clear-history > label {
 	vertical-align: middle;
 	}
 
+#BMB_viewBookmarksSidebar > label,
+#BMB_bookmarksShowAllTop > label,
 #BMB_bookmarksShowAll > label {
 
-	margin-inline-start: -25px !important;
+	margin-inline-start: 10px !important;
 	}
 
-#BMB_viewBookmarksToolbar.menuitem-iconic.subviewbutton[label^="Hide"] > .menu-iconic-left > image.menu-iconic-icon {
+/* Bookmarks Toolbar Sub-Menu */
 
-	list-style-image: url("../MipImages/FF/container-hide-black.svg");
+#BMB_viewBookmarksToolbar[label^="Hide"]::Before {
+
+	content: url("../MipImages/FF/container-hide-black.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 1px;
+	vertical-align: middle;
 	}
 
-#BMB_viewBookmarksToolbar.menuitem-iconic.subviewbutton[label^="View"] > .menu-iconic-left > image.menu-iconic-icon {
+#BMB_viewBookmarksToolbar[label^="View"]::Before {
 
-	list-style-image: url("../MipImages/FF/container-unhide-black.svg");
+	content: url("../MipImages/FF/container-unhide-black.svg");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 1px;
+	vertical-align: middle;
+	}
+
+#BMB_viewBookmarksToolbar > label {
+
+	margin-inline-start: 10px !important;
 	}
 
 /* Mobile Bookmarks *************************************************************/
@@ -1599,6 +1629,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 
 /* Web Developer Tools Menu *****************************************************/
 
+#browserToolsMenu::Before,
 #webDeveloperMenu::Before {
 
 	content: url("chrome://browser/skin/ion.svg");
@@ -1639,6 +1670,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	vertical-align: middle;
 	}
 
+#browserToolsMenu > label,
 #webDeveloperMenu > label,
 #getMoreDevtools > label,
 #extensionsForDevelopers > label,

@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.0 (MIP/CSS)
+ * Menu Icon Plus CSS v2.4 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -654,19 +654,18 @@ menuitem.downloadRemoveFromHistoryMenuItem > label {
  * NOTE that this (and > tab-Overflow) are the only panels included in MIP/CSS's Standard Menus file
  * The reason this is here is because Aris's bookmark-folders CSS already skins some of the BMB and because we skin containers here */
 
-#BMB_viewBookmarksSidebar .menu-iconic-icon {
+#BMB_viewBookmarksSidebar::Before {
 
-	 list-style-image: url("../MipImages/FF/application.png");
-	-moz-image-region: auto;
-	 }
+	content: url("../MipImages/FF/application.png");
 
-#BMB_bookmarksShowAllTop .menu-iconic-icon {
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 1px;
+	vertical-align: middle;
+	}
 
-	 list-style-image: url("../MipImages/FF/allBookmarks.png");
-	-moz-image-region: auto;
-	 }
-
-#BMB_bookmarksShowAll::Before { /* Alignment is broken in FF89 (fixing it) and the list-icon is missing */
+#BMB_bookmarksShowAllTop::Before {
 
 	content: url("../MipImages/FF/allBookmarks.png");
 
@@ -677,9 +676,22 @@ menuitem.downloadRemoveFromHistoryMenuItem > label {
 	vertical-align: middle;
 	}
 
+#BMB_bookmarksShowAll::Before {
+
+	content: url("../MipImages/FF/allBookmarks.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: 1px;
+	vertical-align: middle;
+	}
+
+#BMB_viewBookmarksSidebar > label,
+#BMB_bookmarksShowAllTop > label,
 #BMB_bookmarksShowAll > label {
 
-	margin-inline-start: -25px !important;
+	margin-inline-start: 10px !important;
 	}
 
 /* Bookmark This Page Link Tab or Frame + Bookmark-New **************************/
@@ -1014,6 +1026,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 
 /* Web Developer Tools Menu *****************************************************/
 
+#browserToolsMenu::Before,
 #webDeveloperMenu::Before {
 
 	content: url("../MipImages/FF/tools-grey.png");
@@ -1053,8 +1066,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	vertical-align: middle;
 	}
 
-/* #getMoreDevtools > label, */
-/* #extensionsForDevelopers > label, */
+#browserToolsMenu > label,
 #webDeveloperMenu > label,
 #menu_devToolbox:not([checked=true]) > label {
 

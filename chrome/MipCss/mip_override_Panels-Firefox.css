@@ -119,6 +119,8 @@
 	background-image: var(--avatar-image-url) !important;
 	}
 
+#appMenu-fxa-label2 > vbox > label { margin-inline: -2px !important; }
+
 #appMenu-new-window-button2,
 #appMenu-library-recentlyClosedWindows {
 
@@ -150,6 +152,7 @@
 	}
 
 #appMenu-extensions-themes-button,
+#PanelUI-developer-tools .subviewbutton[data-l10n-id="appmenu-developer-tools-extensions"],
 #appmenu-developer-tools-view .subviewbutton[data-l10n-id="appmenu-developer-tools-extensions"] {
 /* #appmenu-developer-tools-view .subviewbutton:nth-last-child(1) { */
 
@@ -251,42 +254,49 @@
 	}
 
 /* #appmenu-developer-tools-view .subviewbutton:nth-child(1) { */
+   #PanelUI-developer-tools .subviewbutton[key="key_toggleToolbox"],
    #appmenu-developer-tools-view .subviewbutton[key="key_toggleToolbox"] {  /* Web Developer Tools */
 
 	list-style-image: url("../MipImages/FF/switch.png");
 	}
 
 /* #appmenu-developer-tools-view .subviewbutton:nth-child(2) { */
+   #PanelUI-developer-tools .subviewbutton[oncommand="switchToTabHavingURI('about:performance', true)"],
    #appmenu-developer-tools-view .subviewbutton[oncommand="switchToTabHavingURI('about:performance', true)"] {  /* Task Manager */
 
 	list-style-image: url("../MipImages/FF/tool-profiler.png");
 	}
 
 /* #appmenu-developer-tools-view .subviewbutton:nth-child(3) { */
+   #PanelUI-developer-tools .subviewbutton[label="Remote Debugging"],
    #appmenu-developer-tools-view .subviewbutton[label="Remote Debugging"] {  /* Remote Debugging */
 
 	list-style-image: url("../MipImages/FF/tool-debugger.png");
 	}
 
 /* #appmenu-developer-tools-view .subviewbutton:nth-child(4) { */
+   #PanelUI-developer-tools .subviewbutton[key="key_browserToolbox"],
    #appmenu-developer-tools-view .subviewbutton[key="key_browserToolbox"] {  /* Browser Toolbox */
 
 	list-style-image: url("../MipImages/FF/tilt-grey.png");
 	}
 
 /* #appmenu-developer-tools-view .subviewbutton:nth-child(5) { */
+   #PanelUI-developer-tools .subviewbutton[label="Browser Content Toolbox"],
    #appmenu-developer-tools-view .subviewbutton[label="Browser Content Toolbox"] { /* Browser Content Toolbaox -  */
 
 	list-style-image: url("../MipImages/FF/tilt-grey.png");
 	}
 
 /* #appmenu-developer-tools-view .subviewbutton:nth-last-child(5) { */
+   #PanelUI-developer-tools .subviewbutton[key="key_browserConsole"],
    #appmenu-developer-tools-view .subviewbutton[key="key_browserConsole"] { /* Browser Console */
 
 	list-style-image: url("../MipImages/FF/commandline.png");
 	}
 
 /* #appmenu-developer-tools-view .subviewbutton:nth-last-child(4) { */
+   #PanelUI-developer-tools .subviewbutton[key="key_responsiveDesignMode"],
    #appmenu-developer-tools-view .subviewbutton[key="key_responsiveDesignMode"] {  /* Responsive Design Mode */
 
 	list-style-image: url("../MipImages/FF/tool-responsivemode.png");

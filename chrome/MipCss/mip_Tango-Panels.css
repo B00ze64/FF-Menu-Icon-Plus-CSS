@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.2 (MIP/CSS)
+ * Menu Icon Plus CSS v2.4 (MIP/CSS)
  * Add Icons To Firefox Standard Panels
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -83,7 +83,8 @@
 #downloadsHistory .button-text,
 .subviewbutton > .toolbarbutton-text {
 
-	padding-inline-start: var(--arrowpanel-menuicon-padding) !important;
+/*	padding-inline-start: var(--arrowpanel-menuicon-padding) !important; */
+	padding-inline-start: calc(var(--arrowpanel-menuicon-padding) - 2px) !important;
 	}
 
 .subviewbutton[disabled=true] > image { opacity: 0.4; }
@@ -93,7 +94,8 @@
 #panelMenu_bookmarksMenu .subviewbutton[disabled=true] .toolbarbutton-text,
 #appMenu_historyMenu .subviewbutton[disabled=true] .toolbarbutton-text {
 
-	padding-inline-start: var(--arrowpanel-menublank-padding) !important;
+/*	padding-inline-start: var(--arrowpanel-menublank-padding) !important; */
+	padding-inline-start: calc(var(--arrowpanel-menublank-padding) - 2px) !important;
 	}
 
 #appMenu-proton-update-banner {
@@ -230,6 +232,7 @@
 	background-image: var(--avatar-image-url) !important;
 	}
 
+#appMenu-fxa-label2 > vbox > label { margin-inline: -2px !important; }
 
 #appMenu-new-tab-button2,
 #appMenu-library-recentlyClosedTabs {
@@ -267,6 +270,7 @@
 	}
 
 #appMenu-extensions-themes-button,
+#PanelUI-developer-tools .subviewbutton[data-l10n-id="appmenu-developer-tools-extensions"],
 #appmenu-developer-tools-view .subviewbutton[data-l10n-id="appmenu-developer-tools-extensions"] {
 /* #appmenu-developer-tools-view .subviewbutton:nth-last-child(1) { */
 
@@ -363,7 +367,7 @@
 
 #PanelUI-fxa-menu-account-signout-button {
 
-	list-style-image: url("chrome://browser/skin/sign-out.svg");
+	list-style-image: url("../MipImages/Firefox-UI-Fix/sign-out.svg");
 	}
 
 .PanelUI-remotetabs-notabsforclient-label {
@@ -442,54 +446,63 @@
 	}
 
 /* #appmenu-developer-tools-view .subviewbutton:nth-child(1) { */
+   #PanelUI-developer-tools .subviewbutton[key="key_toggleToolbox"],
    #appmenu-developer-tools-view .subviewbutton[key="key_toggleToolbox"] {  /* Web Developer Tools */
 
 	list-style-image: url("../MipImages/Tango/tango_PowerDown.png");
 	}
 
 /* #appmenu-developer-tools-view .subviewbutton:nth-child(2) { */
+   #PanelUI-developer-tools .subviewbutton[oncommand="switchToTabHavingURI('about:performance', true)"],
    #appmenu-developer-tools-view .subviewbutton[oncommand="switchToTabHavingURI('about:performance', true)"] {  /* Task Manager */
 
 	list-style-image: url("../MipImages/Tango/tango_Dev-Profiler.png");
 	}
 
 /* #appmenu-developer-tools-view .subviewbutton:nth-child(3) { */
+   #PanelUI-developer-tools .subviewbutton[label="Remote Debugging"],
    #appmenu-developer-tools-view .subviewbutton[label="Remote Debugging"] {  /* Remote Debugging */
 
 	list-style-image: url("../MipImages/Tango/tango_Dev-Debugger.png");
 	}
 
 /* #appmenu-developer-tools-view .subviewbutton:nth-child(4) { */
+   #PanelUI-developer-tools .subviewbutton[key="key_browserToolbox"],
    #appmenu-developer-tools-view .subviewbutton[key="key_browserToolbox"] {  /* Browser Toolbox */
 
 	list-style-image: url("../MipImages/FF/tilt.png");
 	}
 
 /* #appmenu-developer-tools-view .subviewbutton:nth-child(5) { */
+   #PanelUI-developer-tools .subviewbutton[label="Browser Content Toolbox"],
    #appmenu-developer-tools-view .subviewbutton[label="Browser Content Toolbox"] { /* Browser Content Toolbaox */
 
 	list-style-image: url("../MipImages/FF/tilt.png");
 	}
 
 /* #appmenu-developer-tools-view .subviewbutton:nth-last-child(5) { */
+   #PanelUI-developer-tools .subviewbutton[key="key_browserConsole"],
    #appmenu-developer-tools-view .subviewbutton[key="key_browserConsole"] { /* Browser Console */
 
 	list-style-image: url("../MipImages/Tango/tango_Dev-Console.png");
 	}
 
 /* #appmenu-developer-tools-view .subviewbutton:nth-last-child(4) { */
+   #PanelUI-developer-tools .subviewbutton[key="key_responsiveDesignMode"],
    #appmenu-developer-tools-view .subviewbutton[key="key_responsiveDesignMode"] {  /* Responsive Design Mode */
 
 	list-style-image: url("../MipImages/Tango/tango_Dev-Responsive.png");
 	}
 
 /* #appmenu-developer-tools-view .subviewbutton:nth-last-child(3) { */
+   #PanelUI-developer-tools .subviewbutton[label="Eyedropper"],
    #appmenu-developer-tools-view .subviewbutton[label="Eyedropper"] { /* Eyedropper */
 
 	list-style-image: url("../MipImages/Tango/tango_Eyedropper.png");
 	}
 
 /* #appmenu-developer-tools-view .subviewbutton:nth-last-child(2) { */
+   #PanelUI-developer-tools .subviewbutton[key="key_viewSource"],
    #appmenu-developer-tools-view .subviewbutton[key="key_viewSource"] { /* Page Source */
 
 /*	list-style-image: url("../MipImages/Tango/tango_ViewSource-Brakets.png"); */
