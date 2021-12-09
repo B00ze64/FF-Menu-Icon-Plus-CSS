@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.4 (MIP/CSS)
+ * Menu Icon Plus CSS v2.4.1 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -2757,6 +2757,7 @@ menuitem.customize-context-addToPanel > label {
 
 /* Tab-Move Start/End (and Close to the Right) **********************************/
 
+#pictureInPictureToggleContextMenu menuitem[data-l10n-id="picture-in-picture-move-toggle-left"]::Before,
 #context_moveToStart::Before,
 #context_closeTabsToTheStart::Before {
 
@@ -2769,6 +2770,7 @@ menuitem.customize-context-addToPanel > label {
 	vertical-align: middle;
 	}
 
+#pictureInPictureToggleContextMenu menuitem[data-l10n-id="picture-in-picture-move-toggle-right"]::Before,
 #context_moveToEnd::Before,
 #context_closeTabsToTheEnd::Before {
 
@@ -2789,6 +2791,8 @@ menuitem.customize-context-addToPanel > label {
 	opacity: 0.4;
 	}
 
+#pictureInPictureToggleContextMenu menuitem[data-l10n-id="picture-in-picture-move-toggle-left"] > label,
+#pictureInPictureToggleContextMenu menuitem[data-l10n-id="picture-in-picture-move-toggle-right"] > label,
 #context_moveToStart > label,
 #context_moveToEnd > label,
 #context_closeTabsToTheEnd > label,
@@ -3663,7 +3667,7 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 
 #toolbar-context-autohide-downloads-button:not([checked=true])::Before,
 #autohide-context menuitem[data-l10n-id="full-screen-autohide"]:not([checked=true])::Before,
-#pictureInPictureToggleContextMenu menuitem[oncommand="PictureInPicture.hideToggle();"]::Before,
+#pictureInPictureToggleContextMenu menuitem[data-l10n-id="picture-in-picture-hide-toggle"]::Before,
 #_testpilot-containers-menuitem-_hide-container::Before,
 #context-ctp-hide::Before {
 

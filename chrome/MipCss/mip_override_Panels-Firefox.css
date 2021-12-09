@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.2 (MIP/CSS)
+ * Menu Icon Plus CSS v2.4.1 (MIP/CSS)
  * Add Icons To Firefox Standard Panels
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -118,8 +118,6 @@
 	background-size: 16px !important;
 	background-image: var(--avatar-image-url) !important;
 	}
-
-#appMenu-fxa-label2 > vbox > label { margin-inline: -2px !important; }
 
 #appMenu-new-window-button2,
 #appMenu-library-recentlyClosedWindows {

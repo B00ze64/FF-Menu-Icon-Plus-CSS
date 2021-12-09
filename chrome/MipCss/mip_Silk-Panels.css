@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.4 (MIP/CSS)
+ * Menu Icon Plus CSS v2.4.1 (MIP/CSS)
  * Add Icons To Firefox Standard Panels
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -81,10 +81,10 @@
 	--arrowpanel-menuitem-padding: 8px !important; } /* Original: 8px */
 
 #downloadsHistory .button-text,
+#widget-overflow toolbarbutton label,
 .subviewbutton > .toolbarbutton-text {
 
-/*	padding-inline-start: var(--arrowpanel-menuicon-padding) !important; */
-	padding-inline-start: calc(var(--arrowpanel-menuicon-padding) - 2px) !important;
+	padding-inline-start: var(--arrowpanel-menuicon-padding) !important;
 	}
 
 .subviewbutton[disabled=true] > image { opacity: 0.4; }
@@ -94,8 +94,7 @@
 #panelMenu_bookmarksMenu .subviewbutton[disabled=true] .toolbarbutton-text,
 #appMenu_historyMenu .subviewbutton[disabled=true] .toolbarbutton-text {
 
-/*	padding-inline-start: var(--arrowpanel-menublank-padding) !important; */
-	padding-inline-start: calc(var(--arrowpanel-menublank-padding) - 2px) !important;
+	padding-inline-start: var(--arrowpanel-menublank-padding) !important;
 	}
 
 #appMenu-proton-update-banner {
@@ -231,8 +230,6 @@
 	background-size: 16px !important;
 	background-image: var(--avatar-image-url) !important;
 	}
-
-#appMenu-fxa-label2 > vbox > label { margin-inline: -2px !important; }
 
 #appMenu-new-tab-button2,
 #appMenu-library-recentlyClosedTabs {
