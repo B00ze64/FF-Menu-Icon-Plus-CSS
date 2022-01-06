@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.5 (MIP/CSS)
+ * Menu Icon Plus CSS v2.5.1 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -2557,8 +2557,9 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 
 /* Tab-New **********************************************************************/
 
-#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"][checked=false]::Before, /* FF85 Bookmarks Toolbar Sub-Menu */
-#placesContext_openBookmarkContainer\:tabs::Before, /* FF89 New Open All Bookmarks Menu Item (Bookmarks Toolbar and Library Folders) */
+#toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-on-new-tab-2"][checked=false]::Before,	/* FF85 Bookmarks Toolbar Sub-Menu */
+#placesContext_openBookmarkContainer\:tabs::Before,										/* FF89 New Open All Bookmarks Menu Item (Bookmarks Toolbar and Library Folders) */
+#placesContext_openBookmarkLinks\:tabs::Before,											/* FF89 New Open All Selected Bookmarks context menu item */
 
 #context_openANewTab::Before,
 #toolbar-context-openANewTab::Before,
@@ -2589,6 +2590,7 @@ menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer)::Bef
 #placesContext_open\:newtab[disabled=true]::Before,
 #placesContext_openLinks\:tabs[disabled=true]::Before,
 #placesContext_openContainer\:tabs[disabled=true]::Before,
+#placesContext_openBookmarkLinks\:tabs[disabled=true]::Before,
 menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer)[disabled=true]::Before {
 
 	opacity: 0.4;
@@ -2604,6 +2606,7 @@ menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer)[disa
 #placesContext_open\:newtab > label,
 #placesContext_openLinks\:tabs > label,
 #placesContext_openContainer\:tabs > label,
+#placesContext_openBookmarkLinks\:tabs > label,
 menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer) > label,
 #historyUndoPopup menuitem.restoreallitem > label,
 #syncedTabsOpenSelectedInTab > label,
