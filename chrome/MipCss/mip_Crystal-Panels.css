@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.4.1 (MIP/CSS)
+ * Menu Icon Plus CSS v2.6 (MIP/CSS)
  * Add Icons To Firefox Standard Panels
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -314,6 +314,13 @@
 
 	list-style-image: url("../MipImages/Crystal/crystal_Help.png");
 	}
+
+#appMenu-restart-button { /* RESTART (Aris Restart Script Menu Entry) */
+
+	list-style-image: url("../MipImages/Crystal/crystal_Restart.png");
+	}
+
+#appMenu-restart-button .toolbarbutton-icon { transform: none !important; }
 
 #appMenu-quit-button2 {
 

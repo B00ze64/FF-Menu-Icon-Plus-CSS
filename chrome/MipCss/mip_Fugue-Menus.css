@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.5.1 (MIP/CSS)
+ * Menu Icon Plus CSS v2.6 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -59,37 +59,77 @@
 
 /********************************************************************************
  *
- * DPI-DEPENDENT (needs user_pref("media.navigator.enabled", true))
+ * DPI/OS-DEPENDENT (needs user_pref("media.navigator.enabled", true))
  *
  ********************************************************************************/
 
-@media (min-resolution: 120dpi) {
+@media (-moz-os-version: windows-win7) or (-moz-os-version: windows-win8) {
+
+	/* Prevent vertical arrows in BMB menu */
+
+		:root { --arrowpanel-menuitem-padding: 4px 8px !important; }
+		 menupopup > menuitem, menupopup > menu { padding-block: 0px !important; }
+
+	:root {
+		--mip-menu-icon-margin: 6px;
+		--mip-menu-label-margin: -20px;
+		--mip-checkmark-icon-margin: 6px;
+		--mip-checkmark-label-margin: 10px;
+		--mip-bmb-icon-margin: 1px;
+		--mip-bmb-label-margin: 10px;
+		--mip-iconreplace-label: -20px;
+		}
+
+	@media (min-resolution: 120dpi) {
+	
+		menupopup menuitem,
+		menupopup menu {
+			min-height: 20px !important;
+		}
+
+		:root {
+			--mip-menu-icon-margin: 2px;
+			--mip-menu-label-margin: -16px;
+			--mip-checkmark-icon-margin: 2px;
+			--mip-iconreplace-label: -16px;
+			}
+		}
+	
+	@media (min-resolution: 140dpi) {
+
+		:root {
+			--mip-checkmark-label-margin: 8px;
+			}
+		}
+	}
+
+@media (-moz-os-version: windows-win10) or (-moz-os-version: windows-win11) {
+
+	:root {
+		--mip-menu-icon-margin: 0px;
+		--mip-menu-label-margin: 8px;
+		--mip-checkmark-icon-margin: 0px;
+		--mip-checkmark-label-margin: 8px;
+		--mip-bmb-icon-margin: 0px;
+		--mip-bmb-label-margin: 8px;
+		--mip-iconreplace-label: 0px;
+		}
 
 	menupopup menuitem,
 	menupopup menu {
-		min-height: 20px !important;
+
+/*		min-height: 16px !important; */
+		max-height: 15px !important;
+		}
+
+	menupopup[needsgutter] menu:not([icon], .menu-iconic), menupopup[needsgutter] menuitem:not([checked="true"], [icon], .menuitem-iconic) {
+
+		--mip-menu-icon-margin: -24px;
+		--mip-menu-label-margin: 8px;
+		}
 	}
-}
 
-@media (min-resolution: 150dpi) {
 
-	menupopup menuitem,
-	menupopup menu {
-		min-height: 24px !important;
-	}
-}
-
-:root {
-	--menu-icon-margin: 6px;
-	--menu-label-margin: -20px;
-}
-
-@media (min-resolution: 120dpi) {
-:root {
-	--menu-icon-margin: 2px;
-	--menu-label-margin: -16px;
-	}
-}
 /********************************************************************************
  *
  * FILE MENU
@@ -112,8 +152,7 @@
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_newNavigator > label,
@@ -125,7 +164,7 @@
 #syncedTabsOpenSelectedInWindow > label,
 #_testpilot-containers-menuitem-_move-to-new-window-container > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Private Browsing *************************************************************/
@@ -140,8 +179,7 @@
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_newPrivateWindow > label,
@@ -149,7 +187,7 @@
 #placesContext_open\:newprivatewindow > label,
 #syncedTabsOpenSelectedInPrivateWindow > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Location-Open ****************************************************************/
@@ -165,8 +203,7 @@
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_openLocation > label,
@@ -174,7 +211,7 @@
 #context-openlinkincurrent > label,
 #syncedTabsOpenSelected > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* File-Open ********************************************************************/
@@ -186,13 +223,12 @@
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_openFile > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Close Window *****************************************************************/
@@ -205,14 +241,13 @@
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_closeWindow > label,
 #orgClose > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Email ************************************************************************/
@@ -227,8 +262,7 @@
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_sendLink > label,
@@ -236,7 +270,7 @@
 #context-sendvideo > label,
 #context-sendaudio > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Print Page Setup *************************************************************/
@@ -248,8 +282,7 @@
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* Print Preview ****************************************************************/
@@ -261,8 +294,7 @@
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* Print ************************************************************************/
@@ -276,8 +308,7 @@
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_printSetup > label,
@@ -286,7 +317,7 @@
 #context-printframe > label,
 #context-print-selection > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Import from another browser **************************************************/
@@ -302,15 +333,14 @@
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_importFromAnotherBrowser > label,
 #help_importFromAnotherBrowser > label,
 #browserImport > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Offline (Work Offline) *******************************************************/
@@ -323,13 +353,12 @@
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #goOfflineMenuitem:not([checked=true]) > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Exit/Quit/Shutdown ***********************************************************/
@@ -342,13 +371,12 @@
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_FileQuitItem > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -373,8 +401,7 @@ menuitem[cmd="cmd_undo"]::Before,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_undo[disabled=true]::Before,
@@ -398,7 +425,7 @@ menuitem[cmd="cmd_undo"][disabled=true]::Before,
 menuitem[cmd="cmd_undo"] > label,
 #textbox-contextmenu menuitem[command="cmd_undo"] > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 #allTabsMenu-undoCloseTab {
@@ -419,8 +446,7 @@ menuitem[data-l10n-id="text-action-redo"]::Before,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 menuitem[data-l10n-id="text-action-redo"][disabled=true]::Before,
@@ -434,7 +460,7 @@ menuitem[data-l10n-id="text-action-redo"] > label,
 #menu_redo > label,
 #orgRedo > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Cut **************************************************************************/
@@ -451,8 +477,7 @@ menuitem[cmd="cmd_cut"]::Before,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_cut[disabled=true]::Before,
@@ -472,7 +497,7 @@ menuitem[cmd="cmd_cut"][disabled=true]::Before,
 menuitem[cmd="cmd_cut"] > label,
 #textbox-contextmenu menuitem[command="cmd_cut"] > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Copy *************************************************************************/
@@ -490,8 +515,7 @@ menuitem[cmd="cmd_copy"]::Before,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* Copy Link ********************************************************************/
@@ -510,8 +534,7 @@ menuitem[command="downloadsCmd_copyLocation"]::Before,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_copy[disabled=true]::Before,
@@ -539,7 +562,7 @@ menuitem[cmd="cmd_copy"] > label,
 menuitem[command="downloadsCmd_copyLocation"] > label,
 #syncedTabsCopySelected > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Paste ************************************************************************/
@@ -557,8 +580,7 @@ menuitem[cmd="cmd_paste"]::Before,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_paste[disabled=true]::Before,
@@ -580,7 +602,7 @@ menuitem[cmd="cmd_paste"][disabled=true]::Before,
 menuitem[cmd="cmd_paste"] > label,
 #textbox-contextmenu menuitem[command="cmd_paste"] > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Paste and Go *****************************************************************/
@@ -594,8 +616,7 @@ menuitem.searchbar-paste-and-search::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #paste-and-go[disabled=true]::Before,
@@ -607,7 +628,7 @@ menuitem.searchbar-paste-and-search[disabled=true]::Before {
 #paste-and-go > label,
 menuitem.searchbar-paste-and-search > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Delete ***********************************************************************/
@@ -628,8 +649,7 @@ menuitem[cmd="cmd_delete"]::Before,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_delete[disabled=true]::Before,
@@ -655,7 +675,7 @@ menuitem[cmd="cmd_delete"][disabled=true]::Before,
 menuitem[cmd="cmd_delete"] > label,
 #textbox-contextmenu menuitem[command="cmd_delete"] > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Select All - Must be BEFORE TABS *********************************************/
@@ -675,8 +695,7 @@ menuitem[cmd="cmd_selectAll"]::Before,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_selectAll[disabled=true]::Before,
@@ -700,7 +719,7 @@ menuitem[cmd="cmd_selectAll"][disabled=true]::Before,
 menuitem[cmd="cmd_selectAll"] > label,
 #textbox-contextmenu menuitem[command="cmd_selectAll"] > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Find (In this page...) *******************************************************/
@@ -714,8 +733,7 @@ menuitem[cmd="cmd_selectAll"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_findAgain::Before {
@@ -725,8 +743,7 @@ menuitem[cmd="cmd_selectAll"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_find[disabled=true]::Before,
@@ -740,7 +757,7 @@ menuitem[cmd="cmd_selectAll"] > label,
 #context-searchselect > label,
 #context-searchselect-private > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Find Tabs (TABS PANEL) *******************************************************/
@@ -767,8 +784,7 @@ menu#viewToolbarsMenu::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #toggle_toolbar-menubar:not([checked=true])::Before {
@@ -778,8 +794,7 @@ menu#viewToolbarsMenu::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #toggle_PersonalToolbar:not([checked=true])::Before {
@@ -789,15 +804,14 @@ menu#viewToolbarsMenu::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_viewPopup menu#viewToolbarsMenu > label,
 #toggle_toolbar-menubar:not([checked=true]) > label,
 #toggle_PersonalToolbar:not([checked=true]) > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Sidebars *********************************************************************/
@@ -809,13 +823,12 @@ menu#viewToolbarsMenu::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #viewSidebarMenuMenu > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Zoom/Zoom-In/Zoom-Out/Zoom-Reset**********************************************/
@@ -827,8 +840,7 @@ menu#viewToolbarsMenu::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_zoomEnlarge::Before {
@@ -838,8 +850,7 @@ menu#viewToolbarsMenu::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_zoomReduce::Before {
@@ -849,8 +860,7 @@ menu#viewToolbarsMenu::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_zoomReset::Before {
@@ -860,8 +870,7 @@ menu#viewToolbarsMenu::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #toggle_zoom:not([checked=true])::Before {
@@ -872,8 +881,7 @@ menu#viewToolbarsMenu::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #viewFullZoomMenu > label,
@@ -882,7 +890,7 @@ menu#viewToolbarsMenu::Before {
 #menu_zoomReset > label,
 #toggle_zoom:not([checked=true]) > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Page Style *******************************************************************/
@@ -894,13 +902,12 @@ menu#viewToolbarsMenu::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #pageStyleMenu > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Char Encoding ****************************************************************/
@@ -913,8 +920,7 @@ menu#viewToolbarsMenu::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #repair-text-encoding[disabled=true]::Before,
@@ -926,7 +932,7 @@ menu#viewToolbarsMenu::Before {
 #repair-text-encoding > label,
 #charsetMenu > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* FullScreen *******************************************************************/
@@ -940,8 +946,7 @@ menu#viewToolbarsMenu::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context-leave-dom-fullscreen::Before,
@@ -953,8 +958,7 @@ menu#viewToolbarsMenu::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context-video-fullscreen > label,
@@ -962,7 +966,7 @@ menu#viewToolbarsMenu::Before {
 #fullScreenItem:not([checked=true]) > label,
 #autohide-context menuitem[data-l10n-id="full-screen-exit"] > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Reader Mode ******************************************************************/
@@ -975,13 +979,12 @@ menu#viewToolbarsMenu::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_readerModeItem > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Bidi Switch Text Direction ***************************************************/
@@ -996,8 +999,7 @@ menu#viewToolbarsMenu::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #documentDirection-swap > label,
@@ -1005,7 +1007,7 @@ menu#viewToolbarsMenu::Before {
 #context-bidi-text-direction-toggle > label,
 #context-bidi-page-direction-toggle > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -1024,14 +1026,13 @@ menu#viewToolbarsMenu::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_showAllHistory > label,
 #menu_historySidebar:not([checked=true]) > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* History Clear Recent / Forget Site *******************************************/
@@ -1045,8 +1046,7 @@ menu#viewToolbarsMenu::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #sanitizeItem[disabled=true]::Before {
@@ -1064,15 +1064,14 @@ menuitem.downloadRemoveFromHistoryMenuItem::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #sanitizeItem > label,
 #placesContext_deleteHost > label,
 menuitem.downloadRemoveFromHistoryMenuItem > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* History Clear All (Downloads/Search) *****************************************/
@@ -1087,8 +1086,7 @@ menuitem.searchbar-clear-history::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 menuitem[command="downloadsCmd_clearList"][disabled=true]::Before,
@@ -1101,7 +1099,7 @@ menuitem[command="downloadsCmd_clearList"] > label,
 menuitem[command="downloadsCmd_clearDownloads"] > label,
 menuitem.searchbar-clear-history > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* History Restore Previous Session *********************************************/
@@ -1113,8 +1111,7 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #historyRestoreLastSession[disabled=true]::Before {
@@ -1124,7 +1121,7 @@ menuitem.searchbar-clear-history > label {
 
 #historyRestoreLastSession > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* History Recently Closed Windows **********************************************/
@@ -1136,8 +1133,7 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #historyUndoWindowMenu[disabled=true]::Before {
@@ -1147,7 +1143,7 @@ menuitem.searchbar-clear-history > label {
 
 #historyUndoWindowMenu > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -1166,8 +1162,7 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_bookmarksSidebar:not([checked=true])::Before {
@@ -1177,15 +1172,14 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #bookmarksShowAll > label,
 #placesContext_showAllBookmarks > label,
 #menu_bookmarksSidebar:not([checked=true]) > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Bookmarks toolbar Button PANEL
@@ -1199,8 +1193,7 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 1px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-bmb-icon-margin);
 	}
 
 #BMB_bookmarksShowAllTop::Before {
@@ -1210,8 +1203,7 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 1px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-bmb-icon-margin);
 	}
 
 #BMB_bookmarksShowAll::Before {
@@ -1221,15 +1213,14 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 1px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-bmb-icon-margin);
 	}
 
 #BMB_viewBookmarksSidebar > label,
 #BMB_bookmarksShowAllTop > label,
 #BMB_bookmarksShowAll > label {
 
-	margin-inline-start: 10px !important;
+	margin-inline-start: var(--mip-bmb-label-margin) !important;
 	}
 
 /* Open All In Tabs in the BMB Folder Footer */
@@ -1242,14 +1233,13 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 1px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-bmb-icon-margin);
 	}
 
 #BMB_bookmarksPopup menuseparator.bookmarks-actions-menuseparator + menuitem.openintabs-menuitem.subviewbutton > label {
 /* menuitem.openintabs-menuitem.subviewbutton.panel-subview-footer > label { */
 
-	margin-inline-start: 10px !important;
+	margin-inline-start: var(--mip-bmb-label-margin) !important;
 	}
 
 /* Bookmarks Toolbar Sub-Menu */
@@ -1262,8 +1252,7 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 1px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-bmb-icon-margin);
 	}
 
 #BMB_viewBookmarksToolbar[label^="View"]::Before {
@@ -1274,13 +1263,12 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 1px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-bmb-icon-margin);
 	}
 
 #BMB_viewBookmarksToolbar > label {
 
-	margin-inline-start: 10px !important;
+	margin-inline-start: var(--mip-bmb-label-margin) !important;
 	}
 
 /* Bookmark This Page Link Tab or Frame + Bookmark-New **************************/
@@ -1302,8 +1290,7 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_bookmarkThisPage[data-l10n-id="menu-bookmark-edit"]::Before { /* Edit This Bookmark */
@@ -1329,7 +1316,7 @@ menuitem.searchbar-clear-history > label {
 #syncedTabsBookmarkSelected > label,
 #newbookmark > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Bookmark Folder-New **********************************************************/
@@ -1342,8 +1329,7 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #placesContext_new\:folder[disabled=true]::Before,
@@ -1355,7 +1341,7 @@ menuitem.searchbar-clear-history > label {
 #placesContext_new\:folder > label,
 #newfolder > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Bookmark Separator-New *******************************************************/
@@ -1368,8 +1354,7 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #placesContext_new\:separator[disabled=true]::Before,
@@ -1381,7 +1366,7 @@ menuitem.searchbar-clear-history > label {
 #placesContext_new\:separator > label,
 #newseparator > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Bookmark/Folder Properties ***************************************************/
@@ -1396,8 +1381,7 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #placesContext_show_bookmark\:info[disabled=true]::Before,
@@ -1411,7 +1395,24 @@ menuitem.searchbar-clear-history > label {
 #placesContext_show_folder\:info > label,
 #placesContext_show\:info > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Show Recently Bookmarks In Folder (ie Open Containing Folder) ****************/
+
+#placesContext_showInFolder::Before {
+
+	content: url("../MipImages/Fugue/fugue_FolderOpened.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#placesContext_showInFolder > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* FF85 Show Other Bookmarks ****************************************************/
@@ -1424,8 +1425,7 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"][checked=false]::Before {
@@ -1436,14 +1436,13 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #show-other-bookmarks_PersonalToolbar[checked=false] > label,
 #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-always-show-2"][checked=false] > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 #PlacesToolbar #OtherBookmarks {
@@ -1466,13 +1465,12 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #viewColumns > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Sort Ascending/Descending ****************************************************/
@@ -1485,8 +1483,7 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #viewSortAscending:not([checked=true])::Before,
@@ -1498,8 +1495,7 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #viewSortDescending:not([checked=true])::Before {
@@ -1510,8 +1506,7 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #viewSort > label,
@@ -1519,7 +1514,7 @@ menuitem.searchbar-clear-history > label {
 #viewSortDescending:not([checked=true]) > label,
 #placesContext_sortBy\:name > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Backup/Restore Bookmarks *****************************************************/
@@ -1531,8 +1526,7 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #fileRestoreMenu::Before {
@@ -1542,8 +1536,7 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #restoreFromFile::Before {
@@ -1553,8 +1546,7 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #fileRestorePopup menuitem[oncommand="PlacesOrganizer.onRestoreMenuItemClick(this);"]::Before { /* The File Chooser Saved Backups */
@@ -1564,8 +1556,7 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #backupBookmarks > label,
@@ -1573,7 +1564,7 @@ menuitem.searchbar-clear-history > label {
 #restoreFromFile > label,
 #fileRestorePopup menuitem > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Import/Export Bookmarks to HTML **********************************************/
@@ -1585,8 +1576,7 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #fileExport::Before {
@@ -1596,14 +1586,13 @@ menuitem.searchbar-clear-history > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #fileImport > label,
 #fileExport > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -1704,13 +1693,12 @@ treechildren::-moz-tree-image(container, queryFolder_unfiled_____) {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_openDownloads > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Downloads Pause/Resume *******************************************************/
@@ -1722,8 +1710,7 @@ menuitem[data-l10n-id="downloads-cmd-pause"]::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 menuitem[data-l10n-id="downloads-cmd-resume"]::Before {
@@ -1733,14 +1720,13 @@ menuitem[data-l10n-id="downloads-cmd-resume"]::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 menuitem[data-l10n-id="downloads-cmd-pause"] > label,
 menuitem[data-l10n-id="downloads-cmd-resume"] > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Downloads Open Containing Folder *********************************************/
@@ -1752,13 +1738,12 @@ menuitem.downloadShowMenuItem::Before { /* [command="downloadsCmd_show"] */
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 menuitem.downloadShowMenuItem > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Downloads Goto ***************************************************************/
@@ -1770,13 +1755,12 @@ menuitem[command="downloadsCmd_openReferrer"]::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 menuitem[command="downloadsCmd_openReferrer"] > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -1798,8 +1782,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"]::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_openAddons > label,
@@ -1808,7 +1791,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"]::Before {
 menuitem[data-l10n-id="page-action-manage-extension"] > label,
 menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* AddOns Remove ****************************************************************/
@@ -1821,8 +1804,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"]::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 menuitem[data-l10n-id="page-action-remove-extension"][disabled=true]::Before,
@@ -1834,7 +1816,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"][disabled=true]::B
 menuitem[data-l10n-id="page-action-remove-extension"] > label,
 menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Page Information (frame/image/page) ******************************************/
@@ -1850,8 +1832,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_pageInfo > label,
@@ -1860,7 +1841,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 #context-viewimageinfo > label,
 #context-viewimagedesc > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Options **********************************************************************/
@@ -1875,15 +1856,14 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_preferences > label,
 #syncedTabsManageDevices > label,
 #blockedPopupOptions menuitem[oncommand="gPopupBlockerObserver.editPopupSettings();"] > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -1903,15 +1883,14 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #sync-setup > label,
 #sync-unverifieditem > label,
 #sync-reauthitem > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Sync Now *********************************************************************/
@@ -1928,8 +1907,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #sync-enable::Before {
@@ -1944,7 +1922,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 #sync-tabs-menuitem > label,
 #menu_tabsSidebar:not([checked=true]) > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1970,13 +1948,13 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: var(--menu-icon-margin);
+		margin-inline-start: var(--mip-menu-icon-margin);
 		vertical-align: middle;
 		}
 
 	#syncedTabsManageDevices > label {
 
-		margin-inline-start: var(--menu-label-margin) !important;
+		margin-inline-start: var(--mip-menu-label-margin) !important;
 		} */
 
 /* Send To Device ***************************************************************/
@@ -1990,8 +1968,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context_sendTabToDevice[disabled=true]::Before,
@@ -2005,7 +1982,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 #context-sendpagetodevice > label,
 #context-sendlinktodevice > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Send To Device: Device List **************************************************/
@@ -2019,8 +1996,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context_sendTabToDevicePopupMenu menuitem[label^="Send to All Devices"]::Before,
@@ -2032,8 +2008,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context_sendTabToDevicePopupMenu menuitem[label^="Manage Devices"]::Before,
@@ -2046,8 +2021,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* #context_sendTabToDevicePopupMenu menuitem[label^="Learn About Sending Tabs"]::Before,
@@ -2058,7 +2032,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 #context-sendpagetodevice-popup menuitem.sendtab-target > label,
 #context-sendlinktodevice-popup menuitem.sendtab-target > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -2079,8 +2053,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* Get More Tools ***************************************************************/
@@ -2094,7 +2067,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: var(--menu-icon-margin);
+		margin-inline-start: var(--mip-menu-icon-margin);
 		vertical-align: middle;
 		} */
 
@@ -2107,15 +2080,14 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #browserToolsMenu > label,
 #webDeveloperMenu > label,
 #menu_devToolbox:not([checked=true]) > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Dom Inspector ****************************************************************/
@@ -2127,8 +2099,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* Web Console ******************************************************************/
@@ -2140,8 +2111,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* Debug ************************************************************************/
@@ -2154,8 +2124,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* Network Monitor **************************************************************/
@@ -2167,8 +2136,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* Style Editor *****************************************************************/
@@ -2180,8 +2148,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* Performance Profiler *********************************************************/
@@ -2196,8 +2163,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* Storage (Explorer) ***********************************************************/
@@ -2209,8 +2175,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	/*
 	-moz-context-properties: fill;
 	 fill: DimGrey;
@@ -2226,8 +2191,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	-moz-context-properties: fill;
 	 fill: SlateGrey;
 	}
@@ -2241,8 +2205,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	-moz-context-properties: fill;
 	 fill: SlateGrey;
 	}
@@ -2256,8 +2219,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	-moz-context-properties: fill;
 	 fill: SlateGrey;
 	}
@@ -2272,8 +2234,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* Toolbox'es *******************************************************************/
@@ -2285,8 +2246,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_browserContentToolbox::Before {
@@ -2296,8 +2256,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* Error Console ****************************************************************/
@@ -2310,8 +2269,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* Responsive Design ************************************************************/
@@ -2323,8 +2281,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* Eyedropper *******************************************************************/
@@ -2336,8 +2293,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* Labels ***********************************************************************/
@@ -2361,7 +2317,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 #menu_responsiveUI:not([checked=true]) > label,
 #menu_eyedropper > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -2380,14 +2336,13 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_openHelp > label,
 #helpPolicySupport > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Firefox Tour/Tips ************************************************************/
@@ -2404,8 +2359,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_openTour > label,
@@ -2414,7 +2368,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 #context-sendpagetodevice-popup menuitem[label^="Learn About Sending Tabs"] > label,
 #context-sendlinktodevice-popup menuitem[label^="Learn About Sending Tabs"] > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Keyboard Shortcuts ***********************************************************/
@@ -2426,13 +2380,12 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_keyboardShortcuts > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Troubleshooting Information **************************************************/
@@ -2444,13 +2397,12 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #troubleShooting > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Submit Feedback **************************************************************/
@@ -2462,13 +2414,12 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #feedbackPage > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* RESTART (in Safe Mode) *******************************************************/
@@ -2480,13 +2431,12 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #helpSafeMode > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* RESTART (Aris Restart Script Menu Entry) *************************************/
@@ -2496,8 +2446,16 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	list-style-image: url("../MipImages/Fugue/fugue_Restart-red.png");
 
 	-moz-image-region: auto;
-	transform: none !important;
-	fill: none !important;
+	 transform: none !important;
+	 fill: none !important;
+	}
+
+@media (-moz-os-version: windows-win10) or (-moz-os-version: windows-win11) {
+
+	#fileMenu-restart-item .menu-iconic-icon {
+
+		margin-inline-start: 0px
+		}
 	}
 
 /* Report Phishing Website/Addon ************************************************/
@@ -2512,8 +2470,7 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"]::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #help_reportSiteIssue[disabled=true]::Before,
@@ -2527,7 +2484,7 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"][disabled=true]::B
 #menu_HelpPopup_reportPhishingtoolmenu > label,
 menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* About Firefox ****************************************************************/
@@ -2540,13 +2497,12 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #aboutName > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -2579,8 +2535,7 @@ menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer)::Bef
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_newNavigatorTab[disabled=true]::Before,
@@ -2612,7 +2567,7 @@ menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer) > la
 #syncedTabsOpenSelectedInTab > label,
 #syncedTabsOpenAllInTabs > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Reload (Tab,Frame,Image) *****************************************************/
@@ -2629,8 +2584,7 @@ menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer) > la
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context_reloadTab > label,
@@ -2640,7 +2594,7 @@ menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer) > la
 #context-reloadframe > label,
 #context-reloadimage > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Tab-Audio Muting *************************************************************/
@@ -2654,8 +2608,7 @@ menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer) > la
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context-media-mute[disabled=true]::Before {
@@ -2672,8 +2625,7 @@ menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer) > la
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context_toggleMuteTab > label,
@@ -2681,7 +2633,7 @@ menuitem.openintabs-menuitem:not(.subviewbutton):not(.panel-subview-footer) > la
 #context-media-mute > label,
 #context-media-unmute > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Tab-Pin (and other PIN items) ************************************************/
@@ -2697,8 +2649,7 @@ menuitem.customize-context-addToPanel::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context_unpinTab::Before,
@@ -2710,8 +2661,7 @@ menuitem.customize-context-addToPanel::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 menuitem[data-l10n-id="toolbar-context-menu-pin-to-overflow-menu"][disabled=true]::Before {
@@ -2728,7 +2678,7 @@ menuitem[data-l10n-id="toolbar-context-menu-pin-to-overflow-menu"] > label,
 #customizationPanelItemContextMenuUnpin > label,
 menuitem.customize-context-addToPanel > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Tab-Duplicate ****************************************************************/
@@ -2741,14 +2691,13 @@ menuitem.customize-context-addToPanel > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context_duplicateTab > label,
 #context_duplicateTabs > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Tabs-All [OVERRIDES SELECT ALL / FUGUE ONLY] *********************************/
@@ -2763,8 +2712,7 @@ menuitem.customize-context-addToPanel > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context_selectAllTabs[disabled=true]::Before,
@@ -2778,7 +2726,7 @@ menuitem.customize-context-addToPanel > label {
 #context_selectAllTabs > label,
 #toolbar-context-selectAllTabs > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Tab-Move *********************************************************************/
@@ -2790,8 +2738,7 @@ menuitem.customize-context-addToPanel > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context_moveTabOptions[disabled=true]::Before {
@@ -2801,7 +2748,7 @@ menuitem.customize-context-addToPanel > label {
 
 #context_moveTabOptions > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Tab-Move Start/End (and Close to the Right) **********************************/
@@ -2815,8 +2762,7 @@ menuitem.customize-context-addToPanel > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #pictureInPictureToggleContextMenu menuitem[data-l10n-id="picture-in-picture-move-toggle-right"]::Before,
@@ -2828,8 +2774,7 @@ menuitem.customize-context-addToPanel > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context_moveToStart[disabled=true]::Before,
@@ -2847,7 +2792,7 @@ menuitem.customize-context-addToPanel > label {
 #context_closeTabsToTheEnd > label,
 #context_closeTabsToTheStart > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Tab-Close ********************************************************************/
@@ -2862,15 +2807,14 @@ menuitem.customize-context-addToPanel > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context_closeTab > label,
 #context_closeSelectedTabs > label,
 #menu_close > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Tab Close All / Do NOT Show PopUp Bar ****************************************/
@@ -2883,8 +2827,7 @@ menuitem.customize-context-addToPanel > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context_closeTabOptions[disabled=true]::Before {
@@ -2895,7 +2838,7 @@ menuitem.customize-context-addToPanel > label {
 #context_closeTabOptions > label,
 #blockedPopupDontShowMessage:not([checked=true]) > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Tab Close Other Tabs *********************************************************/
@@ -2907,8 +2850,7 @@ menuitem.customize-context-addToPanel > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context_closeOtherTabs[disabled=true]::Before {
@@ -2918,7 +2860,7 @@ menuitem.customize-context-addToPanel > label {
 
 #context_closeOtherTabs > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Tab-Hidden (History Menu) ****************************************************/
@@ -2930,8 +2872,7 @@ menuitem.customize-context-addToPanel > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* Tab-History (Recently Closed) ************************************************/
@@ -2943,8 +2884,7 @@ menuitem.customize-context-addToPanel > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #historyUndoMenu[disabled=true]::Before {
@@ -2955,7 +2895,7 @@ menuitem.customize-context-addToPanel > label {
 #hiddenTabsMenu > label,
 #historyUndoMenu > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Tab-Hidden (Tabs Dropdown Panel) *********************************************/
@@ -2968,6 +2908,23 @@ menuitem.customize-context-addToPanel > label {
 	}
 
 #allTabsMenu-hiddenTabsButton > label { padding-inline-start: 8px !important; }
+
+/* Tab-Share (Win10 Only) *******************************************************/
+
+menuitem[data-l10n-id="tab-context-share-url"]::Before {
+
+	content: url("../MipImages/Misc/Icon-Share-Green-Red.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+menuitem[data-l10n-id="tab-context-share-url"] > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
 
 /********************************************************************************
  *
@@ -2984,8 +2941,7 @@ menuitem[command="Browser:OpenAboutContainers"]::Before { /* #new-tab-button, #n
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #allTabsMenu-containerTabsView toolbarbutton[data-l10n-id="all-tabs-menu-manage-user-context"] > image { list-style-image: url("../MipImages/FF/container-site.svg"); }
@@ -3002,8 +2958,7 @@ menuitem[command="Browser:OpenAboutContainers"]::Before { /* #new-tab-button, #n
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* Multiple Containers **********************************************************/
@@ -3017,8 +2972,7 @@ menuitem[command="Browser:OpenAboutContainers"]::Before { /* #new-tab-button, #n
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_newUserContext[disabled=true]::Before {
@@ -3040,8 +2994,12 @@ menuitem[command="Browser:OpenAboutContainers"]::Before { /* #new-tab-button, #n
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#_testpilot-containers-menuitem-_open-bookmark-in-container-tab > label {
+
+	margin-inline-start: var(--mip-iconreplace-label) !important;
 	}
 
 /* No Containers ****************************************************************/
@@ -3053,8 +3011,7 @@ menuitem[data-usercontextid="0"]::Before { /* #new-tab-button, #new-tab-button-p
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 menuitem[command="Browser:OpenAboutContainers"] > label,
@@ -3063,10 +3020,9 @@ menuitem[command="Browser:OpenAboutContainers"] > label,
 #context_reopenInContainer > label,
 #context-openlinkinusercontext-menu > label,
 #_testpilot-containers-menuitem-_open-in-this-container > label,
-menuitem[data-usercontextid="0"] > label,
-#_testpilot-containers-menuitem-_open-bookmark-in-container-tab > label {
+menuitem[data-usercontextid="0"] > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -3092,8 +3048,7 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context-video-saveimage[disabled=true]::Before {
@@ -3129,7 +3084,7 @@ menuitem[data-usercontextid="0"] > label,
 #context-video-saveimage > label,
 #context-saveaudio > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Pocket ***********************************************************************/
@@ -3142,14 +3097,13 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context-pocket > label,
 #context-savelinktopocket > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* View Image *******************************************************************/
@@ -3162,8 +3116,7 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context-viewbgimage[disabled=true]::Before {
@@ -3180,15 +3133,14 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context-viewimage > label,
 #context-viewbgimage > label,
 #context-setDesktopBackground > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* View Video *******************************************************************/
@@ -3200,13 +3152,12 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context-viewvideo > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* VIEW ALTERNATE ***************************************************************/
@@ -3225,8 +3176,7 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	} */
 
 /* Search Web [OPTIONAL OVERRIDES FIND] *****************************************/
@@ -3239,14 +3189,13 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context-searchselect > label,
 #context-searchselect-private > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Search Add Keyword ***********************************************************/
@@ -3258,13 +3207,12 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context-keywordfield > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Frame (This Frame/Show Only) *************************************************/
@@ -3277,14 +3225,13 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #frame > label,
 #context-showonlythisframe > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Check Spelling Toggle / Add To Dictionary ************************************/
@@ -3297,14 +3244,13 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #spell-add-to-dictionary > label,
 #spell-check-enabled:not([checked=true]) > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Check Spelling Select Language ***********************************************/
@@ -3317,8 +3263,7 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #spell-add-dictionaries::Before {
@@ -3328,15 +3273,14 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #spell-dictionaries > label,
 #spell-add-dictionaries-main > label,
 #spell-add-dictionaries > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Inspect Element **************************************************************/
@@ -3348,8 +3292,7 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* Inspect Accessibility ********************************************************/
@@ -3362,8 +3305,7 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	-moz-context-properties: fill;
 	 fill: SlateGrey;
 	}
@@ -3371,7 +3313,7 @@ menuitem[data-usercontextid="0"] > label,
 #context-inspect > label,
 #context-inspect-a11y > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -3389,13 +3331,12 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context-video-pictureinpicture:not([checked=true]) > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Play/Pause/Speed *************************************************************/
@@ -3407,8 +3348,7 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context-media-pause::Before {
@@ -3418,8 +3358,7 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context-media-playbackrate::Before {
@@ -3429,8 +3368,7 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context-media-play[disabled=true]::Before,
@@ -3443,7 +3381,7 @@ menuitem[data-usercontextid="0"] > label,
 #context-media-pause > label,
 #context-media-playbackrate > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Loop/Repeat ******************************************************************/
@@ -3456,13 +3394,12 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context-media-loop:not([checked=true]) > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Show/Hide Controls ***********************************************************/
@@ -3475,8 +3412,7 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context-media-showcontrols::Before {
@@ -3487,8 +3423,7 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context-media-hidecontrols[disabled=true]::Before,
@@ -3500,7 +3435,7 @@ menuitem[data-usercontextid="0"] > label,
 #context-media-hidecontrols > label,
 #context-media-showcontrols > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Plugin ***********************************************************************/
@@ -3512,13 +3447,12 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context-ctp-play > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -3539,8 +3473,7 @@ menuitem[data-usercontextid="0"] > label,
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #context-viewframesource[disabled=true]::Before,
@@ -3556,7 +3489,7 @@ menuitem[data-usercontextid="0"] > label,
 #context-viewsource > label,
 #menu_pageSource > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* View Source GoTo Line ********************************************************/
@@ -3569,8 +3502,7 @@ menuitem[generateditemid="16"]:not([checked=true])::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* View Source Wrap Lines *******************************************************/
@@ -3583,8 +3515,7 @@ menuitem[generateditemid="17"]:not([checked=true])::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* View Source Syntax Highlight *************************************************/
@@ -3597,8 +3528,7 @@ menuitem[generateditemid="18"]:not([checked=true])::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 menuitem[label^="Go to Line"]:not([checked=true]) > label,
@@ -3608,7 +3538,7 @@ menuitem[generateditemid="17"]:not([checked=true]) > label,
 menuitem[label="Syntax Highlighting"]:not([checked=true]) > label,
 menuitem[generateditemid="18"]:not([checked=true]) > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -3617,28 +3547,21 @@ menuitem[generateditemid="18"]:not([checked=true]) > label {
  *
  ********************************************************************************/
 
-#screenshots_mozilla_org-menuitem-_create-screenshot > hbox.menu-iconic-left { display: none !important; }
-
 #context-take-screenshot::Before,
-#screenshots_mozilla_org-menuitem-_create-screenshot::Before {
+#context-take-frame-screenshot::Before {
 
 	content: url("../MipImages/Fugue/fugue_ScreenshotSaveImage.png");
 
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
-#screenshots_mozilla_org-menuitem-_create-screenshot > label {
+#context-take-screenshot > label,
+#context-take-frame-screenshot > label {
 
-	margin-inline-start: 10px !important;
-	}
-
-#context-take-screenshot > label {
-
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -3655,14 +3578,13 @@ menuitem[generateditemid="18"]:not([checked=true]) > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #blockedPopupAllowSite > label,
 #menu_HelpPopup_reportPhishingErrortoolmenu > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"]::Before {
@@ -3672,13 +3594,12 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"]::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -3700,8 +3621,7 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	opacity: 0.4;
 	}
 
@@ -3711,7 +3631,7 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 #context-sendpagetodevice-popup menuitem[label="No Devices Connected"] > label,
 #context-sendlinktodevice-popup menuitem[label="No Devices Connected"] > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* HIDE STUFF that has no Un-Hide / Downloads,FullScreenToolbar,PIP Auto-Hide ***/
@@ -3729,8 +3649,7 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #toggle_PersonalToolbar menuitem[data-l10n-id="toolbar-context-menu-bookmarks-toolbar-never-show-2"][checked=false] > label,
@@ -3741,7 +3660,7 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 #_testpilot-containers-menuitem-_hide-container > label,
 #context-ctp-hide > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -3758,8 +3677,7 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #fill-login[data-l10n-id="main-context-menu-use-saved-password"]::Before,
@@ -3776,8 +3694,7 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #fill-login-generated-password::Before { /* Use Generated Password */
@@ -3787,8 +3704,7 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #fill-login > label,
@@ -3797,7 +3713,7 @@ menuitem[oncommand="gPopupBlockerObserver.showBlockedPopup(event);"] > label {
 #fill-login-generated-password > label,
 #fill-login > #fill-login-popup > menuitem.context-login-item > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -3814,8 +3730,7 @@ menuitem.customize-context-addToToolbar::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 menuitem[data-l10n-id="page-action-remove-from-urlbar"]::Before,
@@ -3826,8 +3741,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-from-toolbar"]::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 menuitem[data-l10n-id="page-action-add-to-urlbar"][disabled=true]::Before,
@@ -3842,7 +3756,7 @@ menuitem.customize-context-addToToolbar > label,
 menuitem[data-l10n-id="page-action-remove-from-urlbar"] > label,
 menuitem[data-l10n-id="toolbar-context-menu-remove-from-toolbar"] > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -3863,8 +3777,7 @@ menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"]::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #menu_customizeToolbars[disabled=true]::Before,
@@ -3880,7 +3793,7 @@ menuitem[command="cmd_CustomizeToolbars"] > label,
 menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar"] > label,
 menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"] > label {
 
-	margin-inline-start: var(--menu-label-margin) !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -3888,6 +3801,15 @@ menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"] > label {
  * Navigation Context Icons
  *
  ********************************************************************************/
+
+#context-back,
+#context-forward,
+#context-reload,
+#context-stop,
+#context-bookmarkpage {
+
+	max-height: unset !important;
+	}
 
 #context-back image {
 
@@ -3953,8 +3875,7 @@ menuitem[checked=true]::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: var(--menu-icon-margin);
-	vertical-align: middle;
+	margin-inline-start: var(--mip-checkmark-icon-margin);
 	}
 
 menuitem[checked=true][disabled=true]::Before {
@@ -3966,7 +3887,7 @@ menuitem[checked=true] > hbox.menu-iconic-left { display: none; !important }
 
 menuitem[checked=true] > label {
 
-	margin-inline-start: 10px !important;
+	margin-inline-start: var(--mip-checkmark-label-margin) !important;
 	}
 
 }

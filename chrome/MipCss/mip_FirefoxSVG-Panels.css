@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.4.1 (MIP/CSS)
+ * Menu Icon Plus CSS v2.6 (MIP/CSS)
  * Add Icons To Firefox Standard Panels
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -312,7 +312,7 @@
 
 #appMenu-more-button2 {
 
-/*	list-style-image: url("chrome://browser/skin/developer.svg"); */
+/*	list-style-image: url("../MipImages/FF/developer.svg"); */
 	list-style-image: url("chrome://browser/skin/ion.svg");
 	}
 
@@ -323,7 +323,7 @@
 
 #appMenu-quit-button2 {
 
-	list-style-image: url("chrome://browser/skin/quit.svg");
+	list-style-image: url("../MipImages/FF/quit.svg");
 	}
 
 /********************************************************************************
@@ -452,7 +452,7 @@
    #appmenu-developer-tools-view .subviewbutton[key="key_toggleToolbox"] {  /* Web Developer Tools */
 
 /*	list-style-image: url("chrome://browser/skin/toggle.svg"); */
-	list-style-image: url("chrome://browser/skin/developer.svg");
+	list-style-image: url("../MipImages/FF/developer.svg");
 	}
 
 /* #appmenu-developer-tools-view .subviewbutton:nth-child(2) { */

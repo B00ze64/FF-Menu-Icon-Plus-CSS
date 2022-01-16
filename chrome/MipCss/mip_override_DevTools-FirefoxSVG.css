@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.0 (MIP/CSS)
+ * Menu Icon Plus CSS v2.6 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -74,7 +74,7 @@
 #menu_devToolbox:not([checked=true])::Before {
 
 /*	content: url("../MipImages/FF/toggle.svg"); */
-	content: url("chrome://browser/skin/developer.svg");
+	content: url("../MipImages/FF/developer.svg");
 	}
 
 /* Dom Inspector ****************************************************************/

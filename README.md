@@ -1,4 +1,4 @@
-# Menu Icon Plus CSS (MIP/CSS) v2.x
+# Menu Icon Plus CSS (MIP/CSS) v2.6
 ## Add Icons To Firefox Menus/Context-Menus/Panels
 
 **Panels are here!** Most of the panels code comes from:
@@ -25,7 +25,7 @@ Besides copying all the project's files correctly in your profile/chrome folder 
 
 This project began with Firefox 78 if I recall correctly. Adjustments were made as Firefox evolved. Previous menus are still supported, but some icons might no longer work on previous versions. This is especially true for the SVG theme, where I've had to adjust to Mozilla moving and renaming icons.
 
-This project is currently tested on Windows 7 in 1080p 100% scaling with the Light Theme, where the PNG images look really good. If you use the Dark Theme, you might prefer the SVG icons. The same for very high DPI screens with 125% scaling or more, as SVG scales really well; PNG icons are resized instead of scaled on high DPI screens and they become a little blurry. I do have a Win10 installation in progress but I have not tested **MIP/CSS** on that yet, and if Firefox uses different menus/panels on that version of the O/S then things might not work as intended. I'll test this on Win10 eventually.
+This project is currently tested on Windows 7/10 with the Light Theme, where the PNG images look really good. If you use the Dark Theme, you might prefer the SVG icons. The same for very high DPI screens with 125% scaling or more, as SVG scales really well; PNG icons are resized instead of scaled on high DPI screens and they become a little blurry.
 
 # The Icon Themes
 
@@ -56,12 +56,10 @@ All the Themes in Alphabetical order:
 
 # File Structure
 
-Every theme has up to 4 files, and some override files which only change the picture used but do not themselves insert the icon element (you use them AFTER a complete theme file). Let's take the Crystal theme for example, you will find:
+Every theme has up to 3 files, and some override files which only change the picture used but do not themselves insert the icon element (you use them AFTER a complete theme file). Let's take the Crystal theme for example, you will find:
 
-* mip_Crystal-Config.css:
-    * This is used in *userContent.css* and adds icons to the old about:config. This is still in the project, but the old about:config page is now gone and the new page no longer has context menus; only useful for people running older versions of Firefox.
 * mip_Crystal-Library.css:
-    * This is also used in *userContent.css* and adds icons to the Bookmarks Library when you are opening it inside a Tab (I do not use this myself).
+    * This is used in *userContent.css* and adds icons to the Bookmarks Library when you are opening it inside a Tab. This currently works well only in Windows 10; on Win 7 the menus are really strange and not working well.
 * **mip_Crystal-Menus.css**:
     * This is used in *userChrome.css* and adds icons to the Firefox menus and to the Library window.
 * **mip_Crystal-Panels.css**:

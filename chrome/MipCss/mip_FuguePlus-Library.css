@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.5.1 (MIP/CSS)
+ * Menu Icon Plus CSS v2.6 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -56,6 +56,77 @@
 
 /********************************************************************************
  *
+ * DPI/OS-DEPENDENT (needs user_pref("media.navigator.enabled", true))
+ *
+ ********************************************************************************/
+
+@media (-moz-os-version: windows-win7) or (-moz-os-version: windows-win8) {
+
+	/* Prevent vertical arrows in BMB menu */
+
+		:root { --arrowpanel-menuitem-padding: 4px 8px !important; }
+		 menupopup > menuitem, menupopup > menu { padding-block: 0px !important; }
+
+	:root {
+		--mip-menu-icon-margin: 6px;
+		--mip-menu-label-margin: -8px;
+		--mip-checkmark-icon-margin: 6px;
+		--mip-checkmark-label-margin: 10px;
+		--mip-bmb-icon-margin: 1px;
+		--mip-bmb-label-margin: 10px;
+		--mip-iconreplace-label: -20px;
+		}
+
+	@media (min-resolution: 120dpi) {
+	
+		menupopup menuitem,
+		menupopup menu {
+			min-height: 20px !important;
+		}
+
+		:root {
+			--mip-menu-icon-margin: 2px;
+			--mip-menu-label-margin: -16px;
+			--mip-checkmark-icon-margin: 2px;
+			--mip-iconreplace-label: -16px;
+			}
+	}
+	
+	@media (min-resolution: 140dpi) {
+
+		:root {
+			--mip-checkmark-label-margin: 8px;
+			}
+		}
+	}
+
+@media (-moz-os-version: windows-win10) or (-moz-os-version: windows-win11) {
+
+	:root {
+		--mip-menu-icon-margin: 0px;
+		--mip-menu-label-margin: 8px;
+		--mip-checkmark-icon-margin: 0px;
+		--mip-checkmark-label-margin: 8px;
+		--mip-bmb-icon-margin: 0px;
+		--mip-bmb-label-margin: 8px;
+		--mip-iconreplace-label: 0px;
+		}
+
+	menupopup menuitem,
+	menupopup menu {
+/*		min-height: 16px !important; */
+		max-height: 15px !important;
+		}
+
+	menupopup[needsgutter] menu:not([icon], .menu-iconic), menupopup[needsgutter] menuitem:not([checked="true"], [icon], .menuitem-iconic) {
+
+		--mip-menu-icon-margin: -24px;
+		--mip-menu-label-margin: 8px;
+		}
+	}
+
+/********************************************************************************
+ *
  * CONTEXT MENUS
  *
  ********************************************************************************/
@@ -69,13 +140,12 @@
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #placesContext_open\:newwindow > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Private Browsing *************************************************************/
@@ -87,13 +157,12 @@
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #placesContext_open\:newprivatewindow > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Location-Open ****************************************************************/
@@ -105,13 +174,12 @@
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #placesContext_open > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Close Window *****************************************************************/
@@ -123,13 +191,12 @@
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #orgClose > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Cut **************************************************************************/
@@ -142,8 +209,7 @@
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #orgCut[disabled=true]::before,
@@ -155,7 +221,7 @@
 #orgCut > label,
 #placesContext_cut > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Copy *************************************************************************/
@@ -168,8 +234,7 @@
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 /* Copy Link ********************************************************************/
@@ -182,8 +247,7 @@ menuitem[command="downloadsCmd_copyLocation"]::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #orgCopy[disabled=true]::Before,
@@ -197,7 +261,7 @@ menuitem[command="downloadsCmd_copyLocation"]::Before {
 #downloadsContextMenu menuitem[command="cmd_copy"] > label,
 menuitem[command="downloadsCmd_copyLocation"] > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Paste ************************************************************************/
@@ -211,8 +275,7 @@ menuitem[command="downloadsCmd_copyLocation"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #orgPaste[disabled=true]::Before,
@@ -226,7 +289,7 @@ menuitem[command="downloadsCmd_copyLocation"] > label {
 #placesContext_paste > label,
 #placesContext_paste_group > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Delete ***********************************************************************/
@@ -242,8 +305,7 @@ menuitem[command="downloadsCmd_copyLocation"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #orgDelete[disabled=true]::Before,
@@ -261,7 +323,7 @@ menuitem[command="downloadsCmd_copyLocation"] > label {
 #placesContext_deleteFolder > label,
 #placesContext_delete_history > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Select All - Must be BEFORE TABS *********************************************/
@@ -273,8 +335,7 @@ menuitem[command="downloadsCmd_copyLocation"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #orgSelectAll[disabled=true]::Before {
@@ -284,7 +345,7 @@ menuitem[command="downloadsCmd_copyLocation"] > label {
 
 #orgSelectAll > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* History Clear Recent / Forget Site *******************************************/
@@ -297,14 +358,13 @@ menuitem.downloadRemoveFromHistoryMenuItem::Before { /* menuitem[command="cmd_de
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #placesContext_deleteHost > label,
 menuitem.downloadRemoveFromHistoryMenuItem > label { /* menuitem[command="cmd_delete"] */
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* History Clear All (Downloads/Search) *****************************************/
@@ -316,13 +376,12 @@ menuitem[command="downloadsCmd_clearDownloads"]::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 menuitem[command="downloadsCmd_clearDownloads"] > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Bookmark This Page Link Tab or Frame + Bookmark-New **************************/
@@ -336,8 +395,7 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #placesContext_new\:bookmark[disabled=true]::Before,
@@ -350,7 +408,7 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 #placesContext_createBookmark > label,
 #newbookmark > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Bookmark Folder-New **********************************************************/
@@ -363,8 +421,7 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #placesContext_new\:folder[disabled=true]::Before,
@@ -377,7 +434,7 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 #placesContext_new\:folder > label,
 #newfolder > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Bookmark Separator-New *******************************************************/
@@ -390,8 +447,7 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #placesContext_new\:separator[disabled=true]::Before,
@@ -403,7 +459,24 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 #placesContext_new\:separator > label,
 #newseparator > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/* Show Recently Bookmarks In Folder (ie Open Containing Folder) ****************/
+
+#placesContext_showInFolder::Before {
+
+	content: url("../MipImages/Fugue/fugue_FolderOpened.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#placesContext_showInFolder > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -421,8 +494,7 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #orgUndo[disabled=true]::Before {
@@ -432,7 +504,7 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 
 #orgUndo > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Redo *************************************************************************/
@@ -444,8 +516,7 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #orgRedo[disabled=true]::Before {
@@ -455,7 +526,7 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 
 #orgRedo > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Columns Chooser based on Fugue Table *****************************************/
@@ -467,13 +538,12 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #viewColumns > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Sort Ascending/Descending ****************************************************/
@@ -485,8 +555,7 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #viewSortAscending:not([checked=true])::Before,
@@ -497,8 +566,7 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #viewSortDescending:not([checked=true])::Before {
@@ -508,8 +576,7 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #viewSort > label,
@@ -517,7 +584,7 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 #viewSortDescending:not([checked=true]) > label,
 #placesContext_sortBy\:name > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Backup/Restore Bookmarks *****************************************************/
@@ -529,8 +596,7 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #fileRestoreMenu::Before {
@@ -540,8 +606,7 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #restoreFromFile::Before {
@@ -551,8 +616,7 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #fileRestorePopup menuitem[oncommand="PlacesOrganizer.onRestoreMenuItemClick(this);"]::Before { /* The File Chooser Saved Backups */
@@ -562,8 +626,7 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #backupBookmarks > label,
@@ -571,7 +634,7 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 #restoreFromFile > label,
 #fileRestorePopup menuitem > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Import/Export Bookmarks to HTML **********************************************/
@@ -583,8 +646,7 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #fileExport::Before {
@@ -594,14 +656,13 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #fileImport > label,
 #fileExport > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Import from another browser **************************************************/
@@ -613,13 +674,12 @@ menuitem[command="downloadsCmd_clearDownloads"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #browserImport > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -677,8 +737,7 @@ menuitem[data-l10n-id="downloads-cmd-pause"]::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 menuitem[data-l10n-id="downloads-cmd-resume"]::Before {
@@ -688,14 +747,13 @@ menuitem[data-l10n-id="downloads-cmd-resume"]::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 menuitem[data-l10n-id="downloads-cmd-pause"] > label,
 menuitem[data-l10n-id="downloads-cmd-resume"] > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Downloads Open Containing Folder *********************************************/
@@ -707,13 +765,12 @@ menuitem.downloadShowMenuItem::Before { /* [command="downloadsCmd_show"] */
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 menuitem.downloadShowMenuItem > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* Downloads Goto ***************************************************************/
@@ -725,13 +782,12 @@ menuitem[command="downloadsCmd_openReferrer"]::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 menuitem[command="downloadsCmd_openReferrer"] > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -754,8 +810,7 @@ menuitem[command="downloadsCmd_openReferrer"] > label {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 #placesContext_openBookmarkContainer\:tabs[disabled=true]::Before,
@@ -773,7 +828,7 @@ menuitem[command="downloadsCmd_openReferrer"] > label {
 #placesContext_openContainer\:tabs > label,
 #placesContext_openBookmarkLinks\:tabs > label {
 
-	margin-inline-start: -20px !important;
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
@@ -789,8 +844,7 @@ menuitem[checked=true]::Before {
 	display: block;
 	width: 16px;
 	height: 16px;
-	margin-inline-start: 6px;
-	vertical-align: middle;
+	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
 menuitem[checked=true][disabled=true]::Before {

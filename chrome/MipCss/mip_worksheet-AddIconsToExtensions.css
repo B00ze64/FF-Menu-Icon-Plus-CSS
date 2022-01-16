@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.2 (MIP/CSS)
+ * Menu Icon Plus CSS v2.6 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -44,12 +44,75 @@
  ********************************************************************************
  *
  * This is the file I use to try things out when I build the themes. This one is
- * currently mostly for my own use; I only skin extensions I have. There are no 
+ * currently mostly for my own use; I only skin extensions I have. There are no
  * separate theme files.
  *
  */
 
 @-moz-document url("chrome://browser/content/browser.xhtml") {
+
+/********************************************************************************
+ *
+ * DPI/OS-DEPENDENT (needs user_pref("media.navigator.enabled", true))
+ *
+ ********************************************************************************/
+
+@media (-moz-os-version: windows-win7) or (-moz-os-version: windows-win8) {
+
+	:root {
+		--mip-menu-icon-margin: 6px;
+		--mip-menu-label-margin: -20px;
+		--mip-checkmark-icon-margin: 6px;
+		--mip-checkmark-label-margin: 10px;
+		--mip-iconreplace-label: -20px;
+		}
+
+	@media (min-resolution: 120dpi) {
+
+		menupopup menuitem,
+		menupopup menu {
+			min-height: 20px !important;
+		}
+
+		:root {
+			--mip-menu-icon-margin: 2px;
+			--mip-menu-label-margin: -16px;
+			--mip-checkmark-icon-margin: 2px;
+			--mip-iconreplace-label: -16px;
+			}
+		}
+
+	@media (min-resolution: 140dpi) {
+
+		:root {
+			--mip-checkmark-label-margin: 8px;
+			}
+		}
+	}
+
+@media (-moz-os-version: windows-win10) or (-moz-os-version: windows-win11) {
+
+	:root {
+		--mip-menu-icon-margin: 0px;
+		--mip-menu-label-margin: 8px;
+		--mip-checkmark-icon-margin: 0px;
+		--mip-checkmark-label-margin: 8px;
+		--mip-iconreplace-label: 0px;
+		}
+
+	menupopup menuitem,
+	menupopup menu {
+/*		min-height: 16px !important; */
+		max-height: 15px !important;
+		}
+
+	menupopup[needsgutter] menu:not([icon], .menu-iconic), menupopup[needsgutter] menuitem:not([checked="true"], [icon], .menuitem-iconic) {
+
+		--mip-menu-icon-margin: -24px;
+		--mip-menu-label-margin: 8px;
+		}
+	}
+
 
 /********************************************************************************
  *
@@ -74,13 +137,12 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#menu_ToolsPopup menuitem[label="Open Bookmarks Organizer"] > label {
 
-		margin-inline-start: 10px !important;
+		margin-inline-start: var(--mip-checkmark-label-margin) !important;
 		}
 
 /********************************************************************************
@@ -93,23 +155,17 @@
 
 	#_63395548-7017-4407-a03a-31a553563e7b_-menuitem-_open-selected-links::Before {
 
-/*		content: url("chrome://browser/skin/zoom-in.svg");
-		content: url("../MipImages/Crystal/crystal_Plus.png");
-		content: url("../MipImages/Oxygen/oxygen_Plus.png");
-		content: url("../MipImages/Tango/tango_Plus.png");
-		*/
 		content: url("../MipImages/Fugue/fugue_Plus.png");
 
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#_63395548-7017-4407-a03a-31a553563e7b_-menuitem-_open-selected-links > label {
 
-		margin-inline-start: -20px !important;
+		margin-inline-start: var(--mip-menu-label-margin) !important;
 		}
 
 /* Replace Dictionaries At Hand Icon and add icons to the sub-menu **************/
@@ -124,8 +180,7 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#contentAreaContextMenu menu[label="Dictionaries At Hand"] > menupopup > menuitem[label$="(English)"]::Before { /* Red Bookmark for the English dictionaries */
@@ -136,8 +191,7 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#contentAreaContextMenu menu[label="Dictionaries At Hand"] > menupopup > menuitem[label$="(French)"]::Before { /* Blue Bookmark for the French dictionaries */
@@ -148,14 +202,17 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
-	#contentAreaContextMenu menu[label="Dictionaries At Hand"] > label,
+	#contentAreaContextMenu menu[label="Dictionaries At Hand"] > label {
+
+		margin-inline-start: var(--mip-iconreplace-label) !important;
+		}
+
 	#contentAreaContextMenu menu[label="Dictionaries At Hand"] > menupopup > menuitem > label {
 
-		margin-inline-start: -20px !important;
+		margin-inline-start: var(--mip-menu-label-margin) !important;
 		}
 
 /* Replace ImTranslator Icon and make the contentAreaContextMenu label MUCH less wide *****/
@@ -177,21 +234,24 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#contentAreaContextMenu menu[label^="ImTranslator"] > label {
 
-		margin-inline-start: -20px !important;
+		margin-inline-start: var(--mip-iconreplace-label) !important;
 
 		width: 120px !important; /* This will mostly always be smaller than the other entries in the menu but will expand automatically */
 		}
 
-	#contentAreaContextMenu menuitem[label^="Translate this page to"] > label,
+	#contentAreaContextMenu menuitem[label^="Translate this page to"] > label {
+
+		margin-inline-start: var(--mip-iconreplace-label) !important;
+		}
+
 	#toolbar-context-menu menuitem[label^="Translate this page to"] > label {
 
-		margin-inline-start: -20px !important;
+		margin-inline-start: var(--mip-menu-label-margin) !important;
 		}
 
 	#contentAreaContextMenu menu[label^="ImTranslator"] menuitem[label^="Inline Translator"]::Before,
@@ -205,8 +265,7 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#contentAreaContextMenu menu[label^="ImTranslator"] menuitem[label^="Pop-Up Bubble"]::Before,
@@ -221,8 +280,7 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#contentAreaContextMenu menu[label^="ImTranslator"] menuitem[label^="Inline Translator"] > label,
@@ -230,7 +288,7 @@
 	#contentAreaContextMenu menu[label^="ImTranslator"] menuitem[label^="Pop-Up Bubble"] > label,
 	#toolbar-context-menu menuitem[label^="Pop-Up Bubble"] > label {
 
-		margin-inline-start: -20px !important;
+		margin-inline-start: var(--mip-menu-label-margin) !important;
 		}
 
 	toolbarbutton[label^="ImTranslator"] {
@@ -251,25 +309,24 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-checkmark-icon-margin);
 		}
 
 	#simple-tab-groups_drive4ik-menuitem-_stg-move-tab-parent > label {
 
-		margin-inline-start: 10px !important;
+		margin-inline-start: var(--mip-checkmark-label-margin) !important;
 		}
 
 	#menu_simple-tab-groups_drive4ik-sidebar-action:not([checked=true]) > label {
 
-		margin-inline-start: -20px !important;
+		margin-inline-start: var(--mip-iconreplace-label) !important;
 		}
 
 	#button_simple-tab-groups_drive4ik-sidebar-action {
 
 /*		list-style-image: url("../MipImages/Misc/STG-TabGroups.svg") !important; */
 		list-style-image: url("../MipImages/Fugue/fugue_SimpleTabGroups.png") !important;
-	}
+		}
 
 /********************************************************************************
  *
@@ -292,6 +349,46 @@
 		list-style-image: url("../MipImages/Misc/PrintEdit(oxygen).png") !important;
 		}
 
+	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_startclose[label^="Start"]::Before {
+
+		content: url("../MipImages/Fugue/fugue_PageStyle.png");
+
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: var(--mip-menu-icon-margin);
+		}
+
+	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_startclose[label^="Close"]::Before {
+
+		content: url("../MipImages/Fugue/fugue_ClearAll.png");
+
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: var(--mip-menu-icon-margin);
+		}
+
+	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_suspendresume[label^="Suspend"]::Before {
+
+		content: url("../MipImages/Fugue/fugue_Player-Pause.png");
+
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_suspendresume[label^="Resume"]::Before {
+
+		content: url("../MipImages/Fugue/fugue_Player-Play.png");
+
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
 	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printedit::Before {
 
 /*		content: url("../MipImages/Misc/PrintEdit(original).png"); */
@@ -300,56 +397,40 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printpreview::Before {
 
-/*		content: url("chrome://devtools/skin/images/rules-view-print-simulation.svg");
-		content: url("../MipImages/Crystal/crystal_PrintPreview.png");
-		content: url("../MipImages/Oxygen/oxygen_PrintPreview.png");
-		content: url("../MipImages/Silk/silk_PrintPreview.png");
-		content: url("../MipImages/Tango/tango_PrintPreview.png");
-		*/
 		content: url("../MipImages/Fugue/fugue_PrintPreview.png");
 
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_print::Before {
 
-/*		content: url("chrome://browser/skin/print.svg");
-		content: url("../MipImages/FF/print.png");
-		content: url("../MipImages/Crystal/crystal_Print.png");
-		content: url("../MipImages/Fugue/fugue_Print.png");
-		content: url("../MipImages/Silk/silk_Print.png");
-		content: url("../MipImages/Tango/tango_Print.png");
-		*/
 		content: url("../MipImages/Oxygen/oxygen_Print.png");
 
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_saveaspdf::Before {
-		
+
 		content: url("../MipImages/Misc/PrintEdit_SavePageAsPDF.png");
 
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
+	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_suspendresume[disabled=true]::Before,
 	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printedit[disabled=true]::Before,
 	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printpreview[disabled=true]::Before,
 	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_print[disabled=true]::Before,
@@ -358,12 +439,14 @@
 		opacity: 0.4;
 		}
 
+	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_suspendresume > label,
+	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_startclose > label,
 	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printedit > label,
 	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_printpreview > label,
 	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_print > label,
 	#toolbar-context-menu #printedit-we_dw-dev-menuitem-_saveaspdf > label {
 
-		margin-inline-start: -20px !important;
+		margin-inline-start: var(--mip-menu-label-margin) !important;
 		}
 
 /* Skin Save-Page-WE (Also context Menu) ****************************************/
@@ -377,18 +460,12 @@
 	#savepage-we_dw-dev-menuitem-_saveselectedtabs::Before,
 	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs::Before {
 
-/*		content: url("../MipImages/Crystal/crystal_Save.png");
-		content: url("../MipImages/Oxygen/oxygen_Save.png");
-		content: url("../MipImages/Silk/silk_Save.png");
-		content: url("../MipImages/Tango/tango_Save.png");
-		*/
 		content: url("../MipImages/Fugue/fugue_Save.png");
 
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#savepage-we_dw-dev-menuitem-_savelistedurls::Before,
@@ -399,8 +476,7 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#savepage-we_dw-dev-menuitem-_viewpageinfo::Before,
@@ -411,8 +487,7 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#savepage-we_dw-dev-menuitem-_cancelsave::Before,
@@ -423,8 +498,7 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#savepage-we_dw-dev-menuitem-_saveselectedtabs[disabled=true]::Before,
@@ -448,7 +522,7 @@
 	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_viewpageinfo > label,
 	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_cancelsave > label {
 
-		margin-inline-start: -20px !important;
+		margin-inline-start: var(--mip-menu-label-margin) !important;
 		}
 
 	#savepage-we_dw-dev-menuitem-_saveselectedtabs-basicitems::Before,
@@ -465,8 +539,7 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#savepage-we_dw-dev-menuitem-_saveselectedtabs-standarditems::Before,
@@ -483,8 +556,7 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#savepage-we_dw-dev-menuitem-_saveselectedtabs-customitems::Before,
@@ -501,8 +573,7 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#savepage-we_dw-dev-menuitem-_saveselectedtabs-basicitems > label,
@@ -533,7 +604,7 @@
 	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_saveselectedtabs-w-customitems > label,
 	#toolbar-context-menu #savepage-we_dw-dev-menuitem-_savelistedurls-w-customitems > label {
 
-		margin-inline-start: -20px !important;
+		margin-inline-start: var(--mip-menu-label-margin) !important;
 		}
 
 /* DownThemAll context sub-menu *************************************************/
@@ -545,13 +616,12 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#toolbar-context-menu menu[label="DownThemAll!"] > label {
 
-		margin-inline-start: -20px !important;
+		margin-inline-start: var(--mip-menu-label-margin) !important;
 		}
 
 	#toolbar-context-menu menu[label="DownThemAll!"] > menupopup > menuseparator:first-child { display: none; } /* Extraneous Separator */
@@ -565,19 +635,18 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#toolbar-context-menu menuitem[label="What is my Geolocation?"] > label {
 
-		margin-inline-start: -20px !important;
+		margin-inline-start: var(--mip-menu-label-margin) !important;
 		}
 
 /* I Dont Care About Cookies ****************************************************/
 
 	toolbarbutton#jid1-kkzogwgsw3ao4q_jetpack-browser-action .toolbarbutton-badge {
-	
+
 		background-clip: text !important;	/* Fix (remove) the border around the badge which is actually the text background */
 		font-weight: normal !important;		/* We dont need a bold-sized checkmark */
 		}
@@ -591,8 +660,7 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#toolbar-context-menu #skipredirect_sblask-menuitem-_copy-last-source-url[disabled=true]::Before {
@@ -602,7 +670,7 @@
 
 	#toolbar-context-menu #skipredirect_sblask-menuitem-_copy-last-source-url > label {
 
-		margin-inline-start: -20px !important;
+		margin-inline-start: var(--mip-menu-label-margin) !important;
 		}
 
 /* Neat URL *********************************************************************/
@@ -614,13 +682,12 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#toolbar-context-menu #neaturl_hugsmile_eu-menuitem-_neaturl-tb-preferences > label {
 
-		margin-inline-start: -20px !important;
+		margin-inline-start: var(--mip-menu-label-margin) !important;
 		}
 
 /* Stylus ***********************************************************************/
@@ -632,8 +699,7 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_disableAll:not([checked=true])::Before {
@@ -643,8 +709,7 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_open-manager::Before {
@@ -654,8 +719,7 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_open-options::Before {
@@ -665,8 +729,7 @@
 		display: block;
 		width: 16px;
 		height: 16px;
-		margin-inline-start: 6px;
-		vertical-align: middle;
+		margin-inline-start: var(--mip-menu-icon-margin);
 		}
 
 	#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_show-badge:not([checked=true]) > label,
@@ -674,7 +737,7 @@
 	#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_open-manager > label,
 	#toolbar-context-menu #_7a7a4a92-a2a0-41d1-9fd7-1e92480d612d_-menuitem-_open-options > label {
 
-		margin-inline-start: -20px !important;
+		margin-inline-start: var(--mip-menu-label-margin) !important;
 		}
 
 }
