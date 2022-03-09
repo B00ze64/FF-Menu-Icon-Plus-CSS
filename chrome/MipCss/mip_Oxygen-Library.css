@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.6 (MIP/CSS)
+ * Menu Icon Plus CSS v2.6.1 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -299,7 +299,8 @@ menuitem[command="downloadsCmd_copyLocation"] > label {
 #placesContext_delete::before,
 #placesContext_deleteBookmark::Before,
 #placesContext_deleteFolder::Before,
-#placesContext_delete_history::before {
+#placesContext_delete_history::before,
+menuitem.downloadDeleteFileMenuItem::Before {
 
 /*	content: url("../MipImages/Oxygen/oxygen_Recycle.png"); */
 	content: url("../MipImages/Oxygen/oxygen_Delete.png");
@@ -314,7 +315,8 @@ menuitem[command="downloadsCmd_copyLocation"] > label {
 #placesContext_delete[disabled=true]::before,
 #placesContext_deleteBookmark[disabled=true]::Before,
 #placesContext_deleteFolder[disabled=true]::Before,
-#placesContext_delete_history[disabled=true]::before {
+#placesContext_delete_history[disabled=true]::before,
+menuitem.downloadDeleteFileMenuItem[disabled=true]::Before {
 
 	opacity: .4;
 	}
@@ -323,7 +325,8 @@ menuitem[command="downloadsCmd_copyLocation"] > label {
 #placesContext_delete > label,
 #placesContext_deleteBookmark > label,
 #placesContext_deleteFolder > label,
-#placesContext_delete_history > label {
+#placesContext_delete_history > label,
+menuitem.downloadDeleteFileMenuItem > label {
 
 	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}

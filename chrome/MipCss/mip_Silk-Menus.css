@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.6 (MIP/CSS)
+ * Menu Icon Plus CSS v2.6.1 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -636,6 +636,7 @@ menuitem.searchbar-paste-and-search > label {
 #placesContext_deleteBookmark::Before,
 #placesContext_deleteFolder::Before,
 menuitem[cmd="cmd_delete"]::Before,
+menuitem.downloadDeleteFileMenuItem::Before,
 #textbox-contextmenu menuitem[command="cmd_delete"]::Before {
 
 /*	content: url("../MipImages/Silk/silk_Recycle.png"); */
@@ -655,6 +656,7 @@ menuitem[cmd="cmd_delete"]::Before,
 #placesContext_deleteBookmark[disabled=true]::Before,
 #placesContext_deleteFolder[disabled=true]::Before,
 menuitem[cmd="cmd_delete"][disabled=true]::Before,
+menuitem.downloadDeleteFileMenuItem[disabled=true]::Before,
 #textbox-contextmenu menuitem[command="cmd_delete"][disabled=true]::Before {
 
 	opacity: 0.4;
@@ -668,6 +670,7 @@ menuitem[cmd="cmd_delete"][disabled=true]::Before,
 #placesContext_deleteBookmark > label,
 #placesContext_deleteFolder > label,
 menuitem[cmd="cmd_delete"] > label,
+menuitem.downloadDeleteFileMenuItem > label,
 #textbox-contextmenu menuitem[command="cmd_delete"] > label {
 
 	margin-inline-start: var(--mip-menu-label-margin) !important;
