@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.6,1 (MIP/CSS)
+ * Menu Icon Plus CSS v2.6.2 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -63,7 +63,7 @@
  *
  ********************************************************************************/
 
-@media (-moz-os-version: windows-win7) or (-moz-os-version: windows-win8) {
+@media (-moz-platform: windows-win7),(-moz-platform: windows-win8) {
 
 	/* Prevent vertical arrows in BMB menu */
 
@@ -103,7 +103,7 @@
 		}
 	}
 
-@media (-moz-os-version: windows-win10) or (-moz-os-version: windows-win11) {
+@media (-moz-platform: windows-win10),(-moz-platform: windows-win11) {
 
 	:root {
 		--mip-menu-icon-margin: 0px;
@@ -2453,7 +2453,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	 fill: none !important;
 	}
 
-@media (-moz-os-version: windows-win10) or (-moz-os-version: windows-win11) {
+@media (-moz-platform: windows-win10),(-moz-platform: windows-win11) {
 
 	#fileMenu-restart-item .menu-iconic-icon {
 
