@@ -839,6 +839,29 @@ menuitem[command="downloadsCmd_openReferrer"] > label {
 
 /********************************************************************************
  *
+ * CONTAINERS
+ *
+ ********************************************************************************/
+
+/* Bookmarks Context Menu *******************************************************/
+
+#placesContext_open\:newcontainertab::Before {
+
+	content: url("../MipImages/Fugue/fugue_Theme.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#placesContext_open\:newcontainertab > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
+
+/********************************************************************************
+ *
  * Checkmarks
  *
  ********************************************************************************/

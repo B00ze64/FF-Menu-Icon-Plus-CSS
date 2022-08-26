@@ -2970,6 +2970,7 @@ menuitem[command="Browser:OpenAboutContainers"]::Before { /* #new-tab-button, #n
 
 #_testpilot-containers-menuitem-_open-bookmark-in-container-tab > .menu-iconic-left > image { display: none !important; }
 
+#placesContext_open\:newcontainertab::Before,
 #_testpilot-containers-menuitem-_open-bookmark-in-container-tab::Before {
 
 	content: url("../MipImages/Fugue/fugue_Theme.png");
@@ -2983,6 +2984,11 @@ menuitem[command="Browser:OpenAboutContainers"]::Before { /* #new-tab-button, #n
 #_testpilot-containers-menuitem-_open-bookmark-in-container-tab > label {
 
 	margin-inline-start: var(--mip-iconreplace-label) !important;
+	}
+
+#placesContext_open\:newcontainertab > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /* No Containers ****************************************************************/
@@ -3840,6 +3846,29 @@ menuitem[data-l10n-id="toolbar-context-menu-view-customize-toolbar-2"] > label {
 #context-bookmarkpage[disabled=true] image {
 
 	opacity: 0.4;
+	}
+
+/********************************************************************************
+ *
+ * CONTAINERS
+ *
+ ********************************************************************************/
+
+/* Bookmarks Context Menu *******************************************************/
+
+#placesContext_open\:newcontainertab::Before {
+
+	content: url("../MipImages/Fugue/fugue_Theme.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#placesContext_open\:newcontainertab > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
 /********************************************************************************
