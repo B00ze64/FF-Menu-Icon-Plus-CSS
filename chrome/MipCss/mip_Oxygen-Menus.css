@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.6.3 (MIP/CSS)
+ * Menu Icon Plus CSS v2.6.4 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -1760,6 +1760,23 @@ menuitem[command="downloadsCmd_openReferrer"] > label {
  * TOOLS MENU
  *
  ********************************************************************************/
+
+/* Firefox View FF106 ***********************************************************/
+
+#menu_openFirefoxView::Before {
+
+	content: url("../MipImages/FF/FIREFOX-78-icon16.png");
+	
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+#menu_openFirefoxView > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
 
 /* AddOns ***********************************************************************/
 

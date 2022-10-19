@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.6.2 (MIP/CSS)
+ * Menu Icon Plus CSS v2.6,1 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -2080,7 +2080,6 @@ menuitem[data-l10n-id="toolbar-context-menu-report-extension"] > label {
 
 #aboutName::Before {
 
-/*	content: url("chrome://browser/skin/welcome-back.svg"); */
 	content: url("chrome://global/skin/icons/info.svg");
 
 	display: block;
