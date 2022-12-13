@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.6.4 (MIP/CSS)
+ * Menu Icon Plus CSS v2.6.5 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -121,12 +121,13 @@
 		--mip-iconreplace-label: 0px;
 		}
 
-	menupopup menuitem,
+/*	I think this was for high-dpi screens, does not appear to be needed for v108 and actually breaks the menus...
+	menupopup menuitem, 
 	menupopup menu {
 
-/*		min-height: 16px !important; */
+		min-height: 16px !important;
 		max-height: 15px !important;
-		}
+		} */
 
 	menupopup:not([needsgutter]) menuitem:not(.menuitem-iconic, [checked="true"]) > label,
 	menupopup:not([needsgutter]) menu:not([icon], .menu-iconic) > label {
