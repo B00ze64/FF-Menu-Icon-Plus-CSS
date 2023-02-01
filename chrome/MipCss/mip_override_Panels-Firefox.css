@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.4.1 (MIP/CSS)
+ * Menu Icon Plus CSS v2.6.6 (MIP/CSS)
  * Add Icons To Firefox Standard Panels
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -259,8 +259,8 @@
 	}
 
 /* #appmenu-developer-tools-view .subviewbutton:nth-child(2) { */
-   #PanelUI-developer-tools .subviewbutton[oncommand="switchToTabHavingURI('about:performance', true)"],
-   #appmenu-developer-tools-view .subviewbutton[oncommand="switchToTabHavingURI('about:performance', true)"] {  /* Task Manager */
+   #PanelUI-developer-tools .subviewbutton[oncommand="switchToTabHavingURI('about:processes', true)"],
+   #appmenu-developer-tools-view .subviewbutton[oncommand="switchToTabHavingURI('about:processes', true)"] {  /* Task Manager */
 
 	list-style-image: url("../MipImages/FF/tool-profiler.png");
 	}
