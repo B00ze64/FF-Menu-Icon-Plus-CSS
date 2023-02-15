@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.6.5 (MIP/CSS)
+ * Menu Icon Plus CSS v2.6.7 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -123,7 +123,7 @@
  ********************************************************************************/
 
 /* Replace Bookmarks Organizer Icon *********************************************/
-
+/*
 	#menu_ToolsPopup menuitem[label="Open Bookmarks Organizer"] > hbox.menu-iconic-left { display: none !important; }
 
 	#menu_ToolsPopup menuitem[label="Open Bookmarks Organizer"]::Before {
@@ -133,7 +133,7 @@
 		content: url("../MipImages/Fugue/fugue_Bookmarks-Opened.png");
 		content: url("../MipImages/Silk/silk_Bookmarks-Opened.png");
 		content: url("../MipImages/Tango/tango_Bookmarks-Organize.png");
-		*/
+
 		content: url("../MipImages/Oxygen/oxygen_Bookmarks-Organize.png");
 
 		display: block;
@@ -146,6 +146,7 @@
 
 		margin-inline-start: var(--mip-checkmark-label-margin) !important;
 		}
+*/
 
 /********************************************************************************
  *

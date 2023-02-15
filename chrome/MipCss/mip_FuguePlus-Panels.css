@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.6.6 (MIP/CSS)
+ * Menu Icon Plus CSS v2.6.7 (MIP/CSS)
  * Add Icons To Firefox Standard Panels
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -146,8 +146,8 @@
 
 #appMenu-multiView .subviewbutton::before,
 #appMenu-proton-update-banner::before,
-#downloadsHistory .button-icon,
-.subviewbutton > image {
+#downloadsHistory .button-icon {
+/* .subviewbutton > image { */
 
 	fill: currentColor !important;
 	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
