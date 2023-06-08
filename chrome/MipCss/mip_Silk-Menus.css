@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.6.5 (MIP/CSS)
+ * Menu Icon Plus CSS v2.6.8 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -1878,6 +1878,23 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
  * SYNC / DEVICES
  *
  ********************************************************************************/
+
+/* Help Menu Switch Device ******************************************************/
+
+#helpSwitchDevice::Before {
+
+	content: url("../MipImages/Fugue/fugue_MobilePhone.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+		}
+
+#helpSwitchDevice > label {
+
+	margin-inline-start: var(--mip-menu-label-margin) !important;
+	}
 
 /* Sync Setup *******************************************************************/
 

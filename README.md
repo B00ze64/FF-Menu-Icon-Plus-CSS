@@ -4,7 +4,6 @@
 **Panels are here!** Most of the panels code comes from:
 
 * Black7375's (MS_Y) Firefox-UI-Fix project (https://github.com/black7375/Firefox-UI-Fix).
-* Some of the SVG icons (SVG Theme) also come from Black7375's project.
 * The Avatar, and the Sync icon preceding the Sync Now label in the panels, would definitively NOT be here without that project. If you are not using the Firefox menus, and are using SVG icons, head over to Firefox-UI-Fix!
 
 **Menu Icon Plus CSS** is a bunch of CSS files (and images) that you *@import* in your *userChrome.css* and *userContent.css* files in Firefox to add icons to the Firefox interface. It styles every menuitem that exists in XUL, and thanks to Black7375, it now also styles the panels (those white-background menus, like the hamburger button).
@@ -23,13 +22,13 @@ Besides copying all the project's files correctly in your profile/chrome folder 
 
 # Supported Versions
 
-This project began with Firefox 78 if I recall correctly. Adjustments were made as Firefox evolved. Previous menus are still supported, but some icons might no longer work on previous versions. This is especially true for the SVG theme, where I've had to adjust to Mozilla moving and renaming icons.
+This project began with Firefox 78 if I recall correctly. Adjustments were made as Firefox evolved. Previous menus are still supported, but some icons might no longer work on previous versions.
 
-This project is currently tested on Windows 7/10 with the Light Theme, where the PNG images look really good. If you use the Dark Theme, you might prefer the SVG icons. The same for very high DPI screens with 125% scaling or more, as SVG scales really well; PNG icons are resized instead of scaled on high DPI screens and they become a little blurry.
+This project is currently tested on Windows 10 with the Light Theme, where the PNG images look really good.
 
 # The Icon Themes
 
-The original Menu Icon Plus XUL extension included 5 themes, and **Menu Icon Plus CSS (MIP/CSS)** includes all 5, plus 3 more: There is a **Firefox SVG** theme which uses exclusively built-in Firefox SVG icons, a **Firefox** "Theme" which you can use to override icons from other themes with the old PNG icons from Firefox 24 and 52, and **Fugue Plus** which is a mix of Fugue and whatever icon I find better looking from the other themes. I have tested all of them when I first created their CSS, but the only theme I've really spent a lot of time on is **Fugue Plus**, and it's the only one I really test when I do updates. You are encouraged to open issues and make corrections or suggestions, especially for **Firefox SVG**, which I am only keeping working and not looking at Mozilla's new SVG icons as they become available.
+The original Menu Icon Plus XUL extension included 5 themes, and **Menu Icon Plus CSS (MIP/CSS)** includes all 5, plus 2 more: There is a **Firefox** "Theme" which you can use to override icons from other themes with the old PNG icons from Firefox 24 and 52, and **Fugue Plus** which is a mix of Fugue and whatever icon I find better looking from the other themes. I have tested all of them when I first created their CSS, but the only theme I've really spent a lot of time on is **Fugue Plus**, and it's the only one I really test when I do updates. You are encouraged to open issues and make corrections or suggestions.
 
 All the Themes in Alphabetical order: 
 
@@ -39,20 +38,18 @@ All the Themes in Alphabetical order:
     
 2. The **Firefox** Theme (overrides some icons with old FF24/52 ones; Menus can be used alone)
 
-3. The **Firefox SVG** Theme (uses built-in Firefox SVG icons)
+3. **Fugue** icons by Yusuke Kamiyamane (http://p.yusukekamiyamane.com/)
 
-4. **Fugue** icons by Yusuke Kamiyamane (http://p.yusukekamiyamane.com/)
+4. **Fugue Plus** (uses Fugue and Crystal and some other icons)
 
-5. **Fugue Plus** (uses Fugue and Crystal and some other icons)
-
-6. **Oxygen**
+5. **Oxygen**
 
     1. https://web.archive.org/web/20100301151643/https://www.oxygen-icons.org/
     2. https://github.com/pasnox/oxygen-icons-png
 
-7. **Silk** icons by Mark James, Birmingham (UK) (http://www.famfamfam.com/)
+6. **Silk** icons by Mark James, Birmingham (UK) (http://www.famfamfam.com/)
 
-8. **Tango** (http://tango-project.org/)
+7. **Tango** (http://tango-project.org/)
 
 # File Structure
 
@@ -79,8 +76,6 @@ There are a FEW images in the PublicDomain folder that I downloaded off from gen
 
 ### The Crystal Project
 ![preview](preview_Crystal.jpg)
-### Firefox SVG
-![preview](preview_FirefoxSVG.jpg)
 ### Fugue
 ![preview](preview_Fugue.jpg)
 ### Fugue Plus

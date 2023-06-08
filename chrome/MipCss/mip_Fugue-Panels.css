@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.6.7 (MIP/CSS)
+ * Menu Icon Plus CSS v2.6.8 (MIP/CSS)
  * Add Icons To Firefox Standard Panels
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -441,6 +441,16 @@
 	list-style-image: url("../MipImages/Fugue/fugue_HistoryDelete.png");
 	}
 
+#appMenuSearchHistory {
+
+	list-style-image: url("../MipImages/Fugue/fugue_Find.png");
+	}
+
+#appMenu-restoreSession {
+
+	list-style-image: url("../MipImages/Fugue/fugue_RestoreSession.png");
+	}
+
 /********************************************************************************
 /* More Tools Sub-Panel (DevTools)
  ********************************************************************************/
@@ -549,6 +559,11 @@
 
 /*	list-style-image: url("../MipImages/Fugue/fugue_Warning-1.png"); */
 	list-style-image: url("../MipImages/Fugue/fugue_Warning-2.png");
+	}
+
+#appMenu_helpSwitchDevice {
+
+	list-style-image: url("../MipImages/Fugue/fugue_MobilePhone.png");
 	}
 
 #appMenu_aboutName {

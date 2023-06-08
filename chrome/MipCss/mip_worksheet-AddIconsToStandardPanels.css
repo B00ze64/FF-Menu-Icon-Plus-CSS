@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.6.7 (MIP/CSS)
+ * Menu Icon Plus CSS v2.6.8 (MIP/CSS)
  * Add Icons To Firefox Standard Panels
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -769,6 +769,26 @@
 	list-style-image: url("../MipImages/Tango/tango_Sweep.png");
 	}
 
+#appMenuSearchHistory {
+
+	list-style-image: url("chrome://global/skin/icons/search-glass.svg");
+	list-style-image: url("../MipImages/FF/Search-glass-2.png");
+	list-style-image: url("../MipImages/Crystal/crystal_Find.png");
+	list-style-image: url("../MipImages/Fugue/fugue_Find.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Find.png");
+	list-style-image: url("../MipImages/Tango/tango_Find.png");
+	list-style-image: url("../MipImages/Silk/silk_Find.png");
+	}
+
+#appMenu-restoreSession {
+
+	list-style-image: url("chrome://browser/skin/restore-session.svg");
+	list-style-image: url("../MipImages/Crystal/crystal_Session.png");
+	list-style-image: url("../MipImages/Oxygen/oxygen_Session.png");
+	list-style-image: url("../MipImages/Fugue/fugue_RestoreSession(silk).png");
+	list-style-image: url("../MipImages/Fugue/fugue_RestoreSession.png");
+	}
+
 /********************************************************************************
 /* More Tools Sub-Panel (DevTools)
  ********************************************************************************/
@@ -1034,6 +1054,12 @@
 
 	list-style-image: url("../MipImages/FF/warning-16-XP.png");
 	list-style-image: url("../MipImages/FF/warning-16.png");
+	}
+
+#appMenu_helpSwitchDevice {
+
+	list-style-image: url("../MipImages/PublicDomain/Icon-Mobile-Phone.png");
+	list-style-image: url("../MipImages/Fugue/fugue_MobilePhone.png");
 	}
 
 #appMenu_aboutName {
