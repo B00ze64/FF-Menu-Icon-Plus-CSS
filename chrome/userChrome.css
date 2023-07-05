@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.0 (MIP/CSS)
+ * Menu Icon Plus CSS v2.7 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus/Panels
  * userChrome.css
  *
@@ -69,8 +69,6 @@
 /* @import "./MipCss/mip_Tango-Panels.css";			/* Firefox Panels Tango   Theme */
 
 /* @import "./MipCss/mip_Firefox-Menus.css";			/* Use this alone or after one of the other themes to use some of the old Firefox icons */
-/* @import "./MipCss/mip_FirefoxSVG-Menus.css";			/* Use this alone or after one of the other themes to use mostly built-in SVG icons */
-/* @import "./MipCss/mip_FirefoxSVG-Panels.css";		/* Use this alone or after one of the other themes to use mostly built-in SVG icons */
 
 /* OVERRIDES MUST BE USED AFTER A COMPLETE THEME */
 /* Overrides should be used in both userChrome/userContent if using Library-In-A-Tab */

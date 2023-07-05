@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.6 (MIP/CSS)
+ * Menu Icon Plus CSS v2.7 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus/Panels
  * userContent.css
  *
@@ -63,7 +63,6 @@
 /* @import "./MipCss/mip_Tango-Library.css";		/* Library-In-A-Tab Tango Theme */
 
 /* @import "./MipCss/mip_Firefox-Library.css";		/* Use this alone or after one of the other themes to use some of the old Firefox icons */
-/* @import "./MipCss/mip_FirefoxSVG-Library.css";	/* Use this alone or after one of the other themes to use mostly built-in SVG icons */
 
 /* OVERRIDES MUST BE USED AFTER A COMPLETE THEME */
 /* Overrides should be used in both userChrome/userContent if using Library-In-A-Tab */
@@ -78,4 +77,3 @@
 /* @import "./MipCss/mip_override_Privacy-Firefox.css";		/* Private Browsing using the old Firefox PNG icon */
 
 /* @import "./MipCss/mip_worksheet-AddIconsToLibraryInTab.css";	/* This is my worksheet, it runs Fugue Plus */
-
