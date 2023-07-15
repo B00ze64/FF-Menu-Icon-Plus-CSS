@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.6.8 (MIP/CSS)
+ * Menu Icon Plus CSS v2.7 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -56,80 +56,6 @@
 		url("chrome://browser/content/places/historySidebar.xhtml"),
 		url("chrome://browser/content/places/bookmarksSidebar.xhtml"),
 		url("chrome://browser/content/syncedtabs/sidebar.xhtml") {
-
-/********************************************************************************
- *
- * DPI/OS-DEPENDENT (needs user_pref("media.navigator.enabled", true))
- *
- ********************************************************************************/
-
-@media (-moz-platform: windows-win7),(-moz-platform: windows-win8) {
-
-	/* Prevent vertical arrows in BMB menu */
-
-		:root { --arrowpanel-menuitem-padding: 4px 8px !important; }
-		 menupopup > menuitem, menupopup > menu { padding-block: 0px !important; }
-
-	:root {
-		--mip-menu-icon-margin: 6px;
-		--mip-menu-label-margin: -20px;
-		--mip-checkmark-icon-margin: 6px;
-		--mip-checkmark-label-margin: 10px;
-		--mip-bmb-icon-margin: 1px;
-		--mip-bmb-label-margin: 10px;
-		--mip-iconreplace-label: -20px;
-		}
-
-	@media (min-resolution: 120dpi) {
-	
-		menupopup menuitem,
-		menupopup menu {
-			min-height: 20px !important;
-		}
-
-		:root {
-			--mip-menu-icon-margin: 2px;
-			--mip-menu-label-margin: -16px;
-			--mip-checkmark-icon-margin: 2px;
-			--mip-iconreplace-label: -16px;
-			}
-		}
-	
-	@media (min-resolution: 140dpi) {
-
-		:root {
-			--mip-checkmark-label-margin: 8px;
-			}
-		}
-	}
-
-@media (-moz-platform: windows-win10),(-moz-platform: windows-win11) {
-
-	:root {
-		--mip-menu-icon-margin: 0px;
-		--mip-menu-label-margin: 8px;
-		--mip-checkmark-icon-margin: 0px;
-		--mip-checkmark-label-margin: 8px;
-		--mip-bmb-icon-margin: 0px;
-		--mip-bmb-label-margin: 8px;
-		--mip-iconreplace-label: 0px;
-		}
-
-/*	I think this was for high-dpi screens, does not appear to be needed for v108 and actually breaks the menus...
-	menupopup menuitem, 
-	menupopup menu {
-
-		min-height: 16px !important;
-		max-height: 15px !important;
-		} */
-
-	menupopup[needsgutter] menu:not([icon], .menu-iconic), menupopup[needsgutter] menuitem:not([checked="true"], [icon], .menuitem-iconic) {
-
-		--mip-menu-icon-margin: -24px;
-		--mip-menu-label-margin: 8px;
-		}
-	}
-
 
 /********************************************************************************
  *
@@ -1188,6 +1114,16 @@ menuitem.searchbar-clear-history > label {
 	margin-inline-start: var(--mip-bmb-icon-margin);
 	}
 
+#BMB_searchBookmarks::Before {
+	
+	content: url("../MipImages/Silk/silk_Find.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-bmb-icon-margin);
+	}
+
 #BMB_bookmarksShowAllTop::Before {
 
 	content: url("../MipImages/Silk/silk_Bookmarks-Opened.png");
@@ -1209,6 +1145,7 @@ menuitem.searchbar-clear-history > label {
 	}
 
 #BMB_viewBookmarksSidebar > label,
+#BMB_searchBookmarks > label,
 #BMB_bookmarksShowAllTop > label,
 #BMB_bookmarksShowAll > label {
 
@@ -1713,8 +1650,43 @@ menuitem[data-l10n-id="downloads-cmd-resume"]::Before {
 	margin-inline-start: var(--mip-menu-icon-margin);
 	}
 
+menuitem[data-l10n-id="downloads-cmd-unblock"]::Before {
+
+	content: url("../MipImages/Fugue/fugue_TrafficLightGreen.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+menuitem[data-l10n-id="downloads-cmd-use-system-default"]::Before {
+
+	content: url("../MipImages/Fugue/fugue_Application.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
+menuitem[data-l10n-id="downloads-cmd-always-use-system-default"]:not([checked=true])::Before,
+menuitem[data-l10n-id="downloads-cmd-always-open-similar-files"]:not([checked=true])::Before {
+
+	content: url("../MipImages/Fugue/fugue_ApplicationRun.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-inline-start: var(--mip-menu-icon-margin);
+	}
+
 menuitem[data-l10n-id="downloads-cmd-pause"] > label,
-menuitem[data-l10n-id="downloads-cmd-resume"] > label {
+menuitem[data-l10n-id="downloads-cmd-resume"] > label,
+menuitem[data-l10n-id="downloads-cmd-unblock"] > label,
+menuitem[data-l10n-id="downloads-cmd-use-system-default"] > label,
+menuitem[data-l10n-id="downloads-cmd-always-use-system-default"]:not([checked=true]) > label,
+menuitem[data-l10n-id="downloads-cmd-always-open-similar-files"]:not([checked=true]) > label {
 
 	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}

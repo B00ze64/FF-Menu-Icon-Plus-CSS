@@ -55,6 +55,8 @@
 
 @import "./css/generalui/bookmark_icons_colorized.css"; /* Aris-t2 bookmarks folders [This must appear BEFORE Menu Icon Plus] */
 
+@import "./MipCss/mip_ConfigMenus.css";			/* MUST be included if any of below are used */
+
 /* @import "./MipCss/mip_Crystal-Library.css";		/* Library-In-A-Tab Crystal Theme */
 /* @import "./MipCss/mip_Fugue-Library.css";		/* Library-In-A-Tab Fugue Theme */
    @import "./MipCss/mip_FuguePlus-Library.css";	/* Library-In-A-Tab Fugue+ Theme */

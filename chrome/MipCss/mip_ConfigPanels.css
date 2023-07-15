@@ -1,0 +1,147 @@
+/********************************************************************************
+ * Menu Icon Plus CSS v2.7 (MIP/CSS)
+ * Add Icons To Firefox Menus/Context-Menus
+ *
+ * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
+ *   Project Homepage https://github.com/B00ze64/FF-Menu-Icon-Plus-CSS
+ *   Released under Creative Commons Attribution 4.0 License.
+ *   https://creativecommons.org/licenses/by/4.0/
+ *
+ * - The Original MIP Firefox Extension (c) Justin Rodes http://www.codedawn.com/menu-icons-plus.php
+ * - MOST OF THE PANELS CODE (c) Black7375 (https://github.com/black7375/Firefox-UI-Fix)
+ *
+ * + The icons come from ->
+ *
+ * - Crystal Project	http://www.everaldo.com/
+ *			https://commons.wikimedia.org/wiki/Category:Crystal_Project
+ *			LGPL
+ *
+ * - Fugue Icons	http://p.yusukekamiyamane.com/
+ *			by Yusuke Kamiyamane,
+ *			Creative Commons Attribution 3.0 License.
+ *
+ * - Oxygen Icons	http://www.oxygen-icons.org/ [use Wayback Machine]
+ *			https://github.com/pasnox/oxygen-icons-png
+ *			https://techbase.kde.org/Projects/Oxygen/Licensing
+ *
+ * - Silk Icons		http://www.famfamfam.com/
+ *			Mark James, Birmingham (UK),
+ *			Creative Commons Attribution 2.5 License.
+ *
+ * - Tango Icons	http://tango-project.org/
+ *			Public Domain
+ *
+ * + Contributors ->
+ *
+ *	Aris-t2 (https://github.com/Aris-t2) Figured out how to add icons to the Firefox menus
+ *	Acid-Crash Discovered bug with the Responsive Design SVG icon and suggested the fix for it
+ *	Devtools/Help Menu SVG icons and Panels code by Black7375 (https://github.com/black7375/Firefox-UI-Fix)
+ *
+ * + NOTES:
+ * - TabSize=8
+ *
+ */
+ 
+ @-moz-document	url("chrome://browser/content/browser.xhtml"),
+		url("chrome://browser/content/places/places.xhtml"),
+		url("chrome://browser/content/places/historySidebar.xhtml"),
+		url("chrome://browser/content/places/bookmarksSidebar.xhtml"),
+		url("chrome://browser/content/syncedtabs/sidebar.xhtml") {
+
+/********************************************************************************
+ *
+ * GENERAL PANEL PADDING
+ * Original Code by Black7375 (https://github.com/black7375/Firefox-UI-Fix)
+ *
+ ********************************************************************************/
+
+:root {
+	--arrowpanel-menuicon-padding:		8px;
+	--arrowpanel-menuitem-margin:		0 var(--arrowpanel-menuicon-padding) !important; /* Original: 0 8px */
+	--arrowpanel-menuitem-padding:		4px 8px !important; /* Original: 8px Black7375: 5px */
+	--arrowpanel-menublank-padding:		calc(var(--arrowpanel-menuicon-padding) * 2 + 8px) !important;
+	--arrowpanel-menuimageblank-padding:	calc(var(--arrowpanel-menuitem-padding) - 2px) !important;
+	}
+
+:root[uidensity=compact] {
+
+	--arrowpanel-menuitem-padding: 3px !important; } /* Original: 8px */
+
+:root[uidensity=touch] {
+
+	--arrowpanel-menuitem-padding: 8px !important; } /* Original: 8px */
+
+#downloadsHistory .button-text,
+#widget-overflow toolbarbutton label,
+.subviewbutton > .toolbarbutton-text {
+
+	padding-inline-start: var(--arrowpanel-menuicon-padding) !important;
+	}
+
+.subviewbutton[disabled=true] > image { opacity: 0.4; }
+
+/* Miscellaneous Align (Update Banner, Disabled Images, lines with no image) ****/
+
+#panelMenu_bookmarksMenu .subviewbutton[disabled=true] .toolbarbutton-text,
+#appMenu_historyMenu .subviewbutton[disabled=true] .toolbarbutton-text {
+
+	padding-inline-start: var(--arrowpanel-menublank-padding) !important;
+	}
+
+#appMenu-proton-update-banner {
+
+	margin-bottom: 2px !important;
+	}
+
+#appMenu-proton-update-banner::before {
+
+	margin-inline-start: var(--arrowpanel-menuitem-padding) !important;
+	}
+
+#appMenu-proton-update-banner .toolbarbutton-text {
+
+	margin-inline-start: 0 !important;
+	}
+
+#appMenu-proton-update-banner::before,
+#appMenu-multiView .subviewbutton::before {
+
+	display: -moz-inline-box;
+	margin-inline-end: var(--arrowpanel-menuicon-padding);
+	width:  16px !important;
+	height: 16px !important;
+	}
+
+#appMenu-fxa-status2,
+#appMenu-zoom-controls {
+
+	align-items: center;
+	padding-top:    var(--arrowpanel-menuimageblank-padding) !important;
+	padding-bottom: var(--arrowpanel-menuimageblank-padding) !important;
+	}
+
+#appMenu-zoom-controls::before {
+
+	margin-inline-end: 0 !important;
+	}
+
+#appMenu-proton-addon-banners > .addon-banner-item > .toolbarbutton-icon {
+
+	display: -moz-inline-box !important;
+	margin-inline-start: var(--arrowpanel-menuicon-padding);
+	-moz-box-ordinal-group: 0 !important;
+	}
+
+/* SVG Icon Colors **************************************************************/
+
+#appMenu-multiView .subviewbutton::before,
+#appMenu-proton-update-banner::before,
+#downloadsHistory .button-icon {
+/* .subviewbutton > image { */
+
+	fill: currentColor !important;
+	fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
+	-moz-context-properties: fill !important;
+	}
+}
+

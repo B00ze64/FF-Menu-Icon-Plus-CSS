@@ -53,7 +53,10 @@
  *
  */
 
-@import "./css/generalui/bookmark_icons_colorized.css"; /* Aris-t2 bookmarks folders [This must appear BEFORE Menu Icon Plus] */
+@import "./css/generalui/bookmark_icons_colorized.css";		/* Aris-t2 bookmarks folders [This must appear BEFORE Menu Icon Plus] */
+
+@import "./MipCss/mip_ConfigMenus.css";				/* MUST be included if any of below are used */
+@import "./MipCss/mip_ConfigPanels.css";			/* MUST be included if any of below are used */
 
 /* @import "./MipCss/mip_Crystal-Menus.css";			/* Firefox Menus  Crystal Theme */
 /* @import "./MipCss/mip_Crystal-Panels.css";			/* Firefox Panels Crystal Theme */
@@ -87,4 +90,3 @@
 /* @import "./MipCss/mip_worksheet-AddIconsToStandardMenus.css";	/* This is my worksheet, it runs Fugue Plus */
 /* @import "./MipCss/mip_worksheet-AddIconsToStandardPanels.css";	/* This is my worksheet, it runs Fugue Plus */
    @import "./MipCss/mip_worksheet-AddIconsToExtensions.css";		/* This will style some extensions */
-

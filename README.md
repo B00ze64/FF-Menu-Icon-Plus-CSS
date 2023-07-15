@@ -1,4 +1,4 @@
-# Menu Icon Plus CSS (MIP/CSS) v2.6
+# Menu Icon Plus CSS (MIP/CSS) v2.7
 ## Add Icons To Firefox Menus/Context-Menus/Panels
 
 **Panels are here!** Most of the panels code comes from:
@@ -22,9 +22,7 @@ Besides copying all the project's files correctly in your profile/chrome folder 
 
 # Supported Versions
 
-This project began with Firefox 78 if I recall correctly. Adjustments were made as Firefox evolved. Previous menus are still supported, but some icons might no longer work on previous versions.
-
-This project is currently tested on Windows 10 with the Light Theme, where the PNG images look really good.
+This project began with Firefox 78 if I recall correctly. Adjustments were made as Firefox evolved. Previous menus are still supported, but some icons might no longer work on previous versions. This project is currently tested on Windows 10 with the Light Theme, where the PNG images look really good.
 
 # The Icon Themes
 
@@ -67,6 +65,15 @@ Every theme has up to 3 files, and some override files which only change the pic
 # Installation
 
 Just extract the project into your *Profile/chrome* folder, so that you have *MipCss*, *MipImages* and *image* folders **inside** the *chrome* folder. Use the included *userChrome.css* and *userContent.css* as templates to modify your own. You are EXPECTED to edit the userChrome and userContent files to select WHICH theme you want to use. And as mentionned earlier, you are **strongly encouraged** to install the *bookmark_icons_colorized.css* file from Aris-t2's [CustomCSSforFx](https://github.com/Aris-t2/CustomCSSforFx).
+
+NOTE that starting with v2.7, you need to import 2 additional files in *userChrome.css* (mip_ConfigMenus.css and mip_ConfigPanels.css) and 1 file in *userContent.css* (mip_ConfigMenus.css), preferably before the theme files themselves. So *userChrome.css* should look like this:
+
+`@import "./css/generalui/bookmark_icons_colorized.css";`
+`@import "./MipCss/mip_ConfigMenus.css";`
+`@import "./MipCss/mip_ConfigPanels.css";`
+`@import "./MipCss/mip_FuguePlus-Menus.css";`
+`@import "./MipCss/mip_FuguePlus-Panels.css";`
+`@import "./MipCss/mip_worksheet-AddIconsToExtensions.css";`
 
 # Public Domain Images
 

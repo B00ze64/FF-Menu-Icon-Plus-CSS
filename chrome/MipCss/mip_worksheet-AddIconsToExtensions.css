@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.6.7 (MIP/CSS)
+ * Menu Icon Plus CSS v2.7 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -50,71 +50,6 @@
  */
 
 @-moz-document url("chrome://browser/content/browser.xhtml") {
-
-/********************************************************************************
- *
- * DPI/OS-DEPENDENT (needs user_pref("media.navigator.enabled", true))
- *
- ********************************************************************************/
-
-@media (-moz-platform: windows-win7),(-moz-platform: windows-win8) {
-
-	:root {
-		--mip-menu-icon-margin: 6px;
-		--mip-menu-label-margin: -20px;
-		--mip-checkmark-icon-margin: 6px;
-		--mip-checkmark-label-margin: 10px;
-		--mip-iconreplace-label: -20px;
-		}
-
-	@media (min-resolution: 120dpi) {
-
-		menupopup menuitem,
-		menupopup menu {
-			min-height: 20px !important;
-		}
-
-		:root {
-			--mip-menu-icon-margin: 2px;
-			--mip-menu-label-margin: -16px;
-			--mip-checkmark-icon-margin: 2px;
-			--mip-iconreplace-label: -16px;
-			}
-		}
-
-	@media (min-resolution: 140dpi) {
-
-		:root {
-			--mip-checkmark-label-margin: 8px;
-			}
-		}
-	}
-
-@media (-moz-platform: windows-win10),(-moz-platform: windows-win11) {
-
-	:root {
-		--mip-menu-icon-margin: 0px;
-		--mip-menu-label-margin: 8px;
-		--mip-checkmark-icon-margin: 0px;
-		--mip-checkmark-label-margin: 8px;
-		--mip-iconreplace-label: 0px;
-		}
-
-/*	I think this was for high-dpi screens, does not appear to be needed for v108 and actually breaks the menus...
-	menupopup menuitem, 
-	menupopup menu {
-
-		min-height: 16px !important;
-		max-height: 15px !important;
-		} */
-
-	menupopup[needsgutter] menu:not([icon], .menu-iconic), menupopup[needsgutter] menuitem:not([checked="true"], [icon], .menuitem-iconic) {
-
-		--mip-menu-icon-margin: -24px;
-		--mip-menu-label-margin: 8px;
-		}
-	}
-
 
 /********************************************************************************
  *
