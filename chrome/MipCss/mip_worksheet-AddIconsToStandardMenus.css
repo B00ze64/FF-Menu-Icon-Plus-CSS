@@ -880,6 +880,8 @@ menuitem[cmd="cmd_selectAll"] > label,
 /* Find (In this page...) *******************************************************/
 
 #menu_find::Before,
+#menu_searchHistory::Before,
+#menu_searchBookmarks::Before,
 #context-searchselect::Before,
 #context-searchselect-private::Before {
 
@@ -926,6 +928,8 @@ menuitem[cmd="cmd_selectAll"] > label,
 
 #menu_find > label,
 #menu_findAgain > label,
+#menu_searchHistory > label,
+#menu_searchBookmarks > label,
 #context-searchselect > label,
 #context-searchselect-private > label {
 
@@ -1027,8 +1031,8 @@ menu#viewToolbarsMenu::Before {
 	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
 
-/* Zoom/Zoom-In/Zoom-Out/Zoom-Reset**********************************************/
-
+/* Zoom/
+Zoom-In/Zoom-Out/Zoom-Reset**********************************************/
 #viewFullZoomMenu::Before {
 
 	content: url("../MipImages/Crystal/crystal_Zoom.png");
@@ -1564,7 +1568,7 @@ menuitem.searchbar-clear-history > label {
 	}
 
 #BMB_searchBookmarks::Before {
-	
+
 	content: url("chrome://global/skin/icons/search-glass.svg");
 	content: url("../MipImages/FF/Search-glass-2.png");
 
@@ -2504,6 +2508,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 /* Page Information (frame/image/page) ******************************************/
 
 #menu_pageInfo::Before,
+#context-menu_pageInfo::before,
 #context-viewinfo::Before,
 #context-viewframeinfo::Before,
 #context-viewimageinfo::Before,
@@ -2529,6 +2534,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	}
 
 #menu_pageInfo > label,
+#context-menu_pageInfo > label,
 #context-viewinfo > label,
 #context-viewframeinfo > label,
 #context-viewimageinfo > label,
@@ -3457,6 +3463,7 @@ menuitem[data-l10n-id="toolbar-context-menu-remove-extension"] > label {
 	-moz-image-region: auto;
 	 transform: none !important;
 	 fill: none !important;
+	 margin-inline-start: 0 !important;
 }
 
 @media (-moz-platform: windows-win10),(-moz-platform: windows-win11) {

@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.7 (MIP/CSS)
+ * Menu Icon Plus CSS v2.8 (MIP/CSS)
  * Add Icons To Firefox Standard Panels
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -64,31 +64,56 @@
  *
  ********************************************************************************/
 
-#sidebarMenu-popup.cui-widget-panel #sidebar-reverse-position[label$="Right"] > image.toolbarbutton-icon {
+#sidebar-reverse-position[label$="Right"]::before {
 
-	list-style-image: url("../MipImages/Fugue/fugue_Sidebar-Right.png");
+	content: url("../MipImages/Fugue/fugue_Sidebar-Right.png");
+
+	display: block;
 	width: 16px;
 	height: 16px;
+	padding-inline-end: 8px;
 	}
 
-#sidebarMenu-popup.cui-widget-panel #sidebar-reverse-position[label$="Left"] > image.toolbarbutton-icon {
+#sidebar-reverse-position[label$="Left"]::before {
 
-	list-style-image: url("../MipImages/Fugue/fugue_Sidebar-Left.png");
+	content: url("../MipImages/Fugue/fugue_Sidebar-Left.png");
+
+	display: block;
 	width: 16px;
 	height: 16px;
+	padding-inline-end: 8px;
 	}
 
-#sidebarMenu-popup.cui-widget-panel toolbarbutton[data-l10n-id="sidebar-menu-close"] > image.toolbarbutton-icon {
+#sidebarMenu-popup menuitem[data-l10n-id="sidebar-menu-close"]::before {
 
-	list-style-image: url("../MipImages/Fugue/fugue_ClearAll.png");
+	content: url("../MipImages/Fugue/fugue_ClearAll.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	padding-inline-end: 8px;
 	}
 
-#sidebar-switcher-bookmarks.subviewbutton {
+#sidebar-switcher-bookmarks::Before {
+	
+	content: url("../MipImages/Fugue/fugue_Bookmarks-Closed.png");
 
-	list-style-image: url("../MipImages/Fugue/fugue_Bookmarks-Closed.png");
+	display: block;
+	width: 16px;
+	height: 16px;
+	padding-inline-end: 8px;
 	}
 
-#sidebar-switcher-history.subviewbutton,
+#sidebar-switcher-history::Before {
+
+	content: url("../MipImages/FF/history-XP.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	padding-inline-end: 8px;
+	}
+
 #appMenu-history-button,
 #appMenu-library-history-button,
 #PanelUI-historyMore {
@@ -96,9 +121,14 @@
 	list-style-image: url("../MipImages/FF/history-XP.png");
 	}
 
-#sidebar-switcher-tabs.subviewbutton {
+#sidebar-switcher-tabs::Before {
 
-	list-style-image: url("../MipImages/Fugue/fugue_Sync.png");
+	content:  url("../MipImages/Fugue/fugue_Sync.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	padding-inline-end: 8px;
 	}
 
 /********************************************************************************

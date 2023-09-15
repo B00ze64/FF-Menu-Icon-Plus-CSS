@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.7 (MIP/CSS)
+ * Menu Icon Plus CSS v2.8 (MIP/CSS)
  * Add Icons To Firefox Standard Panels
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -64,36 +64,43 @@
  *
  ********************************************************************************/
 
-#sidebarMenu-popup.cui-widget-panel #sidebar-reverse-position[label$="Right"] > image.toolbarbutton-icon {
+#sidebar-reverse-position[label$="Right"]::before {
 
-	list-style-image: url("../MipImages/FF/dock-side-right.svg");
-	list-style-image: url("../MipImages/Silk/silk_Sidebar-Right.png");
+	content: url("../MipImages/FF/dock-side-right.svg");
+	content: url("../MipImages/Silk/silk_Sidebar-Right.png");
+	content: url("../MipImages/Fugue/fugue_Sidebar-Right.png");
 
-	list-style-image: url("../MipImages/Fugue/fugue_Sidebar-Right.png");
+	display: block;
 	width: 16px;
 	height: 16px;
+	padding-inline-end: 8px;
 	}
 
-#sidebarMenu-popup.cui-widget-panel #sidebar-reverse-position[label$="Left"] > image.toolbarbutton-icon {
+#sidebar-reverse-position[label$="Left"]::before {
 
-	list-style-image: url("../MipImages/FF/dock-side-left.svg");
-	list-style-image: url("../MipImages/Silk/silk_Sidebar-Left.png");
+	content: url("../MipImages/FF/dock-side-left.svg");
+	content: url("../MipImages/Silk/silk_Sidebar-Left.png");
+	content: url("../MipImages/Fugue/fugue_Sidebar-Left.png");
 
-	list-style-image: url("../MipImages/Fugue/fugue_Sidebar-Left.png");
+	display: block;
 	width: 16px;
 	height: 16px;
+	padding-inline-end: 8px;
 	}
 
-#sidebarMenu-popup.cui-widget-panel toolbarbutton[data-l10n-id="sidebar-menu-close"] > image.toolbarbutton-icon {
+#sidebarMenu-popup menuitem[data-l10n-id="sidebar-menu-close"]::before {
 
-	list-style-image: url("chrome://global/skin/icons/close.svg");
+	content: url("chrome://global/skin/icons/close.svg");
+	content: url("../MipImages/Crystal/crystal_ClearAll.png");
+	content: url("../MipImages/Oxygen/oxygen_ClearAll.png");
+	content: url("../MipImages/Tango/tango_ClearAll.png");
+	content: url("../MipImages/Silk/silk_ClearAll.png");
+	content: url("../MipImages/Fugue/fugue_ClearAll.png");
 
-	list-style-image: url("../MipImages/Crystal/crystal_ClearAll.png");
-	list-style-image: url("../MipImages/Oxygen/oxygen_ClearAll.png");
-	list-style-image: url("../MipImages/Tango/tango_ClearAll.png");
-	list-style-image: url("../MipImages/Silk/silk_ClearAll.png");
-
-	list-style-image: url("../MipImages/Fugue/fugue_ClearAll.png");
+	display: block;
+	width: 16px;
+	height: 16px;
+	padding-inline-end: 8px;
 	}
 
 /*
@@ -104,20 +111,44 @@
 	}
 */
 
-#sidebar-switcher-bookmarks.subviewbutton {
+#sidebar-switcher-bookmarks::Before {
+	
+	content: url("chrome://browser/skin/sidebars.svg");
+	content: url("../MipImages/FF/application.png");
+/*	content: url("../MipImages/FF/toolbarButton-sidebarToggle.png"); /* Alternate */
+	content: url("../MipImages/Crystal/crystal_Bookmarks.png");
+	content: url("../MipImages/Oxygen/oxygen_Bookmarks.png");
+	content: url("../MipImages/Silk/silk_Bookmarks-Closed.png");
+	content: url("../MipImages/Tango/tango_Bookmarks.png");
 
-	list-style-image: url("chrome://browser/skin/sidebars.svg");
-	list-style-image: url("../MipImages/FF/application.png");
-/*	list-style-image: url("../MipImages/FF/toolbarButton-sidebarToggle.png"); /* Alternate */
-	list-style-image: url("../MipImages/Crystal/crystal_Bookmarks.png");
-	list-style-image: url("../MipImages/Oxygen/oxygen_Bookmarks.png");
-	list-style-image: url("../MipImages/Silk/silk_Bookmarks-Closed.png");
-	list-style-image: url("../MipImages/Tango/tango_Bookmarks.png");
+	content: url("../MipImages/Fugue/fugue_Bookmarks-Closed.png");
 
-	list-style-image: url("../MipImages/Fugue/fugue_Bookmarks-Closed.png");
+	display: block;
+	width: 16px;
+	height: 16px;
+	padding-inline-end: 8px;
 	}
 
-#sidebar-switcher-history.subviewbutton,
+#sidebar-switcher-history::Before {
+
+	content: url("chrome://browser/skin/history.svg");
+	content: url("../MipImages/FF/history.png");
+
+	content: url("../MipImages/Crystal/crystal_History.png");
+	content: url("../MipImages/Fugue/fugue_History.png");
+	content: url("../MipImages/Oxygen/oxygen_History.png");
+	content: url("../MipImages/Silk/silk_History.png");
+	content: url("../MipImages/Silk/silk_HistoryClock.png"); /* Alternative */
+	content: url("../MipImages/Tango/tango_History.png");
+
+	content: url("../MipImages/FF/history-XP.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	padding-inline-end: 8px;
+	}
+
 #appMenu-history-button,
 #appMenu-library-history-button,
 #PanelUI-historyMore {
@@ -135,17 +166,22 @@
 	list-style-image: url("../MipImages/FF/history-XP.png");
 	}
 
-#sidebar-switcher-tabs.subviewbutton {
+#sidebar-switcher-tabs::Before {
 
-	list-style-image: url("../MipImages/FF/sync.svg");
-	list-style-image: url("../MipImages/FF/sync-16.png");
-	list-style-image: url("../MipImages/Crystal/crystal_Sync.png");
-	list-style-image: url("../MipImages/Oxygen/oxygen_Sync.png");
-	list-style-image: url("../MipImages/Silk/silk_Reload.png");
-	list-style-image: url("../MipImages/Tango/tango_Sync-bright.png");
-	list-style-image: url("../MipImages/Tango/tango_Sync.png");
+	content:  url("../MipImages/FF/sync.svg");
+	content:  url("../MipImages/FF/sync-16.png");
+	content:  url("../MipImages/Crystal/crystal_Sync.png");
+	content:  url("../MipImages/Oxygen/oxygen_Sync.png");
+	content:  url("../MipImages/Silk/silk_Reload.png");
+	content:  url("../MipImages/Tango/tango_Sync-bright.png");
+	content:  url("../MipImages/Tango/tango_Sync.png");
 
-	list-style-image: url("../MipImages/Fugue/fugue_Sync.png");
+	content:  url("../MipImages/Fugue/fugue_Sync.png");
+
+	display: block;
+	width: 16px;
+	height: 16px;
+	padding-inline-end: 8px;
 	}
 
 /********************************************************************************

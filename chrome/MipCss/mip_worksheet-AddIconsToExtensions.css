@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.7 (MIP/CSS)
+ * Menu Icon Plus CSS v2.8 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -239,7 +239,8 @@
 	#simple-tab-groups_drive4ik-menuitem-_stg-move-tab-parent > hbox.menu-iconic-left { display: none !important; }
 
 	#simple-tab-groups_drive4ik-menuitem-_stg-move-tab-parent::Before,
-	#menu_simple-tab-groups_drive4ik-sidebar-action:not([checked=true])::Before {
+	#menu_simple-tab-groups_drive4ik-sidebar-action:not([checked=true])::Before,
+        #menubar_menu_simple-tab-groups_drive4ik-sidebar-action:not([checked=true])::Before {
 
 /*		content: url("../MipImages/Misc/STG-TabGroups.svg"); */
 		content: url("../MipImages/Fugue/fugue_SimpleTabGroups.png");
@@ -255,7 +256,8 @@
 		margin-inline-start: var(--mip-checkmark-label-margin) !important;
 		}
 
-	#menu_simple-tab-groups_drive4ik-sidebar-action:not([checked=true]) > label {
+	#menu_simple-tab-groups_drive4ik-sidebar-action:not([checked=true]) > label, 
+        #menubar_menu_simple-tab-groups_drive4ik-sidebar-action:not([checked=true]) > label {
 
 		margin-inline-start: var(--mip-iconreplace-label) !important;
 		}
@@ -264,6 +266,23 @@
 
 /*		list-style-image: url("../MipImages/Misc/STG-TabGroups.svg") !important; */
 		list-style-image: url("../MipImages/Fugue/fugue_SimpleTabGroups.png") !important;
+		}
+
+/* Restore icon in view sidebar menu for bookmarksearchplus2 */
+
+	#menubar_menu_bookmarksearchplus2_aafn_org-sidebar-action:not([checked=true])::Before {
+
+		content: url("../MipImages/Misc/bookmarksearchplus2_MenuIcon.png");
+
+		display: block;
+		width: 16px;
+		height: 16px;
+		margin-inline-start: var(--mip-checkmark-icon-margin);
+		}
+
+	#menubar_menu_bookmarksearchplus2_aafn_org-sidebar-action:not([checked=true]) > label {
+
+		margin-inline-start: var(--mip-iconreplace-label) !important;
 		}
 
 /********************************************************************************

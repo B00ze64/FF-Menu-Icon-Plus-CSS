@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.7 (MIP/CSS)
+ * Menu Icon Plus CSS v2.8 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -378,6 +378,8 @@ menuitem.searchbar-paste-and-search > label {
 /* Find (In this page...) *******************************************************/
 
 #menu_find::Before,
+#menu_searchHistory::Before,
+#menu_searchBookmarks::Before,
 #context-searchselect::Before,
 #context-searchselect-private::Before {
 
@@ -407,6 +409,8 @@ menuitem.searchbar-paste-and-search > label {
 
 #menu_find > label,
 #menu_findAgain > label,
+#menu_searchHistory > label,
+#menu_searchBookmarks > label,
 #context-searchselect > label,
 #context-searchselect-private > label {
 
@@ -890,6 +894,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 /* Page Information (frame/image/page) ******************************************/
 
 #menu_pageInfo::Before,
+#context-menu_pageInfo::before,
 #context-viewinfo::Before,
 #context-viewframeinfo::Before,
 #context-viewimageinfo::Before,
@@ -904,6 +909,7 @@ menuitem[data-l10n-id="toolbar-context-menu-manage-extension"] > label {
 	}
 
 #menu_pageInfo > label,
+#context-menu_pageInfo > label,
 #context-viewinfo > label,
 #context-viewframeinfo > label,
 #context-viewimageinfo > label,
