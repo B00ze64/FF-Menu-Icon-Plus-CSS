@@ -1,4 +1,4 @@
-# Menu Icon Plus CSS (MIP/CSS) v2.7
+# Menu Icon Plus CSS (MIP/CSS) v2.9
 ## Add Icons To Firefox Menus/Context-Menus/Panels
 
 **Panels are here!** Most of the panels code comes from:

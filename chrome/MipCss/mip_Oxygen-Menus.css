@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.8 (MIP/CSS)
+ * Menu Icon Plus CSS v2.9 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -453,7 +453,9 @@ menuitem[cmd="cmd_copy"]::Before,
 #context-copyvideourl::Before,
 #downloadsContextMenu menuitem[command="cmd_copy"]::Before,
 menuitem[command="downloadsCmd_copyLocation"]::Before,
-#syncedTabsCopySelected::Before {
+#syncedTabsCopySelected::Before,
+#context-stripOnShareLink::Before,
+#strip-on-share::Before {
 
 	content: url("../MipImages/Oxygen/oxygen_Copy.png");
 
@@ -486,7 +488,9 @@ menuitem[cmd="cmd_copy"] > label,
 #textbox-contextmenu menuitem[command="cmd_copy"] > label,
 #downloadsContextMenu menuitem[command="cmd_copy"] > label,
 menuitem[command="downloadsCmd_copyLocation"] > label,
-#syncedTabsCopySelected > label {
+#syncedTabsCopySelected > label,
+#context-stripOnShareLink > label,
+#strip-on-share > label {
 
 	margin-inline-start: var(--mip-menu-label-margin) !important;
 	}
