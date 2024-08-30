@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.9.2 (MIP/CSS)
+ * Menu Icon Plus CSS v2.9.3 (MIP/CSS)
  * Add Icons To Firefox Standard Panels
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -65,7 +65,7 @@
 
 #sidebar-reverse-position[label$="Right"]::before {
 
-	content: url("../MipImages/Fugue/fugue_Sidebar-Right.png");
+	content: url("../MipImages/Fugue/fugue_Sidebar-Right.png") !important;
 
 	display: block;
 	width: 16px;
@@ -75,7 +75,7 @@
 
 #sidebar-reverse-position[label$="Left"]::before {
 
-	content: url("../MipImages/Fugue/fugue_Sidebar-Left.png");
+	content: url("../MipImages/Fugue/fugue_Sidebar-Left.png") !important;
 
 	display: block;
 	width: 16px;
@@ -85,7 +85,7 @@
 
 #sidebarMenu-popup menuitem[data-l10n-id="sidebar-menu-close"]::before {
 
-	content: url("../MipImages/Tango/tango_ClearAll.png");
+	content: url("../MipImages/Tango/tango_ClearAll.png") !important;
 
 	display: block;
 	width: 16px;
@@ -95,7 +95,7 @@
 
 #sidebar-switcher-bookmarks::Before {
 	
-	content: url("../MipImages/Tango/tango_Bookmarks.png");
+	content: url("../MipImages/Tango/tango_Bookmarks.png") !important;
 
 	display: block;
 	width: 16px;
@@ -105,7 +105,7 @@
 
 #sidebar-switcher-history::Before {
 
-	content: url("../MipImages/Tango/tango_History.png");
+	content: url("../MipImages/Tango/tango_History.png") !important;
 
 	display: block;
 	width: 16px;
@@ -122,8 +122,8 @@
 
 #sidebar-switcher-tabs::Before {
 
-/*	content:  url("../MipImages/Tango/tango_Sync.png"); */
-	content:  url("../MipImages/Tango/tango_Sync-bright.png");
+/*	content:  url("../MipImages/Tango/tango_Sync.png") !important; */
+	content:  url("../MipImages/Tango/tango_Sync-bright.png") !important;
 
 	display: block;
 	width: 16px;

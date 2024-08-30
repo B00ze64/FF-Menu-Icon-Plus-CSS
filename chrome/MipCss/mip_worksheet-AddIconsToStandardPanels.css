@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.9.2 (MIP/CSS)
+ * Menu Icon Plus CSS v2.9.3 (MIP/CSS)
  * Add Icons To Firefox Standard Panels
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -68,7 +68,7 @@
 
 	content: url("../MipImages/FF/dock-side-right.svg");
 	content: url("../MipImages/Silk/silk_Sidebar-Right.png");
-	content: url("../MipImages/Fugue/fugue_Sidebar-Right.png");
+	content: url("../MipImages/Fugue/fugue_Sidebar-Right.png") !important;
 
 	display: block;
 	width: 16px;
@@ -80,7 +80,7 @@
 
 	content: url("../MipImages/FF/dock-side-left.svg");
 	content: url("../MipImages/Silk/silk_Sidebar-Left.png");
-	content: url("../MipImages/Fugue/fugue_Sidebar-Left.png");
+	content: url("../MipImages/Fugue/fugue_Sidebar-Left.png") !important;
 
 	display: block;
 	width: 16px;
@@ -95,7 +95,7 @@
 	content: url("../MipImages/Oxygen/oxygen_ClearAll.png");
 	content: url("../MipImages/Tango/tango_ClearAll.png");
 	content: url("../MipImages/Silk/silk_ClearAll.png");
-	content: url("../MipImages/Fugue/fugue_ClearAll.png");
+	content: url("../MipImages/Fugue/fugue_ClearAll.png") !important;
 
 	display: block;
 	width: 16px;
@@ -121,7 +121,7 @@
 	content: url("../MipImages/Silk/silk_Bookmarks-Closed.png");
 	content: url("../MipImages/Tango/tango_Bookmarks.png");
 
-	content: url("../MipImages/Fugue/fugue_Bookmarks-Closed.png");
+	content: url("../MipImages/Fugue/fugue_Bookmarks-Closed.png") !important;
 
 	display: block;
 	width: 16px;
@@ -141,7 +141,7 @@
 	content: url("../MipImages/Silk/silk_HistoryClock.png"); /* Alternative */
 	content: url("../MipImages/Tango/tango_History.png");
 
-	content: url("../MipImages/FF/history-XP.png");
+	content: url("../MipImages/FF/history-XP.png") !important;
 
 	display: block;
 	width: 16px;
@@ -176,7 +176,7 @@
 	content:  url("../MipImages/Tango/tango_Sync-bright.png");
 	content:  url("../MipImages/Tango/tango_Sync.png");
 
-	content:  url("../MipImages/Fugue/fugue_Sync.png");
+	content:  url("../MipImages/Fugue/fugue_Sync.png") !important;
 
 	display: block;
 	width: 16px;
