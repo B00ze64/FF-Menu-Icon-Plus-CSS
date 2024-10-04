@@ -1,5 +1,5 @@
 /********************************************************************************
- * Menu Icon Plus CSS v2.9.1 (MIP/CSS)
+ * Menu Icon Plus CSS v2.9.2 (MIP/CSS)
  * Add Icons To Firefox Menus/Context-Menus
  *
  * - This CSS file and some of the resources it references (c) Sylvain "B00ze64" B.
@@ -2821,6 +2821,7 @@ menuitem.customize-context-addToPanel > label {
 #context_closeTab::Before,
 #context_closeSelectedTabs::Before,
 #context_closeDuplicateTabs::Before,
+#allTabsMenu-closeDuplicateTabs::Before,
 #menu_close::Before {
 
 /*	content: url("../MipImages/Fugue/fugue_TabX.png"); */
@@ -2840,6 +2841,7 @@ menuitem.customize-context-addToPanel > label {
 #context_closeTab > label,
 #context_closeSelectedTabs > label,
 #context_closeDuplicateTabs > label,
+/* #allTabsMenu-closeDuplicateTabs > label, */
 #menu_close > label {
 
 	margin-inline-start: var(--mip-menu-label-margin) !important;
